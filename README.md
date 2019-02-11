@@ -10,9 +10,9 @@
 
 ## Built With
 
-* [Google Drive](https://firebase.google.com/) - File management api
-* [Yandex Translate](https://bumptech.github.io/glide/) - Character translation service
-* [Caligraphy](https://github.com/worker8/RadioGroupPlus) - Font-family library
+* [Google Drive](https://developers.google.com/drive/) - File management api
+* [Yandex Translate](https://tech.yandex.com/translate/) - Character translation service
+* [Caligraphy](https://github.com/InflationX/Calligraphy) - Font-family library
 
 ## License
 
