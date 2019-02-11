@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML અનુવાદક મફત</string>
+<string name="translate">અનુવાદ</string>
+<string name="message">પેસ્ટ તમે XML અહીં... </string>
+<string name="email_to">ઇમેઇલ</string>
+<string name="translate_from">અનુવાદ પરથી</string>
+<string name="translate_to">ભાષાંતર કરવા માટે</string>
+<string name="no_connection">કોઈ ઇન્ટરનેટ કનેક્શન છે</string>
+<string name="no_connection_direction">XML અનુવાદક મુક્ત કરી શક્યા નહિં સ્થાપિત ઇન્ટરનેટ કનેક્શન છે. ખાતરી કરો કે તમે સાથે જોડાયેલ છે, એક નેટવર્ક અને ફરીથી પ્રયાસ કરો.</string>
+<string name="welcome_to_xmlanguage_translator">સ્વાગત માટે XML અનુવાદક મફત</string>
+<string name="translate_from_choose_one">અનુવાદ (એક પસંદ કરો)</string>
+<string name="translate_to_choose_one_or_more">અનુવાદ (એક પસંદ કરો અથવા વધુ)</string>
+<string name="powered_by_yandex_translate">દ્વારા સંચાલિત યાન્ડેક્ષ.અનુવાદ</string>
+<string name="paste_example_below">પેસ્ટ ઉદાહરણ નીચે</string>
+<string name="please_do_not_alter_the_main_xml_folder">* કૃપા કરીને બદલી નથી મુખ્ય XML ફોલ્ડર *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">ચેક તમારા Google ડ્રાઇવ માટે તમારી શબ્દસમૂહ XML શબ્દમાળાઓ!</string>
+<string name="step_3">પગલું 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">ભાષા પસંદ કરો તમારા XML શબ્દમાળાઓ અને પસંદ કરો ઇચ્છિત ભાષા.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">પરવાનગી આપે XML અનુવાદક મફત પરવાનગી ઍક્સેસ કરવા માટે Google ડ્રાઇવ એકાઉન્ટ તમારા પસંદગી છે.</string>
+<string name="step_2">પગલું 2</string>
+<string name="step_1">પગલું 1</string>
+<string name="how_to_use_xmlanguage_translator">કેવી રીતે વાપરવા માટે XML અનુવાદક મફત</string>
+<string name="help">મદદ</string>
+<string name="home">ઘર</string>
+<string name="disclaimer">ડિસક્લેમર</string>
+<string name="finished">સમાપ્ત!</string>
+<string name="translating_updating_wait">અનુવાદ અને અપલોડ .xml ફાઇલો છે. આ થોડો સમય લાગી શકે છે. તમારી ધીરજ માટે આભાર.</string>
+<string name="daily_limit_reached">તમે પહોંચી ગયા છો અથવા વિશે છે સુધી પહોંચવા માટે તમારા 3000 પાત્ર દૈનિક મર્યાદા માટે મુક્ત અનુવાદ. ચાલુ રાખવા માટે અનુવાદ .xml, ડાઉનલોડ XML અનુવાદક પર 20 ડોલર એક મહિના સાથે કોઈ રદ ફી!</string>
+<string name="choose_lang_translate_to">પસંદ કરો ભાષાઓમાં ભાષાંતર કરવા માટે.</string>
+<string name="choose_one_translate_from">પસંદ કરો એક ભાષા અનુવાદ માટે</string>
+<string name="choose_lang_translate_from">મહેરબાની કરીને પસંદ કરો છો ભાષામાં ભાષાંતર કરવા માટે.</string>
+<string name="paste_xml_to_translate">કૃપા કરીને પેસ્ટ XML માંગો છો શબ્દસમૂહ</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">આ એપ્લિકેશન ઉપયોગ કરીને, તમે અહીં સંમતિ માટે અસ્વીકૃતિ અને માટે સંમત તેની શરતો.</string>
+<string name="disclaimer_2">સર્જક આ એપ્લિકેશન બનાવવા નથી કોઇ વોરંટી આ સંપૂર્ણતા વિશે, વિશ્વસનીયતા અને ચોકસાઈ પેદા માહિતી છે. કોઈપણ ક્રિયા લેવા પર માહિતી તમે શોધવા પર આ એપ્લિકેશન તમારા પોતાના જોખમે કડક છે. સર્જક આ એપ્લિકેશન માટે જવાબદાર રહેશે નહીં કોઇ નુકસાન અને/અથવા નુકસાની સાથે જોડાણ આ ઉપયોગ એપ્લિકેશન છે.</string>
+<string name="disclaimer_1">સર્જક આ એપ્લિકેશન doesn\'t બાહ્ય રીતે ગ્રાન્ટ ઉપયોગ જનરેટ કરેલ ડેટા નો ઉપયોગ કરીને આ એપ્લિકેશન\'s સેવાઓ. તે વપરાશકર્તા આ એપ્લિકેશન તે નક્કી કરવા માટે તક માન્ય છે વપરાશ અનુવાદિત માહિતી પૂરી પાડવામાં કરવા માટે આ એપ્લિકેશન\'s સેવાઓ. જો કે, the use of this application\'s સેવાઓ નહીં બદલી કોઈપણ કોપીરાઈટ અથવા વપરાશ પરવાનગીઓ પૂરી પાડવામાં આવેલ માહિતી છે.</string>
+<string name="disclaimer_for_xmlanguage_translator">ડિસક્લેમર માટે XML અનુવાદક મફત</string>
+<string name="ok">બરાબર</string>
+<string name="mayber_later">કદાચ પાછળથી</string>
+<string name="try_it">તે પ્રયત્ન કરો</string>
+<string name="external_storage_must">બાહ્ય સ્ટોરેજ ઉપલબ્ધ હોવા જ જોઈએ.</string>
+<string name="mount_external_please">કૃપા કરીને માઉન્ટ કરી શકાય તેવી બાહ્ય સંગ્રહ મીડિયા ક્રમમાં આ એપ્લિકેશન વાપરવા માટે.</string>
+<string name="read_external_permission_necessary">વાંચો બાહ્ય પરવાનગી જરૂરી વાંચવા માટે કાર્યક્રમ ફાઈલો.</string>
+<string name="permission_necessary">પરવાનગી જરૂરી</string>
+<string name="write_external_permission_necessary">લખવા બાહ્ય પરવાનગી જરૂરી લખવા માટે કાર્યક્રમ ફાઈલો.</string>
+<string name="read_permission_explain">વાંચો બાહ્ય સ્ટોરેજ પરવાનગી આપે છે આ એપ્લિકેશન વાંચવા માટે મહત્વપૂર્ણ એપ્લિકેશન માહિતી છે. કૃપા કરીને પરવાનગી આપે છે આ પરવાનગી એપ્લિકેશન સુયોજનો છે.</string>
+<string name="write_permission_explain">લખવા બાહ્ય સ્ટોરેજ પરવાનગી આપે છે આ એપ સ્ટોર કરવા માટે મહત્વપૂર્ણ એપ્લિકેશન માહિતી છે. કૃપા કરીને પરવાનગી આપે છે આ પરવાનગી એપ્લિકેશન સુયોજનો છે.</string>
+<string name="translations_complete">અનુવાદ પૂર્ણ</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

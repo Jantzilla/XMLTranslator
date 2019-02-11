@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">Бушлай XML тәрҗемәче</string>
+<string name="translate">Күчерергә</string>
+<string name="message">Вставьте сез монда XML форматында... </string>
+<string name="email_to">ЭЛЕКТРОН ПОЧТА АША</string>
+<string name="translate_from">Күчерергә</string>
+<string name="translate_to">Күчерергә</string>
+<string name="no_connection">Юк, Интернетка Тоташу</string>
+<string name="no_connection_direction">Бушлай XML переводчику түгел, ачыклый тоташтыру интернет. Инаныгыз сез тоташтырылган челтәрләр һәм повторите узды.</string>
+<string name="welcome_to_xmlanguage_translator">Рәхим итегез XML-тәрҗемәче бушлай</string>
+<string name="translate_from_choose_one">Күчерергә берсе (сайлап берсен)</string>
+<string name="translate_to_choose_one_or_more">Күчерү (сайлагыз бер яки берничә)</string>
+<string name="powered_by_yandex_translate">Туклану нче Яндекс.Күчерергә</string>
+<string name="paste_example_below">Вставить Үрнәк Түбәнрәк</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Зинһар, изменяйте төп папки XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Тикшерегез сезнең Google диск күчерү өчен XML-юллар!</string>
+<string name="step_3">3 адым</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Сайларга тел юллык XML һәм сайлагыз кирәкле телләр.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Рөхсәт итәргә бушлай XML-тәрҗемәче рөхсәт керү язмасын Google диск Сезнең выбор.</string>
+<string name="step_2">2 адым</string>
+<string name="step_1">Адым 1</string>
+<string name="how_to_use_xmlanguage_translator">Ничек файдаланырга XML-тәрҗемәче бушлай</string>
+<string name="help">Ярдәм итегез</string>
+<string name="home">Йорты</string>
+<string name="disclaimer">Җаваплылыктан баш тарту</string>
+<string name="finished">Аңламадым!</string>
+<string name="translating_updating_wait">Тәрҗемә отправку .XML-файллар. Бу алырга мөмкин күпмедер вакыт. Рәхмәт сезнең сабырлыгыгыз.</string>
+<string name="daily_limit_reached">Сез үсеп, яки собираетесь ирешергә сезнең 3000 символы лимиты өчен бушлай тәрҗемәләр. Дәвам итү өчен тәрҗемә итү .XML-файле, скачать XML-тәрҗемәче, 20 долларга, бер ай булмаса, җыемнар өчен гамәлдән чыгуга!</string>
+<string name="choose_lang_translate_to">Зинһар өчен, сайлагыз тел тәрҗемә итү.</string>
+<string name="choose_one_translate_from">Зинһар өчен, сайлагыз бер тел өчен күчерергә белән</string>
+<string name="choose_lang_translate_from">Зинһар өчен, сайлагыз тел күчерү өчен килгән.</string>
+<string name="paste_xml_to_translate">Зинһар, вставить XML-код сез күчерергә телибез</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Ярдәмендә бу кушымталар, сез соглашаетесь белән җаваплылыктан баш тарту һәм соглашаетесь белән аның шартлары.</string>
+<string name="disclaimer_2">Тиңдәше бу кушымталар бирми бернинди гарантияләр чагыштырмача тулылыгын, дөреслеген, төгәллек получаемых мәгълүматлар. Теләсә нинди эш-гамәлләре, алар, сез алырга мәгълүмат, аны сез таба аласыз әлеге гаризада булып тора катгый тђвђккђллђп. Тиңдәше бу кушымталар тотмый өчен җаваплылык, теләсә нинди зыян һәм/яки зыян бәйле кулланып, әлеге кушымталар.</string>
+<string name="disclaimer_1">Тиңдәше бу кушымталар түгел\'т куллану рөхсәт итәргә алынган мәгълүматларның ярдәмендә әлеге кушымтаның хезмәтләре\'. Бу кадәр кеше, әлеге кушымта өчен билгеләргә өлкәсе допустимого мәгълүматларын куллану, моның өчен кушымтаның хезмәтләре\'. Әмма, куллану сервислар бу кушымталар булмаячак үзгәртә теләсә нинди авторлык хокуклары яки рөхсәт куллану мәгълүматлар.</string>
+<string name="disclaimer_for_xmlanguage_translator">Җаваплылыктан баш тарту өчен бушлай XML-тәрҗемәче</string>
+<string name="ok">Яхшы</string>
+<string name="mayber_later">Бәлки соңрак</string>
+<string name="try_it">Карагыз әле</string>
+<string name="external_storage_must">Тышкы накопитель булырга тиеш карарга була.</string>
+<string name="mount_external_please">Зинһар, монтируйте записи тышкы йөртүче мәгълүмат өчен файдаланырга бу кушымта.</string>
+<string name="read_external_permission_necessary">Укыгыз внешнее рөхсәт, кирәкле уку өчен, файлларның кушымталар.</string>
+<string name="permission_necessary">Рөхсәт кирәк</string>
+<string name="write_external_permission_necessary">Язарга внешнее рөхсәт, кирәкле язу өчен файлларның кушымталар.</string>
+<string name="read_permission_explain">Укырга рөхсәт тышкы барлыгы мөмкинлек бирә кушымта өчен прочитать барлык мөһим мәгълүмат. Зинһар, рөхсәт итегез бу рөхсәт </string>
+<string name="write_permission_explain">Язарга рөхсәт тышкы барлыгы мөмкинлек бирә кушымта саклау өчен мөһим булган әлеге кушымталар. Зинһар, рөхсәт итегез бу рөхсәт </string>
+<string name="translations_complete">Тулы Тәрҗемәсен</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

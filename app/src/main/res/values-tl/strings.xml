@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Translator sa Libreng</string>
+<string name="translate">Isalin</string>
+<string name="message">I-Paste sa iyo na XML dito... </string>
+<string name="email_to">EMAIL SA</string>
+<string name="translate_from">Isalin Ang Mula Sa</string>
+<string name="translate_to">Isalin Sa</string>
+<string name="no_connection">Walang Koneksyon Sa Internet</string>
+<string name="no_connection_direction">XML Translator sa Libreng ay hindi maaaring magtatag ng isang koneksyon sa internet. Tiyakin na ikaw ay konektado sa isang network at subukang muli.</string>
+<string name="welcome_to_xmlanguage_translator">Maligayang pagdating sa XML Translator sa Libreng</string>
+<string name="translate_from_choose_one">Isalin ang Mula sa (Pumili ng isa)</string>
+<string name="translate_to_choose_one_or_more">Isalin Sa (Pumili ng isa o higit pang mga)</string>
+<string name="powered_by_yandex_translate">Pinagagana sa pamamagitan ng Yandex.Isalin</string>
+<string name="paste_example_below">I-Paste Ang Halimbawa Sa Ibaba</string>
+<string name="please_do_not_alter_the_main_xml_folder">* * * Mangyaring huwag baguhin ang mga pangunahing XML folder *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Suriin ang iyong Google Drive para sa iyong mga isinalin na mga XML na string!</string>
+<string name="step_3">Hakbang 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Piliin ang wika ng iyong XML string na ito at piliin ang ninanais na wika.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Payagan ang XML Translator Libreng pahintulot upang ma-access ang Google Drive account ng iyong mga pagpipilian.</string>
+<string name="step_2">Hakbang 2</string>
+<string name="step_1">Hakbang 1</string>
+<string name="how_to_use_xmlanguage_translator">Paano gamitin ang XML Translator sa Libreng</string>
+<string name="help">Tulong</string>
+<string name="home">Tahanan</string>
+<string name="disclaimer">Disclaimer</string>
+<string name="finished">Tapos na!</string>
+<string name="translating_updating_wait">Pagsasalin at pag-upload .xml file. Ito ay maaaring tumagal ng isang habang. Salamat sa iyo para sa iyong pasensya.</string>
+<string name="daily_limit_reached">Naabot mo na ang o ay tungkol sa upang maabot ang iyong mga 3000 character araw-araw na limitasyon para sa libreng pagsasalin. Upang magpatuloy sa pagsasalin .xml, i-download ang XML Translator sa 20 dollars sa isang buwan na walang mga pagkansela ng mga bayad!</string>
+<string name="choose_lang_translate_to">Mangyaring piliin ang wika upang isalin sa.</string>
+<string name="choose_one_translate_from">Mangyaring pumili ng ISANG wika upang isalin ang mula sa</string>
+<string name="choose_lang_translate_from">Mangyaring piliin ang wika upang isalin ang mula sa.</string>
+<string name="paste_xml_to_translate">Mangyaring i-paste ang XML gusto isinalin</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Sa pamamagitan ng paggamit ng application na ito, ikaw ay sumasang-pagsang-ayon sa disclaimer at sumasang-ayon sa mga tuntunin nito.</string>
+<string name="disclaimer_2">Ang lumikha ng application na ito ay hindi gumagawa ng anumang warranty tungkol sa pagiging kumpleto, pagiging maaasahan at kawastuhan ng data na binuo. Anumang pagkilos na magdadala sa iyo sa ang impormasyon na mahanap ka sa application na ito ay mahigpit sa iyong sariling peligro. Ang lumikha ng application na ito ay hindi mananagot para sa anumang pagkalugi at/o pinsala na may kaugnayan sa paggamit ng application na ito.</string>
+<string name="disclaimer_1">Ang lumikha ng application na ito doesn\'t malinaw na bigyan ng paggamit ng data na binuo gamit ang application na ito\'s serbisyo. Ito ay hanggang sa ang user ng mga application na ito upang matukoy ang saklaw ng pinapahintulutang paggamit ng mga data na ibinigay sa application na ito\'s serbisyo. Gayunman, ang paggamit ng application na ito\'s serbisyo ay hindi baguhin ang anumang copyright o paggamit ng mga pahintulot ng ang ibinigay na data.</string>
+<string name="disclaimer_for_xmlanguage_translator">Disclaimer para sa XML Translator sa Libreng</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Siguro sa ibang pagkakataon</string>
+<string name="try_it">Subukan ito</string>
+<string name="external_storage_must">Panlabas na imbakan ay dapat na magagamit.</string>
+<string name="mount_external_please">Mangyaring mount writable panlabas na imbakan ng media sa pagkakasunud-sunod upang gamitin ang app na ito.</string>
+<string name="read_external_permission_necessary">Basahin ang mga panlabas na mga pahintulot na kinakailangan upang basahin ang mga file ng application.</string>
+<string name="permission_necessary">Pahintulot na kinakailangan</string>
+<string name="write_external_permission_necessary">Isulat ang mga panlabas na mga pahintulot na kinakailangan upang sumulat sa file ng application.</string>
+<string name="read_permission_explain">Basahin ang mga Panlabas na Imbakan ng pahintulot na ito ay nagbibigay-daan sa app na basahin ang mga mahalagang data ng app. Mangyaring payagan ang mga ito ng pahintulot sa mga Setting ng App.</string>
+<string name="write_permission_explain">Isulat ang Panlabas na Storage pahintulot ay nagbibigay-daan sa ang app na ito upang mag-imbak ng mahalagang data ng app. Mangyaring payagan ang mga ito ng pahintulot sa mga Setting ng App.</string>
+<string name="translations_complete">Kumpletuhin Ang Mga Pagsasalin</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

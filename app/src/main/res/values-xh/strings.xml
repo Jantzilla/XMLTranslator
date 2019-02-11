@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Umguquleli Free</string>
+<string name="translate">Guqulela</string>
+<string name="message">Cola kuwe XML apha... </string>
+<string name="email_to">- IMEYILI APHA:</string>
+<string name="translate_from">Guqulela Ukusuka</string>
+<string name="translate_to">Guqulela Ukuba</string>
+<string name="no_connection">Akukho Internet Udibaniso</string>
+<string name="no_connection_direction">XML Umguquleli Free ayikwazanga bamisa internet udibaniso. Qiniseka uxhulumeneyo kwi umsebenzi womnatha kwaye uzame kwakhona.</string>
+<string name="welcome_to_xmlanguage_translator">Wamkelekile XML Umguquleli Free</string>
+<string name="translate_from_choose_one">Guqulela Ukususela (Khetha enye)</string>
+<string name="translate_to_choose_one_or_more">Guqulela (Khetha enye okanye ngaphezulu)</string>
+<string name="powered_by_yandex_translate">Powered by Yandex.Guqulela</string>
+<string name="paste_example_below">Cola Umzekelo Ngezantsi</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Nceda musa alter engundoqo XML ulawulo *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Khangela yakho Google Drive yakho iguqulelwe XML lwamagama!</string>
+<string name="step_3">Inyathelo lesi-3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Khetha ulwimi lwakho XML lwamagama kwaye khetha babuza iilwimi.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Vumela XML Umguquleli Free imvume ukufikelela kwi i-Google Drive-akhawunti yakho oyikhethileyo.</string>
+<string name="step_2">Inyathelo lesi-2</string>
+<string name="step_1">Inyathelo 1</string>
+<string name="how_to_use_xmlanguage_translator">Uyisebenzisa njani XML Umguquleli Free</string>
+<string name="help">Uncedo</string>
+<string name="home">Ekhaya</string>
+<string name="disclaimer">Disclaimer</string>
+<string name="finished">Ugqibile!</string>
+<string name="translating_updating_wait">Ukuguqulela kwaye layisha phezulu .xml iifayili. Oku kungathatha okomzuzwana. Ndiyabulela kuba yakho umonde.</string>
+<string name="daily_limit_reached">Kufuneka ufikelele okanye ingaba malunga ukufikelela yakho 3000 uphawu yonke imihla umda kuba free iinguqulelo. Ukuqhubeka ukuguqulela .xml, ukhuphele XML Umguquleli ku-20 dollazi inyanga kunye akukho ukucinywa imirhumo!</string>
+<string name="choose_lang_translate_to">Nceda ukhethe iilwimi ukuguqulela.</string>
+<string name="choose_one_translate_from">Nceda ukhethe ENYE ulwimi ukuguqulela ukusuka</string>
+<string name="choose_lang_translate_from">Nceda khetha ulwimi ukuguqulela ukusuka.</string>
+<string name="paste_xml_to_translate">Nceda cola XML ungathanda iguqulelwe</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Ngokusebenzisa le nkqubo, wena page imvume kwi-disclaimer kwaye uyavuma ukuba imiqathango yalo.</string>
+<string name="disclaimer_2">I-dala isiqulathi-zifayili kwesi sicelo akakwazi ukwenza nawuphi na iziqinisekiso malunga completeness, reliability kwaye uqukuqelo ye-generated data. Nayiphi na intshukumo uthatha phezu ulwazi ufuna ukufumana kule nkqubo ngu strictly e eyakho umngcipheko. I-dala isiqulathi-zifayili le nkqubo ayisayi kuba netyala kuba nayiphi na ilahleko kunye/okanye umonakalo othe kwi-unxulumano kunye sebenzisa le nkqubo.</string>
+<string name="disclaimer_1">I-dala isiqulathi-zifayili le nkqubo akubonakali\'t explicitly isibonelelo ukusebenzisa i-data intsalelo esi sicelo\'s iinkonzo. Kubalulekile ukuya kwi-umsebenzisi le nkqubo ukugqiba umda we allowable ukusetyenziswa data enikezwa kwesi sicelo\'s iinkonzo. Nangona kunjalo, ukusetyenziswa esi sicelo\'s iinkonzo ayisayi alter na copyrights okanye ukusetyenziswa neemvume enikezwa data.</string>
+<string name="disclaimer_for_xmlanguage_translator">Disclaimer kuba XML Umguquleli Free</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Mhlawumbi kamva</string>
+<string name="try_it">Zama ke</string>
+<string name="external_storage_must">Wangaphandle yokugcina kufuneka kufumaneka.</string>
+<string name="mount_external_please">Nceda ntaba kuyabhaleka wangaphandle yokugcina eendaba ukuze sebenzisa olu setyenziso.</string>
+<string name="read_external_permission_necessary">Funda wangaphandle imvume kuyimfuneko ukufunda isicelo iifayili.</string>
+<string name="permission_necessary">Imvume eyimfuneko</string>
+<string name="write_external_permission_necessary">Bhala wangaphandle imvume eyimfuneko ukubhala isicelo iifayili.</string>
+<string name="read_permission_explain">Funda Wangaphandle Yokugcina imvume ukuvumela oku app ukufunda kubalulekile app data. Nceda ukuvumela oku imvume kwi-App Izicwangciso.</string>
+<string name="write_permission_explain">Bhala Wangaphandle Yokugcina imvume ukuvumela oku app ukugcina ebalulekileyo app data. Nceda ukuvumela oku imvume kwi-App Izicwangciso.</string>
+<string name="translations_complete">Iinguqulelo Uzalise</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

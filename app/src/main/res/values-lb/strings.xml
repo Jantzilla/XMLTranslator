@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML-Iwwersetzer Gratis</string>
+<string name="translate">Iwwersetzen</string>
+<string name="message">Fügen Se XML hei... </string>
+<string name="email_to">E-MAIL OP</string>
+<string name="translate_from">Iwwersetze Vu</string>
+<string name="translate_to">Iwwersetzen</string>
+<string name="no_connection">Keng Internet-Verbindung</string>
+<string name="no_connection_direction">XML-Iwwersetzer Fräi, konnt net opriichten vun enger internet-Verbindung. Plazen Si sécher, datt Si mat engem Netzwierk verbonnen sinn an versichen Iech et nach eng kéier.</string>
+<string name="welcome_to_xmlanguage_translator">Wëllkomm am XML-Iwwersetzer Gratis</string>
+<string name="translate_from_choose_one">Iwwersetzen Aus (Wielt eng)</string>
+<string name="translate_to_choose_one_or_more">Iwwersetzen (Wielt eng oder méi)</string>
+<string name="powered_by_yandex_translate">Ugedriwwe vum Yandex.Iwwersetzen</string>
+<string name="paste_example_below">Einfügen-B. Ënnen</string>
+<string name="please_do_not_alter_the_main_xml_folder">* W. e. g ännert Se net d \' Haapt-XML-Ordner. *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Iwwerpréiwen Si Hir Google-Laufwerk fir Hir übersetzten XML-strings!</string>
+<string name="step_3">Schrëtt 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Wielt d \'Sprooch vum XML-strings an wielen Se d\' gewënschtener Sproochen aus.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Erlaben XML-Iwwersetzer Fräi d \'Berechtigung fir den Zougrëff op d\' Google Drive-Kont vun Hirer Wal.</string>
+<string name="step_2">Schrëtt 2</string>
+<string name="step_1">Schrëtt 1</string>
+<string name="how_to_use_xmlanguage_translator">Wéi benotzen vun XML-Iwwersetzer Gratis</string>
+<string name="help">Hëllefen</string>
+<string name="home">Home</string>
+<string name="disclaimer">Haftungsausschloss</string>
+<string name="finished">Fäerdeg!</string>
+<string name="translating_updating_wait">Iwwersetzen an erop .xml-Dateien. Dat kann eng Weile daueren. Villmols Merci fir Är Gedold.</string>
+<string name="daily_limit_reached">Si hunn erreecht oder ze erreechen Hir 3000 Zeechen tägliches limit fir Gratis benotzerkont. Fir weider iwwersetzen .xml luede vun der XML-Iwwersetzer bei 20 Dollar pro Mount mat keng Stornogebühren!</string>
+<string name="choose_lang_translate_to">Wielt w. e. g d \'Sprooch z\' iwwersetzen.</string>
+<string name="choose_one_translate_from">W. e. g wielen Dir ENG Sprooch zum iwwersetzen aus dem</string>
+<string name="choose_lang_translate_from">W. e. g wielt d \'Sprooch, z\' iwwersetzen.</string>
+<string name="paste_xml_to_translate">W. e. g fügen Se den XML-wëllt Dir iwwersat</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Duerch d \' Benotze vun dëser Hëllef, Si heimat op den Haftungsausschloss a Stëmmen zu Hirem Bedingungen.</string>
+<string name="disclaimer_2">D \'Schëpfer dëser Benotzung net maachen keng Is iwwer d\' Vollstännegkeet, Zouverlässegkeet a Genauegkeet vun de generierten Daten. All Aktioun, déi Si huelen op d \' Informatiounen, déi Dir fannt an dëser Applikation ass strikt op eege Gefor. De Schëpfer vun dëser Benotzung haftet net fir Verloschter an/oder Schied am Zesummenhang mat der Notzung vun dëse Gebrauch.</string>
+<string name="disclaimer_1">De Schëpfer vun dëser Benotzung doesn\'t extra ze ausstellen, déi Gebrauch vun Daten, déi mat Hëllef vun dëser Benotzung\'s services. Et ass dem Benotzer de Gebrauch, fir ze bestëmmen, den Ëmfank vun der zulässigen Notzung vun de Daten, déi dës Hëllef\'s services. Allerdéngs ass d \' Benotze vun dëser Benotzung\'s services net veränneren, keng Explizit-oder Nutzungs-Berechtigungen der Donnéeë.</string>
+<string name="disclaimer_for_xmlanguage_translator">Haftungsausschloss (Disclaimer) fir XML-Iwwersetzer Gratis</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Vläicht méi spéit</string>
+<string name="try_it">Probéieren Si et</string>
+<string name="external_storage_must">Externer Späicher disponibel sinn.</string>
+<string name="mount_external_please">W. e. g montieren beschreibbaren externer Speichermedien, fir dës app notzen.</string>
+<string name="read_external_permission_necessary">Liest Dir extern Erlabnis erfuerdert zum Liesen vun Dateien fir d \' Uwendung.</string>
+<string name="permission_necessary">Erlabnis noutwendeg</string>
+<string name="write_external_permission_necessary">Schreift d \'extern Erlabnis obligatoresch ze schreiwen, fir d\' lëscht eropgelueden Dateien der Uwendung.</string>
+<string name="read_permission_explain">Liest Dir Extern Späicher Erlabnis erméiglecht dës app Liesen Iech w. e. g d \' wichtege app-Daten. W. e. g erlaben Si dës Berechtigung in-App-Astellungen.</string>
+<string name="write_permission_explain">Schreiwen Si Extern Späicher Erlabnis erméiglecht dës app ze späicheren wichteg app-Daten. W. e. g erlaben Si dës Berechtigung in-App-Astellungen.</string>
+<string name="translations_complete">Méint Komplett</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

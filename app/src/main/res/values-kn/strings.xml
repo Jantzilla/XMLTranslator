@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ</string>
+<string name="translate">ಭಾಷಾಂತರಿಸಲು</string>
+<string name="message">ಪೇಸ್ಟ್ ನೀವು ಮದುವೆ ಇಲ್ಲಿ... </string>
+<string name="email_to">ಇಮೇಲ್</string>
+<string name="translate_from">ಭಾಷಾಂತರಿಸಲು</string>
+<string name="translate_to">ಭಾಷಾಂತರಿಸಿ</string>
+<string name="no_connection">ಯಾವುದೇ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ</string>
+<string name="no_connection_direction">ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ could not establish a ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ. ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ ನೀವು ಸಂಪರ್ಕ ಜಾಲ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+<string name="welcome_to_xmlanguage_translator">ಸ್ವಾಗತ ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ</string>
+<string name="translate_from_choose_one">ಭಾಷಾಂತರಿಸಲು (ಆಯ್ಕೆ)</string>
+<string name="translate_to_choose_one_or_more">ಭಾಷಾಂತರಿಸಲು (ಆಯ್ಕೆ ಒಂದು ಅಥವಾ ಹೆಚ್ಚು)</string>
+<string name="powered_by_yandex_translate">ನಡೆಸಲ್ಪಡುತ್ತಿದೆ Yandex.ಭಾಷಾಂತರಿಸಲು</string>
+<string name="paste_example_below">ಪೇಸ್ಟ್ ಉದಾಹರಣೆಗೆ ಕೆಳಗಿನ</string>
+<string name="please_do_not_alter_the_main_xml_folder">* ದಯವಿಟ್ಟು ಮಾರ್ಪಡಿಸುತ್ತದೆ ಮುಖ್ಯ XML ಫೋಲ್ಡರ್ನಲ್ಲಿ *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">ಪರಿಶೀಲಿಸಿ ನಿಮ್ಮ Google ಡ್ರೈವ್ ನಿಮ್ಮ ನುಡಿಗಟ್ಟು ಮದುವೆ ತಂತಿಗಳನ್ನು!</string>
+<string name="step_3">ಹಂತ 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">ಆಯ್ಕೆ ಭಾಷೆ, ನಿಮ್ಮ ಮದುವೆ ತಂತಿಗಳನ್ನು ಮತ್ತು ಬಯಸಿದ ಆಯ್ಕೆ ಭಾಷೆಗಳು.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">ಅವಕಾಶ ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಯನ್ನು ಗೂಗಲ್ ಡ್ರೈವ್ ಖಾತೆ, ನಿಮ್ಮ ಆಯ್ಕೆಯ.</string>
+<string name="step_2">ಹೆಜ್ಜೆ 2</string>
+<string name="step_1">ಹಂತ 1</string>
+<string name="how_to_use_xmlanguage_translator">How to use ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ</string>
+<string name="help">ಸಹಾಯ</string>
+<string name="home">ಮುಖಪುಟ</string>
+<string name="disclaimer">ಹಕ್ಕುತ್ಯಾಗ</string>
+<string name="finished">ಮುಗಿಸಿದರು!</string>
+<string name="translating_updating_wait">ಅನುವಾದ ಮತ್ತು ಅಪ್ಲೋಡ್ .xml ಕಡತಗಳನ್ನು. ಈ ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು. ನಿಮ್ಮ ತಾಳ್ಮೆಗೆ ಧನ್ಯವಾದಗಳು.</string>
+<string name="daily_limit_reached">ನೀವು ತಲುಪಿದ್ದೀರಿ ಅಥವಾ ಬಗ್ಗೆ ತಲುಪಲು ನಿಮ್ಮ 3000 ಮೀ ದೈನಂದಿನ ಮಿತಿಯನ್ನು ಉಚಿತ ಅನುವಾದಗಳು. ಅನುವಾದ ಮುಂದುವರಿಸಲು .ಮದುವೆ, ಡೌನ್ಲೋಡ್ XML ಅನುವಾದಕ ನಲ್ಲಿ 20 ಡಾಲರ್ ಒಂದು ತಿಂಗಳು ಯಾವುದೇ ರದ್ದತಿ ಶುಲ್ಕ!</string>
+<string name="choose_lang_translate_to">ದಯವಿಟ್ಟು ಆಯ್ಕೆ ಭಾಷೆಗಳಿಗೆ ಭಾಷಾಂತರಿಸಿ.</string>
+<string name="choose_one_translate_from">ದಯವಿಟ್ಟು ಒಂದು ಆಯ್ಕೆ ಭಾಷೆಗೆ ಭಾಷಾಂತರಿಸಿ</string>
+<string name="choose_lang_translate_from">Please choose the ಭಾಷೆ ಭಾಷಾಂತರಿಸಲು.</string>
+<string name="paste_xml_to_translate">ದಯವಿಟ್ಟು ಪೇಸ್ಟ್ XML ಬಯಸುತ್ತೀರಿ ನುಡಿಗಟ್ಟು</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿಕೊಂಡು, ನೀವು ಇದರ ಒಪ್ಪಿಗೆ ಹಕ್ಕುತ್ಯಾಗ ಮತ್ತು ತನ್ನ ನಿಯಮಗಳಿಗೆ ಒಪ್ಪಿಗೆ.</string>
+<string name="disclaimer_2">ಸೃಷ್ಟಿಕರ್ತ ಈ ಅಪ್ಲಿಕೇಶನ್ ಮಾಡುವುದಿಲ್ಲ ಯಾವುದೇ ಖಾತರಿ ಬಗ್ಗೆ ಪರಿಪೂರ್ಣತೆ, ವಿಶ್ವಾಸಾರ್ಹತೆ ಮತ್ತು ನಿಖರತೆ ರಚಿತವಾದ ಮಾಹಿತಿ. ಯಾವುದೇ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು ಮೇಲೆ ಮಾಹಿತಿಯನ್ನು ನೀವು ಹೇಗೆ ಈ ಅಪ್ಲಿಕೇಶನ್ ನಿಮ್ಮ ಸ್ವಂತ ಅಪಾಯ ಕಟ್ಟುನಿಟ್ಟಾಗಿ. ಸೃಷ್ಟಿಕರ್ತ ಈ ಅಪ್ಲಿಕೇಶನ್ ಜವಾಬ್ದಾರರಾಗಿರುವುದಿಲ್ಲ ಯಾವುದೇ ನಷ್ಟ ಮತ್ತು/ಅಥವಾ ಹಾನಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಬಳಸಿ ಈ ಅಪ್ಲಿಕೇಶನ್.</string>
+<string name="disclaimer_1">ಸೃಷ್ಟಿಕರ್ತ ಈ ಅಪ್ಲಿಕೇಶನ್ doesn\'t ಸ್ಪಷ್ಟವಾಗಿ ಅನುದಾನ ಬಳಕೆ ದಶಮಾಂಶ ರಚಿತವಾದ ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿಕೊಂಡು\'ರು ಸೇವೆಗಳು. ಇದು ಅಪ್ ಬಳಕೆದಾರ ಈ ಅಪ್ಲಿಕೇಶನ್ ವ್ಯಾಪ್ತಿಯನ್ನು ನಿರ್ಧರಿಸಲು ನೀಡುವುದು ಬಳಕೆಯ ಡೇಟಾ ಸರಬರಾಜು ಮಾಡಲು ಈ ಅಪ್ಲಿಕೇಶನ್\'ರು ಸೇವೆಗಳು. ಆದಾಗ್ಯೂ, the use of this application\'ರು ಸೇವೆಗಳು ಮಾಡುವುದಿಲ್ಲ ಮಾರ್ಪಡಿಸುತ್ತದೆ ಯಾವುದೇ ಹಕ್ಕುಸ್ವಾಮ್ಯಗಳನ್ನು ಅಥವಾ ಬಳಕೆ ಅನುಮತಿಗಳನ್ನು ಸರಬರಾಜು ಮಾಹಿತಿ.</string>
+<string name="disclaimer_for_xmlanguage_translator">ಹಕ್ಕುತ್ಯಾಗ ಮದುವೆ ಅನುವಾದಕ ಉಚಿತ</string>
+<string name="ok">ಸರಿ</string>
+<string name="mayber_later">ಬಹುಶಃ ನಂತರ</string>
+<string name="try_it">ಇದು ಪ್ರಯತ್ನಿಸಿ</string>
+<string name="external_storage_must">ಬಾಹ್ಯ ಸಂಗ್ರಹಣೆ ಮಾಡಬೇಕು ಲಭ್ಯವಿದೆ.</string>
+<string name="mount_external_please">ದಯವಿಟ್ಟು ಮೌಂಟ್ ಬರೆಯಬಹುದಾದ ಬಾಹ್ಯ ಶೇಖರಣಾ ಮಾಧ್ಯಮ ಸಲುವಾಗಿ ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿ.</string>
+<string name="read_external_permission_necessary">ಓದಿ ಬಾಹ್ಯ ಅನುಮತಿ ಅಗತ್ಯ ಓದಲು ಅಪ್ಲಿಕೇಶನ್ ಕಡತಗಳನ್ನು.</string>
+<string name="permission_necessary">ಅನುಮತಿ ಅಗತ್ಯ</string>
+<string name="write_external_permission_necessary">ಬರೆಯಲು ಬಾಹ್ಯ ಅನುಮತಿ ಅಗತ್ಯ ಬರೆಯಲು ಅಪ್ಲಿಕೇಶನ್ ಕಡತಗಳನ್ನು.</string>
+<string name="read_permission_explain">ಓದಿ ಬಾಹ್ಯ ಶೇಖರಣಾ ಅನುಮತಿ ಅನುಮತಿಸುತ್ತದೆ ಈ ಅಪ್ಲಿಕೇಶನ್ ಓದಲು ಪ್ರಮುಖ ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾ. ಅವಕಾಶ ದಯವಿಟ್ಟು ಈ ಅನುಮತಿ ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು.</string>
+<string name="write_permission_explain">ಬರೆಯಲು ಬಾಹ್ಯ ಶೇಖರಣಾ ಅನುಮತಿ ಅನುಮತಿಸುತ್ತದೆ ಈ ಅಪ್ಲಿಕೇಶನ್ ಸ್ಟೋರ್ ಪ್ರಮುಖ ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾ. ಅವಕಾಶ ದಯವಿಟ್ಟು ಈ ಅನುಮತಿ ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು.</string>
+<string name="translations_complete">ಅನುವಾದಗಳು ಸಂಪೂರ್ಣ</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

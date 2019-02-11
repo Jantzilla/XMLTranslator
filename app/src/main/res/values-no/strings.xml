@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML-Oversetter Gratis</string>
+<string name="translate">Oversette</string>
+<string name="message">Lim inn XML du her... </string>
+<string name="email_to">E-POST TIL</string>
+<string name="translate_from">Oversette Fra</string>
+<string name="translate_to">Oversett Til</string>
+<string name="no_connection">Ingen Internett-Tilkobling</string>
+<string name="no_connection_direction">XML-Oversetter Gratis kunne ikke opprette en internett-tilkobling. Kontroller at du er koblet til et nettverk, og prøv på nytt.</string>
+<string name="welcome_to_xmlanguage_translator">Velkommen til XML-Oversetter Gratis</string>
+<string name="translate_from_choose_one">Oversette Fra (Velg ett)</string>
+<string name="translate_to_choose_one_or_more">Oversett Til (Velg en eller flere)</string>
+<string name="powered_by_yandex_translate">Drevet av Yandex.Oversette</string>
+<string name="paste_example_below">Lime Inn Eksemplet Nedenfor</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Vennligst ikke endre viktigste XML-mappen *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Sjekk din Google Disk for oversatt XML-strenger!</string>
+<string name="step_3">Trinn 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Velg språk til XML-strenger og velg ønsket språk.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">La XML-Oversetter Gratis tilgang til Google Disk-konto av ditt valg.</string>
+<string name="step_2">Trinn 2</string>
+<string name="step_1">Trinn 1</string>
+<string name="how_to_use_xmlanguage_translator">Hvordan å bruke XML-Oversetter Gratis</string>
+<string name="help">Hjelp</string>
+<string name="home">Hjem</string>
+<string name="disclaimer">Ansvarsfraskrivelse</string>
+<string name="finished">Ferdig!</string>
+<string name="translating_updating_wait">Oversettelses-og opplasting .xml-filer. Dette kan ta en stund. Takk for tålmodigheten din.</string>
+<string name="daily_limit_reached">Du har nådd eller er i ferd med å nå dine 3000 tegn daglige grensen for gratis oversettelser. For å fortsette å oversette .xml, last ned XML-Oversetter 20 dollar i måneden med ingen avbestillingsgebyrer!</string>
+<string name="choose_lang_translate_to">Vennligst velg språkene å oversette til.</string>
+<string name="choose_one_translate_from">Vennligst velg ET språk for å oversette fra</string>
+<string name="choose_lang_translate_from">Vennligst velg språket du vil oversette fra.</string>
+<string name="paste_xml_to_translate">Vennligst lim inn XML du ønsker oversatt</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Ved hjelp av dette programmet, samtykker du herved til ansvarsfraskrivelse og godtar vilkårene.</string>
+<string name="disclaimer_2">Skaperen av dette programmet ikke gjøre noen garantier om fullstendighet, pålitelighet og nøyaktighet i den genererte data. Enhver handling du ta på informasjon du finner på denne søknaden er helt og holdent på egen risiko. Skaperen av dette programmet vil ikke kunne holdes ansvarlig for eventuelle tap og/eller skader i forbindelse med bruk av dette programmet.</string>
+<string name="disclaimer_1">Skaperen av dette programmet doesn\'t eksplisitt gi bruk av data generert ved bruk av dette programmet\'s tjenester. Det er opp til brukeren av dette programmet til å bestemme omfanget av tillatte bruk av data levert til dette programmet\'s tjenester. Imidlertid er bruken av dette programmet\'s tjenester vil ikke endre noen opphavsrett eller bruk tillatelser av den angitte data.</string>
+<string name="disclaimer_for_xmlanguage_translator">Ansvarsfraskrivelse for XML-Oversetter Gratis</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Kanskje senere</string>
+<string name="try_it">Prøv det</string>
+<string name="external_storage_must">Ekstern lagring må være tilgjengelig.</string>
+<string name="mount_external_please">Vennligst mount skrivbar eksterne lagringsmedier for å bruke dette programmet.</string>
+<string name="read_external_permission_necessary">Les eksterne tillatelse som er nødvendig for å lese programmet filer.</string>
+<string name="permission_necessary">Tillatelse nødvendig</string>
+<string name="write_external_permission_necessary">Skriv eksterne tillatelse er nødvendig å skrive til programmet filer.</string>
+<string name="read_permission_explain">Les Ekstern Lagring tillatelsen gjør det mulig for denne appen til å lese viktig app data. Vennligst tillat denne tillatelsen i Appen Innstillinger.</string>
+<string name="write_permission_explain">Skriv Ekstern Lagring tillatelse tillater dette programmet til å lagre viktig app data. Vennligst tillat denne tillatelsen i Appen Innstillinger.</string>
+<string name="translations_complete">Oversettelser Komplett</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

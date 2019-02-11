@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">ኤክስኤምኤል ቅድሚያ የታዘዘ</string>
+<string name="translate">ቀጥል</string>
+<string name="message">መገለጫዎ ይችላል ኤክስኤምኤል. </string>
+<string name="email_to">ጋር</string>
+<string name="translate_from">አዳዲስ ግምገማዎች ነው</string>
+<string name="translate_to">አዳዲስ ግምገማዎች ጋር</string>
+<string name="no_connection">.</string>
+<string name="no_connection_direction">ኤክስኤምኤል ቅድሚያ የታዘዘ ን የክሬዲት.. እርግጠኛ ናችሁ...</string>
+<string name="welcome_to_xmlanguage_translator">አዳዲስ ግምገማዎች ጋር ይገናኛሉ ቅድሚያ የታዘዘ</string>
+<string name="translate_from_choose_one">አዳዲስ ግምገማዎች ነው (ምረጥ)</string>
+<string name="translate_to_choose_one_or_more">አዳዲስ (ምረጥ ወይም ተጨማሪ)</string>
+<string name="powered_by_yandex_translate">አዳዲስ ግምገማዎች ነፃ.ቀጥል</string>
+<string name="paste_example_below">አንድ ምሳሌ ከታች</string>
+<string name="please_do_not_alter_the_main_xml_folder">* በቀዳሚ ግምገማዎች ላይ ይታያል ቅድሚያ ይታያል ፎልደር *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">አዳዲስ ግምገማዎች ላይ የእርስዎ የተተረጎመውን ይታያል ሕብረቁምፊዎች!</string>
+<string name="step_3">ደረጃ 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">መምረጥ ቋንቋ ነው ኤክስኤምኤል ሕብረቁምፊዎች እና ይምረጡ ይታያል ቋንቋዎች.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">የሚሰጡዋቸውን ይታያል ቅድሚያ የታዘዘ መመሳሰልን ጋር ይገናኛሉ ላይ መለያ ነው.</string>
+<string name="step_2">ደረጃ 2</string>
+<string name="step_1">ደረጃ 1</string>
+<string name="how_to_use_xmlanguage_translator">እንዴት ጋር ይገናኛሉ ቅድሚያ የታዘዘ</string>
+<string name="help">እርዳታ</string>
+<string name="home">የቤት</string>
+<string name="disclaimer">በቀዳሚ ግምገማዎች ላይ</string>
+<string name="finished">ተጨማሪ ያንብቡ</string>
+<string name="translating_updating_wait">. እና የሚሰጡዋቸውን .ኤክስኤምኤል. አዳዲስ ግምገማዎች. አዳዲስ ግምገማዎች.</string>
+<string name="daily_limit_reached">ግምገማ ከማስገባትዎ አሁን ወይም ናቸው ጋር ይገናኛሉ 3000 ባሕርይ ቅድሚያ... ...ኤክስኤምኤል, ግምገማዎች ይታያል የታዘዘ ቢያንስ 20. በወር ይገናኛሉ ሆኖ ክፍያዎች!</string>
+<string name="choose_lang_translate_to">አዳዲስ ግምገማዎች በይፋ ቋንቋዎች ጋር አዳዲስ ግምገማዎች.</string>
+<string name="choose_one_translate_from">አዳዲስ ግምገማዎች በይፋ አንድ ቋንቋ ጋር ይገናኛሉ የሚሰጡዋቸውን</string>
+<string name="choose_lang_translate_from">አዳዲስ ግምገማዎች በይፋ ቋንቋ አዳዲስ ግምገማዎች.</string>
+<string name="paste_xml_to_translate">አዳዲስ ግምገማዎች መገለጫዎ ይታያል ግምገማዎች የተተረጎመውን</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">በመጠቀም ላይ እርስዎ ከዚህ በታች ስምምነት ወደ በቀዳሚ ግምገማዎች ላይ እና ከእርሳቸው ጋር ግምገማዎች.</string>
+<string name="disclaimer_2">ፈጣሪ ነው በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ ሆኗል warranties ስለ መገለጫዎ, ሆኗል ቀላል ነው የመነጨ ውሂብ. ማንኛውም ድርጊት ይህን አንድ ጊዜ መረጃ ማግኘት ይህ ይዘት ስለጀመሩ. ፈጣሪ የሚሰጡዋቸውን አይሆኑም ተጠቃሚ የሚሰጡዋቸውን እና/ወይም ጉዳቶችን በተገናኘ አጠቃቀም.</string>
+<string name="disclaimer_1">ፈጣሪ የሚሰጡዋቸውን በፊትቅድሚያ የሚሰጡዋቸውን ሆኗል አዳዲስ አጠቃቀም ውሂብ የመነጨ በመጠቀም ላይ\'ዎች አገልግሎቶች. ደረጃ እስከ ተጠቃሚው የሚሰጡዋቸውን ለመወሰን በመስጠት ነው allowable አጠቃቀም ውሂብ የሚሰጡዋቸውን ጋር\'ዎች አገልግሎቶች. በቀዳሚ ግምገማዎች ላይ\'ዎች አገልግሎቶች አዳዲስ ግምገማዎች ይታያል ማንኛውም copyrights ወይም አጠቃቀም ፍቃዶችን ነው የሚሰጡዋቸውን.</string>
+<string name="disclaimer_for_xmlanguage_translator">በቀዳሚ ግምገማዎች ላይ ይታያል ቅድሚያ የታዘዘ</string>
+<string name="ok">በቀዳሚ ግምገማዎች ላይ</string>
+<string name="mayber_later">በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ.</string>
+<string name="try_it">በቀዳሚ ግምገማዎች ላይ</string>
+<string name="external_storage_must">ውጫዊ ማስቀመጫ መሆን አለበት.</string>
+<string name="mount_external_please">አዳዲስ ግምገማዎች ቅድሚያ የተበላሸ ውጫዊ ማህደረ መረጃ ማከማቻ የሚሰጡዋቸውን.</string>
+<string name="read_external_permission_necessary">ማንበብ ውጫዊ... የሚሰጡዋቸውን.</string>
+<string name="permission_necessary">አዳዲስ ግምገማዎች.</string>
+<string name="write_external_permission_necessary">አንድ ውጫዊ.. መገለጫዎ ጋር የሚሰጡዋቸውን.</string>
+<string name="read_permission_explain">ማንበብ ውጫዊ.. የሚሰጡዋቸውን... አዳዲስ ግምገማዎች በይፋ ላይ...</string>
+<string name="write_permission_explain">አንድ ውጫዊ.. የሚሰጡዋቸውን... አዳዲስ ግምገማዎች በይፋ ላይ...</string>
+<string name="translations_complete">ትርጉሞች ተጠናቋል</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

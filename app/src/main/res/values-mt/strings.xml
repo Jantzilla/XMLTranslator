@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Traduttur Ħielsa</string>
+<string name="translate">Tittraduċi</string>
+<string name="message">Pejst inti XML hawn... </string>
+<string name="email_to">EMAIL</string>
+<string name="translate_from">Tittraduċi Mil -</string>
+<string name="translate_to">Li Tittraduċi</string>
+<string name="no_connection">L-Ebda Konnessjoni Mal-Internet</string>
+<string name="no_connection_direction">XML Traduttur Mingħajr ma setgħetx tiġi stabbilita konnessjoni mal-internet. Kun żgur li huma konnessi mal-netwerk u erġa \' ipprova.</string>
+<string name="welcome_to_xmlanguage_translator">Merħba lill XML Traduttur Ħielsa</string>
+<string name="translate_from_choose_one">Tittraduċi Mill (Jagħżlu waħda)</string>
+<string name="translate_to_choose_one_or_more">Jissarraf (Jagħżlu wieħed jew aktar)</string>
+<string name="powered_by_yandex_translate">Mħaddem mill-teknoloġija moderna.Tittraduċi</string>
+<string name="paste_example_below">Pejst Tal-Eżempju Hawn Taħt</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Jekk jogħġbok ma jbiddlux il-prinċipali XML folder *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Tiċċekkja l-Google Drive għall-tradotti tiegħek XML kordi!</string>
+<string name="step_3">Pass 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Agħżel il-lingwa tal tiegħek XML kordi u tagħżel l-lingwi mixtieqa.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Jippermettu XML Traduttur Mingħajr il-permess biex jinkiseb aċċess għall-Google Issuq kont ta\'l-għażla tiegħek.</string>
+<string name="step_2">Pass 2</string>
+<string name="step_1">Pass 1</string>
+<string name="how_to_use_xmlanguage_translator">Kif għandek tuża XML Traduttur Ħielsa</string>
+<string name="help">Għajnuna</string>
+<string name="home">- Dar</string>
+<string name="disclaimer">Ċaħda</string>
+<string name="finished">Lest!</string>
+<string name="translating_updating_wait">It-traduzzjoni u l-introduzzjoni tal .xml-fajls. Dan jista\'jieħu waqt. Grazzi għall-paċenzja.</string>
+<string name="daily_limit_reached">Inti laħqu jew wasalt biex jilħaq tiegħek 3000 karattru limitu ta\'kuljum għall-traduzzjonijiet b\'xejn. Biex tkompli-traduzzjoni .xml, niżżel XML Traduttur fl-20 dollaru xahar bl-ebda miżati kanċellazzjoni!</string>
+<string name="choose_lang_translate_to">Jekk jogħġbok agħżel il-lingwi li jissarraf.</string>
+<string name="choose_one_translate_from">Jekk jogħġbok agħżel WAĦDA tal-lingwa biex tittraduċi mil -</string>
+<string name="choose_lang_translate_from">Jekk jogħġbok agħżel il-lingwa li tittraduċi mill.</string>
+<string name="paste_xml_to_translate">Jekk jogħġbok pejst l-XML inti tixtieq tradotti</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Billi jużaw din l-applikazzjoni, inti b\'dan l-kunsens għall-ċaħda u jaqblu li l-termini.</string>
+<string name="disclaimer_2">L-creator ta \' din l-applikazzjoni ma tagħmel l-ebda garanziji dwar l-kompletezza, l-affidabbiltà u l-preċiżjoni tad-data ġġenerata. Kwalunkwe azzjoni li tieħu fuq l-informazzjoni li ssib dwar din l-applikazzjoni hija strettament fil-responsabbiltà tiegħek. L-creator ta \'din l-applikazzjoni mhux se tkun responsabbli għal xi telf u/jew il-ħsarat fil-konnessjoni ma\' l-użu ta \' din l-applikazzjoni.</string>
+<string name="disclaimer_1">L-creator ta \' din l-applikazzjoni mat b\'mod espliċitu l-għotja-użu tad-dejta ġġenerat bl-użu ta\'din l-applikazzjoni\'s-servizzi. Huwa f\'idejn l-utent ta\'din l-applikazzjoni biex jiddeterminaw l-ambitu tal-permess l-użu tad-dejta pprovduta li din l-applikazzjoni\'s-servizzi. Madankollu, l-użu ta \' din l-applikazzjoni\'s-servizzi mhux ser jibdel kwalunkwe drittijiet tal-awtur jew l-użu il-permessi ta\'l-dejta fornuta.</string>
+<string name="disclaimer_for_xmlanguage_translator">Ir-rinunzja għall-XML Traduttur Ħielsa</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Forsi aktar tard</string>
+<string name="try_it">Ipprova</string>
+<string name="external_storage_must">Estern tal-ħażna għandhom ikunu disponibbli.</string>
+<string name="mount_external_please">Jekk jogħġbok monte-modi ta\'tneħħija tradizzjonali esterni tal-ħażna tal-midja sabiex jużaw din il-app.</string>
+<string name="read_external_permission_necessary">Aqra esterni permess meħtieġa biex taqra l-fajls ta\'l-applikazzjoni.</string>
+<string name="permission_necessary">Il-permess meħtieġa</string>
+<string name="write_external_permission_necessary">Ikteb esterni permess meħtieġ li jiktbu lill-fajls ta\'l-applikazzjoni.</string>
+<string name="read_permission_explain">Aqra Esterni tal-Ħażna permess tippermetti dan l-app li taqra importanti app-dejta. Jekk jogħġbok jippermettu dan il-permess fil-App-Settings.</string>
+<string name="write_permission_explain">Ikteb Esterni tal-Ħażna permess tippermetti dan l-app taħżen importanti app-dejta. Jekk jogħġbok jippermettu dan il-permess fil-App-Settings.</string>
+<string name="translations_complete">It-Traduzzjonijiet Kompluta</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

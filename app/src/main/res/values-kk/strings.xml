@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">Тегін XML аудармашы</string>
+<string name="translate">Перевести</string>
+<string name="message">Салыңыз да, сіз мындасыз XML форматында... </string>
+<string name="email_to">ЭЛЕКТРОНДЫҚ ПОШТА</string>
+<string name="translate_from">Перевести</string>
+<string name="translate_to">Перевести</string>
+<string name="no_connection">Жоқ, Интернетке Қосылу</string>
+<string name="no_connection_direction">Тегін XML аудармашыға алмады белгіленсін қосу интернет. Көз жеткізіңіз желісіне қосылған, әрекетті қайталаңыз.</string>
+<string name="welcome_to_xmlanguage_translator">Қош келдіңіз XML-аудармашы тегін</string>
+<string name="translate_from_choose_one">Аудару (таңдау),</string>
+<string name="translate_to_choose_one_or_more">Көшіру () таңдаңыз немесе бірнеше)</string>
+<string name="powered_by_yandex_translate">Қорек Яндекс.Перевести</string>
+<string name="paste_example_below">Қою Үлгісі Төменде</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Өтінеміз, изменяйте негізгі папкалар XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Тексеріңіз Google диск ауыстыру үшін XML-жолдар!</string>
+<string name="step_3">3-қадам</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Тілді таңдау жолдарының XML таңдаңыз қажетті тілдері.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Рұқсат тегін XML-аудармашы қол жеткізуге рұқсат есептік жазбасы Google диск Сіздің таңдау.</string>
+<string name="step_2">2-қадам</string>
+<string name="step_1">1-қадам</string>
+<string name="how_to_use_xmlanguage_translator">Қалай пайдалану XML-аудармашы тегін</string>
+<string name="help">Помогите</string>
+<string name="home">Үй</string>
+<string name="disclaimer">Жауапкершіліктен бас тарту</string>
+<string name="finished">Бітірген!</string>
+<string name="translating_updating_wait">Перевод және жөнелту .XML-файлдары. Бұл біраз уақыт алуы мүмкін. Рахмет, сіздің шыдамдылық.</string>
+<string name="daily_limit_reached">Сіз қол жеткіздік немесе барамыз қол жеткізуге сіздің 3000 символдан лимиті тегін аударымдар. Жалғастыру үшін аудару .XML файлындағы, скачать XML-аудармашы 20 доллар ай алымдарды алып тастауды!</string>
+<string name="choose_lang_translate_to">Таңдаңыз аударма тіл.</string>
+<string name="choose_one_translate_from">Таңдаңыз бір тіл үшін аудара отырып,</string>
+<string name="choose_lang_translate_from">Таңдаңыз тілі үшін ауыстыру.</string>
+<string name="paste_xml_to_translate">Менің сұғындыр-XML-код сіз аудару</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Осы қосымшаның көмегімен, сіз келісесіз жауапкершіліктен бас тарту және келісесіз және оның шарттары.</string>
+<string name="disclaimer_2">Жаратушы осы қосымшаның ешқандай кепілдік бермейді қатысты толықтығын, дұрыстығын және дәлдігін алынатын деректер. Кез келген іс-әрекеттер, олар сіз қабылдауға арналған ақпарат, сіз таба осы өтініште болып табылады қатаң түрде өз тәуекел. Жаратушы осы қосымшаның үшін жауап бермейді кез келген шығындар және/немесе залал, байланысты пайдалана отырып, осы қосымшалар.</string>
+<string name="disclaimer_1">Жаратушы осы қосымшаның емес\'т амӛз рұқсат алынған деректерді пайдалану осы қосымшаның көмегімен халыққа қызмет көрсету\'. Бұл пайдаланушылар осы қосымшаның анықтау үшін область рұқсат етілген деректерді пайдалану үшін осы қосымшаның халыққа қызмет көрсету\'. Алайда, пайдалану сервистердің осы қосымшаның емес өзгертуге болады кез келген авторлық құқықты немесе пайдалануға рұқсат.</string>
+<string name="disclaimer_for_xmlanguage_translator">Жауапкершіліктен бас тарту үшін тегін XML-аудармашы</string>
+<string name="ok">Жақсы</string>
+<string name="mayber_later">Мүмкін кейінірек</string>
+<string name="try_it">Көріңіз</string>
+<string name="external_storage_must">Сыртқы жад қол жетімді болуы тиіс.</string>
+<string name="mount_external_please">Яғни, монтируйте жазу сыртқы ақпарат тасығыштарды пайдалану үшін бұл-қосымша.</string>
+<string name="read_external_permission_necessary">Оқыңыз сыртқы рұқсат үшін қажетті оқу файлдарды қосымшалар.</string>
+<string name="permission_necessary">Рұқсат қажет</string>
+<string name="write_external_permission_necessary">Жазу сыртқы рұқсат үшін қажетті жазбалар файлдар қосымшалар.</string>
+<string name="read_permission_explain">Әрі қарай рұқсат сыртқы жинақтағыш мүмкіндік береді қосымша оқып барлық маңызды деректер. Өтінемін, маған рұқсат параметрлері қосымшалар.</string>
+<string name="write_permission_explain">Жазу рұқсаты сыртқы жинақтағыш мүмкіндік береді қосымша сақтау үшін маңызды деректер қосымшалар. Өтінемін, маған рұқсат параметрлері қосымшалар.</string>
+<string name="translations_complete">Толық Аудару</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

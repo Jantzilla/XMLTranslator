@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Μεταφραστής Δωρεάν</string>
+<string name="translate">Μετάφραση</string>
+<string name="message">Επικόλληση XML εδώ... </string>
+<string name="email_to">EMAIL ΣΤΟ</string>
+<string name="translate_from">Μετάφραση Από Το</string>
+<string name="translate_to">Μετάφραση</string>
+<string name="no_connection">Δεν Υπάρχει Σύνδεση Στο Internet</string>
+<string name="no_connection_direction">XML Translator Free δεν ήταν δυνατό να δημιουργήσει μια σύνδεση στο internet. Βεβαιωθείτε ότι είστε συνδεδεμένοι σε ένα δίκτυο και προσπαθήστε ξανά.</string>
+<string name="welcome_to_xmlanguage_translator">Καλώς ήρθατε στο XML Μεταφραστής Δωρεάν</string>
+<string name="translate_from_choose_one">Μετάφραση Από (Επιλέξτε ένα)</string>
+<string name="translate_to_choose_one_or_more">Μετάφραση (Επιλέξτε ένα ή περισσότερα)</string>
+<string name="powered_by_yandex_translate">Τροφοδοτείται από το Yandex.Μετάφραση</string>
+<string name="paste_example_below">Επικολλήστε Το Παρακάτω Παράδειγμα</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Παρακαλώ μην αλλάξετε το κύριο XML φάκελο *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Ελέγξτε το Google Drive για τα μεταφρασμένα XML χορδές!</string>
+<string name="step_3">Βήμα 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Επιλέξτε τη γλώσσα της XML χορδές και επιλέξτε τις επιθυμητές γλώσσες.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Επιτρέπουν XML Μεταφραστής Δωρεάν άδεια για να αποκτήσετε πρόσβαση στο Google Drive λογαριασμό της επιλογής σας.</string>
+<string name="step_2">Βήμα 2</string>
+<string name="step_1">Βήμα 1</string>
+<string name="how_to_use_xmlanguage_translator">Πώς να χρησιμοποιήσετε το XML Μεταφραστής Δωρεάν</string>
+<string name="help">Βοήθεια</string>
+<string name="home">Το σπίτι</string>
+<string name="disclaimer">Αποποίηση ευθυνών</string>
+<string name="finished">Τελείωσα!</string>
+<string name="translating_updating_wait">Μετάφραση και την ανάρτηση .τα αρχεία xml. Αυτό μπορεί να διαρκέσει λίγο. Σας ευχαριστώ για την υπομονή σας.</string>
+<string name="daily_limit_reached">Έχετε φτάσει ή είναι έτοιμος να φτάσει τις 3000 χαρακτήρα ημερήσιο όριο για δωρεάν μεταφράσεις. Για να συνεχίσετε την μετάφραση .xml, κατεβάστε το XML Μεταφραστής στα 20 δολάρια το μήνα χωρίς ακυρωτικά!</string>
+<string name="choose_lang_translate_to">Παρακαλώ επιλέξτε τις γλώσσες για μετάφραση.</string>
+<string name="choose_one_translate_from">Παρακαλώ επιλέξτε ΜΙΑ γλώσσα για να μεταφράσει από</string>
+<string name="choose_lang_translate_from">Παρακαλώ επιλέξτε τη γλώσσα για να μεταφράσει.</string>
+<string name="paste_xml_to_translate">Παρακαλώ επικόλληση του XML θέλετε να μεταφραστεί</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Με τη χρήση αυτής της εφαρμογής, συμφωνείτε με την αποποίηση ευθυνών και συμφωνείτε με τους όρους της.</string>
+<string name="disclaimer_2">Ο δημιουργός αυτής της εφαρμογής δεν κάνει καμία εγγύηση σχετικά με την πληρότητα, την αξιοπιστία και την ακρίβεια των δεδομένων που παράγονται. Κάθε δράση που θα αναλάβει τις πληροφορίες που θα βρείτε σε αυτή την εφαρμογή είναι αυστηρά με δική σας ευθύνη. Ο δημιουργός αυτής της εφαρμογής δεν θα ευθύνεται για οποιαδήποτε απώλεια και/ή ζημία σε σχέση με τη χρήση αυτής της εφαρμογής.</string>
+<string name="disclaimer_1">Ο δημιουργός αυτής της εφαρμογής doesn\'t παρέχουν ρητώς τη χρήση των δεδομένων που προκύπτουν χρησιμοποιώντας αυτή την εφαρμογή\'s υπηρεσίες. Ο χρήστης αυτής της εφαρμογής για να καθορίσει το πεδίο της επιτρεπόμενης χρήσης των δεδομένων που παρέχεται σε αυτή την εφαρμογή\'s υπηρεσίες. Ωστόσο, η χρήση αυτής της εφαρμογής\'s υπηρεσίες δεν θα τροποποιήσει οποιαδήποτε δικαιώματα πνευματικής ιδιοκτησίας ή τα δικαιώματα χρήσης των παρεχόμενων δεδομένων.</string>
+<string name="disclaimer_for_xmlanguage_translator">Αποποίηση ευθυνών για το XML Μεταφραστής Δωρεάν</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Ίσως αργότερα</string>
+<string name="try_it">Δοκιμάστε το</string>
+<string name="external_storage_must">Εξωτερικής αποθήκευσης πρέπει να είναι διαθέσιμες.</string>
+<string name="mount_external_please">Παρακαλώ τοποθετεί εγγράψιμο εξωτερικά μέσα αποθήκευσης για να χρησιμοποιήσετε αυτό το app.</string>
+<string name="read_external_permission_necessary">Διαβάστε εξωτερικής άδεια είναι απαραίτητο να διαβάσετε τα αρχεία της εφαρμογής.</string>
+<string name="permission_necessary">Άδεια απαραίτητο</string>
+<string name="write_external_permission_necessary">Γράψτε εξωτερικής άδεια απαραίτητο να γράψετε αρχεία της εφαρμογής.</string>
+<string name="read_permission_explain">Διαβάστε Εξωτερικής Αποθήκευσης η άδεια επιτρέπει αυτό το app για να διαβάσετε σημαντικές δεδομένων app. Παρακαλούμε να δοθεί αυτή η άδεια στις Ρυθμίσεις του App.</string>
+<string name="write_permission_explain">Γράψτε Εξωτερικής Αποθήκευσης η άδεια επιτρέπει αυτό το app για να αποθηκεύσετε σημαντικά δεδομένα app. Παρακαλούμε να δοθεί αυτή η άδεια στις Ρυθμίσεις του App.</string>
+<string name="translations_complete">Μεταφράσεις Πλήρη</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

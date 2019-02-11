@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ</string>
+<string name="translate">ਅਨੁਵਾਦ</string>
+<string name="message">ਪੇਸਟ ਤੁਹਾਨੂੰ XML ਇੱਥੇ... </string>
+<string name="email_to">ਈਮੇਲ ਕਰਨ ਲਈ</string>
+<string name="translate_from">ਤੱਕ ਦਾ ਅਨੁਵਾਦ</string>
+<string name="translate_to">ਅਨੁਵਾਦ ਕਰਨ ਲਈ</string>
+<string name="no_connection">ਕੋਈ ਵੀ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ</string>
+<string name="no_connection_direction">XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ ਸਥਾਪਤ ਨਾ ਕਰ ਸਕਦਾ ਹੈ ਇੱਕ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ ਹੈ. ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਨਾਲ ਜੁੜੇ ਰਹੇ ਹਨ, ਇੱਕ ਨੈੱਟਵਰਕ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ ਕਰੋ.</string>
+<string name="welcome_to_xmlanguage_translator">ਸਵਾਗਤ ਕਰਨ ਲਈ XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ</string>
+<string name="translate_from_choose_one">ਅਨੁਵਾਦ ਤੱਕ (ਇਕ ਚੁਣੋ)</string>
+<string name="translate_to_choose_one_or_more">ਅਨੁਵਾਦ ਕਰਨ ਲਈ, (ਇੱਕ ਚੁਣੋ ਜ ਹੋਰ)</string>
+<string name="powered_by_yandex_translate">ਦੁਆਰਾ ਸੰਚਾਲਿਤ Yandex.ਅਨੁਵਾਦ</string>
+<string name="paste_example_below">ਪੇਸਟ ਉਦਾਹਰਨ ਹੇਠ</string>
+<string name="please_do_not_alter_the_main_xml_folder">* ਨਾ ਕਰੋ ਜੀ ਨੂੰ ਤਬਦੀਲ ਮੁੱਖ XML ਫੋਲਡਰ *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">ਚੈੱਕ ਤੁਹਾਡੀ ਗੂਗਲ ਡਰਾਈਵ ਲਈ ਆਪਣੇ ਅਨੁਵਾਦ XML ਸਤਰ!</string>
+<string name="step_3">ਕਦਮ 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">ਚੁਣੋ ਭਾਸ਼ਾ ਦੇ ਆਪਣੇ XML ਸਤਰ ਦੀ ਚੋਣ ਕਰੋ, ਅਤੇ ਲੋੜੀਦੀ ਭਾਸ਼ਾ.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">ਸਹਾਇਕ XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ ਹੈ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਇਜਾਜ਼ਤ ਗੂਗਲ ਡਰਾਈਵ ਖਾਤੇ ਦੀ ਆਪਣੀ ਪਸੰਦ ਹੈ.</string>
+<string name="step_2">ਕਦਮ 2</string>
+<string name="step_1">ਕਦਮ 1</string>
+<string name="how_to_use_xmlanguage_translator">ਵਰਤਣ ਲਈ ਕਿਸ XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ</string>
+<string name="help">ਮਦਦ</string>
+<string name="home">ਘਰ</string>
+<string name="disclaimer">ਬੇਦਾਅਵਾ</string>
+<string name="finished">ਮੁਕੰਮਲ ਹੋ!</string>
+<string name="translating_updating_wait">ਅਨੁਵਾਦ ਅਤੇ ਅੱਪਲੋਡ .xml ਫਾਇਲ. ਇਹ ਇੱਕ ਜਦਕਿ ਲੈ ਸਕਦਾ ਹੈ. ਤੁਹਾਡੇ ਸਬਰ ਲਈ ਧੰਨਵਾਦ.</string>
+<string name="daily_limit_reached">ਤੁਹਾਨੂੰ ਪਹੁੰਚ ਗਿਆ ਹੈ, ਜ ਦੇ ਬਾਰੇ ਹਨ, ਨੂੰ ਹਾਸਲ ਕਰਨ ਲਈ ਆਪਣੇ 3000 ਅੱਖਰ ਦੇ ਲਈ ਰੋਜ਼ਾਨਾ ਦੀ ਸੀਮਾ ਮੁਫ਼ਤ ਅਨੁਵਾਦ. ਜਾਰੀ ਕਰਨ ਲਈ ਅਨੁਵਾਦ .xml, ਡਾਊਨਲੋਡ XML ਅਨੁਵਾਦਕ \' ਤੇ 20 ਡਾਲਰ ਦਾ ਇੱਕ ਮਹੀਨੇ ਦੇ ਨਾਲ ਕੋਈ ਵੀ ਰੱਦ ਫੀਸ!</string>
+<string name="choose_lang_translate_to">ਦੀ ਚੋਣ ਕਰੋ ਜੀ, ਭਾਸ਼ਾ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਕਰਨ ਲਈ.</string>
+<string name="choose_one_translate_from">ਦੀ ਚੋਣ ਕਰੋ ਜੀ, ਇਕ ਭਾਸ਼ਾ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਤੱਕ</string>
+<string name="choose_lang_translate_from">ਦੀ ਚੋਣ ਕਰੋ ਜੀ, ਭਾਸ਼ਾ ਤੱਕ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ.</string>
+<string name="paste_xml_to_translate">ਕਿਰਪਾ ਕਰਕੇ ਪੇਸਟ XML ਤੁਹਾਨੂੰ ਚਾਹੁੰਦੇ ਹੋ, ਦਾ ਅਨੁਵਾਦ</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">ਇਸ ਕਾਰਜ ਨੂੰ ਵਰਤ ਕੇ, ਤੁਹਾਨੂੰ ਨਿਰਦੋਸ਼ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਬੇਦਾਅਵਾ ਅਤੇ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹੈ, ਇਸ ਨਿਯਮ ਹੈ.</string>
+<string name="disclaimer_2">ਸਿਰਜਣਹਾਰ ਦੇ ਇਸ ਕਾਰਜ ਨੂੰ ਬਣਾ ਨਹੀ ਹੈ, ਕਿਸੇ ਵੀ ਵਾਰੰਟੀ ਬਾਰੇ ਸੰਪੂਰਨਤਾ, ਭਰੋਸੇਯੋਗਤਾ ਅਤੇ ਸ਼ੁੱਧਤਾ ਦੇ ਡਾਟਾ ਤਿਆਰ ਹੈ. ਕਿਸੇ ਵੀ ਕਾਰਵਾਈ ਨੂੰ ਲੈ ਉੱਤੇ ਜਾਣਕਾਰੀ ਤੁਹਾਨੂੰ ਲੱਭਣ \' ਤੇ ਇਸ ਕਾਰਜ ਨੂੰ ਸਖਤੀ ਹੈ, ਤੁਹਾਡੇ ਆਪਣੇ ਜੋਖਮ ਤੇ ਹੈ. ਸਿਰਜਣਹਾਰ ਦੇ ਇਸ ਕਾਰਜ ਲਈ ਜਵਾਬਦੇਹ ਨਹੀ ਹੋ ਕਿਸੇ ਵੀ ਨੁਕਸਾਨ ਅਤੇ/ਜ ਦਾ ਨੁਕਸਾਨ ਦੇ ਨਾਲ ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਵਿੱਚ ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਵਰਤੋਂ ਲਈ.</string>
+<string name="disclaimer_1">ਸਿਰਜਣਹਾਰ ਦੇ ਇਸ ਕਾਰਜ ਨੂੰ doesn\'t ਸਪਸ਼ਟ ਦੇਣ ਦੇ ਵਰਤਣ ਤਿਆਰ ਡਾਟਾ ਨੂੰ ਇਸ ਕਾਰਜ ਨੂੰ ਵਰਤ\'s ਸੇਵਾ. ਇਸ ਨੂੰ ਕਰਨ ਲਈ ਹੈ, ਯੂਜ਼ਰ ਨੂੰ ਇਸ ਦੇ ਕਾਰਜ ਨੂੰ ਦੇ ਸਕੋਪ ਪਤਾ ਕਰਨ ਲਈ ਜਾਇਜ਼ ਉਪਯੋਗ ਡਾਟਾ ਦੀ ਸਪਲਾਈ ਕਰਨ ਲਈ ਇਸ ਕਾਰਜ ਨੂੰ\'s ਸੇਵਾ. ਪਰ, ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਵਰਤੋਂ\'s ਸੇਵਾ ਕਰੇਗਾ, ਨੂੰ ਤਬਦੀਲ ਨਾ ਕਿਸੇ ਵੀ ਕਾਪੀਰਾਈਟ ਜ ਉਪਯੋਗ ਅਧਿਕਾਰ ਦੇ ਦਿੱਤਾ ਹੈ ਡਾਟਾ.</string>
+<string name="disclaimer_for_xmlanguage_translator">ਬੇਦਾਅਵਾ ਲਈ XML ਅਨੁਵਾਦਕ ਮੁਫ਼ਤ</string>
+<string name="ok">ਠੀਕ ਹੈ</string>
+<string name="mayber_later">ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਬਾਅਦ</string>
+<string name="try_it">ਇਸ ਨੂੰ ਦੀ ਕੋਸ਼ਿਸ਼</string>
+<string name="external_storage_must">ਬਾਹਰੀ ਸਟੋਰੇਜ਼ ਉਪਲੱਬਧ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</string>
+<string name="mount_external_please">ਜੀ ਪਹਾੜ ਲਿਖਣਯੋਗ ਬਾਹਰੀ ਸਟੋਰੇਜ਼ ਮੀਡੀਆ ਨੂੰ ਵਰਤਣ ਲਈ ਕ੍ਰਮ ਵਿੱਚ ਇਸ ਐਪਲੀਕੇਸ਼ ਨੂੰ.</string>
+<string name="read_external_permission_necessary">→ ਬਾਹਰੀ ਅਧਿਕਾਰ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਜ਼ਰੂਰੀ ਕਾਰਜ ਨੂੰ ਫਾਇਲ ਨੂੰ.</string>
+<string name="permission_necessary">ਦੀ ਇਜਾਜ਼ਤ ਜ਼ਰੂਰੀ</string>
+<string name="write_external_permission_necessary">ਲਿਖਣ ਬਾਹਰੀ ਦੀ ਇਜਾਜ਼ਤ ਕਰਨ ਲਈ ਜ਼ਰੂਰੀ ਲਿਖਣ ਕਾਰਜ ਨੂੰ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ.</string>
+<string name="read_permission_explain">→ ਬਾਹਰੀ ਸਟੋਰੇਜ਼ ਆਗਿਆ ਦੇ ਸਹਾਇਕ ਹੈ, ਇਸ ਐਪਲੀਕੇਸ਼ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਜ਼ਰੂਰੀ ਐਪਲੀਕੇਸ਼ ਨੂੰ ਡਾਟਾ ਹੈ. ਸਹਾਇਕ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਦੀ ਇਜਾਜ਼ਤ ਦੇ ਵਿਚ ਐਪਲੀਕੇਸ਼ ਨੂੰ ਸੈਟਿੰਗ.</string>
+<string name="write_permission_explain">ਲਿਖਣ ਬਾਹਰੀ ਸਟੋਰੇਜ਼ ਆਗਿਆ ਦੇ ਸਹਾਇਕ ਹੈ, ਇਸ ਐਪਲੀਕੇਸ਼ ਨੂੰ ਸਟੋਰ ਕਰਨ ਲਈ ਮਹੱਤਵਪੂਰਨ ਐਪ ਡਾਟਾ ਨੂੰ. ਸਹਾਇਕ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਦੀ ਇਜਾਜ਼ਤ ਦੇ ਵਿਚ ਐਪਲੀਕੇਸ਼ ਨੂੰ ਸੈਟਿੰਗ.</string>
+<string name="translations_complete">ਅਨੁਵਾਦ ਨੂੰ ਪੂਰਾ</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

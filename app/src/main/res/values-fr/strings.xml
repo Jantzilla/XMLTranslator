@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Translator Gratuit</string>
+<string name="translate">Traduire</string>
+<string name="message">Collez vous XML ici... </string>
+<string name="email_to">E-MAIL À</string>
+<string name="translate_from">Traduire De L\'</string>
+<string name="translate_to">Traduire</string>
+<string name="no_connection">Pas De Connexion Internet</string>
+<string name="no_connection_direction">XML Traducteur Gratuit n\'a pas pu établir une connexion internet. Assurez-vous que vous êtes connecté à un réseau et essayez de nouveau.</string>
+<string name="welcome_to_xmlanguage_translator">Bienvenue à XML Translator Gratuit</string>
+<string name="translate_from_choose_one">Traduire De l\' (en Choisir un)</string>
+<string name="translate_to_choose_one_or_more">Traduire (Choisir une ou plusieurs)</string>
+<string name="powered_by_yandex_translate">Alimenté par Yandex.Traduire</string>
+<string name="paste_example_below">Collez L\'Exemple Ci-Dessous</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Veuillez ne pas modifier le XML principal dossier *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Vérifiez votre Google Drive pour traduire des chaînes XML!</string>
+<string name="step_3">Étape 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Choisissez la langue de votre XML chaînes et sélectionnez la langue souhaitée.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Permettre XML Traducteur Gratuit à l\'autorisation d\'accès au compte Google Drive de votre choix.</string>
+<string name="step_2">Étape 2</string>
+<string name="step_1">Étape 1</string>
+<string name="how_to_use_xmlanguage_translator">Comment utiliser XML Translator Gratuit</string>
+<string name="help">Aider</string>
+<string name="home">La maison</string>
+<string name="disclaimer">Avertissement</string>
+<string name="finished">Fini!</string>
+<string name="translating_updating_wait">Traduire et à télécharger .des fichiers xml. Cela peut prendre un certain temps. Je vous remercie pour votre patience.</string>
+<string name="daily_limit_reached">Vous avez atteint ou sont sur le point d\'atteindre votre 3000 caractères limite quotidienne pour des traductions libres. Pour continuer à traduire .xml, télécharger XML Traducteur à 20 dollars par mois avec aucun frais d\'annulation!</string>
+<string name="choose_lang_translate_to">Veuillez choisir les langues à traduire.</string>
+<string name="choose_one_translate_from">Veuillez choisir UNE langue à traduire à partir de</string>
+<string name="choose_lang_translate_from">Veuillez choisir la langue à traduire.</string>
+<string name="paste_xml_to_translate">Veuillez collez le code XML que vous souhaitez traduire</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">En utilisant cette application, vous consentez par les présentes à l\'avertissement et acceptez les conditions.</string>
+<string name="disclaimer_2">Le créateur de cette application n\'offre aucune garantie quant à l\'exhaustivité, à la fiabilité et à l\'exactitude des données générées. Toute action que vous prenez sur les informations que vous trouverez sur cette application est strictement à vos propres risques. Le créateur de cette application ne sera pas responsable pour toute perte et/ou dommage lié à l\'utilisation de cette application.</string>
+<string name="disclaimer_1">Le créateur de cette application n\'t\'accordent explicitement l\'utilisation de données obtenues à l\'aide de cette application\'s services. C\'est à l\'utilisateur de cette application pour déterminer la portée admissible de l\'utilisation de données fournies à cette application\'s services. Cependant, l\'utilisation de cette application\'s services ne modifient pas les droits d\'auteur ou de droits d\'utilisation des données fournies.</string>
+<string name="disclaimer_for_xmlanguage_translator">Avertissement pour XML Translator Gratuit</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Peut-être plus tard</string>
+<string name="try_it">L\'essayer</string>
+<string name="external_storage_must">De stockage externe doit être disponible.</string>
+<string name="mount_external_please">S\'il vous plaît monter écriture des supports de stockage externes afin d\'utiliser cette application.</string>
+<string name="read_external_permission_necessary">Lire la permission nécessaire pour lire les fichiers de l\'application.</string>
+<string name="permission_necessary">L\'autorisation nécessaire</string>
+<string name="write_external_permission_necessary">Écrire une permission nécessaire pour écrire dans les fichiers d\'application.</string>
+<string name="read_permission_explain">Lire de Stockage Externe autorisation permet à cette application pour lire les importantes données de l\'application. S\'il vous plaît permettre cette autorisation dans les Paramètres de l\'Application.</string>
+<string name="write_permission_explain">Écrire de Stockage Externe autorisation permet à cette application pour stocker des données d\'application. S\'il vous plaît permettre cette autorisation dans les Paramètres de l\'Application.</string>
+<string name="translations_complete">Traductions Complètes</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

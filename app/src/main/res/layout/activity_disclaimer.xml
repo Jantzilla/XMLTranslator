@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jantzapps.jantz.xmltranslatorfree.DisclaimerActivity">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disclaimer_for_xmlanguage_translator"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                fontPath="fonts/avenir.ttf"
+                tools:ignore="MissingPrefix"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="2px"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disclaimer_1"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disclaimer_2"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/yandex_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/powered_by_yandex_translate"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                fontPath="fonts/avenir.ttf"
+                tools:ignore="MissingPrefix"
+                android:background="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

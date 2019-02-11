@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML тӱлаш кусарымаш</string>
+<string name="translate">Кусарымаш</string>
+<string name="message">Тыште те XML шынден форматыште... </string>
+<string name="email_to">ЭЛЕКТРОН ПОЧТО</string>
+<string name="translate_from">Кусарымаш</string>
+<string name="translate_to">Кусарымаш</string>
+<string name="no_connection">Подключение Уке Интернетыш</string>
+<string name="no_connection_direction">Кусараш ом тӱлӧ xml интернет подключение палемден кертеш. Рашемдаш, мом ыштымыжым онча да тендан деке ушышо вот.</string>
+<string name="welcome_to_xmlanguage_translator">XML добро пожаловать-окса кусарымаш</string>
+<string name="translate_from_choose_one">Кусараш гыч (мутым)</string>
+<string name="translate_to_choose_one_or_more">Кусарымаш (ик але икмыняр ойырен налаш)</string>
+<string name="powered_by_yandex_translate">Чылт кочмо деч.Кусарымаш</string>
+<string name="paste_example_below">Лапкан Примерлан Шындаш</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Пожалуйста, тӱҥ папке вашталташ ок XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Тендам кусара xml тергымаш google диск-корно!</string>
+<string name="step_3">3 ошкылеш</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Йылмым ойыро да корно xml йылмым ойыро кӱлеш.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Оксам тӱлымо кӧнеда XML-google диск кусарен шотыш налме возышым ойыро йодеш пурышна тендан деке.</string>
+<string name="step_2">2 ошкылеш</string>
+<string name="step_1">1 ошкылеш</string>
+<string name="how_to_use_xmlanguage_translator">Xml-ым кӱчеш семын кучылтыныт-окса кусарымаш</string>
+<string name="help">Полша</string>
+<string name="home">Пӧрт</string>
+<string name="disclaimer">Вуйшиймаш деч кораҥмаш</string>
+<string name="finished">Тӱҥ пытаренам!</string>
+<string name="translating_updating_wait">Да кусарымашым колтыза .XML-файл. Тидым икмыняр жап налын кертеш. Тау тыланда чытыман.</string>
+<string name="daily_limit_reached">Тыланда оксам тӱлаш але символ погынен шушо лимит шу 3000 тендам кусара. Умбакыже кусарен .XML-файлым скачать XML-20 долларым кусарыме пого деч посна тылзыште шӧрен верч!</string>
+<string name="choose_lang_translate_to">Пожалуйста, йылмым ойыро кусарен.</string>
+<string name="choose_one_translate_from">Пожалуйста, ик йылмым ойыро, - манеш кусарымаш</string>
+<string name="choose_lang_translate_from">Пожалуйста, руш йылме гыч ойыро.</string>
+<string name="paste_xml_to_translate">Пожалуйста, xml шындаш-те кодам ыле кусарымаш</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Тиде-ан приложений дене, вуйшиймаш деч кораҥмаш да тудын дене келшыше йӧн дене тыланда келша.</string>
+<string name="disclaimer_2">Тидын шотышто гарантийым тичмаш приложений нимогай юмо ок пу, ару да чын уверым налаш. Кеч-могай пашашке те могай информацийым налаш, те тудым муын пуаш йодын, лӱдын да чытырен шке пеҥгыде улыт. Кеч-могай зиян тиде мутым огеш кучо юмо-ан приложений да/але эҥгекым, тиде приложенийым кучылтмо дене кылдалтын.</string>
+<string name="disclaimer_1">Тидым юмо ок приложений\'т уверым кучылтыда лийза, тиде-ан приложений дене налме суаплык\'. Тидын марте ан приложений тиде пайдаланен, тидым рашемдаш манын уверым-ан приложений суаплыкым кучылтын сита область\'. Туге гынат, кеч-могай вашталтыш лийын огыл уверым кучылтыда авторский права тиде приложений але кучылташ разрешенийым сервис.</string>
+<string name="disclaimer_for_xmlanguage_translator">Вуйшиймаш деч кораҥмаш верчат тӱлен XML-кусарыше</string>
+<string name="ok">Сай</string>
+<string name="mayber_later">Вара керт</string>
+<string name="try_it">Тамлен ончо</string>
+<string name="external_storage_must">Тӱжвал магнитдиск гыч лиймеямде лиеш.</string>
+<string name="mount_external_please">Пожалуйста, монтироватлаш записи тӱжвал информаций нумалеш манын, тиде приложенийым кучылташ.</string>
+<string name="read_external_permission_necessary">Разрешения тӱжвал лудын, лудшо-ан приложений файлым кӱл.</string>
+<string name="permission_necessary">Кӱлеш разрешения</string>
+<string name="write_external_permission_necessary">Разрешения тӱжвал возен, возен кӱл файлым приложений.</string>
+<string name="read_permission_explain">Магнитдиск-ан приложений тӱжвал лудаш разрешенийым пуаш манын, чыла кӱлешан уверым лудаш. Пожалуйста, келыштараш йӧным пуа разрешений тиде приложений.</string>
+<string name="write_permission_explain">Возымо уверым йӧным аралымаш-ан приложений тӱҥ разрешения тӱжвал магнитдиск-ан приложений. Пожалуйста, келыштараш йӧным пуа разрешений тиде приложений.</string>
+<string name="translations_complete">Тичмаш Кусарымаш</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Traductor Gratis</string>
+<string name="translate">Traduir</string>
+<string name="message">Enganxar vostè XML aquí... </string>
+<string name="email_to">CORREU ELECTRÒNIC</string>
+<string name="translate_from">Tradueix De L\'</string>
+<string name="translate_to">Traduir Al</string>
+<string name="no_connection">Sense Connexió A Internet</string>
+<string name="no_connection_direction">XML Traductor Lliure no pot establir una connexió a internet. Assegureu-vos que esteu connectat a una xarxa i provar de nou.</string>
+<string name="welcome_to_xmlanguage_translator">Benvinguts a XML Traductor Gratis</string>
+<string name="translate_from_choose_one">Tradueix De l\' (Triar un)</string>
+<string name="translate_to_choose_one_or_more">Traduir A (Escollir una o més d\'una)</string>
+<string name="powered_by_yandex_translate">Impulsat per Yandex.Traduir</string>
+<string name="paste_example_below">Enganxa El Següent Exemple</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Si us plau, no alterar les principals XML de la carpeta *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Fes Google Drive per a la seva XML traduït cadenes!</string>
+<string name="step_3">Pas 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Triar l\'idioma de la seva XML cadenes i seleccionar l\'llengües.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Permet XML Traductor Lliure permís per accedir a Google Drive compte de la seva elecció.</string>
+<string name="step_2">Pas 2</string>
+<string name="step_1">Pas 1</string>
+<string name="how_to_use_xmlanguage_translator">Com utilitzar XML Traductor Gratis</string>
+<string name="help">Ajuda</string>
+<string name="home">Casa</string>
+<string name="disclaimer">Avís d\'exempció de responsabilitat</string>
+<string name="finished">Acabat!</string>
+<string name="translating_updating_wait">La traducció i de penjar .els fitxers xml. Això pot trigar una estona. Gràcies per la vostra paciència.</string>
+<string name="daily_limit_reached">Si ha arribat o estan a punt d\'arribar al seu 3000 caràcter límit diari per a la lliure traduccions. Per continuar traduint .xml, descarregar XML Traductor a les 20 dòlars al mes, sense despeses de cancel·lació!</string>
+<string name="choose_lang_translate_to">Si us plau, escolliu les llengües a traduir.</string>
+<string name="choose_one_translate_from">Si us plau, escolliu UN idioma a traduir de</string>
+<string name="choose_lang_translate_from">Si us plau, escolliu la llengua a la qual tradueix.</string>
+<string name="paste_xml_to_translate">Si us plau, enganxeu el codi XML que t\'agradaria traduir</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Per utilitzar aquesta aplicació, consentiu a l\'avís legal i d\'acord amb els seus termes.</string>
+<string name="disclaimer_2">El creador d\'aquesta aplicació no fa cap garantia sobre la veracitat, la fiabilitat i l\'exactitud de les dades generades. Qualsevol acció que es fa sobre la informació que trobeu en aquesta aplicació és estrictament al seu propi risc. El creador d\'aquesta aplicació no es fa responsable de qualssevol danys i/o perjudicis en relació amb l\'ús d\'aquesta aplicació.</string>
+<string name="disclaimer_1">El creador d\'aquesta aplicació no\'t explícitament subvenció a l\'ús de dades generat amb aquesta aplicació\'s de serveis. Correspon a l\'usuari d\'aquesta aplicació per determinar l\'abast de admissible l\'ús de les dades subministrades per aquesta aplicació\'s de serveis. No obstant això, l\'ús d\'aquesta aplicació\'s serveis no alterar qualsevol drets d\'autor o l\'ús de permisos de les dades subministrades.</string>
+<string name="disclaimer_for_xmlanguage_translator">Avís d\'exempció de responsabilitat per l\'XML Traductor Gratis</string>
+<string name="ok">D\'acord</string>
+<string name="mayber_later">Potser més endavant</string>
+<string name="try_it">Proveu-ho</string>
+<string name="external_storage_must">D\'emmagatzematge extern ha d\'estar disponible.</string>
+<string name="mount_external_please">Si us plau, muntatge d\'escriptura d\'emmagatzematge extern mitjans de comunicació per tal d\'utilitzar aquesta aplicació.</string>
+<string name="read_external_permission_necessary">Llegir externs permís necessari per llegir l\'aplicació fitxers.</string>
+<string name="permission_necessary">Permís necessari</string>
+<string name="write_external_permission_necessary">Escriure externs permís necessari per a escriure a l\'aplicació fitxers.</string>
+<string name="read_permission_explain">Llegir d\'Emmagatzematge Extern permís permet que aquesta aplicació llegeixi important les dades de l\'aplicació. Si us plau permeti aquest permís a l\'Aplicació Configuració.</string>
+<string name="write_permission_explain">Escriure d\'Emmagatzematge Extern permís permet que aquesta aplicació per emmagatzemar important les dades de l\'aplicació. Si us plau permeti aquest permís a l\'Aplicació Configuració.</string>
+<string name="translations_complete">Traduccions Completes</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML مترجم مفت</string>
+<string name="translate">ترجمہ</string>
+<string name="message">پیسٹ آپ XML یہاں... </string>
+<string name="email_to">ای میل کرنے کے لئے</string>
+<string name="translate_from">ترجمہ سے</string>
+<string name="translate_to">ترجمہ کرنے کے لئے</string>
+<string name="no_connection">کوئی انٹرنیٹ کنکشن</string>
+<string name="no_connection_direction">XML مترجم مفت نہیں کر سکتے ہیں قائم ایک انٹرنیٹ کنکشن ہے. اس بات کو یقینی بنانے آپ کو ایک نیٹ ورک سے منسلک اور دوبارہ کوشش کریں.</string>
+<string name="welcome_to_xmlanguage_translator">خوش آمدید کرنے کے لئے XML مترجم مفت</string>
+<string name="translate_from_choose_one">ترجمہ سے (ایک کا انتخاب کریں)</string>
+<string name="translate_to_choose_one_or_more">ترجمہ کرنے کے لئے (ایک کا انتخاب کریں یا اس سے زیادہ)</string>
+<string name="powered_by_yandex_translate">کی طرف سے طاقت Yandex.ترجمہ</string>
+<string name="paste_example_below">پیسٹ مثال کے طور پر ذیل میں</string>
+<string name="please_do_not_alter_the_main_xml_folder">* براہ مہربانی کو تبدیل نہیں کرتے ، اہم XML فولڈر میں *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">چیک آپ کے گوگل ڈرائیو کے لئے آپ کا ترجمہ XML ڈور!</string>
+<string name="step_3">مرحلہ 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">زبان منتخب کی آپ XML ڈور منتخب کریں اور مطلوبہ زبانوں.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">کی اجازت XML مترجم مفت تک رسائی کی اجازت گوگل ڈرائیو اکاؤنٹ کے آپ کی پسند ہے.</string>
+<string name="step_2">مرحلہ 2</string>
+<string name="step_1">مرحلہ 1</string>
+<string name="how_to_use_xmlanguage_translator">کس طرح استعمال کرنے کے لئے XML مترجم مفت</string>
+<string name="help">مدد</string>
+<string name="home">گھر</string>
+<string name="disclaimer">ڈس کلیمر</string>
+<string name="finished">ختم ہو گیا!</string>
+<string name="translating_updating_wait">ترجمہ اور اپ لوڈ .xml فائلوں. یہ کچھ وقت لگ سکتا ہے. آپ کے تعاون کا شکریہ.</string>
+<string name="daily_limit_reached">آپ تک پہنچ چکے ہیں یا کر رہے ہیں کے بارے میں تک پہنچنے کے لئے آپ کے 3000 کے کردار کی روزانہ کی حد مفت کے لئے ترجمہ. جاری رکھنے کے لئے ترجمہ .xml, ڈاؤن لوڈ ، اتارنا XML مترجم میں 20 ڈالر ایک ماہ کے ساتھ کوئی منسوخی کی فیس!</string>
+<string name="choose_lang_translate_to">براہ مہربانی منتخب زبانوں میں ترجمہ کرنے کے لئے.</string>
+<string name="choose_one_translate_from">براہ مہربانی ایک کا انتخاب کی زبان سے ترجمہ کرنے کے لئے</string>
+<string name="choose_lang_translate_from">براہ مہربانی منتخب زبان سے ترجمہ کرنے کے لئے.</string>
+<string name="paste_xml_to_translate">براہ مہربانی پیسٹ XML آپ چاہتے ترجمہ</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">کا استعمال کرتے ہوئے اس درخواست میں ، آپ کو اس طرح کی اجازت کے لئے ڈس کلیمر اور اتفاق کرنے کے لئے اس کی شرائط.</string>
+<string name="disclaimer_2">خالق کی اس درخواست کو بنانے کے نہیں ہے کسی بھی وارنٹی کے بارے میں کاملیت ، وشوسنییتا اور درستگی کے تیار کردہ اعداد و شمار. کسی بھی عمل آپ صلی اللہ علیہ وسلم کے بارے میں معلومات تلاش کرنے میں آپ کی اس درخواست سختی سے اپنی ذمہ داری پر. خالق کی اس درخواست کے ذمہ دار نہیں ہو گا کے لئے کسی بھی نقصان اور/یا نقصانات کے استعمال کے سلسلے میں اس درخواست کی ہے ۔ </string>
+<string name="disclaimer_1">خالق کی اس درخواست doesn\'t واضح طور پر گرانٹ کے استعمال کے اعداد و شمار پیدا کا استعمال کرتے ہوئے اس درخواست\'s کی خدمات. یہ ہے اپ کرنے کے لئے صارف کی اس درخواست کے دائرہ کار کا تعین کرنے کی اجازت کے استعمال کے اعداد و شمار فراہم کرنے کے لئے اس درخواست\'s کی خدمات. تاہم, اس ایپلی کیشن کے استعمال\'s کی خدمات کو تبدیل نہیں کرے گا کسی بھی کاپی رائٹ یا استعمال کی اجازت کے فراہم کردہ اعداد و شمار.</string>
+<string name="disclaimer_for_xmlanguage_translator">ڈس کلیمر کے لئے XML مترجم مفت</string>
+<string name="ok">ٹھیک ہے</string>
+<string name="mayber_later">شاید بعد میں</string>
+<string name="try_it">یہ کرنے کی کوشش کریں</string>
+<string name="external_storage_must">بیرونی سٹوریج دستیاب ہونا ضروری ہے.</string>
+<string name="mount_external_please">براہ مہربانی پہاڑ تحریر بیرونی سٹوریج میڈیا کے لئے اس اپلی کیشن استعمال کرنے.</string>
+<string name="read_external_permission_necessary">پڑھنے کے بیرونی اجازت ضروری پڑھنے کے لئے درخواست دیتا ہے.</string>
+<string name="permission_necessary">اجازت ضروری</string>
+<string name="write_external_permission_necessary">لکھنے بیرونی اجازت کرنے کے لئے ضروری لکھنے کے لئے درخواست دیتا ہے.</string>
+<string name="read_permission_explain">پڑھنے کے بیرونی سٹوریج کی اجازت دیتا اس اپلی کیشن کو پڑھنے کے لئے اہم اے پی پی کے اعداد و شمار. براہ کرم کی اجازت اس اجازت میں اے پی پی کی ترتیبات.</string>
+<string name="write_permission_explain">لکھنے بیرونی سٹوریج کی اجازت دیتا کے لئے اس اپلی کیشن سٹور اہم اے پی پی کے اعداد و شمار. براہ کرم کی اجازت اس اجازت میں اے پی پی کی ترتیبات.</string>
+<string name="translations_complete">ترجمہ مکمل</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

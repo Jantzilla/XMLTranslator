@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">Бесплатне XML преводилац</string>
+<string name="translate">Транслате</string>
+<string name="message">Убаците сте овде у КСМЛ формату... </string>
+<string name="email_to">Е-МАИЛ</string>
+<string name="translate_from">Транслате</string>
+<string name="translate_to">Транслате</string>
+<string name="no_connection">Нема Интернет Конекција</string>
+<string name="no_connection_direction">Бесплатне XML преводилац није успео да успостави везу интернету. Проверите да ли сте повезани са мрежом и покушајте поново.</string>
+<string name="welcome_to_xmlanguage_translator">Добродошли у XML-преводилац бесплатно</string>
+<string name="translate_from_choose_one">Превод са (изабрати један)</string>
+<string name="translate_to_choose_one_or_more">Врати превод описа на (изаберите један или више)</string>
+<string name="powered_by_yandex_translate">Поверед би Иандек.Транслате</string>
+<string name="paste_example_below">Да Убаците Пример Испод</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Молимо вас да не промените главни фасцикли КСМЛ *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Проверите свој Гоогле диск за превођење XML-линије!</string>
+<string name="step_3">Корак 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Изаберите језик редова XML и изаберите жељене језике.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Дозволи бесплатан XML-преводилац дозволу за приступ налогу Google диск на Вашем избору.</string>
+<string name="step_2">Корак 2</string>
+<string name="step_1">Корак 1</string>
+<string name="how_to_use_xmlanguage_translator">Како да користите КСМЛ-преводилац бесплатно</string>
+<string name="help">Помозите</string>
+<string name="home">Код куће</string>
+<string name="disclaimer">Одрицање од одговорности</string>
+<string name="finished">Завршио!</string>
+<string name="translating_updating_wait">Превод и слање .КСМЛ датотеке. То може да потраје неко време. Хвала на стрпљењу.</string>
+<string name="daily_limit_reached">Достигли сте или ћете да остварите своје 3000 карактера лимит на бесплатне преводе. За наставак превод .КСМЛ датотеци, довнлоад XML-преводилац за 20 долара месечно без накнаде за отказивање!</string>
+<string name="choose_lang_translate_to">Молимо вас, изаберите језик превода.</string>
+<string name="choose_one_translate_from">Молимо вас, изаберите један језик да преведе са</string>
+<string name="choose_lang_translate_from">Молимо вас, изаберите језик за превод.</string>
+<string name="paste_xml_to_translate">Молим вас, убаците XML-код желите да преведете</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Помоћу ове апликације, слажете се са одрицање од одговорности и да се слажете са условима.</string>
+<string name="disclaimer_2">Творац ове апликације не даје никакве гаранције у вези потпуност, веродостојност и тачност добијених података. Све активности које се на информације које ћете наћи у овој апликацији је строго на сопствени ризик. Творац ове апликације није одговоран за било какав губитак и/или штету у вези са коришћењем ове апликације.</string>
+<string name="disclaimer_1">Творац ове апликације не\'т да омогући коришћење података добијених помоћу ове апликације услуге\'. То је до корисника ове апликације је да се утврди подручје дозвољене употребе података за ове апликације услуге\'. Међутим, услуге употреба ове апликације не ће променити сва ауторска права или дозволе за коришћење података.</string>
+<string name="disclaimer_for_xmlanguage_translator">Одрицање од одговорности за бесплатно XML-преводилац</string>
+<string name="ok">Добро</string>
+<string name="mayber_later">Може касније</string>
+<string name="try_it">Покушајте</string>
+<string name="external_storage_must">Спољну меморију, мора да буде доступан.</string>
+<string name="mount_external_please">Молим вас, монтируйте снимање спољних носача информација да би могли да користите ову апликацију.</string>
+<string name="read_external_permission_necessary">Прочитајте спољни дозвола је потребна за читање датотеке апликације.</string>
+<string name="permission_necessary">Дозвола је потребна</string>
+<string name="write_external_permission_necessary">Врите спољни дозвола је потребна за снимање датотеке апликације.</string>
+<string name="read_permission_explain">Прочитајте резолуцију спољне меморије вам омогућава апликацији да чита све важне податке. Молим вас, дозволите то је резолуција у подешавањима апликације.</string>
+<string name="write_permission_explain">Написати резолуцију спољне меморије вам омогућава да апликација за чување важних података апликације. Молим вас, дозволите то је резолуција у подешавањима апликације.</string>
+<string name="translations_complete">Комплетан Превод</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

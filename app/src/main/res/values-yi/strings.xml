@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">קסמל טראַנסלאַטאָר פֿרייַ</string>
+<string name="translate">איבערזעצן</string>
+<string name="message">פּאַפּ איר קסמל דאָ... </string>
+<string name="email_to">EMAIL צו</string>
+<string name="translate_from">זעץ פון</string>
+<string name="translate_to">זעץ צו</string>
+<string name="no_connection">קיין אינטערנעט קשר</string>
+<string name="no_connection_direction">קסמל טראַנסלאַטאָר פֿרייַ קען ניט פאַרלייגן אַ אינטערנעט קשר. מאַכן זיכער איר זענען פארבונדן צו אַ נעץ און פּרובירן ווידער.</string>
+<string name="welcome_to_xmlanguage_translator">באַגריסונג צו קסמל טראַנסלאַטאָר פֿרייַ</string>
+<string name="translate_from_choose_one">איבערזעצן פון (קלייַבן איינער)</string>
+<string name="translate_to_choose_one_or_more">איבערזעצן צו (קלייַבן איין אָדער מער)</string>
+<string name="powered_by_yandex_translate">פּאַוערד דורך יאַנדעקס.איבערזעצן</string>
+<string name="paste_example_below">פּאַפּ בייַשפּיל אונטן</string>
+<string name="please_do_not_alter_the_main_xml_folder">* ביטע טאָן ניט יבערבייַטן די הויפּט קסמל טעקע *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">טשעק דיין גוגל דרייוו פֿאַר דיין איבערגעזעצט קסמל סטרינגס!</string>
+<string name="step_3">טרעטן 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">קלייַבן די שפּראַך פון דיין קסמל סטרינגס און אויסקלייַבן די געבעטן שפּראַכן.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">לאָזן קסמל טראַנסלאַטאָר פֿרייַ דערלויבעניש צו צוטריט די גוגל דרייוו חשבון פון אייער ברירה.</string>
+<string name="step_2">שריט 2</string>
+<string name="step_1">שריט 1</string>
+<string name="how_to_use_xmlanguage_translator">ווי צו נוצן קסמל טראַנסלאַטאָר פֿרייַ</string>
+<string name="help">הילף</string>
+<string name="home">היים</string>
+<string name="disclaimer">אָפּלייקענונג</string>
+<string name="finished">פאַרטיק!</string>
+<string name="translating_updating_wait">איבערזעצן און ופּלאָאַדינג .קסמל טעקעס. דעם קען נעמען אַ בשעת. דאנק איר פֿאַר אייער געדולד.</string>
+<string name="daily_limit_reached">איר האָבן ריטשט אָדער זענען וועגן צו דערגרייכן דיין 3000 כאַראַקטער טעגלעך שיעור פֿאַר פֿרייַ איבערזעצונגען. צו פאָרזעצן איבערזעצן .קסמל, אָפּלאָדירן קסמל טראַנסלאַטאָר בייַ 20 דאָללאַרס אַ חודש מיט קיין קאַנסאַליישאַן פיז!</string>
+<string name="choose_lang_translate_to">ביטע קלייַבן די שפּראַכן צו איבערזעצן צו.</string>
+<string name="choose_one_translate_from">ביטע קלייַבן איינער שפּראַך צו איבערזעצן פון</string>
+<string name="choose_lang_translate_from">ביטע קלייַבן די שפּראַך צו איבערזעצן פון.</string>
+<string name="paste_xml_to_translate">ביטע פּאַפּ די קסמל איר וואָלט ווי איבערגעזעצט</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">דורך ניצן דעם אַפּלאַקיישאַן, איר כירביי צושטימען צו די אָפּלייקענונג און שטימען צו זייַן ווערטער.</string>
+<string name="disclaimer_2">דער באשעפער פון דעם אַפּלאַקיישאַן טוט ניט מאַכן קיין וואָראַנטיז וועגן די קאַמפּליטנאַס, רילייאַבילאַטי און אַקיעראַסי פון די דאַטן דזשענערייטאַד. קיין קאַמף איר נעמען אויף די אינפֿאָרמאַציע איר געפֿינען אויף דעם אַפּלאַקיישאַן איז שטרענג בייַ דיין אייגן ריזיקירן. דער באשעפער פון דעם אַפּלאַקיישאַן וועט ניט זיין לייאַבאַל פֿאַר קיין לאָססעס און/אָדער דאַמידזשיז אין קשר מיט די נוצן פון דעם אַפּלאַקיישאַן.</string>
+<string name="disclaimer_1">דער באשעפער פון דעם אַפּלאַקיישאַן doesn\'t בפירוש שענקען נוצן פון דאַטן דזשענערייטאַד ניצן דעם אַפּלאַקיישאַן\'s באַדינונגען. עס איז אַרויף צו די באַניצער פון דעם אַפּלאַקיישאַן צו באַשליסן די פאַרנעם פון אַלאַואַבאַל באַניץ פון דאַטן סאַפּלייד צו דעם אַפּלאַקיישאַן\'s באַדינונגען. אָבער, די נוצן פון דעם אַפּלאַקיישאַן\'s באַדינונגען וועט ניט יבערבייַטן קיין קאַפּירייץ אָדער באַניץ פּערמישאַנז פון די דאַטן סאַפּלייד.</string>
+<string name="disclaimer_for_xmlanguage_translator">אָפּלייקענונג פֿאַר קסמל טראַנסלאַטאָר פֿרייַ</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">אפֿשר שפּעטער</string>
+<string name="try_it">פּרובירן עס</string>
+<string name="external_storage_must">פונדרויסנדיק סטאָרידזש מוזן זייַן פאַראַנען.</string>
+<string name="mount_external_please">ביטע בארג ווריטאַבלע פונדרויסנדיק סטאָרידזש מידיאַ אין סדר צו נוצן דעם אַפּ.</string>
+<string name="read_external_permission_necessary">לייענען פונדרויסנדיק דערלויבעניש נייטיק צו לייענען אַפּלאַקיישאַן טעקעס.</string>
+<string name="permission_necessary">דערלויבעניש נייטיק</string>
+<string name="write_external_permission_necessary">שרייַבן פונדרויסנדיק דערלויבעניש נייטיק צו שרייַבן אַפּלאַקיישאַן צו טעקעס.</string>
+<string name="read_permission_explain">לייענען פונדרויסנדיק סטאָרידזש דערלויבעניש אַלאַוז דעם אַפּ צו לייענען וויכטיק אַפּ דאַטן. ביטע לאָזן דעם דערלויבעניש אין אַפּ סעטטינגס.</string>
+<string name="write_permission_explain">שרייַבן פונדרויסנדיק סטאָרידזש דערלויבעניש אַלאַוז דעם אַפּ צו קראָם וויכטיק אַפּ דאַטן. ביטע לאָזן דעם דערלויבעניש אין אַפּ סעטטינגס.</string>
+<string name="translations_complete">איבערזעצונגען גאַנץ</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

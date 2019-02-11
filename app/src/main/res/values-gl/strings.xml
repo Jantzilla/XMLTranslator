@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Tradutor Libre</string>
+<string name="translate">Traducir</string>
+<string name="message">Pegar ti XML aquí... </string>
+<string name="email_to">E-MAIL A</string>
+<string name="translate_from">Traducir De</string>
+<string name="translate_to">Traducir A</string>
+<string name="no_connection">Non Hai Conexión A Internet</string>
+<string name="no_connection_direction">XML Tradutor Libre non pode establecer unha conexión á internet. Asegúrese de que está conectado a unha rede e ténteo de novo.</string>
+<string name="welcome_to_xmlanguage_translator">Benvido ao XML Tradutor Libre</string>
+<string name="translate_from_choose_one">Traducir a Partir de (Escoller unha)</string>
+<string name="translate_to_choose_one_or_more">Traducir Para (Escoller unha ou máis)</string>
+<string name="powered_by_yandex_translate">Alimentado por Yandex.Traducir</string>
+<string name="paste_example_below">Pega Exemplo A Continuación</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Por favor, non alteran o principal XML cartafol *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Comprobe a súa Google Drive para a súa XML traducido cordas!</string>
+<string name="step_3">Paso 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Escoller a lingua da súa XML cordas e seleccione os idiomas desexados.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Permitir XML Tradutor Libre permiso para acceder a Google Drive conta da súa elección.</string>
+<string name="step_2">Paso 2</string>
+<string name="step_1">Paso 1</string>
+<string name="how_to_use_xmlanguage_translator">Como usar XML Tradutor Libre</string>
+<string name="help">Axuda</string>
+<string name="home">Casa</string>
+<string name="disclaimer">Aviso legal</string>
+<string name="finished">Rematado!</string>
+<string name="translating_updating_wait">Traducir e subida .ficheiros xml. Isto pode levar un tempo. Grazas pola súa paciencia.</string>
+<string name="daily_limit_reached">Ten alcanzado ou están a piques de chegar ao seu 3000 personaxe límite diario de balde traducións. Para seguir traducindo .xml, descargar XML Tradutor en 20 dólares por mes, sen taxas de cancelación!</string>
+<string name="choose_lang_translate_to">Por favor, escoller as linguas para traducir.</string>
+<string name="choose_one_translate_from">Por favor, escolla UNHA lingua para traducir de</string>
+<string name="choose_lang_translate_from">Por favor, escolla a lingua para traducir.</string>
+<string name="paste_xml_to_translate">Por favor pega o XML desexa traducido</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Usando esta aplicación, será o consentimento para a renuncia e de acordo cos seus termos.</string>
+<string name="disclaimer_2">O creador desta aplicación non fai calquera garantías sobre a veracidade, fiabilidade e precisión dos datos xerados. Calquera acción que tomar sobre a información que atope sobre esta aplicación é estrictamente ao seu propio risco. O creador desta aplicación non será responsable de calquera perdas e/ou danos en conexión co uso desta aplicación.</string>
+<string name="disclaimer_1">O creador desta aplicación non\'t explicitamente concesión de uso de datos xerado usando esta aplicación\'s servizos. É ata que o usuario desta aplicación para determinar o alcance da permitido o uso de datos proporcionados para esta aplicación\'s servizos. Con todo, o uso desta aplicación\'s servizos non vai cambiar calquera dereitos de autor ou de uso permisos do indicado datos.</string>
+<string name="disclaimer_for_xmlanguage_translator">Aviso para XML Tradutor Libre</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Quizais máis tarde</string>
+<string name="try_it">Probalo</string>
+<string name="external_storage_must">Almacenamento externo debe estar dispoñible.</string>
+<string name="mount_external_please">Por favor, monte escribir externa medios de almacenamento, a fin de utilizar esta app.</string>
+<string name="read_external_permission_necessary">Ler externa permiso necesario para ler a aplicación ficheiros.</string>
+<string name="permission_necessary">O permiso necesario</string>
+<string name="write_external_permission_necessary">Escribir externa permiso necesario para escribir a aplicación ficheiros.</string>
+<string name="read_permission_explain">Ler de Almacenamento Externo permiso permite esta aplicación para ler importante aplicación de datos. Por favor, permita este permiso en Axustes da Aplicación.</string>
+<string name="write_permission_explain">Escribir Almacenamento Externo permiso permite esta aplicación para almacenar importante aplicación de datos. Por favor, permita este permiso en Axustes da Aplicación.</string>
+<string name="translations_complete">Traducións Completo</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML-Преведувач Слободни</string>
+<string name="translate">Превод</string>
+<string name="message">Ставете ќе XML тука... </string>
+<string name="email_to">E-MAIL ЗА ДА</string>
+<string name="translate_from">Превод Од</string>
+<string name="translate_to">За Да Го Преведете</string>
+<string name="no_connection">Без Интернет Конекција</string>
+<string name="no_connection_direction">XML-Преведувач Бесплатни не може да се воспостави интернет конекција. Бидете сигурни дека сте поврзани на мрежа и обидете се повторно.</string>
+<string name="welcome_to_xmlanguage_translator">Добредојдовте на XML-Преведувач Слободни</string>
+<string name="translate_from_choose_one">Превод Од (Изберете еден)</string>
+<string name="translate_to_choose_one_or_more">Се преведе На (Изберете еден или повеќе)</string>
+<string name="powered_by_yandex_translate">Напојува со Yandex.Превод</string>
+<string name="paste_example_below">Ставете Пример Подолу</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Ве молиме не го смени главниот XML папка *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Проверете ги вашите Google Drive за вашиот преведени XML жици!</string>
+<string name="step_3">Чекор 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Изберете јазикот на вашите XML жици и одберете го саканиот јазик.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Овозможи XML-Преведувач Слободни дозвола да пристапите на Google Drive сметка на вашиот избор.</string>
+<string name="step_2">Чекор 2</string>
+<string name="step_1">Чекор 1</string>
+<string name="how_to_use_xmlanguage_translator">Како да се користи XML-Преведувач Слободни</string>
+<string name="help">Помош</string>
+<string name="home">Дома</string>
+<string name="disclaimer">Општи услови</string>
+<string name="finished">Завршена!</string>
+<string name="translating_updating_wait">Преведување и качувањето .xml датотеки. Ова може да потрае некое време. Ви благодариме за вашето трпение.</string>
+<string name="daily_limit_reached">Имате достигна или се за да стигнат до вашиот 3000 карактер дневен лимит за слободни преводи. Да се продолжи со преведување .xml, симнете XML-Преведувач во 20 долари месечно без откажување такси!</string>
+<string name="choose_lang_translate_to">Ве молиме изберете јазици за превод.</string>
+<string name="choose_one_translate_from">Ве молиме изберете ЕДЕН јазик да се преведат од</string>
+<string name="choose_lang_translate_from">Ве молиме изберете јазик за превод.</string>
+<string name="paste_xml_to_translate">Ве молиме ставете XML би сакале преведени</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Со користење на оваа апликација, вие со ова се согласувате на одрекување и се согласувам со неговите услови.</string>
+<string name="disclaimer_2">Креаторот на оваа апликација не прави никакви гаранции за целосноста, сигурноста и точноста на генерираните податоци. Било каква акција ќе земе по информации ќе најдете на оваа апликација е строго на ваш сопствен ризик. Креаторот на оваа апликација нема да биде одговорен за какви било загуби и/или штета во врска со користењето на оваа апликација.</string>
+<string name="disclaimer_1">Креаторот на оваа апликација не\'t експлицитно грант користење на податоците генерирани со помош на оваа апликација   \'s услуги. Тоа е до крајниот корисник на оваа апликација да се одреди опсегот на дозволената употреба на податоците доставени до оваа апликација   \'s услуги. Сепак, употребата на оваа апликација   \'s услуги нема да ја смени било авторските права или употреба дозволи на доставени податоци.</string>
+<string name="disclaimer_for_xmlanguage_translator">Општи услови за XML-Преведувач Слободни</string>
+<string name="ok">Ок</string>
+<string name="mayber_later">Можеби подоцна</string>
+<string name="try_it">Обидете се тоа</string>
+<string name="external_storage_must">Надворешни складирање мора да биде достапна.</string>
+<string name="mount_external_please">Ве молиме планината запишување надворешни чување на медиумите, со цел, да го користите овој стан.</string>
+<string name="read_external_permission_necessary">Прочитајте надворешни дозвола е потребно за да прочитате примена на датотеки.</string>
+<string name="permission_necessary">Дозвола е потребно</string>
+<string name="write_external_permission_necessary">Напишете надворешни дозвола е потребно да пишуваат за апликација датотеки.</string>
+<string name="read_permission_explain">Прочитајте Надворешни Складирање дозвола им овозможува на оваа апликација да го прочитате важно стан податоци. Ве молиме овозможи оваа дозвола во Стан Settings.</string>
+<string name="write_permission_explain">Напишете Надворешни Складирање дозвола им овозможува на оваа апликација да се продавница важно стан податоци. Ве молиме овозможи оваа дозвола во Стан Settings.</string>
+<string name="translations_complete">Преводи Заврши</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

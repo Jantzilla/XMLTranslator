@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">Pulsuz XML tərcüməçi</string>
+<string name="translate">Tərcümə</string>
+<string name="message">Daxil edin və siz burada formatda XML... </string>
+<string name="email_to">E-POÇT</string>
+<string name="translate_from">Tərcümə</string>
+<string name="translate_to">Tərcümə</string>
+<string name="no_connection">Heç Bir İnternet Bağlantısı</string>
+<string name="no_connection_direction">Pulsuz XML tərcüməçiyə uğursuz yüklemek üçün internet bağlantısı. Əmin olun ki, siz şəbəkəsinə qoşulmuş və yenidən cəhd edin.</string>
+<string name="welcome_to_xmlanguage_translator">Xoş gəlmisiniz XML-tərcüməçi pulsuz</string>
+<string name="translate_from_choose_one">Tərcümə (seçmək, bir-bir)</string>
+<string name="translate_to_choose_one_or_more">Tərcümə (birini seçin və ya bir neçə)</string>
+<string name="powered_by_yandex_translate">Powered Yandeks.Tərcümə</string>
+<string name="paste_example_below">Daxil Nümunə Aşağıda</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Lütfən, dəyişdirmək etməyin əsas qovluq XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Edin sizin Google drive tərcümə üçün XML-satır!</string>
+<string name="step_3">Addım 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Dil seçmək satır XML seçin və lazım olan dil.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Həll pulsuz XML-tərcüməçi icazə giriş hesabınıza Google drive Sizin seçimdir.</string>
+<string name="step_2">Addım 2</string>
+<string name="step_1">Addım 1</string>
+<string name="how_to_use_xmlanguage_translator">Necə istifadə XML-tərcüməçi pulsuz</string>
+<string name="help">Kömək edin</string>
+<string name="home">Ev</string>
+<string name="disclaimer">Məsuliyyətdən imtina</string>
+<string name="finished">Başa!</string>
+<string name="translating_updating_wait">Tərcümə və göndərilməsi .XML faylları. Bu, bir müddət bilər. Sabrınız üçün təşəkkür edirik.</string>
+<string name="daily_limit_reached">Siz çatmış və ya olacaq, sizin nail 3000 simvol limiti pulsuz tərcümə. Davam tərcümə .XML-fayl download XML-tərcüməçi 20 dollar, ayda bir haqqı olmadan ləğv olunması üçün!</string>
+<string name="choose_lang_translate_to">Edin dil seçin tərcümə.</string>
+<string name="choose_one_translate_from">Buyurun, seçin, bir dil üçün tərcümə</string>
+<string name="choose_lang_translate_from">Edin dil seçin tərcümə üçün.</string>
+<string name="paste_xml_to_translate">Xahiş edirik, daxil XML-kodu istəyirəm tərcümə</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Bu proqram ilə, siz razılaşırsınız ki, məsuliyyətdən imtina və onun şərtlərinə razıdırlar.</string>
+<string name="disclaimer_2">Bu proqram yaradıcısı dair heç bir qarantiya vermir tamlığı, düzgünlüyü və dəqiqliyi əldə edilən məlumatların. Hər hansı bir hərəkət, siz almaq və məlumat tapa bilərsiniz, bu, həmin bəyanatda bir ciddi öz riski. Bu proqram yaradıcısı görə məsuliyyət daşımır hansı bir zərər və/və ya zərər, bu proqram istifadə ilə bağlı.</string>
+<string name="disclaimer_1">Bu proqram yaradıcısı\'t icazə data istifadə, əldə olunan bu proqram ilə xidmət\'. Bu, artıq istifadəçilər bu proqramlar üçün müəyyən sahəyə uyğun istifadə üçün məlumatlar bu proqram xidmətləri\'. Lakin, servislərindən istifadə bu proqram dəyişdirmək deyil, hər hansı bir müəllif hüquqları və ya icazə data istifadə.</string>
+<string name="disclaimer_for_xmlanguage_translator">Məsuliyyətdən imtina üçün pulsuz XML-tərcüməçi</string>
+<string name="ok">Yaxşı</string>
+<string name="mayber_later">Bilər daha sonra</string>
+<string name="try_it">Cəhd edin</string>
+<string name="external_storage_must">Xarici drive mövcud olmalıdır.</string>
+<string name="mount_external_please">Xahiş edirik, монтируйте yazmaq, xarici media məlumat üçün bu proqram istifadə.</string>
+<string name="read_external_permission_necessary">Oxuyun, xarici həlli üçün lazım olan faylları oxumaq proqram.</string>
+<string name="permission_necessary">İcazə lazımdır</string>
+<string name="write_external_permission_necessary">Yazmaq xarici icazə tələb olunan yazmaq üçün faylları proqram.</string>
+<string name="read_permission_explain">Oxumaq icazəsi xarici yaddaş imkan verir ki, app oxumaq üçün bütün mühüm məlumatlar. Lütfən, icazə verin, bu icazə parametrləri proqram.</string>
+<string name="write_permission_explain">Yazmaq üçün icazə və xarici yaddaş imkan verir app saxlanılması üçün mühüm məlumatların proqram. Lütfən, icazə verin, bu icazə parametrləri proqram.</string>
+<string name="translations_complete">Tam Tərcümə</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

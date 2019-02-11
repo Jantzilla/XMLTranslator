@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Translator Gratuit</string>
+<string name="translate">Traduce</string>
+<string name="message">Pasta XML aici... </string>
+<string name="email_to">E-MAIL LA</string>
+<string name="translate_from">Traduce Din</string>
+<string name="translate_to">Pentru A Traduce</string>
+<string name="no_connection">Nici O Conexiune La Internet</string>
+<string name="no_connection_direction">XML Gratuit Traducator nu a putut stabili o conexiune la internet. Asigurați-vă că sunteți conectat la o rețea și încercați din nou.</string>
+<string name="welcome_to_xmlanguage_translator">Bine ati venit la XML Translator Gratuit</string>
+<string name="translate_from_choose_one">Traduce Din (Alege una)</string>
+<string name="translate_to_choose_one_or_more">Traduce (Alegeți una sau mai multe)</string>
+<string name="powered_by_yandex_translate">Alimentat de Yandex.Traduce</string>
+<string name="paste_example_below">De Exemplu Pastă De Mai Jos</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Vă rugăm să nu modificați principalele XML dosar *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Verifica Google Drive pentru a tradus XML siruri de caractere!</string>
+<string name="step_3">Pasul 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Alegeți limba de XML siruri de caractere și selectați limbile dorite.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Permite XML Translator Gratuit de permisiunea de a accesa contul Google Drive de alegerea ta.</string>
+<string name="step_2">Pasul 2</string>
+<string name="step_1">Pasul 1</string>
+<string name="how_to_use_xmlanguage_translator">Cum să utilizați XML Translator Gratuit</string>
+<string name="help">Ajuta</string>
+<string name="home">Acasă</string>
+<string name="disclaimer">Disclaimer</string>
+<string name="finished">Terminat!</string>
+<string name="translating_updating_wait">Traducerea și încărcarea .fișiere xml. Acest lucru poate dura un timp. Vă mulțumesc pentru răbdare.</string>
+<string name="daily_limit_reached">Ai ajuns sau sunt pe cale de a ajunge la 3000 de caractere limită de zi cu zi pentru gratuit de traduceri. Pentru a continua traducerea .xml, download XML Traducător la 20 de dolari pe lună, fără taxe de anulare!</string>
+<string name="choose_lang_translate_to">Vă rugăm să alegeți limbi pentru a traduce.</string>
+<string name="choose_one_translate_from">Vă rugăm să alegeți O limbă pentru a traduce din</string>
+<string name="choose_lang_translate_from">Vă rugăm să alegeți limba pentru a traduce.</string>
+<string name="paste_xml_to_translate">Vă rugăm să inserați XML-ai dori tradus</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Prin utilizarea această aplicație, sunteți de acord prin prezenta să disclaimer și sunt de acord cu termenii săi.</string>
+<string name="disclaimer_2">Creatorul această aplicație nu face nici o garanție cu privire la exhaustivitatea, exactitatea și fiabilitatea datelor generate. Orice actiune pe informațiile pe care le găsiți în această aplicație este strict pe propriul risc. Creatorul de această cerere nu va fi răspunzător pentru orice pierderi si/sau daune-interese în legătură cu utilizarea de această aplicație.</string>
+<string name="disclaimer_1">Creatorul această aplicație nu\'t acordă în mod explicit utilizarea datelor generate folosind această aplicație\'s servicii. Acesta este de până la utilizatorul de această aplicație pentru a determina domeniul de aplicare al admisibile de utilizare a datelor furnizate de această aplicație\'s servicii. Cu toate acestea, utilizarea de această aplicație\'s services nu va modifica orice drepturi de autor sau permisiuni de utilizare a datelor furnizate.</string>
+<string name="disclaimer_for_xmlanguage_translator">Disclaimer pentru XML Translator Gratuit</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Poate mai târziu</string>
+<string name="try_it">Încercați să-l</string>
+<string name="external_storage_must">De stocare extern trebuie să fie disponibile.</string>
+<string name="mount_external_please">Te rog muntele scriere de stocare extern mass-media, în scopul de a utiliza această aplicație.</string>
+<string name="read_external_permission_necessary">Citeste extern permisiunea este necesar pentru a citi fișiere de aplicații.</string>
+<string name="permission_necessary">Permisiunea necesară</string>
+<string name="write_external_permission_necessary">Scrie externe permisiunea este necesar pentru a scrie fișiere de aplicații.</string>
+<string name="read_permission_explain">Citește permisiunea de Stocare Externă a permite această aplicație pentru a citi importante date app. Vă rugăm să permiteți această permisiune în Setările Aplicației.</string>
+<string name="write_permission_explain">Scrie permisiunea de Stocare Externă a permite această aplicație pentru a stoca importante date app. Vă rugăm să permiteți această permisiune în Setările Aplicației.</string>
+<string name="translations_complete">Traduceri Complete</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML翻訳者無料</string>
+<string name="translate">翻訳</string>
+<string name="message">ペーストすXMLこちら--- </string>
+<string name="email_to">メール</string>
+<string name="translate_from">翻訳から</string>
+<string name="translate_to">翻訳する</string>
+<string name="no_connection">なインターネット接続</string>
+<string name="no_connection_direction">XML翻訳者は無料なの確立インターネット接続します。 ていることを確認してくださいネットワークに接続してから接続し直してください。</string>
+<string name="welcome_to_xmlanguage_translator">Welcome to XML翻訳者無料</string>
+<string name="translate_from_choose_one">翻訳から選択)</string>
+<string name="translate_to_choose_one_or_more">翻訳をす)</string>
+<string name="powered_by_yandex_translate">Powered by Yandexます。翻訳</string>
+<string name="paste_example_below">ペーストの例</string>
+<string name="please_do_not_alter_the_main_xml_folder">※変更のXMLフォルダ*</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">のチェックをGoogleドライブのための翻訳文のXML文字列です！</string>
+<string name="step_3">ステップ3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">言語を選択のXML文字列を選択す。</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">をXML翻訳者に無許可のアクセス、Googleドライブに責任を持つ調査アナリスト選択します。</string>
+<string name="step_2">ステップ2</string>
+<string name="step_1">ステップ1</string>
+<string name="how_to_use_xmlanguage_translator">使い方XML翻訳者無料</string>
+<string name="help">助</string>
+<string name="home">ホーム</string>
+<string name="disclaimer">免責事項</string>
+<string name="finished">完成！</string>
+<string name="translating_updating_wait">翻訳は、アップロードします。xmlファイルです。 このばらく時間がかかる場合があります。 新しい情報が入り次第、お知らせします。</string>
+<string name="daily_limit_reached">かつてはつのど真ん中に位置する3000文字毎日限定無料で最新の翻訳提案があります。 継続翻訳です。xmlダウンロードXML翻訳で20ドル月のキャンセル料金で！</string>
+<string name="choose_lang_translate_to">をお選びください言語に翻訳です。</string>
+<string name="choose_one_translate_from">について語訳から</string>
+<string name="choose_lang_translate_from">言語を選択ください翻訳からです。</string>
+<string name="paste_xml_to_translate">ペーストのXMLい翻訳</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">による本アプリケーションをご利用は、お客様の同意の上で、免責事項および同意します。</string>
+<string name="disclaimer_2">クールもこのアプリケーションは行いませんので保証の完全性、信頼性、精度、生成されたデータです。 動きの情報を探すには厳重にお客様の自己責任となります。 クールもこのような一切の責任を負わないもの損失、および/もしくは損害を使用願いいたします。</string>
+<string name="disclaimer_1">の作用いて明示的に付与用データ生成本アプリケーションをお使いのりサービスです。 ので、ユーザーの応用範囲を定める許容使用量のデータに供給される本アプリ\'sサービスです。 しかし、このアプリ\'sサービスと変わらず他の著作権、使用権限を提供するデータです。</string>
+<string name="disclaimer_for_xmlanguage_translator">免責事項XML翻訳者無料</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">も降</string>
+<string name="try_it">う</string>
+<string name="external_storage_must">外部ストレージおこなうことが可能である。</string>
+<string name="mount_external_please">ください書き込み可能なマウントの外部記憶メディアのために利用するためのアプリです。</string>
+<string name="read_external_permission_necessary">読外部の許可を読む必要アプリケーションファイルです。</string>
+<string name="permission_necessary">許可が必要</string>
+<string name="write_external_permission_necessary">書く外部の許可が必要に書き込みアプリケーションファイルです。</string>
+<string name="read_permission_explain">読外部ストレージアクセス権により可能になる操作このアプリの読みの重要なアプリ内データです。 くださいこれらの許可のアプリを設定します。</string>
+<string name="write_permission_explain">書の外部保管アクセス権により可能になる操作このアプリを保存に重要なアプリ内データです。 くださいこれらの許可のアプリを設定します。</string>
+<string name="translations_complete">翻訳完了</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

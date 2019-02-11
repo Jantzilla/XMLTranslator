@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Mpandika teny maimaim-Poana</string>
+<string name="translate">Mandika</string>
+<string name="message">Mametaka ianao XML eto... </string>
+<string name="email_to">MAILAKA</string>
+<string name="translate_from">Mandika Avy</string>
+<string name="translate_to">Nandika Ny</string>
+<string name="no_connection">Tsy Misy Fifandraisana Aterineto</string>
+<string name="no_connection_direction">XML Mpandika teny maimaim-Poana dia tsy afaka mametraka fifandraisana aterineto. Ataovy azo antoka ianao ka mifandray amin\'ny tambajotra, ary miezaka indray.</string>
+<string name="welcome_to_xmlanguage_translator">Tonga soa eto amin\'ny XML Mpandika teny maimaim-Poana</string>
+<string name="translate_from_choose_one">Mandika Avy (Misafidy iray)</string>
+<string name="translate_to_choose_one_or_more">Mandika (Mifidiana iray na mihoatra)</string>
+<string name="powered_by_yandex_translate">Powered by Yandex.Mandika</string>
+<string name="paste_example_below">Mametaka Ohatra Eto Ambany</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Mba tsy manova ny tena XML fampirimana *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Jereo ny Google Drive ho an\'ny nadika XML tady!</string>
+<string name="step_3">Dingana 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Mifidy ny fitenin \' ny XML tady sy mifidy ny naniry ny fiteny.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Mamela ny XML Mpandika teny maimaim-Poana ny fahazoan-dalana hidirana ny Google Drive noho ny safidy.</string>
+<string name="step_2">Dingana 2</string>
+<string name="step_1">Dingana 1</string>
+<string name="how_to_use_xmlanguage_translator">Ahoana ny mampiasa XML Mpandika teny maimaim-Poana</string>
+<string name="help">Manampy</string>
+<string name="home">An-trano</string>
+<string name="disclaimer">Disclaimer</string>
+<string name="finished">Vita!</string>
+<string name="translating_updating_wait">Nandika sy namoaka .xml antontan-taratasy. Izany dia mety ho elaela. Misaotra anao noho ny faharetana.</string>
+<string name="daily_limit_reached">Tsy maintsy tonga na dia ny hahatratra ny 3000 ny toetra amam-panahy isan\'andro fetra maimaim-poana ny fandikan-teny. Hanohy ny fandikana .xml, download XML Mpandika teny amin\'ny 20 dolara isam-bolana amin\'ny tsy misy fanafoanana ny saram!</string>
+<string name="choose_lang_translate_to">Azafady mifidy ny fiteny handika ny.</string>
+<string name="choose_one_translate_from">Misafidiana fiteny IRAY mba nandika avy</string>
+<string name="choose_lang_translate_from">Azafady mifidy ny teny mba nandika avy.</string>
+<string name="paste_xml_to_translate">Azafady mametaka ny XML ianao dia te-nandika</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Amin\'ny alalan\'ny fampiasana ny fampiharana ity, ianao izao manaiky ny disclaimer sy manaiky ny teny.</string>
+<string name="disclaimer_2">Ny mpamorona ny fampiharana izany dia tsy manao na inona na inona warranties momba ny fahafenoana, azo antoka sy marina ny niteraka angon-drakitra. Misy asa ianao dia handray amin \' ny fampahalalana hitanao ao amin\'ny fampiharana ity dia tanteraka amin\'ny doza manokana. Ny mpamorona ny fampiharana izany dia tsy ho mendrika noho ny fahavoazana sy/na fahasimbana eo amin\'ny fifandraisana amin\'ny fampiasana ny fampiharana izany.</string>
+<string name="disclaimer_1">Ny mpamorona ny fampiharana izany dia\'t mazava anie ny fampiasana ny angon-drakitra niteraka mampiasa fampiharana ity\'s asa. Dia niakatra ho any amin\'ny mpampiasa ny fampiharana izany mba hamaritana ny habetsahan\'ny allowable fampiasana ny angon-drakitra nanome ny fampiharana ity\'s asa. Na izany aza, ny fampiasana ity application\'s asa dia tsy manova na inona na inona ny zon\'ny mpamorona na ny fampiasana ny fahazoan-dàlana\' ny nanome ny angon-drakitra.</string>
+<string name="disclaimer_for_xmlanguage_translator">Disclaimer XML ho an\'ny Mpandika teny maimaim-Poana</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Angamba taty aoriana</string>
+<string name="try_it">Andramo izany</string>
+<string name="external_storage_must">Ivelany ny fitehirizana dia tsy maintsy ho hita.</string>
+<string name="mount_external_please">Azafady tendrombohitra anoratana ivelany fitehirizana haino aman-jery mba mampiasa fampiharana ity.</string>
+<string name="read_external_permission_necessary">Vakio ivelany alalana ilaina mba hamaky ny fampiharana antontan-taratasy.</string>
+<string name="permission_necessary">Fahazoan-dalana ilaina</string>
+<string name="write_external_permission_necessary">Soraty ivelany alalana ilaina mba hanoratra ny fampiharana antontan-taratasy.</string>
+<string name="read_permission_explain">Vakio Ivelany Fitehirizana alalana mamela ny fampiharana izany mba hamaky zava-dehibe ny fampiharana ny angona. Masìna ianao, aoka izany ny fahazoan-dalana amin\'ny Fampiharana ny toe-Javatra.</string>
+<string name="write_permission_explain">Soraty Ivelany Fitehirizana alàlana fampiharana izany dia mamela ny fivarotana zava-dehibe ny fampiharana ny angona. Masìna ianao, aoka izany ny fahazoan-dalana amin\'ny Fampiharana ny toe-Javatra.</string>
+<string name="translations_complete">Ny Fandikan-Teny Feno</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Translator Nemokamai</string>
+<string name="translate">Išversti</string>
+<string name="message">Pasta jūs XML čia... </string>
+<string name="email_to">PAŠTU</string>
+<string name="translate_from">Verčia Iš</string>
+<string name="translate_to">Versti Į</string>
+<string name="no_connection">Nėra Interneto Ryšio</string>
+<string name="no_connection_direction">XML Translator Nemokamai negalėjo užmegzti interneto ryšį. Įsitikinkite, kad esate prisijungę prie tinklo ir pabandyti ir iš naujo.</string>
+<string name="welcome_to_xmlanguage_translator">Sveiki atvykę į XML Translator Nemokamai</string>
+<string name="translate_from_choose_one">Verčia Iš (Pasirinkti vieną)</string>
+<string name="translate_to_choose_one_or_more">Išversti (Pasirinkite vieną ar daugiau)</string>
+<string name="powered_by_yandex_translate">Varomas </string>
+<string name="paste_example_below">Įklijuokite Žemiau Pvz.</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Prašome nekeisti pagrindinės XML katalogą. *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Patikrinkite savo </string>
+<string name="step_3">Žingsnis 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Pasirinkite kalbą iš jūsų XML stygos ir pasirinkite norimą kalbą.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Leidžia XML Translator Nemokamai teisę prieiti prie </string>
+<string name="step_2">2 žingsnis</string>
+<string name="step_1">1 žingsnis</string>
+<string name="how_to_use_xmlanguage_translator">Kaip naudoti XML Translator Nemokamai</string>
+<string name="help">Pagalba</string>
+<string name="home">Namuose</string>
+<string name="disclaimer">Atsakomybės apribojimas</string>
+<string name="finished">Baigta!</string>
+<string name="translating_updating_wait">Išversti ir įkelti .xml failus. Tai gali užtrukti. Ačiū už jūsų kantrybę.</string>
+<string name="daily_limit_reached">Jūs pasiekėte ar ketinate pasiekti savo 3000 simbolių paros ribinė nemokamai vertimai. Toliau versti .xml, atsisiųsti XML Translator 20 dolerių per mėnesį be jokių atšaukimo mokesčių!</string>
+<string name="choose_lang_translate_to">Prašome pasirinkti kalbas, galėtų versti.</string>
+<string name="choose_one_translate_from">Prašome pasirinkti VIENĄ kalbą išversti iš</string>
+<string name="choose_lang_translate_from">Prašome pasirinkti kalbą versti.</string>
+<string name="paste_xml_to_translate">Prašome pasta XML norite išversti</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Naudojant šią programą, jūs sutinkate su atsakomybės ir sutikti su jo sąlygomis.</string>
+<string name="disclaimer_2">Kūrėja šioje paraiškoje nėra jokių garantijų dėl išsamumo, patikimumo ir tikslumo duomenys. Bet kokių veiksmų galite imtis gavus informaciją, jums rasti šią programą, griežtai savo pačių rizika. Kūrėja šioje paraiškoje nėra atsakingas už bet kokius nuostolius, ir/ar nuostolių atlyginimo, ryšium su šia programa.</string>
+<string name="disclaimer_1">Kūrėjas ši programa doesn  \'t aiškiai dotacijos naudoti duomenis, gautus naudojant šią programą  \'s paslaugos. Jis yra iki vartotojo šią programą apibrėžti, leistina naudojimo duomenų, pateiktų šioje paraiškoje  \'s paslaugos. Tačiau, naudoti šią programą  \'s paslaugos nebus pakeisti bet kokias autorines teises ar naudojimo teises pateikė duomenis.</string>
+<string name="disclaimer_for_xmlanguage_translator">Atsakomybės apribojimas XML Translator Nemokamai</string>
+<string name="ok">Gerai</string>
+<string name="mayber_later">Gal vėliau</string>
+<string name="try_it">Pabandykite jį</string>
+<string name="external_storage_must">Išorinės saugyklos turi būti prieinama.</string>
+<string name="mount_external_please">Prašome mount rašyti išorines laikmenas norint naudoti šią programą.</string>
+<string name="read_external_permission_necessary">Skaityti išorės leidimo reikia perskaityti paraiškos failus.</string>
+<string name="permission_necessary">Leidimo reikia</string>
+<string name="write_external_permission_necessary">Rašyti išorės leidimo reikia rašyti prašymą failus.</string>
+<string name="read_permission_explain">Skaityti Išorės Saugojimo leidimo leidžia šią programą skaityti svarbus programos duomenis. Prašome leisti tokio leidimo į programos Nustatymus.</string>
+<string name="write_permission_explain">Rašyti Išorės Saugojimo leidimo tai leidžia app store </string>
+<string name="translations_complete">Vertimai Visiškai</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

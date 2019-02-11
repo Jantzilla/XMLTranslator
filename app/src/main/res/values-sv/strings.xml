@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML-Översättare Gratis</string>
+<string name="translate">Översätt</string>
+<string name="message">Klistra in du XML-här... </string>
+<string name="email_to">E-POST TILL</string>
+<string name="translate_from">Översätt Från</string>
+<string name="translate_to">Översätt Till</string>
+<string name="no_connection">Ingen Internet-Anslutning</string>
+<string name="no_connection_direction">XML-Översättare Gratis kunde inte upprätta en internet-anslutning. Se till att du är ansluten till ett nätverk och försök igen.</string>
+<string name="welcome_to_xmlanguage_translator">Välkommen till XML-Översättare Gratis</string>
+<string name="translate_from_choose_one">Översätta Från (Välj en)</string>
+<string name="translate_to_choose_one_or_more">Översätt Till (Välj ett eller flera)</string>
+<string name="powered_by_yandex_translate">Drivs av Yandex.Översätt</string>
+<string name="paste_example_below">Exemplet Nedan Klistra In</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Du bör inte ändra de viktigaste XML-mappen *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Kontrollera din Google Drive för dina översatta XML-strängar!</string>
+<string name="step_3">Steg 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Välja språk på din XML-strängar och välj önskat språk.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Tillåter XML-Översättare Gratis åtkomst till Google Drive-konto för ditt val.</string>
+<string name="step_2">Steg 2</string>
+<string name="step_1">Steg 1</string>
+<string name="how_to_use_xmlanguage_translator">Hur man använder XML-Översättare Gratis</string>
+<string name="help">Hjälp</string>
+<string name="home">Hem</string>
+<string name="disclaimer">Ansvarsfriskrivning</string>
+<string name="finished">Klar!</string>
+<string name="translating_updating_wait">Att översätta och lägga upp .xml-filer. Detta kan ta ett tag. Tack för ditt tålamod.</string>
+<string name="daily_limit_reached">Du har nått eller är på väg att nå dina 3000 tecken dagliga gränsen för fria översättningar. Att fortsätta översätta .xml, ladda ner XML-Översättare på 20 dollar i månaden med några avbokningsavgifter!</string>
+<string name="choose_lang_translate_to">Vänligen välj språk att översätta till.</string>
+<string name="choose_one_translate_from">Vänligen välj ETT språk att översätta från</string>
+<string name="choose_lang_translate_from">Välj det språk som du vill översätta från.</string>
+<string name="paste_xml_to_translate">Klistra in XML-du skulle vilja översatt</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Genom att använda denna applikation, samtycker du härmed till ansvarsfriskrivning och samtycker till dess villkor.</string>
+<string name="disclaimer_2">Skaparen av detta program inte göra några garantier om fullständighet, tillförlitlighet och noggrannhet av de data som genereras. Någon åtgärd du vidtar på den information du hittar på denna ansökan är helt på din egen risk. Skaparen av denna tillämpning kommer inte att vara ansvarig för eventuella förluster och/eller skador i samband med användningen av denna ansökan.</string>
+<string name="disclaimer_1">Skaparen av detta program spelar\'t uttryckligen bevilja användningen av uppgifter som genererats med hjälp av detta program\'s tjänster. Det är upp till användaren av detta program för att fastställa omfattningen av den tillåtna användningen av data som levereras till detta program\'s tjänster. Men med hjälp av detta program\'s tjänster kommer inte att ändra några upphovsrätt eller användning behörigheter av de uppgifter som levereras.</string>
+<string name="disclaimer_for_xmlanguage_translator">Ansvarsfriskrivning för XML-Översättare Gratis</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Kanske senare</string>
+<string name="try_it">Prova det</string>
+<string name="external_storage_must">Extern lagring måste vara tillgängliga.</string>
+<string name="mount_external_please">Vänligen mount skrivbar externt lagringsmedia för att kunna använda denna app.</string>
+<string name="read_external_permission_necessary">Läs yttre tillstånd som behövs för att läsa filer.</string>
+<string name="permission_necessary">Tillstånd krävs</string>
+<string name="write_external_permission_necessary">Skriv yttre tillstånd som krävs för att skriva till filer ansökan.</string>
+<string name="read_permission_explain">Läs Extern Lagring tillstånd gör att denna app för att läsa viktigt app data. Låt detta tillstånd i Appen Inställningar.</string>
+<string name="write_permission_explain">Skriv Extern Lagring tillstånd gör att denna app för att lagra viktiga app data. Låt detta tillstånd i Appen Inställningar.</string>
+<string name="translations_complete">Översättningar Komplett</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

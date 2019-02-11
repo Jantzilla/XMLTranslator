@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML అనువాదకుడు ఉచిత</string>
+<string name="translate">అనువదించు</string>
+<string name="message">పేస్ట్ కాపీ. మీరు మీరు XML ఇక్కడ... </string>
+<string name="email_to">ఇమెయిల్</string>
+<string name="translate_from">Translate నుండి</string>
+<string name="translate_to">అనువదించు</string>
+<string name="no_connection">ఇంటర్నెట్ కనెక్షన్</string>
+<string name="no_connection_direction">XML అనువాదకుడు ఉచిత కాలేదు ఏర్పాటు ఒక ఇంటర్నెట్ కనెక్షన్. Make sure you are connected to నెట్వర్క్ మరియు మళ్లీ ప్రయత్నించండి.</string>
+<string name="welcome_to_xmlanguage_translator">స్వాగతం XML అనువాదకుడు ఉచిత</string>
+<string name="translate_from_choose_one">Translate నుండి (Choose one)</string>
+<string name="translate_to_choose_one_or_more">అనువాదం (వన్ ఎంచుకోండి లేదా ఎక్కువ)</string>
+<string name="powered_by_yandex_translate">ద్వారా ఆధారితం Yandex.అనువదించు</string>
+<string name="paste_example_below">పేస్ట్ కాపీ. మీరు క్రింద ఉదాహరణ</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Please do not alter ప్రధాన XML ఫోల్డర్ *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">తనిఖీ, మీ Google డ్రైవ్ కోసం మీ glosbe XML తీగలను!</string>
+<string name="step_3">Step 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">ఎంచుకోండి భాష యొక్క మీ XML తీగలను మరియు కావలసిన ఎంచుకోండి భాషలు.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">అనుమతించే XML అనువాదకుడు ఉచిత అనుమతి యాక్సెస్ Google డ్రైవ్ ఖాతా మీ ఎంపిక యొక్క.</string>
+<string name="step_2">Step 2</string>
+<string name="step_1">Step 1</string>
+<string name="how_to_use_xmlanguage_translator">ఎలా ఉపయోగించాలి XML అనువాదకుడు ఉచిత</string>
+<string name="help">సహాయం</string>
+<string name="home">హోం</string>
+<string name="disclaimer">తనది కాదను వ్యక్తి</string>
+<string name="finished">పూర్తి!</string>
+<string name="translating_updating_wait">అనువాదం మరియు అప్లోడ్ .xml ఫైళ్లు. This may take a while. Thank you for your patience.</string>
+<string name="daily_limit_reached">You have reached or are about to reach your 3000 పాత్ర రోజువారీ పరిమితి కోసం ఉచిత అనువాదాలు. కొనసాగించడానికి అనువాదం .xml, డౌన్లోడ్ XML అనువాదకుడు వద్ద 20 డాలర్లు ఒక నెల with no cancellation fees!</string>
+<string name="choose_lang_translate_to">దయచేసి ఎంచుకోండి భాషలు to translate to.</string>
+<string name="choose_one_translate_from">దయచేసి ఒక భాషను ఎంచుకోండి అనువదించడానికి నుండి</string>
+<string name="choose_lang_translate_from">దయచేసి ఎంచుకోండి భాష అనువదించు నుండి.</string>
+<string name="paste_xml_to_translate">దయచేసి పేస్ట్ కాపీ. మీరు గేమ్ XML you would like ఉన్నాయి.</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">ఈ అప్లికేషన్ ఉపయోగించి, మీరు దీన్ని సమ్మతి నిభంధనలు అంగీకరిస్తున్నారు, దాని పరంగా.</string>
+<string name="disclaimer_2">సృష్టికర్త ఈ అప్లికేషన్ ఉండవని ఏ వారంటీలు గురించి సంపూర్ణత, విశ్వసనీయత మరియు ఖచ్చితత్వం యొక్క ఉత్పత్తి డేటా. Any action you take upon the information you కనుగొనేందుకు ఈ అప్లికేషన్ మీ స్వంత పూచీతో ఖచ్చితంగా. సృష్టికర్త ఈ అప్లికేషన్ బాధ్యులు ఉండదు, ఏ నష్టాలు మరియు/లేదా నష్టపరిహారం in connection with the use of this application.</string>
+<string name="disclaimer_1">The creator of this application doesn\'t స్పష్టంగా మంజూరు ఉపయోగం డేటా ఉపయోగించి ఉత్పత్తి. ఈ అప్లికేషన్\'s services. ఇది వరకు యూజర్ ఈ అప్లికేషన్ పరిధిని గుర్తించేందుకు అనుమతించదగిన వాడుక యొక్క డేటా సరఫరా ఈ అప్లికేషన్\'s services. అయితే, ఉపయోగం యొక్క ఈ అప్లికేషన్\'s services will not alter ఏ కాపీ లేదా ఉపయోగం అనుమతులు యొక్క సరఫరా డేటా.</string>
+<string name="disclaimer_for_xmlanguage_translator">తనది కాదను వ్యక్తి కోసం XML అనువాదకుడు ఉచిత</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">బహుశా తరువాత</string>
+<string name="try_it">ఇది ప్రయత్నించండి</string>
+<string name="external_storage_must">బాహ్య నిల్వ అందుబాటులో ఉండాలి.</string>
+<string name="mount_external_please">దయచేసి మౌంట్ వ్రాయగలిగే బాహ్య నిల్వ మీడియా in order to use this app.</string>
+<string name="read_external_permission_necessary">Read బాహ్య అనుమతి అవసరం read అప్లికేషన్ ఫైళ్లు.</string>
+<string name="permission_necessary">అనుమతి అవసరం</string>
+<string name="write_external_permission_necessary">Write బాహ్య అనుమతి అవసరం వ్రాయండి అప్లికేషన్ ఫైళ్లు.</string>
+<string name="read_permission_explain">Read బాహ్య నిల్వ అనుమతి అనుమతిస్తుంది. ఈ అనువర్తనం చదవడానికి ముఖ్యమైన అనువర్తనం డేటా. Please allow ఈ అనుమతి App Settings.</string>
+<string name="write_permission_explain">Write బాహ్య నిల్వ అనుమతి అనుమతిస్తుంది. ఈ అనువర్తనం స్టోర్ ముఖ్యమైన అనువర్తనం డేటా. Please allow ఈ అనుమతి App Settings.</string>
+<string name="translations_complete">అనువాదాలు పూర్తి</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

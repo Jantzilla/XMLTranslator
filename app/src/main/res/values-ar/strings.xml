@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML مترجم مجانا</string>
+<string name="translate">ترجمة</string>
+<string name="message">لصق كنت XML هنا... </string>
+<string name="email_to">البريد الإلكتروني</string>
+<string name="translate_from">ترجمة من</string>
+<string name="translate_to">ترجمة</string>
+<string name="no_connection">لا اتصال إنترنت</string>
+<string name="no_connection_direction">XML مترجم مجانا تعذر تأسيس اتصال بالإنترنت. تأكد من أنك متصل بشبكة وحاول مرة أخرى.</string>
+<string name="welcome_to_xmlanguage_translator">مرحبا بكم XML مترجم مجانا</string>
+<string name="translate_from_choose_one">ترجمة من (اختيار واحد)</string>
+<string name="translate_to_choose_one_or_more">ترجمة (اختر واحد أو أكثر)</string>
+<string name="powered_by_yandex_translate">مدعوم من ياندكس.ترجمة</string>
+<string name="paste_example_below">لصق المثال أدناه</string>
+<string name="please_do_not_alter_the_main_xml_folder">* من فضلك لا تغير الرئيسي مجلد XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">تحقق من محرك جوجل الخاص بك على ترجمة XML السلاسل!</string>
+<string name="step_3">الخطوة 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">اختيار لغة XML سلاسل واختر اللغات.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">تسمح XML مترجم مجانا على إذن الدخول إلى حساب Google Drive الخاص بك في الاختيار.</string>
+<string name="step_2">الخطوة 2</string>
+<string name="step_1">الخطوة 1</string>
+<string name="how_to_use_xmlanguage_translator">كيفية استخدام XML مترجم مجانا</string>
+<string name="help">مساعدة</string>
+<string name="home">المنزل</string>
+<string name="disclaimer">تنويه</string>
+<string name="finished">الانتهاء!</string>
+<string name="translating_updating_wait">ترجمة وتحميل .ملفات xml. هذا قد يستغرق بعض الوقت. شكرا لكم على صبركم.</string>
+<string name="daily_limit_reached">كنت قد وصلت أو هي على وشك أن تصل إلى 3000 حرف الحد اليومي للترجمة مجانا. الاستمرار في ترجمة .xml, تحميل XML مترجم على 20 دولار شهريا بدون رسوم الإلغاء!</string>
+<string name="choose_lang_translate_to">يرجى اختيار اللغات لترجمة.</string>
+<string name="choose_one_translate_from">يرجى اختيار لغة الترجمة من</string>
+<string name="choose_lang_translate_from">يرجى اختيار اللغة إلى ترجمة.</string>
+<string name="paste_xml_to_translate">يرجى لصق XML كنت ترغب في ترجمة</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">باستخدام هذا التطبيق فإنك توافق على شروط الموافقة على شروطها.</string>
+<string name="disclaimer_2">خالق هذا التطبيق لا يجعل أي ضمانات حول اكتمال أو موثوقية ودقة البيانات التي تم إنشاؤها. أي عمل كنت تأخذ على المعلومات التي تجدها في هذا التطبيق هو تماما على مسؤوليتك الخاصة. خالق هذا التطبيق سوف لن تكون مسؤولة عن أي خسائر و/أو أضرار في اتصال مع استخدام هذا التطبيق.</string>
+<string name="disclaimer_1">خالق هذا التطبيق لا توجد الآن\'ر صراحة منحة استخدام البيانات التي تم إنشاؤها باستخدام هذا التطبيق\'s الخدمات. فمن يصل إلى المستخدم من هذا التطبيق لتحديد نطاق المسموح به استخدام البيانات المقدمة من هذا التطبيق\'s الخدمات. ومع ذلك ، فإن استخدام هذا التطبيق\'s الخدمات لن يغير أي حقوق التأليف والنشر أو استخدام أذونات البيانات المقدمة.</string>
+<string name="disclaimer_for_xmlanguage_translator">تنويه بالنسبة XML مترجم مجانا</string>
+<string name="ok">طيب</string>
+<string name="mayber_later">ربما في وقت لاحق</string>
+<string name="try_it">تحاول ذلك</string>
+<string name="external_storage_must">التخزين الخارجية يجب أن تكون متاحة.</string>
+<string name="mount_external_please">يرجى جبل للكتابة وسائط التخزين الخارجية من أجل استخدام هذا التطبيق.</string>
+<string name="read_external_permission_necessary">قراءة الخارجية إذن من الضروري قراءة ملفات التطبيق.</string>
+<string name="permission_necessary">إذن من الضروري</string>
+<string name="write_external_permission_necessary">أكتب الخارجية إذن من الضروري أن يكتب إلى ملفات التطبيق.</string>
+<string name="read_permission_explain">قراءة إذن تخزين خارجي يسمح هذا التطبيق لقراءة أهمية بيانات التطبيق. يرجى يسمح هذا الإذن في إعدادات التطبيق.</string>
+<string name="write_permission_explain">الكتابة إذن تخزين خارجي يسمح هذا التطبيق إلى مخزن التطبيق مهم البيانات. يرجى يسمح هذا الإذن في إعدادات التطبيق.</string>
+<string name="translations_complete">ترجمة كاملة</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

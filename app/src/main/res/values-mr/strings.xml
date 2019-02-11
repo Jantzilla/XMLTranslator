@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML मुक्त भाषांतर</string>
+<string name="translate">अनुवाद</string>
+<string name="message">पेस्ट आपण XML येथे... </string>
+<string name="email_to">ई-मेल</string>
+<string name="translate_from">अनुवाद</string>
+<string name="translate_to">अनुवाद</string>
+<string name="no_connection">इंटरनेट कनेक्शन</string>
+<string name="no_connection_direction">XML अनुवादक मुक्त करू शकत नाही स्थापन एक इंटरनेट कनेक्शन. आपली खात्री आहे की आपण कनेक्ट करण्यासाठी नेटवर्क आणि पुन्हा प्रयत्न करा.</string>
+<string name="welcome_to_xmlanguage_translator">आपले स्वागत XML मुक्त भाषांतर</string>
+<string name="translate_from_choose_one">अनुवाद (एक निवडा)</string>
+<string name="translate_to_choose_one_or_more">अनुवाद (एक निवडा किंवा अधिक)</string>
+<string name="powered_by_yandex_translate">Powered by यांडेक्स.अनुवाद</string>
+<string name="paste_example_below">पेस्ट खाली उदाहरण</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Please do not बदलू मुख्य XML फोल्डर *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Check your Google ड्राइव्ह आपल्या अनुवादित XML स्ट्रिंग!</string>
+<string name="step_3">चरण 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">भाषा निवडा आपल्या XML स्ट्रिंग आणि निवडा इच्छित भाषा आहे.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">परवानगी XML अनुवादक मुक्त परवानगी प्रवेश करण्यासाठी Google ड्राइव्ह खात्यामध्ये आपल्या पर्याय आहे.</string>
+<string name="step_2">चरण 2</string>
+<string name="step_1">चरण 1</string>
+<string name="how_to_use_xmlanguage_translator">कसे वापरावे XML मुक्त भाषांतर</string>
+<string name="help">मदत</string>
+<string name="home">मुख्यपृष्ठ</string>
+<string name="disclaimer">अस्वीकरण</string>
+<string name="finished">पूर्ण झाले!</string>
+<string name="translating_updating_wait">अनुवादित आणि अपलोड .xml फाइल. हे थोडा वेळ लागू शकतो. धन्यवाद आपला संयम आहे.</string>
+<string name="daily_limit_reached">आपण गाठली आहे किंवा are about to reach your 3000 वर्ण दैनंदिन मर्यादा मुक्त अनुवाद. सुरू अनुवादित .एक्स एम एल, डाउनलोड XML भाषांतर येथे 20 डॉलर्स एक महिना नाही शुल्क रद्द!</string>
+<string name="choose_lang_translate_to">कृपया निवडा भाषांमध्ये अनुवाद करणे.</string>
+<string name="choose_one_translate_from">कृपया एक निवडा भाषेत अनुवाद करणे</string>
+<string name="choose_lang_translate_from">कृपया निवडा भाषेत अनुवाद करणे.</string>
+<string name="paste_xml_to_translate">कृपया पेस्ट XML आपण आवडेल अनुवादित</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">हा अनुप्रयोग वापरून, आपण याद्वारे संमती अस्वीकृती आणि सहमत त्याच्या दृष्टीने.</string>
+<string name="disclaimer_2">निर्माता हा अनुप्रयोग करू शकत नाही कोणत्याही हमी बद्दल शेवट, विश्वसनीयता आणि अचूकता व्युत्पन्न डेटा. कोणतीही कृती आपण घेऊ यावर माहिती आपण या अनुप्रयोग काटेकोरपणे येथे आपल्या स्वत: च्या धोका. निर्माता हा अनुप्रयोग जबाबदार राहणार नाही कोणत्याही नुकसान आणि/किंवा नुकसानीसाठी in connection with the use of this application.</string>
+<string name="disclaimer_1">निर्माता हा अनुप्रयोग doesn\'t स्पष्टपणे अनुदान वापर डेटा व्युत्पन्न या अनुप्रयोग वापरत\'s services. तो पर्यंत, वापरकर्ता या अनुप्रयोग व्याप्ती निश्चित करण्यासाठी परवानगी वापर डेटा पुरविले हा अर्ज\'s services. मात्र, the use of this application\'s सेवा करणार नाही बदलू कोणत्याही कॉपीराइट किंवा वापर परवानगी, पुरवले डेटा.</string>
+<string name="disclaimer_for_xmlanguage_translator">अस्वीकरण XML मुक्त भाषांतर</string>
+<string name="ok">ओके</string>
+<string name="mayber_later">कदाचित नंतर</string>
+<string name="try_it">हे वापरून पहा</string>
+<string name="external_storage_must">बाह्य संचय उपलब्ध असणे आवश्यक आहे.</string>
+<string name="mount_external_please">कृपया माउंट बदल करू शकत बाह्य स्टोरेज मीडिया in order to use this app.</string>
+<string name="read_external_permission_necessary">वाचा बाह्य परवानगी वाचा करणे आवश्यक अनुप्रयोग फाइल.</string>
+<string name="permission_necessary">परवानगी आवश्यक</string>
+<string name="write_external_permission_necessary">लिहा बाह्य परवानगी आवश्यक लिहा अर्ज फायली.</string>
+<string name="read_permission_explain">वाचा बाह्य संचय परवानगी देते हा अनुप्रयोग वाचण्यासाठी महत्वाचे अनुप्रयोग डेटा. Please allow या परवानगी मध्ये अनुप्रयोग सेटिंग्ज.</string>
+<string name="write_permission_explain">लिहा बाह्य संचय परवानगी देते, या अनुप्रयोग स्टोअर महत्वाचे अनुप्रयोग डेटा. Please allow या परवानगी मध्ये अनुप्रयोग सेटिंग्ज.</string>
+<string name="translations_complete">अनुवाद पूर्ण</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

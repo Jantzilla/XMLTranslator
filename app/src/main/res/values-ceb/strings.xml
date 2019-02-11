@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Maghuhubad sa Free</string>
+<string name="translate">Paghubad</string>
+<string name="message">Paste kamo XML dinhi... </string>
+<string name="email_to">EMAIL NGADTO SA</string>
+<string name="translate_from">Gikan Sa Paghubad</string>
+<string name="translate_to">Paghubad Sa</string>
+<string name="no_connection">Walay Koneksyon Sa Internet</string>
+<string name="no_connection_direction">XML Maghuhubad sa Libre nga dili sa pagtukod sa usa ka internet connection. Sa paghimo sa pagsiguro nga kamo sa konektado sa usa ka network ug mosulay pag-usab.</string>
+<string name="welcome_to_xmlanguage_translator">Welcome sa XML Maghuhubad sa Free</string>
+<string name="translate_from_choose_one">Translate Gikan sa (Pagpili og usa)</string>
+<string name="translate_to_choose_one_or_more">Paghubad Sa (Pagpili og usa o labaw pa)</string>
+<string name="powered_by_yandex_translate">Powered by Yandex.Paghubad</string>
+<string name="paste_example_below">Paste Panig-Ingnan Sa Ubos</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Palihug sa pagbuhat sa dili pag-usab sa mga nag-unang XML suksukanan sa papel *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Check sa imong Google Drive alang sa imong gihubad XML kuldas!</string>
+<string name="step_3">Lakang 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Pagpili sa pinulongan sa imong XML kuldas ug sa pagpili sa gitinguha nga mga pinulongan.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Tugoti XML Maghuhubad sa Free nga pagtugot sa pag-access sa Google Drive asoy sa imong pagpili.</string>
+<string name="step_2">Lakang 2</string>
+<string name="step_1">Lakang 1</string>
+<string name="how_to_use_xmlanguage_translator">Unsa nga paagi sa paggamit sa XML Maghuhubad sa Free</string>
+<string name="help">Tabang</string>
+<string name="home">Home</string>
+<string name="disclaimer">Disclaimer</string>
+<string name="finished">Nahuman na!</string>
+<string name="translating_updating_wait">Paghubad ug upload .xml nga mga files. Kini aron sa pagkuha sa usa ka samtang. Salamat kaninyo alang sa inyong pailub.</string>
+<string name="daily_limit_reached">Imong makab-ot o mao ang mahitungod sa aron sa pagkab-ot sa imong 3000 kinaiya adlaw-adlaw nga utlanan alang sa libre nga hubad. Aron sa pagpadayon sa paghubad .xml, download XML Maghuhubad sa 20 dolyares sa usa ka bulan nga walay cancellation fees!</string>
+<string name="choose_lang_translate_to">Palihug pagpili sa pinulongan sa paghubad sa.</string>
+<string name="choose_one_translate_from">Palihug pagpili og USA ka pinulongan nga gikan sa paghubad</string>
+<string name="choose_lang_translate_from">Palihug pagpili sa pinulongan sa paghubad gikan sa.</string>
+<string name="paste_xml_to_translate">Palihug sa paste sa XML kamo gusto nga gihubad</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Pinaagi sa paggamit sa niini nga aplikasyon, kamo niini nga pag-uyon sa pagpasabot ug mouyon sa iyang termino.</string>
+<string name="disclaimer_2">Ang tiglalang sa niini nga aplikasyon dili sa paghimo sa bisan unsa nga garantiya mahitungod sa kahingpitan, kasaligan ug katukma sa mga namugna nga data. Bisan unsa nga aksyon nga ikaw sa pagkuha sa sa ibabaw nga mga impormasyon nga imong makita sa niini nga aplikasyon mao ang hugot nga sa imong kaugalingong risgo. Ang tiglalang sa niini nga aplikasyon dili manubag alang sa bisan unsa nga pagkawala ug/o sa danyos sa koneksyon uban sa sa paggamit sa niini nga aplikasyon.</string>
+<string name="disclaimer_1">Ang tiglalang sa niini nga aplikasyon doesn\'t tin-aw nga grant sa paggamit sa data nga namugna sa paggamit sa niini nga aplikasyon\'s serbisyo. Kini mao ang ngadto sa mga user sa niini nga aplikasyon aron sa pagtino ang gidak-on sa matugot nga paggamit sa mga data nga naghatag sa niini nga aplikasyon\'s serbisyo. Apan, ang paggamit sa niini nga aplikasyon\'s serbisyo sa dili pag-usab sa bisan unsa nga mga katungod sa sinulat o sa paggamit permissions sa mga hinabang nga data.</string>
+<string name="disclaimer_for_xmlanguage_translator">Disclaimer alang sa XML Maghuhubad sa Free</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Tingali milabay</string>
+<string name="try_it">Sulayi kini</string>
+<string name="external_storage_must">Gawas pagtipig kinahanglan nga anaa.</string>
+<string name="mount_external_please">Palihug sa bukid sa writable sa gawas pagtipig media aron sa paggamit niini nga app.</string>
+<string name="read_external_permission_necessary">Basaha sa gawas sa pagtugot nga gikinahanglan sa pagbasa sa aplikasyon nga mga files.</string>
+<string name="permission_necessary">Nga pagtugot nga gikinahanglan</string>
+<string name="write_external_permission_necessary">Isulat sa gawas sa pagtugot nga gikinahanglan sa pagsulat sa aplikasyon nga mga files.</string>
+<string name="read_permission_explain">Basaha sa Gawas Pagtipig pagtugot nagtugot sa niini nga app nga sa pagbasa sa importante nga mga data app. Palihug sa pagtugot niini nga pagtugot sa App Setting.</string>
+<string name="write_permission_explain">Isulat sa Gawas Pagtipig pagtugot nagtugot kini nga app sa tindahan sa importante nga mga data app. Palihug sa pagtugot niini nga pagtugot sa App Setting.</string>
+<string name="translations_complete">Hubad Bug-Os Nga</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">လက်ဘာသာပြန်အခမဲ့</string>
+<string name="translate">ဘာသာပြန်ဆို</string>
+<string name="message">ငါးပိသင်လက်မှာ။။။ </string>
+<string name="email_to">အီးမေးလ်</string>
+<string name="translate_from">ဘာသာပြန်ကနေ</string>
+<string name="translate_to">ဘာသာပြန်ရန်</string>
+<string name="no_connection">အဘယ်သူမျှမအင်တာနက်ချိတ်ဆက်</string>
+<string name="no_connection_direction">လက်ဘာသာပြန်အခမဲ့မယ့္သအင်တာနက်ချိတ်ဆက်။ သေချာအောင်သင်ချိတ်ဆက်ဖို့ကွန်ယက်တစ်ခုနှင့်ထပ်ကြိုးစား။</string>
+<string name="welcome_to_xmlanguage_translator">ဓါန္မွလွိဳက္လွဲစြာၾကိဳလက်ဘာသာပြန်အခမဲ့</string>
+<string name="translate_from_choose_one">ဘာသာပြန်ထဲကနေ(တဦးတည်းကိုရွေးချယ်)</string>
+<string name="translate_to_choose_one_or_more">ဘာသာပြန်ရန်(ရှေးခယျြတစျခုသို့မဟုတ်ထိုထက်ပို)</string>
+<string name="powered_by_yandex_translate">စြမ္းအားဖြင့်နည်းလမ်းများကို။ဘာသာပြန်ဆို</string>
+<string name="paste_example_below">ငါးပိဥပမာအောက်</string>
+<string name="please_do_not_alter_the_main_xml_folder">*ေက်းဇူးျပဳ၍မပြောင်းလဲသောအဓိကအလက်ဖိုင်တွဲ*</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">စစ္ေ၏ဂူသင်တို့အဘို့အဘာသာပြန်ထားသောလက်ကြိုး!</string>
+<string name="step_3">အဆင့် ၃</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">ရွေးချယ်ဘာသာစကားကိုသင်၏လက်ကြိုးနှင့်ရွေးအလိုရှိသောသည္။</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">ခွင့်ပြုလက်ဘာသာပြန်အခမဲ့ခွင့်ပြုချက်ကိုရယူဂူအကောင့်ကိုသင့်ရဲ့ရွေးချယ်မှု၏။</string>
+<string name="step_2">အဆင့် ၂</string>
+<string name="step_1">အဆင့် ၁</string>
+<string name="how_to_use_xmlanguage_translator">ဘယ်လိုသုံးစွဲဖို့လက်ဘာသာပြန်အခမဲ့</string>
+<string name="help">အကူအညီ</string>
+<string name="home">အိမ်</string>
+<string name="disclaimer">ခွင</string>
+<string name="finished">ပြီးစီး!</string>
+<string name="translating_updating_wait">ဘာသာပြန်ဆိုနှင့်တင်ခြင်း။လက်ဖိုင်များ။ ဒီခဏတစ်ယူစေခြင်းငှါ။ ၾကက္ၿပီးျဖစ္သည္။</string>
+<string name="daily_limit_reached">သင်ရောက်ရှိသို့မဟုတ်အကြောင်းရောက်ရန်သင့် ၃၀၀၀ ဇာတ်ကောင်နေ့စဉ်န့်သတ်အခမဲ့အဘို့။ ဆက်လက်ဘာသာပြန်ဆို။လက်၊လက်ဘာသာပြန်မှာဒေါ်လာ ၂၀ နှင့်အတူတစ်လအမွတ္ဖျက်သိမ်းဖိုးအခများ!</string>
+<string name="choose_lang_translate_to">ယခုရွေးချယ်သောဘာသာစကားများသို့ဘာသာပြန်ရန်။</string>
+<string name="choose_one_translate_from">ယခုရွေးချယ်ဘာသာစကားဘာသာပြန်ဆိုဖို့မှ</string>
+<string name="choose_lang_translate_from">ယခုရွေးချယ်သောဘာသာစကားသို့ဘာသာပြန်ဆို။</string>
+<string name="paste_xml_to_translate">ယခုငါးပိအလက်လို့မရဘာသာပြန်ထားသော</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">အားဖြင့်ဤလျှောက်လွှာကိုအသုံးပြု၊သင်ဤဥပဒေဖြင့်ခွင့်ပြုချက်မှအခွငနှင့်သဘောတူရန်၎င်း၏။</string>
+<string name="disclaimer_2">ဖန်ဆင်းရှင်၏ဤလျှောက်လွှာအောင်မပါဘူးဆိုအာမခံအကြောင်းပြည့်စုံမှု၊ယုံကြည်စိတ်ချရမှုနှင့်တိကျမှန်ကန်မှု၏ထုတ်လုပ်။ မဆိုအရေးယူသင်အယူအပေါ်သို့သတင်းအချက်အလက်ရှာအပေါ်မှာဤလျှောက်လွှာကိုကိုယ်ပိုင်စွန့်စားမှုမှာတင်းကျပ်စွာ။ ဖန်ဆင်းရှင်၏ဤလျှောက်လွှာအတွက်တာဝန်ရှိလိမ့်မည်မဟုတ်မည်သည့်ဆုံးရှုံးမှုနှင့်/သို့မဟုတ်ပျက်စီးဆုံးရှုံးမှုအတွက်ချိတ်ဆက်အသုံးပြုခြင်းနှင့်အတူဤလျှောက်လွှာကို၏။</string>
+<string name="disclaimer_1">ဖန်ဆင်းရှင်၏ဤပလီကေးရှင်းမရှိပါ\'တီတိဂရံေျမသုံးချက်အလက်များ၏ထုတ်လုပ်ဤလျှောက်လွှာကိုအသုံးပြု\'့။ ဒါဟာသည်အထိအသံုးျပဳသူမ်ား၏ဤလျှောက်လွှာကိုမှဆုံးဖြတ်ရန်အတိုင်းအတာ၏သတ်မှတ်ထားသောအသုံးပြုမှုအချက်အလက်များ၏ထောက်ပံ့ဖို့ဤလျှောက်လွှာ\'့။ သို့သော်၊၏အသုံးပြုမှုကိုဤလျှောက်လွှာကိုျဝန္ေဆာင္မႈမ်ားမည်မပြောင်းလဲမည်သည့်မူပိုင်ခွင့်သို့မဟုတ်အသုံးပြုမှုခွင့်ပြုချက်ကိုထောက်ပံ့။</string>
+<string name="disclaimer_for_xmlanguage_translator">ခွငများအတွက်လက်ဘာသာပြန်အခမဲ့</string>
+<string name="ok">အိုကေ</string>
+<string name="mayber_later">ဒါနဲ့ပတ်သက်ပြီးနောက်ပိုင်းမှာ</string>
+<string name="try_it">ကြိုးစား</string>
+<string name="external_storage_must">ပြင်ပသိုလှောင်မှုဖြစ်ရမည်။</string>
+<string name="mount_external_please">ယခုတောင် writable ပြင်ပသိုလှောင်ရေးမီဒီယာအသုံးပြုနိုင်ရန်အတွက်ဤ။</string>
+<string name="read_external_permission_necessary">ဖတ်ယင်းခွင့်ပြုချက်လိုအပ်ဖတ်ရှုဖို့လျှောက်လွှာတွေကို။</string>
+<string name="permission_necessary">ခွင့်ပြုချက်လိုအပ်</string>
+<string name="write_external_permission_necessary">ရေးသားယင်းခွင့်ပြုချက်လိုအပ်သောအရေးအလီကေးရှင်း။</string>
+<string name="read_permission_explain">ဖတ်ပြင်ပသိုလှောင်မှုခွင့်ပြုချက်ခွင့်ပြုဒီအက္ပ္ကိုဖတ်ရှုဖို့အရေးကြီးအက္ပ္ကို။ ခွင့်ပြုကျေးဇူးပြုဤခွင့်ပြုချက်တွင်အက္ပ္ကိုခ်ိန္ၫ။</string>
+<string name="write_permission_explain">ရေးပြင်ပသိုလှောင်မှုခွင့်ပြုချက်ခွင့်ပြုဒီအက္ပ္ကိုသိမ်းထားဖို့အရေးအက္ပ္ကို။ ခွင့်ပြုကျေးဇူးပြုဤခွင့်ပြုချက်တွင်အက္ပ္ကိုခ်ိန္ၫ။</string>
+<string name="translations_complete">ပန္ခ်က္မ်ားဖြည့်စွက်</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

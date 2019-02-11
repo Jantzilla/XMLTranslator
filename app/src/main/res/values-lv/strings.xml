@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML Translator Bezmaksas</string>
+<string name="translate">Tulkot</string>
+<string name="message">Ielīmējiet jūs XML šeit... </string>
+<string name="email_to">E-PASTU</string>
+<string name="translate_from">Tulkot No</string>
+<string name="translate_to">Tulkot Uz</string>
+<string name="no_connection">Nav Interneta Pieslēguma</string>
+<string name="no_connection_direction">XML Translator Bezmaksas nevarēja izveidot savienojumu ar internetu. Pārliecinieties, ka jums ir izveidots savienojums ar tīklu un mēģiniet vēlreiz.</string>
+<string name="welcome_to_xmlanguage_translator">Laipni lūdzam XML Translator Bezmaksas</string>
+<string name="translate_from_choose_one">Tulkot No (Izvēlēties vienu)</string>
+<string name="translate_to_choose_one_or_more">Tulkot (Izvēlēties vienu vai vairāku)</string>
+<string name="powered_by_yandex_translate">Powered by Yandex.Tulkot</string>
+<string name="paste_example_below">Ielīmējiet Zemāk Piemērs</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Lūdzu, nemainiet galvenais XML mape *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Pārbaudiet savu Google Drive jūsu tulkoto XML stīgas!</string>
+<string name="step_3">Solis 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Izvēlēties valodu XML virknes un izvēlieties vajadzīgo valodu.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Ļauj XML Translator Bezmaksas atļaujas, lai piekļūtu Google Drive kontu pēc jūsu izvēles.</string>
+<string name="step_2">2. posms</string>
+<string name="step_1">Solis 1</string>
+<string name="how_to_use_xmlanguage_translator">Kā izmantot XML Translator Bezmaksas</string>
+<string name="help">Palīdzēt</string>
+<string name="home">Mājas</string>
+<string name="disclaimer">Saistību atruna</string>
+<string name="finished">Gatavs!</string>
+<string name="translating_updating_wait">Tulkošanas un augšupielāde .xml failus. Tas var aizņemt kādu laiku. Paldies par jūsu pacietību.</string>
+<string name="daily_limit_reached">Jums ir sasniegusi vai ir par, lai sasniegtu jūsu 3000 raksturs dienas limitu bezmaksas tulkojumus. Turpināt tulkošanu .xml, lejupielādēt XML Translator 20 dolāru mēnesī, kuram nav anulēšanas maksas!</string>
+<string name="choose_lang_translate_to">Lūdzu, izvēlieties valodu tulkot.</string>
+<string name="choose_one_translate_from">Lūdzu izvēlēties VIENU valodu tulkot no</string>
+<string name="choose_lang_translate_from">Lūdzu, izvēlieties valodu tulkot no.</string>
+<string name="paste_xml_to_translate">Lūdzu ielīmējiet XML jūs vēlētos tulkots</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">Izmantojot šo programmu, jūs piekrītat atruna un piekrīt tā noteikumiem.</string>
+<string name="disclaimer_2">Radītājs šajā pieprasījumā nav nekādas garantijas par to, pilnīgumu, ticamību un precizitāti iegūtie dati. Jebkura darbība, jūs uzņemties uz informāciju, kas jums atrast šo programmu, ir stingri uz savu risku. Radītājs šo programmu nebūs atbildīgs par jebkādiem zaudējumiem un/vai kaitējumu saistībā ar šo pieteikumu.</string>
+<string name="disclaimer_1">Radītājs šis pieteikums doesn  \'t skaidri piešķirt izmantot datus, kas iegūti, izmantojot šo programmu\'s pakalpojumiem. Tas ir atkarīgs no lietotāja par šo programmu, lai noteiktu jomu pieļaujamā lietojuma datiem, ko sniedz šis pieteikums\'s pakalpojumiem. Tomēr izmantot šo pieteikumu\'s pakalpojumiem nemaina jebkuru autortiesību vai lietošanas atļaujas sniegtie dati.</string>
+<string name="disclaimer_for_xmlanguage_translator">Atruna par XML Translator Bezmaksas</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">Varbūt vēlāk</string>
+<string name="try_it">Izmēģiniet to</string>
+<string name="external_storage_must">Ārējās atmiņas ir pieejams.</string>
+<string name="mount_external_please">Lūdzu, mount rakstāms ārējiem informācijas nesējiem, lai izmantotu šo app.</string>
+<string name="read_external_permission_necessary">Lasīt ārējās atļauju, kas vajadzīgi, lai lasītu pieteikuma datnes.</string>
+<string name="permission_necessary">Atļauja nepieciešama</string>
+<string name="write_external_permission_necessary">Rakstīt ārējās atļauju nepieciešams, lai rakstītu pieteikumu failus.</string>
+<string name="read_permission_explain">Lasīt Ārējās Glabāšanas atļauju, kas ļauj šo app, lai lasītu svarīgi app dati. Lūdzu atļaut šo atļauju Lietotnes Iestatījumus.</string>
+<string name="write_permission_explain">Rakstīt Ārējās Glabāšanas atļauju, kas ļauj šo app store svarīgi app dati. Lūdzu atļaut šo atļauju Lietotnes Iestatījumus.</string>
+<string name="translations_complete">Tulkojumi Pabeigt</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

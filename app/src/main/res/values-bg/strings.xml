@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">Безплатни XML преводач</string>
+<string name="translate">Преведете</string>
+<string name="message">Поставете вие сте тук в XML формат... </string>
+<string name="email_to">ЕЛЕКТРОННА ПОЩА</string>
+<string name="translate_from">Преведете</string>
+<string name="translate_to">Преведете</string>
+<string name="no_connection">Няма Интернет Връзка</string>
+<string name="no_connection_direction">Безплатни XML преводач не може да се установи връзка с интернет. Уверете се, че сте свързани към интернет и опитайте отново.</string>
+<string name="welcome_to_xmlanguage_translator">Добре дошли в XML-преводач безплатно</string>
+<string name="translate_from_choose_one">Превод от (изберете едно)</string>
+<string name="translate_to_choose_one_or_more">Преведете на (изберете един или няколко)</string>
+<string name="powered_by_yandex_translate">Захранва от Yandex.Превод</string>
+<string name="paste_example_below">Вмъкване На Пример По-Долу</string>
+<string name="please_do_not_alter_the_main_xml_folder">* Моля, не променя основната папка на XML *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">Проверете вашия Google диск за превод на XML-ред!</string>
+<string name="step_3">Стъпка 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">Изберете език реда на XML и изберете желаните езици.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">Оставете безплатен XML-преводач на разрешение за достъп до профила си в Google диск за Вашия избор.</string>
+<string name="step_2">Стъпка 2</string>
+<string name="step_1">Стъпка 1</string>
+<string name="how_to_use_xmlanguage_translator">Като използват XML-преводач безплатно</string>
+<string name="help">Помогнете</string>
+<string name="home">У Дома</string>
+<string name="disclaimer">Отказ от отговорност</string>
+<string name="finished">Завърши!</string>
+<string name="translating_updating_wait">Превод и изпращане .XML-файлове. Това може да отнеме известно време. Благодаря ви за търпението.</string>
+<string name="daily_limit_reached">Вие сте достигнали или ще достигнат вашите 3000 знака лимит на безплатни преводи. За продължаване на превода .XML-файл, сваляне на XML-преводач на 20 долара на месец, без такси за отмяна!</string>
+<string name="choose_lang_translate_to">Моля, изберете език за превод.</string>
+<string name="choose_one_translate_from">Моля изберете един език, да се превеждат с</string>
+<string name="choose_lang_translate_from">Моля, изберете езика за превод.</string>
+<string name="paste_xml_to_translate">Моля, посочете XML код бихте искали да преведете</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">С помощта на това приложение, вие се съгласявате с отказ от отговорност и се съгласявате с нейните правила и условия.</string>
+<string name="disclaimer_2">Създателят на това приложение не дава никакви гаранции по отношение на пълнотата, достоверността и точността на получените данни. Всички действия, които можете да вземете на информацията, която ще намерите в настоящото заявление, е строго на свой страх и риск. Създателят на това приложение, не носи отговорност за вреди и/или щети, свързани с използването на това приложение.</string>
+<string name="disclaimer_1">Създателят на това приложение не\'т да се позволи използването на данни, получени с помощта на това приложение услуги\'. Това е до потребителите на това приложение, за да се определи област допустимо използване на данни за тази молба услуги\'. Обаче, използване на услуги на този приложения няма да се променят всички авторски права или разрешение за използване на данни.</string>
+<string name="disclaimer_for_xmlanguage_translator">Отказ от отговорност за безплатен XML-преводач</string>
+<string name="ok">Добре</string>
+<string name="mayber_later">Може по-късно</string>
+<string name="try_it">Опитайте</string>
+<string name="external_storage_must">Външен диск трябва да бъде на разположение.</string>
+<string name="mount_external_please">Моля, монтируйте записи на външни носители на информация, за да използвате това приложение.</string>
+<string name="read_external_permission_necessary">Прочетете външно разрешение, необходимо за четене на файлове на приложението.</string>
+<string name="permission_necessary">Разрешение трябва да се</string>
+<string name="write_external_permission_necessary">Напишете външно разрешение, необходимо за запис на файлове на приложението.</string>
+<string name="read_permission_explain">Прочетете разрешение външни дискове позволява на приложението да чете всички важни данни. Моля, нека това разрешение е в настройките на приложението.</string>
+<string name="write_permission_explain">Напишете разрешение външни дискове позволява на приложението за съхранение на важни данни на приложението. Моля, нека това разрешение е в настройките на приложението.</string>
+<string name="translations_complete">Пълен Превод</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->

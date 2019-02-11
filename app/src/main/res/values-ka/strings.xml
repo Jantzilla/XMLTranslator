@@ -1,0 +1,51 @@
+<resources>
+<string name="app_name">XML მთარგმნელი უფასო</string>
+<string name="translate">თარგმნა</string>
+<string name="message">პასტა თქვენ XML აქ... </string>
+<string name="email_to">ელ-ფოსტა</string>
+<string name="translate_from">თარგმნა ეხლა</string>
+<string name="translate_to">თარგმნა</string>
+<string name="no_connection">არ ინტერნეტი</string>
+<string name="no_connection_direction">XML მთარგმნელი უფასო ვერ დაამყაროს ინტერნეტი. დარწმუნდით, რომ თქვენ დაკავშირებული ქსელი და სცადეთ კიდევ ერთხელ.</string>
+<string name="welcome_to_xmlanguage_translator">მოგესალმებით XML მთარგმნელი უფასო</string>
+<string name="translate_from_choose_one">თარგმნა დან (აირჩიეთ ერთ-ერთი)</string>
+<string name="translate_to_choose_one_or_more">თარგმნა (აირჩიეთ ერთი, ან მეტი)</string>
+<string name="powered_by_yandex_translate">Powered by Yandex.თარგმნა</string>
+<string name="paste_example_below">პასტა მაგალითი ქვემოთ</string>
+<string name="please_do_not_alter_the_main_xml_folder">* გთხოვთ არ შეცვალოს ძირითადი XML ფოლდერი *</string>
+<string name="check_your_google_drive_for_your_translated_xml_strings">შეამოწმეთ თქვენი Google Drive თქვენი ნათარგმნი XML სიმებიანი!</string>
+<string name="step_3">ნაბიჯი 3</string>
+<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">აირჩიეთ ენა თქვენს XML სიმებიანი და აირჩიეთ სასურველი ენა.</string>
+<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">საშუალებას XML მთარგმნელი უფასო ნებართვა Google Drive ანგარიშის თქვენი არჩევანი.</string>
+<string name="step_2">ნაბიჯი 2</string>
+<string name="step_1">ნაბიჯი 1</string>
+<string name="how_to_use_xmlanguage_translator">როგორ გამოვიყენოთ XML მთარგმნელი უფასო</string>
+<string name="help">დახმარება</string>
+<string name="home">მთავარი</string>
+<string name="disclaimer">პასუხისმგებლობის შეზღუდვის განაცხადი</string>
+<string name="finished">დასრულდა!</string>
+<string name="translating_updating_wait">თარგმნა და ატვირთვა .xml ფაილი. ეს შეიძლება გაიწელოს. მადლობა, თქვენი მოთმინება.</string>
+<string name="daily_limit_reached">თქვენ არ მიაღწია ან მიღწევა თქვენი 3000 ხასიათი დღიური ლიმიტი უფასოდ თარგმანი. გაგრძელება თარგმნის .xml, ჩამოტვირთვა XML მთარგმნელი 20 დოლარი თვეში არ საფასურის გაუქმების!</string>
+<string name="choose_lang_translate_to">გთხოვთ, აირჩიოთ ენებზე თარგმნა.</string>
+<string name="choose_one_translate_from">გთხოვთ, აირჩიოთ ერთი ენიდან თარგმნის ეხლა</string>
+<string name="choose_lang_translate_from">გთხოვთ, აირჩიოთ ენაზე თარგმნა.</string>
+<string name="paste_xml_to_translate">გთხოვთ პასტა XML გსურთ ნათარგმნი</string>
+<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">გამოყენებით ამ განაცხადს, თქვენ აქვე თანხმობა უარყოფა და ეთანხმებით, რომ მისი თვალსაზრისით.</string>
+<string name="disclaimer_2">შემოქმედი ეს განცხადება არ გაუკეთებიათ გარანტიას სისრულე, საიმედოობა და სიზუსტე გამომუშავებული მონაცემები. ნებისმიერი ქმედება, თქვენ მიიღოს იმ ინფორმაციას, თქვენ ეს პროგრამა არის მკაცრად საკუთარი პასუხისმგებლობით. შემოქმედი ეს პროგრამა არ იქნება პასუხისმგებელი ნებისმიერი ზარალი და/ან ზიანის დაკავშირებით გამოიყენოთ ეს პროგრამა.</string>
+<string name="disclaimer_1">შემოქმედი ეს პროგრამა doesn\'t მკაფიოდ გრანტის გამოყენება მონაცემების გამოყენებით ეს პროგრამა\'s მომსახურება. ეს არის მომხმარებლის ამ განაცხადს, რათა დადგინდეს ფარგლებში დასაშვები გამოყენების მონაცემები მიეწოდება ეს პროგრამა\'s მომსახურება. თუმცა, გამოყენება, ეს პროგრამა\'s მომსახურება არ შეცვალოს ნებისმიერი საავტორო ან სარგებლობის ნებართვების მიწოდებული მონაცემები.</string>
+<string name="disclaimer_for_xmlanguage_translator">პასუხისმგებლობის XML მთარგმნელი უფასო</string>
+<string name="ok">Ok</string>
+<string name="mayber_later">იქნებ მოგვიანებით</string>
+<string name="try_it">სცადე</string>
+<string name="external_storage_must">გარე შენახვის ხელმისაწვდომი უნდა იყოს.</string>
+<string name="mount_external_please">გთხოვთ mount ჩაწერა გარე შენახვის მედია იმისათვის, რომ გამოიყენოთ ეს პროგრამა.</string>
+<string name="read_external_permission_necessary">დაწვრილებით გარე ნებართვა საჭირო წაკითხვის აპლიკაციას.</string>
+<string name="permission_necessary">ნებართვა საჭირო</string>
+<string name="write_external_permission_necessary">დაწერეთ გარე ნებართვა საჭირო დაწერა განცხადება ფაილები.</string>
+<string name="read_permission_explain">დაწვრილებით გარე შენახვის ნებართვა საშუალებას აძლევს ამ app წაკითხვის მნიშვნელოვანი app მონაცემები. გთხოვთ დაუშვებს ნებართვის ოთახი პარამეტრები.</string>
+<string name="write_permission_explain">დაწერეთ გარე შენახვის ნებართვა საშუალებას აძლევს ამ app store მნიშვნელოვანი app მონაცემები. გთხოვთ დაუშვებს ნებართვის ოთახი პარამეტრები.</string>
+<string name="translations_complete">ენათა სრული</string>
+
+</resources>
+
+<!--    Powered By Yandex.Translate    http://translate.yandex.com/    -->
