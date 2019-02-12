@@ -10,6 +10,8 @@
 
 **This app works, that is why it is available in 92 different languages. It has translated itself! Parsing and translating .xml files has never been easier than it is now, thanks to XML Translator Free. Get ready to enjoy a much easier way to translate!**
 
+![](static/xml_translator_plan_small.png)![](static/xml_translator_choose_small.png)![](static/xml_translator_translate_small.png)
+
 ## Built With
 
 * [Google Drive](https://developers.google.com/drive/) - File management api
