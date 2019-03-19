@@ -875,9 +875,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showRawXml() {
-        showTranslateButton();
         constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.MATCH_CONSTRAINT);
-        constraintSet.applyTo(parentLayout);
+        showTranslateButton();
         openFileButton.setVisibility(View.GONE);
         orTextView.setVisibility(View.GONE);
     }
