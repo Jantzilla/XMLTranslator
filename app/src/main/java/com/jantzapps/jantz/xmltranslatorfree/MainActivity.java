@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     AlarmManager alarm_manager;
     private static final int PERMISSION_REQUEST_CODE = 1;
     private static final int PERMISSION_REQUEST_CODE2 = 2;
-    private AdView mAdView;
     private static final String ADMOB_APP_ID = "ca-app-pub-5985384760144093~6592515362";
     InterstitialAd mInterstitialAd;
 
@@ -423,9 +422,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
         MobileAds.initialize(this, ADMOB_APP_ID);
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
