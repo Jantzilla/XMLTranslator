@@ -170,7 +170,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingPrefix" />
 
-    <View
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/ll_button_block"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -179,7 +179,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
     <Button
         android:id="@+id/btnSubmit"
@@ -217,5 +217,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingPrefix" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
