@@ -206,9 +206,9 @@
 
     <TextView
         android:id="@+id/yandex_link"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
+        android:background="@drawable/yandex_background"
         android:gravity="start"
         android:padding="8dp"
         android:text="@string/powered_by_yandex_translate"
