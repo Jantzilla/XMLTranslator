@@ -39,6 +39,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -111,6 +112,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private EditText rawEditText;
     private TextView orTextView;
     private FrameLayout chosenFileView;
+    private ImageView deleteButton;
+    private boolean translateReady;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -450,12 +453,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         buttonBlock = findViewById(R.id.ll_button_block);
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
+        deleteButton = findViewById(R.id.iv_delete);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
         chosenFileView = findViewById(R.id.fl_chosen_file);
 
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showTranslateButton();
+            }
+        });
 
         List<String> list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
@@ -862,12 +873,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showTranslateButton() {
-        constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             TransitionManager.beginDelayedTransition(parentLayout);
 
-        constraintSet.connect(R.id.ll_button_block,ConstraintSet.BOTTOM,R.id.root,ConstraintSet.BOTTOM,0);
+        if(translateReady) {
+            constraintSet.clear(R.id.ll_button_block, ConstraintSet.BOTTOM);
+            constraintSet.connect(R.id.ll_button_block, ConstraintSet.TOP, R.id.root, ConstraintSet.BOTTOM, 0);
+        } else {
+            constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
+            constraintSet.connect(R.id.ll_button_block, ConstraintSet.BOTTOM, R.id.root, ConstraintSet.BOTTOM, 0);
+        }
+
+        translateReady = !translateReady;
         constraintSet.applyTo(parentLayout);
     }
 
