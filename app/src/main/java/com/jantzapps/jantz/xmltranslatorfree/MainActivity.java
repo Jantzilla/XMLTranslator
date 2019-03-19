@@ -482,7 +482,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
-        List<String> list = new ArrayList<String>();
+        final List<String> list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
         list.add("Catalan ca"); list.add("Cebuano ceb"); list.add("Chinese zh"); list.add("Croatian hr"); list.add("Czech cs"); list.add("Danish da"); list.add("Dutch nl"); list.add("English en"); list.add("Esperanto eo"); list.add("Estonian et"); list.add("Finnish fi");
         list.add("French fr"); list.add("Galician gl"); list.add("Georgian ka"); list.add("German de"); list.add("Greek el"); list.add("Gujarati gu"); list.add("Haitian Creole ht"); list.add("Hebrew he");
@@ -616,8 +616,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             @Override
             public void onClick(View v) {
 
+                final List<Integer> toIndices = spinner2.getSelectedIndicies();
+
                 final String fromLang = spinner.getSelectedItemsAsString();
-                final String toLang = spinner2.getSelectedItemsAsString();
+
+                StringBuilder toLangBuilder = new StringBuilder();
+                for(int index : toIndices) {
+                    toLangBuilder.append(list.get(index));
+                    toLangBuilder.append(',');
+                }
+
+                String toLang = toLangBuilder.toString();
 
                 if (xmlStrings.getText().toString().equals("")) {
 
