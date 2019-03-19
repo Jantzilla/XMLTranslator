@@ -285,11 +285,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
     }
 
-    @Override protected void onPause() {
+    @Override protected void onDestroy() {
         if (mGoogleApiClient != null) {
             mGoogleApiClient.disconnect();
         }
-        super.onPause();
+        super.onDestroy();
     }
 
     @Override
