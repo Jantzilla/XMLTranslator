@@ -214,6 +214,7 @@
         android:text="@string/powered_by_yandex_translate"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingPrefix" />
 
