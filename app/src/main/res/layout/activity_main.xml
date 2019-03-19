@@ -15,24 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome_to_xmlanguage_translator"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                fontPath="fonts/avenir.ttf"
-                tools:ignore="MissingPrefix"
-                android:background="@color/colorPrimaryDark"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="2px"
-                android:background="@color/colorAccent"/>
             <TextView
                 android:text="@string/translate_from_choose_one"
                 android:layout_width="match_parent"
