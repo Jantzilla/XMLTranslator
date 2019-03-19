@@ -553,11 +553,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
 
 
-        TextView yandexLink =(TextView)findViewById(R.id.yandex_link);
-        yandexLink.setClickable(true);
-        yandexLink.setMovementMethod(LinkMovementMethod.getInstance());
-        String text = "<a href='http://translate.yandex.com/'>\""+getString(R.string.powered_by_yandex_translate)+"\"</a>";
-        yandexLink.setText(Html.fromHtml(text));
+        TextView yandexLink = findViewById(R.id.yandex_link);
+        yandexLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://translate.yandex.com/")));
+            }
+        });
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
