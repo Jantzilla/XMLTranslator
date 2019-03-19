@@ -38,6 +38,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private ConstraintSet constraintSet;
     private EditText rawEditText;
     private TextView orTextView;
+    private FrameLayout chosenFileView;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -450,6 +452,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         openFileButton = findViewById(R.id.btn_open_file);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
+        chosenFileView = findViewById(R.id.fl_chosen_file);
 
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
@@ -871,6 +874,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private void showChosenFile() {
         showTranslateButton();
         rawEditText.setVisibility(View.GONE);
+        openFileButton.setVisibility(View.GONE);
+        chosenFileView.setVisibility(View.VISIBLE);
         orTextView.setVisibility(View.GONE);
     }
 
