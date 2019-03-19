@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.jantzapps.jantz.xmltranslatorfree.MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <LinearLayout
             android:descendantFocusability="beforeDescendants"
             android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             android:orientation="vertical">
             <TextView
                 android:text="@string/translate_from_choose_one"
@@ -149,6 +148,5 @@
                     android:background="@color/colorPrimaryDark"/>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
