@@ -251,8 +251,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .build();
+
+            mGoogleApiClient.connect();
         }
-        mGoogleApiClient.connect();
     }
 
     @Override public void onConnected(@Nullable Bundle bundle) {
