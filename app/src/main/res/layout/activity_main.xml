@@ -1,166 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.jantzapps.jantz.xmltranslatorfree.MainActivity">
 
-            <TextView
-                android:id="@+id/tv_from_label"
-                android:text="@string/translate_from_choose_one"
-                android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_from_label"
+        fontPath="fonts/avenir.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/translate_from_choose_one"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix" />
+
+    <LinearLayout
+        android:id="@+id/ll_from_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_from_label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <com.jantzapps.jantz.xmltranslatorfree.MultiSelectionSpinner
+                android:id="@+id/input1"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:gravity="center"
-                android:layout_marginTop="8dp"
-                android:textSize="18sp"
-                android:paddingBottom="4dp"
-                android:paddingTop="4dp"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                fontPath="fonts/avenir.ttf"
-                tools:ignore="MissingPrefix"/>
-            <LinearLayout
-                android:id="@+id/ll_from_block"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_from_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/colorPrimaryDark"
-                android:padding="2dp"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp">
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:background="#ffffff"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-                    <com.jantzapps.jantz.xmltranslatorfree.MultiSelectionSpinner
-                        android:id="@+id/input1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="14dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <TextView
-                android:id="@+id/tv_to_label"
-                android:text="@string/translate_to_choose_one_or_more"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/ll_from_block"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:paddingBottom="4dp"
-                android:layout_marginTop="8dp"
-                android:paddingTop="4dp"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                fontPath="fonts/avenir.ttf"
-                tools:ignore="MissingPrefix"/>
-            <LinearLayout
-                android:id="@+id/ll_to_block"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_to_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/colorPrimaryDark"
-                android:padding="2dp"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_to_label"
+        fontPath="fonts/avenir.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/translate_to_choose_one_or_more"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_from_block"
+        tools:ignore="MissingPrefix" />
+
+    <LinearLayout
+        android:id="@+id/ll_to_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_to_label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <com.jantzapps.jantz.xmltranslatorfree.MultiSelectionSpinner
+                android:id="@+id/input2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:background="#ffffff"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
-                    <com.jantzapps.jantz.xmltranslatorfree.MultiSelectionSpinner
-                        android:id="@+id/input2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="14dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toBottomOf="@+id/ll_to_block"
-                app:layout_constraintBottom_toTopOf="@+id/ll_button_block"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:gravity="center"
-                android:hint="@string/message"
-                android:cursorVisible="false"
-                android:inputType="textLongMessage"
-                android:id="@+id/etEmailMessage"/>
-            <View
-                android:id="@+id/ll_button_block"
-                android:layout_height="150dp"
-                android:layout_width="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/colorPrimaryDark"
-                android:orientation="vertical"
-                android:layout_gravity="center"/>
-                <Button
-                    android:text="@string/translate"
-                    android:textSize="20sp"
-                    android:textColor="#ffffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/yandex_link"
-                    app:layout_constraintTop_toTopOf="@+id/ll_button_block"
-                    android:id="@+id/btnSubmit"
-                    android:paddingBottom="18dp"
-                    android:paddingTop="18dp"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp"
-                    android:paddingLeft="24dp"
-                    android:paddingRight="24dp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:background="#47bfc7"
-                    fontPath="fonts/avenir.ttf"
-                    tools:ignore="MissingPrefix"/>
-                <TextView
-                    android:id="@+id/yandex_link"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:text="@string/powered_by_yandex_translate"
-                    android:gravity="start"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:padding="8dp"
-                    tools:ignore="MissingPrefix"
-                    android:background="#ffffff"/>
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etEmailMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:cursorVisible="false"
+        android:gravity="center"
+        android:hint="@string/message"
+        android:inputType="textLongMessage"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_to_block" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <Button
+        android:id="@+id/btn_open_file"
+        fontPath="fonts/avenir.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:background="#47bfc7"
+        android:paddingStart="24dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="18dp"
+        android:text="@string/open_file"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/ll_button_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingPrefix" />
+
+    <View
+        android:id="@+id/ll_button_block"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        fontPath="fonts/avenir.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#47bfc7"
+        android:paddingStart="24dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="18dp"
+        android:text="@string/translate"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/yandex_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_button_block"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/yandex_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="start"
+        android:padding="8dp"
+        android:text="@string/powered_by_yandex_translate"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingPrefix" />
 
 </android.support.constraint.ConstraintLayout>
