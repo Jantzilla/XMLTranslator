@@ -491,19 +491,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         list.add("Nepali ne"); list.add("Norwegian no"); list.add("Papiamento pap"); list.add("Persian fa"); list.add("Polish pl"); list.add("Portuguese pt"); list.add("Punjabi pa"); list.add("Romanian ro"); list.add("Russian ru"); list.add("Scottish gd"); list.add("Serbian sr"); list.add("Sinhala si");
         list.add("Slovak sk"); list.add("Slovenian sl"); list.add("Spanish es"); list.add("Sundanese su"); list.add("Swahili sw"); list.add("Swedish sv"); list.add("Tagalog tl"); list.add("Tajik tg"); list.add("Tamil ta"); list.add("Tatar tt"); list.add("Telugu te"); list.add("Thai th"); list.add("Turkish tr"); list.add("Udmurt udm"); list.add("Ukrainian uk"); list.add("Urdu ur"); list.add("Uzbek uz"); list.add("Vietnamese vi"); list.add("Welsh cy"); list.add("Xhosa xh");
         list.add("Yiddish yi");
-        spinner.setItems(list);
 
+        List<String> languages = new ArrayList<String>();
 
-        List<String> list2 = new ArrayList<String>();
-        list2.add("Afrikaans af"); list2.add("Albanian sq"); list2.add("Amharic am"); list2.add("Arabic ar"); list2.add("Armenian hy"); list2.add("Azerbaijan az"); list2.add("Basque eu"); list2.add("Belarusian be"); list2.add("Bengali bn"); list2.add("Bosnian bs"); list2.add("Bulgarian bg");
-        list2.add("Catalan ca"); list2.add("Cebuano ceb"); list2.add("Chinese zh"); list2.add("Croatian hr"); list2.add("Czech cs"); list2.add("Danish da"); list2.add("Dutch nl"); list2.add("English en"); list2.add("Esperanto eo"); list2.add("Estonian et"); list2.add("Finnish fi");
-        list2.add("French fr"); list2.add("Galician gl"); list2.add("Georgian ka"); list2.add("German de"); list2.add("Greek el"); list2.add("Gujarati gu"); list2.add("Haitian Creole ht"); list2.add("Hebrew he");
-        list2.add("Hill Mari mrj"); list2.add("Hindi hi"); list2.add("Hungarian hu"); list2.add("Icelandic is"); list2.add("Indonesian id"); list2.add("Irish ga"); list2.add("Italian it"); list2.add("Japanese ja"); list2.add("Javanese jv"); list2.add("Kannada kn"); list2.add("Kazakh kk"); list2.add("Khmer km"); list2.add("Korean ko");
-        list2.add("Kyrgyz ky"); list2.add("Laotian lo"); list2.add("Latin la"); list2.add("Latvian lv"); list2.add("Lithuanian lt"); list2.add("Luxembourgish lb"); list2.add("Macedonian mk"); list2.add("Malagasy mg"); list2.add("Malay ms"); list2.add("Malayalam ml"); list2.add("Maltese mt"); list2.add("Maori mi"); list2.add("Marathi mr"); list2.add("Mari mhr"); list2.add("Mongolian mn"); list2.add("Myanmar (Burmese) my");
-        list2.add("Nepali ne"); list2.add("Norwegian no"); list2.add("Papiamento pap"); list2.add("Persian fa"); list2.add("Polish pl"); list2.add("Portuguese pt"); list2.add("Punjabi pa"); list2.add("Romanian ro"); list2.add("Russian ru"); list2.add("Scottish gd"); list2.add("Serbian sr"); list2.add("Sinhala si");
-        list2.add("Slovak sk"); list2.add("Slovenian sl"); list2.add("Spanish es"); list2.add("Sundanese su"); list2.add("Swahili sw"); list2.add("Swedish sv"); list2.add("Tagalog tl"); list2.add("Tajik tg"); list2.add("Tamil ta"); list2.add("Tatar tt"); list2.add("Telugu te"); list2.add("Thai th"); list2.add("Turkish tr"); list2.add("Udmurt udm"); list2.add("Ukrainian uk"); list2.add("Urdu ur"); list2.add("Uzbek uz"); list2.add("Vietnamese vi"); list2.add("Welsh cy"); list2.add("Xhosa xh");
-        list2.add("Yiddish yi");
-        spinner2.setItems(list2);
+        for(String language : list) {
+            int i = language.lastIndexOf(' ');
+            languages.add(language.substring(0, i));
+        }
+
+        spinner.setItems(languages);
+
+        spinner2.setItems(languages);
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
