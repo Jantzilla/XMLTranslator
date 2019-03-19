@@ -874,6 +874,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         orTextView.setVisibility(View.GONE);
     }
 
+    private void showRawXml() {
+        showTranslateButton();
+        constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.MATCH_CONSTRAINT);
+        constraintSet.applyTo(parentLayout);
+        openFileButton.setVisibility(View.GONE);
+        orTextView.setVisibility(View.GONE);
+    }
+
     public String getLangId(String lang) {
         String langId = "";
         switch(lang) {
