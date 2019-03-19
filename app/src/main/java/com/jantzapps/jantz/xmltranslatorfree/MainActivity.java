@@ -21,6 +21,8 @@ import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
+import android.support.constraint.ConstraintSet;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
@@ -29,6 +31,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -101,6 +104,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private static final int PERMISSION_REQUEST_CODE2 = 2;
     private static final String ADMOB_APP_ID = "ca-app-pub-5985384760144093~6592515362";
     InterstitialAd mInterstitialAd;
+    private Button openFileButton;
+    private ConstraintLayout buttonBlock, parentLayout;
+    private ConstraintSet constraintSet;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -437,6 +443,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         final File Xml_limit_path = new File(Environment.getExternalStorageDirectory() + "/App_data/");
         final File Xml_limit = new File(Xml_limit_path, "Char.txt");
 
+        buttonBlock = findViewById(R.id.ll_button_block);
+        parentLayout = findViewById(R.id.root);
+        openFileButton = findViewById(R.id.btn_open_file);
+
+        constraintSet = new ConstraintSet();
+        constraintSet.clone(parentLayout);
 
         List<String> list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
@@ -840,6 +852,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             }
         });
+    }
+
+    private void showTranslateButton() {
+        constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+            TransitionManager.beginDelayedTransition(parentLayout);
+
+        constraintSet.connect(R.id.ll_button_block,ConstraintSet.BOTTOM,R.id.root,ConstraintSet.BOTTOM,0);
+        constraintSet.applyTo(parentLayout);
     }
 
     public String getLangId(String lang) {
