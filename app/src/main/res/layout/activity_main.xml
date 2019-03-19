@@ -117,34 +117,29 @@
     <EditText
         android:id="@+id/etEmailMessage"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:cursorVisible="false"
         android:gravity="center"
         android:hint="@string/message"
         android:inputType="textLongMessage"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/tv_or_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_to_block" />
+        app:layout_constraintTop_toBottomOf="@+id/ll_to_block"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <TextView
         android:id="@+id/tv_or_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/or"
+        android:textStyle="italic|bold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_file"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
-        android:text="Or"
-        android:textSize="24sp"/>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.54" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailMessage" />
 
     <Button
         android:id="@+id/btn_open_file"
