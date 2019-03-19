@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private Button openFileButton;
     private ConstraintLayout buttonBlock, parentLayout;
     private ConstraintSet constraintSet;
+    private EditText rawEditText;
+    private TextView orTextView;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -446,6 +448,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         buttonBlock = findViewById(R.id.ll_button_block);
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
+        rawEditText = findViewById(R.id.etEmailMessage);
+        orTextView = findViewById(R.id.tv_or_label);
 
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
@@ -862,6 +866,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         constraintSet.connect(R.id.ll_button_block,ConstraintSet.BOTTOM,R.id.root,ConstraintSet.BOTTOM,0);
         constraintSet.applyTo(parentLayout);
+    }
+
+    private void showChosenFile() {
+        showTranslateButton();
+        rawEditText.setVisibility(View.GONE);
+        orTextView.setVisibility(View.GONE);
     }
 
     public String getLangId(String lang) {
