@@ -13,7 +13,7 @@
     <style name="MyActionBar"
         parent="Widget.AppCompat.Light.ActionBar.Solid">
         <item name="displayOptions">showHome|useLogo</item>
-        <item name="logo">@drawable/xmlfreelogo</item>
+        <item name="logo">@drawable/xmltlogo</item>
     </style>
 
 </resources>
