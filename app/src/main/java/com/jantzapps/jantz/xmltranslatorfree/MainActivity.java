@@ -922,12 +922,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             case R.id.action_help:
                 Intent helpIntent = new Intent(MainActivity.this, InstructionActivity.class);
                 MainActivity.this.startActivity(helpIntent);
-                finish();
                 return true;
             case R.id.action_disclaimer:
                 Intent disclaimerIntent = new Intent(MainActivity.this, DisclaimerActivity.class);
                 MainActivity.this.startActivity(disclaimerIntent);
-                finish();
                 return true;
 
             default:
