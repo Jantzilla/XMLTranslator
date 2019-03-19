@@ -7,17 +7,14 @@
     android:orientation="vertical"
     tools:context="com.jantzapps.jantz.xmltranslatorfree.MainActivity">
 
-        <LinearLayout
-            android:descendantFocusability="beforeDescendants"
-            android:focusableInTouchMode="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="vertical">
             <TextView
+                android:id="@+id/tv_from_label"
                 android:text="@string/translate_from_choose_one"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:gravity="center"
                 android:layout_marginTop="8dp"
                 android:textSize="18sp"
@@ -28,8 +25,12 @@
                 fontPath="fonts/avenir.ttf"
                 tools:ignore="MissingPrefix"/>
             <LinearLayout
+                android:id="@+id/ll_from_block"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_from_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:background="@color/colorPrimaryDark"
                 android:padding="2dp"
                 android:orientation="vertical"
@@ -57,20 +58,29 @@
                 </LinearLayout>
             </LinearLayout>
             <TextView
+                android:id="@+id/tv_to_label"
                 android:text="@string/translate_to_choose_one_or_more"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ll_from_block"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:paddingBottom="4dp"
+                android:layout_marginTop="8dp"
                 android:paddingTop="4dp"
                 android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 fontPath="fonts/avenir.ttf"
                 tools:ignore="MissingPrefix"/>
             <LinearLayout
+                android:id="@+id/ll_to_block"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_to_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:background="@color/colorPrimaryDark"
                 android:padding="2dp"
                 android:orientation="vertical"
@@ -98,29 +108,36 @@
             </LinearLayout>
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="start"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/ll_to_block"
+                app:layout_constraintBottom_toTopOf="@+id/ll_button_block"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
                 android:hint="@string/message"
+                android:cursorVisible="false"
                 android:inputType="textLongMessage"
                 android:id="@+id/etEmailMessage"/>
-            <TextView
+            <View
+                android:id="@+id/ll_button_block"
+                android:layout_height="150dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="2px"
-                android:background="@color/colorAccent"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:background="@color/colorPrimaryDark"
-                android:padding="10dp"
                 android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_gravity="center"/>
                 <Button
                     android:text="@string/translate"
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/yandex_link"
+                    app:layout_constraintTop_toTopOf="@+id/ll_button_block"
                     android:id="@+id/btnSubmit"
                     android:paddingBottom="18dp"
                     android:paddingTop="18dp"
@@ -137,16 +154,13 @@
                     android:id="@+id/yandex_link"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     android:text="@string/powered_by_yandex_translate"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    fontPath="fonts/avenir.ttf"
+                    android:textSize="12sp"
+                    android:padding="8dp"
                     tools:ignore="MissingPrefix"
-                    android:background="@color/colorPrimaryDark"/>
-            </LinearLayout>
-        </LinearLayout>
+                    android:background="#ffffff"/>
 
 </android.support.constraint.ConstraintLayout>
