@@ -427,7 +427,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         mAdView.loadAd(adRequest);
         MobileAds.initialize(this, ADMOB_APP_ID);
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-5985384760144093/8069248563");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         submit = (Button) findViewById(R.id.btnSubmit);
         xmlStrings = (EditText) findViewById(R.id.etEmailMessage);
