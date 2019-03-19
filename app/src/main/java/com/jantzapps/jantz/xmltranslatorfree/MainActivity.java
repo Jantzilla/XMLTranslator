@@ -1,12 +1,9 @@
 package com.jantzapps.jantz.xmltranslatorfree;
 
-import android.*;
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,8 +26,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Menu;
@@ -45,7 +40,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.ConnectionResult;
@@ -68,7 +62,6 @@ import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -82,7 +75,6 @@ import java.util.concurrent.ExecutionException;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static android.R.string.ok;
-import static android.os.Environment.getExternalStoragePublicDirectory;
 import static android.support.v4.app.NotificationCompat.PRIORITY_MAX;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
@@ -464,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showTranslateButton();
+                animateTranslateButton();
             }
         });
 
@@ -872,7 +864,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         });
     }
 
-    private void showTranslateButton() {
+    private void animateTranslateButton() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             TransitionManager.beginDelayedTransition(parentLayout);
@@ -890,7 +882,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showChosenFile() {
-        showTranslateButton();
+        animateTranslateButton();
         rawEditText.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
         chosenFileView.setVisibility(View.VISIBLE);
@@ -899,7 +891,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     private void showRawXml() {
         constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.MATCH_CONSTRAINT);
-        showTranslateButton();
+        animateTranslateButton();
         openFileButton.setVisibility(View.GONE);
         orTextView.setVisibility(View.GONE);
     }
