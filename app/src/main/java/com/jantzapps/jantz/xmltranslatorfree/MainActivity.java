@@ -26,6 +26,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Menu;
@@ -460,6 +462,26 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
+        rawEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!translateReady && count > 0)
+                    showRawXml();
+                else if(translateReady && count == 0)
+                    animateTranslateButton();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         List<String> list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
         list.add("Catalan ca"); list.add("Cebuano ceb"); list.add("Chinese zh"); list.add("Croatian hr"); list.add("Czech cs"); list.add("Danish da"); list.add("Dutch nl"); list.add("English en"); list.add("Esperanto eo"); list.add("Estonian et"); list.add("Finnish fi");
@@ -875,6 +897,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         } else {
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.BOTTOM, R.id.root, ConstraintSet.BOTTOM, 0);
+            constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.WRAP_CONTENT);
         }
 
         translateReady = !translateReady;
