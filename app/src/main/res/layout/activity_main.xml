@@ -164,7 +164,44 @@
         app:layout_constraintBottom_toTopOf="@+id/ll_button_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingPrefix" />
+        tools:ignore="MissingPrefix"/>
+
+    <FrameLayout
+        android:id="@+id/fl_chosen_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#47bfc7"
+        android:layout_margin="8dp"
+        android:paddingStart="24dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_or_label"
+        app:layout_constraintBottom_toTopOf="@+id/ll_button_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_chosen_file"
+        fontPath="fonts/avenir.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        tools:text="File Name"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingPrefix"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:src="@drawable/delete"/>
+    </FrameLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/ll_button_block"
