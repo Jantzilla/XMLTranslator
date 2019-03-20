@@ -71,13 +71,25 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface arg0, int arg1) {
-
+                    if(noChoiceSelected()) {
+                        mSelection[0] = true;
+                        simple_adapter.clear();
+                        simple_adapter.add(buildSelectedItemString());
+                    }
                 }
             });
         }
 
 
         builder.show();
+        return true;
+    }
+
+    private boolean noChoiceSelected() {
+        for(boolean selection : mSelection) {
+            if(selection)
+                return false;
+        }
         return true;
     }
 
