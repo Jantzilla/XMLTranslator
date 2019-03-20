@@ -44,6 +44,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                 android.R.layout.simple_spinner_item);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        onItemSelected = (OnItemSelected) context;
         super.setAdapter(simple_adapter);
     }
 
@@ -54,6 +55,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                 android.R.layout.simple_spinner_item);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        onItemSelected = (OnItemSelected) context;
         super.setAdapter(simple_adapter);
     }
 
