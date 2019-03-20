@@ -24,6 +24,8 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     boolean[] mSelection = null;
 
     ArrayAdapter<String> simple_adapter;
+    boolean singleChoice;
+    int selectedIndex;
 
     public MultiSelectionSpinner(Context context)
     {
@@ -57,15 +59,22 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     @Override
     public boolean performClick() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMultiChoiceItems(_items, mSelection, this);
 
-        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1)
-            {
-
+        if(singleChoice) {
+            for(int i = 0; i < mSelection.length; i++) {
+                if(mSelection[i])
+                    selectedIndex = i;
             }
-        });
+            builder.setSingleChoiceItems(_items, selectedIndex, this);
+        } else {
+            builder.setMultiChoiceItems(_items, mSelection, this);
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface arg0, int arg1) {
+
+                }
+            });
+        }
 
 
         builder.show();
