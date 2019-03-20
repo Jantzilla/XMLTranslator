@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -19,6 +20,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.provider.OpenableColumns;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -302,7 +304,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             Uri uri = null;
             if (data != null) {
                 uri = data.getData();
-                Log.i(TAG, "Uri: " + uri.toString());
+                showChosenFile(uri);
             }
         }
     }
@@ -317,6 +319,28 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     public void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    public String getFileName(Uri uri) {
+        String result = null;
+        if (uri.getScheme().equals("content")) {
+            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        if (result == null) {
+            result = uri.getPath();
+            int cut = result.lastIndexOf('/');
+            if (cut != -1) {
+                result = result.substring(cut + 1);
+            }
+        }
+        return result;
     }
 
     private boolean isNetworkConnected() {
@@ -944,7 +968,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         constraintSet.applyTo(parentLayout);
     }
 
-    private void showChosenFile() {
+    private void showChosenFile(Uri uri) {
         animateTranslateButton();
         rawEditText.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
