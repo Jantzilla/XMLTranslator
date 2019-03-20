@@ -3,6 +3,8 @@ package com.jantzapps.jantz.xmltranslatorfree;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
@@ -20,6 +22,7 @@ import static android.R.string.ok;
 public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSpinner implements
         DialogInterface.OnMultiChoiceClickListener
 {
+    SharedPreferences sharedPreferences;
     String[] _items = null;
     boolean[] mSelection = null;
 
@@ -33,6 +36,8 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
         simple_adapter = new ArrayAdapter<String>(context,
                 android.R.layout.simple_spinner_item);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         super.setAdapter(simple_adapter);
     }
 
@@ -41,6 +46,8 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
         simple_adapter = new ArrayAdapter<String>(context,
                 android.R.layout.simple_spinner_item);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         super.setAdapter(simple_adapter);
     }
 
