@@ -499,9 +499,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             languages.add(language.substring(0, i));
         }
 
+        spinner.singleChoice = true;
         spinner.setItems(languages);
 
         spinner2.setItems(languages);
+
+        spinner.setSelection(0);
+        spinner2.setSelection(0);
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
