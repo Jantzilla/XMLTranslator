@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private ConstraintLayout buttonBlock, parentLayout;
     private ConstraintSet constraintSet;
     private EditText rawEditText;
-    private TextView orTextView;
+    private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
     private ImageView deleteButton;
     private boolean translateReady;
@@ -490,6 +490,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton = findViewById(R.id.iv_delete);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
+        fileTextView = findViewById(R.id.tv_chosen_file);
         chosenFileView = findViewById(R.id.fl_chosen_file);
 
         constraintSet = new ConstraintSet();
@@ -969,11 +970,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showChosenFile(Uri uri) {
+        String chosenFile = getFileName(uri);
         animateTranslateButton();
         rawEditText.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
         chosenFileView.setVisibility(View.VISIBLE);
         orTextView.setVisibility(View.GONE);
+
+        fileTextView.setText(chosenFile);
     }
 
     private void showRawXml() {
