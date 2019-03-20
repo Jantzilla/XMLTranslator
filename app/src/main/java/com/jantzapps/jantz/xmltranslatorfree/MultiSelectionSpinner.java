@@ -76,6 +76,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                         simple_adapter.clear();
                         simple_adapter.add(buildSelectedItemString());
                     }
+                    resolveLoopedTranslation();
                 }
             });
         }
@@ -83,6 +84,21 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
         builder.show();
         return true;
+    }
+
+    private void resolveLoopedTranslation() {
+        for(int i = 0; i < mSelection.length; i++) {
+            if(mSelection[i] && i == otherIndex) {
+                mSelection[i] = false;
+            }
+        }
+
+        if(noChoiceSelected()) {
+            if(otherIndex < mSelection.length)
+                mSelection[otherIndex + 1] = true;
+            else
+                mSelection[0] = true;
+        }
     }
 
     private boolean noChoiceSelected() {
