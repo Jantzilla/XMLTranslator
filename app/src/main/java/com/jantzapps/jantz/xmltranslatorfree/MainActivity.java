@@ -473,6 +473,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        openFileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performFileSearch();
+            }
+        });
+
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
