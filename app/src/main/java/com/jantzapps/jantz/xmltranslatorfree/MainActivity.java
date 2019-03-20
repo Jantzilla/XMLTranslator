@@ -623,7 +623,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                 final List<Integer> toIndices = spinner2.getSelectedIndicies();
 
-                final String fromLang = spinner.getSelectedItemsAsString();
+                final String fromLang = list.get(spinner.selectedIndex);
 
                 StringBuilder toLangBuilder = new StringBuilder();
                 for(int index : toIndices) {
