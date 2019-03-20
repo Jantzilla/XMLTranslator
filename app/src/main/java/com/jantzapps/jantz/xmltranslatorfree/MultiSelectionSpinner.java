@@ -104,7 +104,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             builder.setNegativeButton("Select All", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
+                    selectAll();
                 }
             });
         }
@@ -119,6 +119,13 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             if(mSelection[i]) {
                 mSelection[i] = false;
             }
+        }
+        validateInputs();
+    }
+
+    private void selectAll() {
+        for(int i = 0; i < mSelection.length; i++) {
+                mSelection[i] = true;
         }
         validateInputs();
     }
