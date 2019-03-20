@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -16,6 +17,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private ImageView deleteButton;
     private boolean translateReady;
     private MultiSelectionSpinner spinner2;
+    private SharedPreferences sharedPreferences;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -456,6 +459,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -505,8 +510,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         spinner2.setItems(languages);
 
-        spinner.setSelection(0);
-        spinner2.setSelection(1);
+        spinner.setSelection(sharedPreferences.getInt("index", 0));
+
+        if(sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1)
+            spinner2.setSelection(sharedPreferences.getInt("index", 0) + 1);
+        else
+            spinner2.setSelection(sharedPreferences.getInt("index", 0) - 1);
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
