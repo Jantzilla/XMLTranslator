@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme"
-        parent="Theme.AppCompat.Light.DarkActionBar">
+        parent="Theme.AppCompat.Light.NoActionBar">
         <item name="actionBarStyle">@style/MyActionBar</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -11,9 +11,7 @@
 
     <!-- ActionBar styles -->
     <style name="MyActionBar"
-        parent="Widget.AppCompat.Light.ActionBar.Solid">
-        <item name="displayOptions">showHome|useLogo</item>
-        <item name="logo">@drawable/xmltlogo</item>
+        parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
 </resources>
