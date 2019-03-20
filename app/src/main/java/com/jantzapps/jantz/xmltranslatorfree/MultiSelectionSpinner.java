@@ -75,6 +75,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     public void onClick(DialogInterface dialog, int which) {
         sharedPreferences.edit().putInt("index", which).apply();
         selectedIndex = which;
+        onItemSelected.onItemSelectedListener();
         super.onClick(dialog, which);
     }
 
