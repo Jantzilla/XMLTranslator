@@ -117,10 +117,10 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
         }
 
         if(noChoiceSelected()) {
-            if(sharedPreferences.getInt("index", 0) < mSelection.length)
+            if(sharedPreferences.getInt("index", 0) < mSelection.length - 1)
                 mSelection[sharedPreferences.getInt("index", 0) + 1] = true;
             else
-                mSelection[0] = true;
+                mSelection[sharedPreferences.getInt("index", 0) - 1] = true;
         }
     }
 
