@@ -506,7 +506,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         spinner2.setItems(languages);
 
         spinner.setSelection(0);
-        spinner2.setSelection(0);
+        spinner2.setSelection(1);
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
