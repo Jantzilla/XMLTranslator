@@ -1071,13 +1071,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.action_help:
-                Intent helpIntent = new Intent(MainActivity.this, InstructionActivity.class);
-                MainActivity.this.startActivity(helpIntent);
-                return true;
-            case R.id.action_disclaimer:
-                Intent disclaimerIntent = new Intent(MainActivity.this, DisclaimerActivity.class);
-                MainActivity.this.startActivity(disclaimerIntent);
+            case R.id.action_settings:
                 return true;
 
             default:
