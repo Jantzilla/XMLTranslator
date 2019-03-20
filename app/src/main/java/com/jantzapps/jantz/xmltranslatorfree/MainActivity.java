@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private FrameLayout chosenFileView;
     private ImageView deleteButton;
     private boolean translateReady;
+    private MultiSelectionSpinner spinner2;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -436,7 +437,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         submit = (Button) findViewById(R.id.btnSubmit);
         xmlStrings = (EditText) findViewById(R.id.etEmailMessage);
         final MultiSelectionSpinner spinner = (MultiSelectionSpinner)findViewById(R.id.input1);
-        final MultiSelectionSpinner spinner2 = (MultiSelectionSpinner)findViewById(R.id.input2);
+        spinner2 = (MultiSelectionSpinner)findViewById(R.id.input2);
         final Handler handler = new Handler();
         dbHelper = new DbHelper(this);
         int day = 86400000;
