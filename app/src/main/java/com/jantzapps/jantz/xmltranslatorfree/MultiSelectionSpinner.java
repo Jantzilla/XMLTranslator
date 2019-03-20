@@ -25,7 +25,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
     ArrayAdapter<String> simple_adapter;
     boolean singleChoice;
-    int selectedIndex;
+    int selectedIndex, otherIndex;
 
     public MultiSelectionSpinner(Context context)
     {
