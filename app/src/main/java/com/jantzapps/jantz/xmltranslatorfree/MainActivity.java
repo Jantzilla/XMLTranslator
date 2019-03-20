@@ -1027,9 +1027,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void performFileSearch() {
 
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("text/xml");
+        intent.setType("text/*");
 
         startActivityForResult(intent, READ_REQUEST_CODE);
     }
