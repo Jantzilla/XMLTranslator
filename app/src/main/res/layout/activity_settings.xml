@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#47bfc7">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:src="@drawable/xmltlogo"/>
+    </android.support.v7.widget.Toolbar>
+
 </android.support.constraint.ConstraintLayout>

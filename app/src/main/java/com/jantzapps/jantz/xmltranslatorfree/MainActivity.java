@@ -31,6 +31,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.transition.TransitionManager;
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private boolean translateReady;
     private MultiSelectionSpinner spinner2;
     private SharedPreferences sharedPreferences;
+    private Toolbar toolbar;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -484,6 +486,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         final File Xml_limit_path = new File(Environment.getExternalStorageDirectory() + "/App_data/");
         final File Xml_limit = new File(Xml_limit_path, "Char.txt");
 
+        toolbar = findViewById(R.id.toolbar);
         buttonBlock = findViewById(R.id.ll_button_block);
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
@@ -497,6 +500,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         constraintSet.clone(parentLayout);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        setSupportActionBar(toolbar);
 
         openFileButton.setOnClickListener(new View.OnClickListener() {
             @Override

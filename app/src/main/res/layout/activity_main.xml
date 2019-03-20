@@ -8,12 +8,26 @@
     android:id="@+id/root"
     tools:context="com.jantzapps.jantz.xmltranslatorfree.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#47bfc7">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:src="@drawable/xmltlogo"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/tv_from_label"
         fontPath="fonts/avenir.ttf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="?actionBarSize"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:paddingTop="4dp"
