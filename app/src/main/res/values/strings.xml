@@ -23,9 +23,6 @@
     <string name="step_2">Step 2</string>
     <string name="step_1">Step 1</string>
     <string name="how_to_use_xmlanguage_translator">How to use XML Translator Free</string>
-    <string name="help">Help</string>
-    <string name="home">Home</string>
-    <string name="disclaimer">Disclaimer</string>
     <string name="finished">Finished!</string>
     <string name="translating_updating_wait">Translating and uploading .xml files. This may take a while. Thank you for your patience.</string>
     <string name="daily_limit_reached">You have reached or are about to reach your 3000 character daily limit for free translations. To continue translating .xml, download XML Translator at 20 dollars a month with no cancellation fees!</string>
@@ -50,4 +47,5 @@
     <string name="translations_complete">Translations Complete</string>
     <string name="open_file">Open File</string>
     <string name="or">Or</string>
+    <string name="settings">Settings</string>
 </resources>
