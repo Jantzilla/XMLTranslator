@@ -95,14 +95,14 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
     private void resolveLoopedTranslation() {
         for(int i = 0; i < mSelection.length; i++) {
-            if(mSelection[i] && i == otherIndex) {
+            if(mSelection[i] && i == sharedPreferences.getInt("index", 0)) {
                 mSelection[i] = false;
             }
         }
 
         if(noChoiceSelected()) {
-            if(otherIndex < mSelection.length)
-                mSelection[otherIndex + 1] = true;
+            if(sharedPreferences.getInt("index", 0) < mSelection.length)
+                mSelection[sharedPreferences.getInt("index", 0) + 1] = true;
             else
                 mSelection[0] = true;
         }
