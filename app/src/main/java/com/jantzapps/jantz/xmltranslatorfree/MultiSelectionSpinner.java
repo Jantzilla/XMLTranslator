@@ -84,10 +84,10 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                 public void onClick(DialogInterface arg0, int arg1) {
                     if(noChoiceSelected()) {
                         mSelection[0] = true;
-                        simple_adapter.clear();
-                        simple_adapter.add(buildSelectedItemString());
                     }
                     resolveLoopedTranslation();
+                    simple_adapter.clear();
+                    simple_adapter.add(buildSelectedItemString());
                 }
             });
         }
