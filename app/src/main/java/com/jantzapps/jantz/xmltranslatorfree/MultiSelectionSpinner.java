@@ -90,12 +90,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface arg0, int arg1) {
-                    if(noChoiceSelected()) {
-                        mSelection[0] = true;
-                    }
-                    resolveLoopedTranslation();
-                    simple_adapter.clear();
-                    simple_adapter.add(buildSelectedItemString());
+                    validateInputs();
                 }
             });
         }
@@ -103,6 +98,15 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
         builder.show();
         return true;
+    }
+
+    public void validateInputs() {
+        if(noChoiceSelected()) {
+            mSelection[0] = true;
+        }
+        resolveLoopedTranslation();
+        simple_adapter.clear();
+        simple_adapter.add(buildSelectedItemString());
     }
 
     private void resolveLoopedTranslation() {
