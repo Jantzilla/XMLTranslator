@@ -97,7 +97,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             builder.setNegativeButton("Clear", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
+                    clearChoices();
                 }
             });
         }
@@ -105,6 +105,15 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 
         builder.show();
         return true;
+    }
+
+    private void clearChoices() {
+        for(int i = 0; i < mSelection.length; i++) {
+            if(mSelection[i]) {
+                mSelection[i] = false;
+            }
+        }
+        validateInputs();
     }
 
     public void validateInputs() {
