@@ -189,6 +189,10 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             throw new IllegalArgumentException("Index " + index
                     + " is out of bounds.");
         }
+
+        if(singleChoice)
+            selectedIndex = index;
+
         simple_adapter.clear();
         simple_adapter.add(buildSelectedItemString());
     }
