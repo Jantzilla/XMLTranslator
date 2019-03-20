@@ -80,7 +80,7 @@ import static android.R.string.ok;
 import static android.support.v4.app.NotificationCompat.PRIORITY_MAX;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
 
     public DriveFile file;
 
@@ -1020,5 +1020,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         return super.onMenuItemSelected(item.getItemId(),item);
     }
 
+    @Override
+    public void onItemSelectedListener() {
+
+    }
 }
 
