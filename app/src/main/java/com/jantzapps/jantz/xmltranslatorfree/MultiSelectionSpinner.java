@@ -67,6 +67,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     @Override
     public void onClick(DialogInterface dialog, int which) {
         sharedPreferences.edit().putInt("index", which).apply();
+        selectedIndex = which;
         super.onClick(dialog, which);
     }
 
@@ -75,10 +76,6 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
         if(singleChoice) {
-            for(int i = 0; i < mSelection.length; i++) {
-                if(mSelection[i])
-                    selectedIndex = i;
-            }
             builder.setSingleChoiceItems(_items, selectedIndex, this);
         } else {
             builder.setMultiChoiceItems(_items, mSelection, this);
