@@ -11,8 +11,6 @@
     <string name="no_connection">No Internet Connection</string>
     <string name="no_connection_direction">XML Translator Free could not establish a internet connection. Make sure you are connected to a network and try again.</string>
     <string name="welcome_to_xmlanguage_translator">Welcome to XML Translator Free</string>
-    <string name="translate_from_choose_one">Translate From (Choose one)</string>
-    <string name="translate_to_choose_one_or_more">Translate To (Choose one or more)</string>
     <string name="powered_by_yandex_translate">Powered by Yandex.Translate</string>
     <string name="paste_example_below">Paste Example Below</string>
     <string name="please_do_not_alter_the_main_xml_folder">* Please do not alter the main XML folder *</string>
