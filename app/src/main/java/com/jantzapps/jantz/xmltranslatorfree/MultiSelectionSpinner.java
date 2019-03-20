@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
 
@@ -61,6 +62,12 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
             throw new IllegalArgumentException(
                     "Argument 'which' is out of bounds.");
         }
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        sharedPreferences.edit().putInt("index", which).apply();
+        super.onClick(dialog, which);
     }
 
     @Override
