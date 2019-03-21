@@ -7,12 +7,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">@android:color/white</item>
     </style>
 
     <!-- ActionBar styles -->
     <style name="MyActionBar"
         parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorSecondary">@android:color/white</item>
     </style>
 
 </resources>
