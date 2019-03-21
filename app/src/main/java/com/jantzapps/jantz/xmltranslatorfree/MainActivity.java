@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
     private ImageView deleteButton;
-    private boolean translateReady, toValuesSelected;
+    private boolean translateReady;
     private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
@@ -567,23 +567,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         if(sharedPreferences.contains("index")) {
             spinner.setSelection(sharedPreferences.getInt("index", 0));
-        } else
+        } else {
             setTranslationToLocale();
+            setDefaultTranslation();
+        }
 
         for(int i = 0; i < list.size(); i++) {
             if(sharedPreferences.getBoolean(String.valueOf(i), false)) {
                 spinner2.mSelection[i] = true;
-                toValuesSelected = true;
-            }
-        }
-
-        if(!toValuesSelected) {
-            if (sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1) {
-                spinner2.setSelection(sharedPreferences.getInt("index", 0) + 1);
-                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) + 1), true).apply();
-            } else {
-                spinner2.setSelection(sharedPreferences.getInt("index", 0) - 1);
-                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) - 1), true).apply();
             }
         }
 
@@ -1102,6 +1093,28 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         spinner.setSelection(0);
         sharedPreferences.edit().putInt("index", 0).apply();
+    }
+
+    private void setDefaultTranslation() {
+        if(!locale.equals("ar")) {
+            spinner.setSelection(3);
+            sharedPreferences.edit().putBoolean("3", true).apply();
+        } if(!locale.equals("zh")) {
+            spinner.setSelection(13);
+            sharedPreferences.edit().putBoolean("13", true).apply();
+        } if(!locale.equals("en")) {
+            spinner.setSelection(18);
+            sharedPreferences.edit().putBoolean("18", true).apply();
+        } if(!locale.equals("fr")) {
+            spinner.setSelection(22);
+            sharedPreferences.edit().putBoolean("22", true).apply();
+        } if(!locale.equals("de")) {
+            spinner.setSelection(25);
+            sharedPreferences.edit().putBoolean("25", true).apply();
+        } if(!locale.equals("es")) {
+            spinner.setSelection(73);
+            sharedPreferences.edit().putBoolean("73", true).apply();
+        }
     }
 
     @Override
