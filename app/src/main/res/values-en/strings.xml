@@ -3,8 +3,8 @@
 <string name="translate">Translate</string>
 <string name="message">Paste you XML here... </string>
 <string name="email_to">EMAIL TO</string>
-<string name="translate_from">Translate From</string>
-<string name="translate_to">Translate To</string>
+<string name="translate_from">Translate</string>
+<string name="translate_to">Into</string>
 <string name="no_connection">No Internet Connection</string>
 <string name="no_connection_direction">XML Translator Free could not establish a internet connection. Make sure you are connected to a network and try again.</string>
 <string name="welcome_to_xmlanguage_translator">Welcome to XML Translator Free</string>
