@@ -71,6 +71,7 @@ import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private Toolbar toolbar;
     private ArrayList<String> list;
     private String locale;
+    private File chosenFile;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -310,6 +312,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             Uri uri = null;
             if (data != null) {
                 uri = data.getData();
+                chosenFile = new File(uri.getPath());
                 showChosenFile(uri);
             }
         }
@@ -347,6 +350,24 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         }
         return result;
+    }
+
+    public String parseFileToString(File chosenFile) {
+        StringBuilder text = new StringBuilder();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(chosenFile));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                text.append(line);
+                text.append('\n');
+            }
+            br.close();
+        }
+        catch (IOException e) {}
+
+        return text.toString();
     }
 
     private boolean isNetworkConnected() {
