@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -78,6 +79,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -115,9 +117,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private FrameLayout chosenFileView;
     private ImageView deleteButton;
     private boolean translateReady, toValuesSelected;
-    private MultiSelectionSpinner spinner2;
+    private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
+    private ArrayList<String> list;
+    private String locale;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -477,7 +481,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         submit = (Button) findViewById(R.id.btnSubmit);
         xmlStrings = (EditText) findViewById(R.id.etEmailMessage);
-        final MultiSelectionSpinner spinner = (MultiSelectionSpinner)findViewById(R.id.input1);
+        spinner = (MultiSelectionSpinner)findViewById(R.id.input1);
         spinner2 = (MultiSelectionSpinner)findViewById(R.id.input2);
         final Handler handler = new Handler();
         dbHelper = new DbHelper(this);
@@ -498,6 +502,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
+
+        locale = Locale.getDefault().getLanguage();
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -537,7 +543,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
-        final List<String> list = new ArrayList<String>();
+        list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
         list.add("Catalan ca"); list.add("Cebuano ceb"); list.add("Chinese zh"); list.add("Croatian hr"); list.add("Czech cs"); list.add("Danish da"); list.add("Dutch nl"); list.add("English en"); list.add("Esperanto eo"); list.add("Estonian et"); list.add("Finnish fi");
         list.add("French fr"); list.add("Galician gl"); list.add("Georgian ka"); list.add("German de"); list.add("Greek el"); list.add("Gujarati gu"); list.add("Haitian Creole ht"); list.add("Hebrew he");
@@ -559,7 +565,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         spinner2.setItems(languages);
 
-        spinner.setSelection(sharedPreferences.getInt("index", 0));
+        if(sharedPreferences.contains("index")) {
+            spinner.setSelection(sharedPreferences.getInt("index", 0));
+        } else
+            setTranslationToLocale();
 
         for(int i = 0; i < list.size(); i++) {
             if(sharedPreferences.getBoolean(String.valueOf(i), false)) {
@@ -1079,6 +1088,25 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         intent.setType("text/*");
 
         startActivityForResult(intent, READ_REQUEST_CODE);
+    }
+
+    private void setTranslationToLocale() {
+
+        for(int i = 0; i < list.size(); i++) {
+            if(list.get(i).substring(list.get(i).lastIndexOf(' ') + 1).equals(locale)) {
+                spinner.setSelection(i);
+                return;
+            }
+        }
+
+        spinner.setSelection(0);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        locale = newConfig.locale.getLanguage();
     }
 
     @Override
