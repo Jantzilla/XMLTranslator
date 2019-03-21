@@ -569,12 +569,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
 
         if(!toValuesSelected) {
-            if (sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1)
+            if (sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1) {
                 spinner2.setSelection(sharedPreferences.getInt("index", 0) + 1);
-            else
+                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) + 1), true).apply();
+            } else {
                 spinner2.setSelection(sharedPreferences.getInt("index", 0) - 1);
-        } else
-            spinner2.validateInputs();
+                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) - 1), true).apply();
+            }
+        }
+
+        spinner2.validateInputs();
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
