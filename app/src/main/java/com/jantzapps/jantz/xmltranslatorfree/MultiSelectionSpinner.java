@@ -62,6 +62,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
         if (mSelection != null && which < mSelection.length) {
             mSelection[which] = isChecked;
+            sharedPreferences.edit().putBoolean(String.valueOf(which), isChecked).apply();
 
             simple_adapter.clear();
             simple_adapter.add(buildSelectedItemString());
@@ -118,6 +119,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
         for(int i = 0; i < mSelection.length; i++) {
             if(mSelection[i]) {
                 mSelection[i] = false;
+                sharedPreferences.edit().putBoolean(String.valueOf(i), false).apply();
             }
         }
         validateInputs();
@@ -126,6 +128,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     private void selectAll() {
         for(int i = 0; i < mSelection.length; i++) {
                 mSelection[i] = true;
+                sharedPreferences.edit().putBoolean(String.valueOf(i), true).apply();
         }
         validateInputs();
     }
@@ -133,6 +136,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     public void validateInputs() {
         if(noChoiceSelected()) {
             mSelection[0] = true;
+            sharedPreferences.edit().putBoolean(String.valueOf(0), true).apply();
         }
         resolveLoopedTranslation();
         simple_adapter.clear();
@@ -143,14 +147,18 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
         for(int i = 0; i < mSelection.length; i++) {
             if(mSelection[i] && i == sharedPreferences.getInt("index", 0)) {
                 mSelection[i] = false;
+                sharedPreferences.edit().putBoolean(String.valueOf(i), false).apply();
             }
         }
 
         if(noChoiceSelected()) {
-            if(sharedPreferences.getInt("index", 0) < mSelection.length - 1)
+            if(sharedPreferences.getInt("index", 0) < mSelection.length - 1) {
                 mSelection[sharedPreferences.getInt("index", 0) + 1] = true;
-            else
+                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) + 1), true).apply();
+            } else {
                 mSelection[sharedPreferences.getInt("index", 0) - 1] = true;
+                sharedPreferences.edit().putBoolean(String.valueOf(sharedPreferences.getInt("index", 0) - 1), true).apply();
+            }
         }
     }
 
