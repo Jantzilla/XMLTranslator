@@ -1095,11 +1095,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         for(int i = 0; i < list.size(); i++) {
             if(list.get(i).substring(list.get(i).lastIndexOf(' ') + 1).equals(locale)) {
                 spinner.setSelection(i);
+                sharedPreferences.edit().putInt("index", i).apply();
                 return;
             }
         }
 
         spinner.setSelection(0);
+        sharedPreferences.edit().putInt("index", 0).apply();
     }
 
     @Override
