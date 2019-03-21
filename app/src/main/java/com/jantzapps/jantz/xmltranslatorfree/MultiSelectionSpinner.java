@@ -99,6 +99,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     clearChoices();
+                    performClick();
                 }
             });
 
@@ -106,6 +107,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     selectAll();
+                    performClick();
                 }
             });
         }
