@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
     private ImageView deleteButton;
-    private boolean translateReady;
+    private boolean translateReady, toValuesSelected;
     private MultiSelectionSpinner spinner2;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
@@ -561,10 +561,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         spinner.setSelection(sharedPreferences.getInt("index", 0));
 
-        if(sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1)
-            spinner2.setSelection(sharedPreferences.getInt("index", 0) + 1);
-        else
-            spinner2.setSelection(sharedPreferences.getInt("index", 0) - 1);
+        for(int i = 0; i < list.size(); i++) {
+            if(sharedPreferences.getBoolean(String.valueOf(i), false)) {
+                spinner2.mSelection[i] = true;
+                toValuesSelected = true;
+            }
+        }
+
+        if(!toValuesSelected) {
+            if (sharedPreferences.getInt("index", 0) < spinner.mSelection.length - 1)
+                spinner2.setSelection(sharedPreferences.getInt("index", 0) + 1);
+            else
+                spinner2.setSelection(sharedPreferences.getInt("index", 0) - 1);
+        } else
+            spinner2.validateInputs();
 
         if(!isExternalStorageAvailable() && !isExternalStorageWritable()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
