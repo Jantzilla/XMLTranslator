@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private ArrayList<String> list;
     private String locale;
     private InputStream inputStream;
+    private String fileString;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -320,7 +321,23 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 try {
                     uri = data.getData();
                     inputStream = getContentResolver().openInputStream(uri);
-                    showChosenFile(uri);
+
+                    fileString = parseFileToString(inputStream);
+
+                    if(!validateFileText(fileString)) {
+                        new AlertDialog.Builder(MainActivity.this)
+                                .setTitle("Invalid File")
+                                .setMessage("Please try another xml file.")
+                                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                }).setIcon(android.R.drawable.ic_dialog_alert).show();
+
+                        inputStream = null;
+
+                    } else {
+                        showChosenFile(uri);
+                    }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -735,22 +752,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 String toLang = toLangBuilder.toString();
 
 
-                    if (!xmlStrings.getText().equals("") || inputStream != null) {
-
-                        String fileString = parseFileToString(inputStream);
-
-                        if(!validateFileText(fileString)) {
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Invalid File")
-                                    .setMessage("Please try another xml file.")
-                                    .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                        }
-                                    }).setIcon(android.R.drawable.ic_dialog_alert).show();
-
-                        } else {
-
-                            if (isNetworkConnected()) {
+                    if (!xmlStrings.getText().equals("") || inputStream != null) {if (isNetworkConnected()) {
                                 new Handler().postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
@@ -978,8 +980,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                             }
                                         }).setIcon(android.R.drawable.ic_dialog_alert).show();
                             }
-                        }
-
                     }
             }
         });
