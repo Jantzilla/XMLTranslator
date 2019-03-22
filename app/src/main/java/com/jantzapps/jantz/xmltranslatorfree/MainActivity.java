@@ -540,6 +540,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                chosenFile = null;
                 animateTranslateButton();
             }
         });
