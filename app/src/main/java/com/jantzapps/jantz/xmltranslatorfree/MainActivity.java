@@ -73,9 +73,10 @@ import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -128,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private Toolbar toolbar;
     private ArrayList<String> list;
     private String locale;
-    private File chosenFile;
+    private InputStream inputStream;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -316,9 +317,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             // Pull that URI using resultData.getData().
             Uri uri = null;
             if (data != null) {
-                uri = data.getData();
-                chosenFile = new File(uri.getPath());
-                showChosenFile(uri);
+                try {
+                    uri = data.getData();
+                    inputStream = getContentResolver().openInputStream(uri);
+                    showChosenFile(uri);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -357,20 +362,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         return result;
     }
 
-    public String parseFileToString(File chosenFile) {
+    public String parseFileToString(InputStream inputStream) {
+        BufferedReader r = new BufferedReader(new InputStreamReader(inputStream));
         StringBuilder text = new StringBuilder();
-
+        String line;
         try {
-            BufferedReader br = new BufferedReader(new FileReader(chosenFile));
-            String line;
-
-            while ((line = br.readLine()) != null) {
-                text.append(line);
-                text.append('\n');
+            while ((line = r.readLine()) != null) {
+                text.append(line).append('\n');
             }
-            br.close();
+        } catch (Exception e) {
+
         }
-        catch (IOException e) {}
 
         return text.toString();
     }
@@ -545,7 +547,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chosenFile = null;
+                inputStream = null;
                 animateTranslateButton();
             }
         });
@@ -733,9 +735,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 String toLang = toLangBuilder.toString();
 
 
-                    if (!xmlStrings.getText().equals("") || chosenFile != null) {
+                    if (!xmlStrings.getText().equals("") || inputStream != null) {
 
-                        String fileString = parseFileToString(chosenFile);
+                        String fileString = parseFileToString(inputStream);
 
                         if(!validateFileText(fileString)) {
                             new AlertDialog.Builder(MainActivity.this)
@@ -825,7 +827,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                 for (int i = 0; i < toLangs.length; i++) {
                                     toLangCount += 1;
                                 }
-                                if (chosenFile != null) {
+                                if (inputStream != null) {
                                     xmlStringsList = storeValues(fileString);
                                 } else
                                     xmlStringsList = storeValues(xmlStrings.getText().toString());
