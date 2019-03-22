@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
-    private ArrayList<String> list;
+    private ArrayList<String> list, xmlNamesList;
     private String locale;
     private InputStream inputStream;
     private String fileString;
@@ -829,10 +829,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                 for (int i = 0; i < toLangs.length; i++) {
                                     toLangCount += 1;
                                 }
-                                if (inputStream != null) {
-                                    xmlStringsList = storeValues(fileString);
-                                } else
+                                if (!xmlStrings.getText().toString().equals("")) {
                                     xmlStringsList = storeValues(xmlStrings.getText().toString());
+                                    xmlNamesList = storeNames(xmlStrings.getText().toString());
+                                } else {
+                                    xmlStringsList = storeValues(fileString);
+                                    xmlNamesList = storeNames(fileString);
+                                }
 
                                 int checkChar = 0;
 
@@ -907,9 +910,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                     final String langDirectDivide = "-";
 
                                     final ArrayList<String> translatedStrings = new ArrayList<String>();
-
-
-                                    final ArrayList<String> xmlNamesList = storeNames(xmlStrings.getText().toString());
 
                                     xmlStrings.setText("");
 
