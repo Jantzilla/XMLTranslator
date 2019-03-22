@@ -910,8 +910,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                     final ArrayList<String> xmlNamesList = storeNames(xmlStrings.getText().toString());
 
                                     xmlStrings.setText("");
-                                    spinner.setSelection(0);
-                                    spinner2.setSelection(0);
 
                                     Runnable r = (new Runnable() {
                                         @Override
