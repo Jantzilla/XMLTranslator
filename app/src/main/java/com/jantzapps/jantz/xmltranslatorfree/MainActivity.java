@@ -726,25 +726,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                 String toLang = toLangBuilder.toString();
 
-                if (xmlStrings.getText().toString().equals("")) {
 
-                    xmlStrings.setError(getString(R.string.paste_xml_to_translate));
-                }
-
-                if (fromLang.isEmpty()) {
-
-                    Toast.makeText(MainActivity.this, R.string.choose_lang_translate_from, Toast.LENGTH_SHORT).show();
-                }
-                if (fromLang.contains(",")) {
-
-                    Toast.makeText(MainActivity.this, R.string.choose_one_translate_from, Toast.LENGTH_SHORT).show();
-                }
-                if (toLang.isEmpty()) {
-
-                    Toast.makeText(MainActivity.this, R.string.choose_lang_translate_to, Toast.LENGTH_SHORT).show();
-                } else {
-                    if (!toLang.isEmpty() && !fromLang.contains(",") && !fromLang.isEmpty() &&
-                            !xmlStrings.getText().toString().equals("")) {
+                    if (!xmlStrings.getText().equals("") || chosenFile != null) {
 
                         if (isNetworkConnected()) {
                             new Handler().postDelayed(new Runnable() {
@@ -826,11 +809,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                             String delims = "[,]";                                                                       //Important!!!  //XML string parsing
                             final String[] toLangs = toLang.split(delims);
+                            final ArrayList<String> xmlStringsList;
                             int toLangCount = 0;
                             for (int i = 0; i < toLangs.length; i++) {
                                 toLangCount += 1;
                             }
-                            final ArrayList<String> xmlStringsList = storeValues(xmlStrings.getText().toString());
+                            if(!xmlStrings.getText().toString().equals(""))
+                                xmlStringsList = storeValues(xmlStrings.getText().toString());
+                            else
+                                xmlStringsList = storeValues(parseFileToString(chosenFile));
 
                             int checkChar = 0;
 
@@ -984,9 +971,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         }
 
                     }
-                }
-
-
             }
         });
     }
