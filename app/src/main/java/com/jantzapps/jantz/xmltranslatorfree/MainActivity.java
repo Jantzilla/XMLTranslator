@@ -55,6 +55,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
 
     private static final int READ_REQUEST_CODE = 42;
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     public DriveFile file;
 
     Button submit;
@@ -277,14 +279,30 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override protected void onResume() {
         super.onResume();
         if (mGoogleApiClient == null) {
-            mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Drive.API)
-                    .addScope(Drive.SCOPE_FILE)
-                    .addScope(Drive.SCOPE_APPFOLDER)                                                     // required for App Folder sample
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .build();
 
-            mGoogleApiClient.connect();
+            int resultCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
+
+            if (resultCode != ConnectionResult.SUCCESS) {
+
+                if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+                    GooglePlayServicesUtil.getErrorDialog(resultCode, this,
+                            PLAY_SERVICES_RESOLUTION_REQUEST).show();
+                } else {
+                    Log.i(TAG, "This device is not supported.");
+                    finish();
+                }
+
+            } else {
+
+                mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Drive.API)
+                        .addScope(Drive.SCOPE_FILE)
+                        .addScope(Drive.SCOPE_APPFOLDER)                                                     // required for App Folder sample
+                        .addConnectionCallbacks(this)
+                        .addOnConnectionFailedListener(this)
+                        .build();
+
+                mGoogleApiClient.connect();
+            }
         }
     }
 
