@@ -783,39 +783,24 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
 
                     if (!xmlStrings.getText().equals("") || inputStream != null) {
-                        if (isNetworkConnected()) {
 
-                            if(mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+                        if(validateFileText(xmlStrings.getText().toString())) {
 
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        if (mInterstitialAd.isLoaded()) {
-                                            mInterstitialAd.show();
-                                        } else {
-                                            Log.d("TAG", "The interstitial wasn't loaded yet.");
-                                        }
-                                    }
-                                }, 4000);
-                                if (Build.VERSION.SDK_INT >= 23) {
-                                    if (checkPermission()) {
-                                        if (!Xml_limit_path.exists()) {
-                                            Xml_limit_path.mkdir();
-                                        }
-                                        if (!Xml_limit.getParentFile().exists()) {
-                                            try {
+                            if (isNetworkConnected()) {
 
-                                                Xml_limit.getParentFile().createNewFile();
-                                                Log.e("Success", "DailyTrac File Created");
-                                            } catch (Exception e) {
+                                if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
 
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            if (mInterstitialAd.isLoaded()) {
+                                                mInterstitialAd.show();
+                                            } else {
+                                                Log.d("TAG", "The interstitial wasn't loaded yet.");
                                             }
-                                        } else {
-                                            Log.e("DailyCharCount", "File Exists");
                                         }
-
-                                    } else {
-                                        requestPermission(); // Code for permission
+                                    }, 4000);
+                                    if (Build.VERSION.SDK_INT >= 23) {
                                         if (checkPermission()) {
                                             if (!Xml_limit_path.exists()) {
                                                 Xml_limit_path.mkdir();
@@ -832,187 +817,215 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                                 Log.e("DailyCharCount", "File Exists");
                                             }
 
-                                        }
-                                    }
-                                } else {
-                                    // Code for Below 23 API Oriented Device
-                                    // Do next code
+                                        } else {
+                                            requestPermission(); // Code for permission
+                                            if (checkPermission()) {
+                                                if (!Xml_limit_path.exists()) {
+                                                    Xml_limit_path.mkdir();
+                                                }
+                                                if (!Xml_limit.getParentFile().exists()) {
+                                                    try {
 
-                                    if (!Xml_limit_path.exists()) {
-                                        Xml_limit_path.mkdir();
-                                    }
-                                    if (!Xml_limit.getParentFile().exists()) {
-                                        try {
+                                                        Xml_limit.getParentFile().createNewFile();
+                                                        Log.e("Success", "DailyTrac File Created");
+                                                    } catch (Exception e) {
 
-                                            Xml_limit.getParentFile().createNewFile();
+                                                    }
+                                                } else {
+                                                    Log.e("DailyCharCount", "File Exists");
+                                                }
 
-
-                                        } catch (Exception e) {
-
+                                            }
                                         }
                                     } else {
-                                        Log.e("DailyCharCount", "File Exists");
-                                    }
-                                }
+                                        // Code for Below 23 API Oriented Device
+                                        // Do next code
+
+                                        if (!Xml_limit_path.exists()) {
+                                            Xml_limit_path.mkdir();
+                                        }
+                                        if (!Xml_limit.getParentFile().exists()) {
+                                            try {
+
+                                                Xml_limit.getParentFile().createNewFile();
 
 
-                                String delims = "[,]";                                                                       //Important!!!  //XML string parsing
-                                final String[] toLangs = toLang.split(delims);
-                                final ArrayList<String> xmlStringsList;
-                                int toLangCount = 0;
-                                for (int i = 0; i < toLangs.length; i++) {
-                                    toLangCount += 1;
-                                }
-                                if (!xmlStrings.getText().toString().equals("")) {
-                                    xmlStringsList = storeValues(xmlStrings.getText().toString());
-                                    xmlNamesList = storeNames(xmlStrings.getText().toString());
-                                } else {
-                                    xmlStringsList = storeValues(fileString);
-                                    xmlNamesList = storeNames(fileString);
-                                }
+                                            } catch (Exception e) {
 
-                                int checkChar = 0;
-
-                                for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
-
-                                    checkChar += xmlStringsList.get(i2).length();
-
-                                }
-
-                                if ((checkChar * toLangCount) + dbHelper.getCharCount() > dailyLimit) {
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                                    builder.setTitle(R.string.app_name);
-                                    builder.setIcon(R.mipmap.ic_launcher);
-                                    builder.setMessage(R.string.daily_limit_reached)
-                                            .setCancelable(false)
-                                            .setPositiveButton(R.string.try_it, new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int id) {
-                                                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                                                    intent.setData(Uri.parse("market://details?id=com.jantzapps.jantz.xmlanguagetranslator"));
-                                                    startActivity(intent);
-                                                    finish();
-                                                }
-                                            })
-                                            .setNegativeButton(R.string.mayber_later, new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int id) {
-                                                    dialog.cancel();
-                                                }
-                                            });
-                                    AlertDialog alert = builder.create();
-                                    alert.show();
-                                } else {
-
-                                    dbHelper.addCharCount((checkChar * toLangCount));
-
-                                    Xml_limit.delete();
-                                    try {
-                                        BufferedWriter bw = new BufferedWriter(new FileWriter(Xml_limit, false));
-                                        bw.write(String.valueOf(dbHelper.getCharCount()));
-                                        bw.close();
-                                        Log.e("Success", "DailyTrac File Written To");
-
-                                        // Details omitted.
-
-                                    } catch (Exception e) {
-                                        e.printStackTrace();
-                                        return;
+                                            }
+                                        } else {
+                                            Log.e("DailyCharCount", "File Exists");
+                                        }
                                     }
 
 
-                                    Toast.makeText(MainActivity.this, R.string.translating_updating_wait, Toast.LENGTH_LONG).show();
-                                    Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
+                                    String delims = "[,]";                                                                       //Important!!!  //XML string parsing
+                                    final String[] toLangs = toLang.split(delims);
+                                    final ArrayList<String> xmlStringsList;
+                                    int toLangCount = 0;
+                                    for (int i = 0; i < toLangs.length; i++) {
+                                        toLangCount += 1;
+                                    }
+                                    if (!xmlStrings.getText().toString().equals("")) {
+                                        xmlStringsList = storeValues(xmlStrings.getText().toString());
+                                        xmlNamesList = storeNames(xmlStrings.getText().toString());
+                                    } else {
+                                        xmlStringsList = storeValues(fileString);
+                                        xmlNamesList = storeNames(fileString);
+                                    }
 
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            check_folder_exists();
+                                    int checkChar = 0;
+
+                                    for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
+
+                                        checkChar += xmlStringsList.get(i2).length();
+
+                                    }
+
+                                    if ((checkChar * toLangCount) + dbHelper.getCharCount() > dailyLimit) {
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                        builder.setTitle(R.string.app_name);
+                                        builder.setIcon(R.mipmap.ic_launcher);
+                                        builder.setMessage(R.string.daily_limit_reached)
+                                                .setCancelable(false)
+                                                .setPositiveButton(R.string.try_it, new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int id) {
+                                                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                                                        intent.setData(Uri.parse("market://details?id=com.jantzapps.jantz.xmlanguagetranslator"));
+                                                        startActivity(intent);
+                                                        finish();
+                                                    }
+                                                })
+                                                .setNegativeButton(R.string.mayber_later, new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int id) {
+                                                        dialog.cancel();
+                                                    }
+                                                });
+                                        AlertDialog alert = builder.create();
+                                        alert.show();
+                                    } else {
+
+                                        dbHelper.addCharCount((checkChar * toLangCount));
+
+                                        Xml_limit.delete();
+                                        try {
+                                            BufferedWriter bw = new BufferedWriter(new FileWriter(Xml_limit, false));
+                                            bw.write(String.valueOf(dbHelper.getCharCount()));
+                                            bw.close();
+                                            Log.e("Success", "DailyTrac File Written To");
+
+                                            // Details omitted.
+
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                            return;
                                         }
-                                    }, 1000);
-
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
-                                        }
-                                    }, 1000);
-
-                                    //progressDialog.setTitle("Creating Files");
-                                    //progressDialog.setMessage("Processing...");
-                                    //progressDialog.show();
-                                    final ArrayList<String> toLangIds = new ArrayList<String>();
-                                    final String fromLangId = getLangId(fromLang);
-                                    final String langDirectDivide = "-";
-
-                                    final ArrayList<String> translatedStrings = new ArrayList<String>();
-
-                                    xmlStrings.setText("");
-
-                                    Runnable r = (new Runnable() {
-                                        @Override
-                                        public void run() {
-
-                                            String langDirection;
 
 
-                                            for (int i = 0; i < toLangs.length; i++) {
-                                                toLangIds.add(getLangId(toLangs[i]));
+                                        Toast.makeText(MainActivity.this, R.string.translating_updating_wait, Toast.LENGTH_LONG).show();
+                                        Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
+
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                check_folder_exists();
                                             }
+                                        }, 1000);
 
-                                            for (int i = 0; i < toLangIds.size(); i++) {
-                                                langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
+                                            }
+                                        }, 1000);
 
-                                                for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
+                                        //progressDialog.setTitle("Creating Files");
+                                        //progressDialog.setMessage("Processing...");
+                                        //progressDialog.show();
+                                        final ArrayList<String> toLangIds = new ArrayList<String>();
+                                        final String fromLangId = getLangId(fromLang);
+                                        final String langDirectDivide = "-";
 
-                                                    translatedStrings.add(Translate(xmlStringsList.get(i2), langDirection));
+                                        final ArrayList<String> translatedStrings = new ArrayList<String>();
 
+                                        xmlStrings.setText("");
+
+                                        Runnable r = (new Runnable() {
+                                            @Override
+                                            public void run() {
+
+                                                String langDirection;
+
+
+                                                for (int i = 0; i < toLangs.length; i++) {
+                                                    toLangIds.add(getLangId(toLangs[i]));
                                                 }
 
-                                                String xmlFile = XMLFileMakerClass.xmlFileCreate(xmlNamesList, translatedStrings);
-                                                if (mGoogleApiClient != null) {
-                                                    upload_to_drive(toLangIds.get(i), xmlFile);
-                                                } else {
-                                                    Log.e(TAG, "Could not connect to google drive manager");
-                                                }
-                                                translatedStrings.clear();
+                                                for (int i = 0; i < toLangIds.size(); i++) {
+                                                    langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
 
-                                            }
-                                            handler.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    NotificationCompat.Builder mBuilder =
-                                                            new NotificationCompat.Builder(MainActivity.this)
-                                                                    .setAutoCancel(true)
-                                                                    .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
-                                                                    .setLights(Color.BLUE, 12500, 12500)
-                                                                    .setColor(Color.argb(1, 66, 208, 217))
-                                                                    .setSmallIcon(R.drawable.finished)
-                                                                    .setContentTitle("XML Translator Free")
-                                                                    .setContentText(getString(R.string.translations_complete));
+                                                    for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
+
+                                                        translatedStrings.add(Translate(xmlStringsList.get(i2), langDirection));
+
+                                                    }
+
+                                                    String xmlFile = XMLFileMakerClass.xmlFileCreate(xmlNamesList, translatedStrings);
+                                                    if (mGoogleApiClient != null) {
+                                                        upload_to_drive(toLangIds.get(i), xmlFile);
+                                                    } else {
+                                                        Log.e(TAG, "Could not connect to google drive manager");
+                                                    }
+                                                    translatedStrings.clear();
+
+                                                }
+                                                handler.post(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        NotificationCompat.Builder mBuilder =
+                                                                new NotificationCompat.Builder(MainActivity.this)
+                                                                        .setAutoCancel(true)
+                                                                        .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
+                                                                        .setLights(Color.BLUE, 12500, 12500)
+                                                                        .setColor(Color.argb(1, 66, 208, 217))
+                                                                        .setSmallIcon(R.drawable.finished)
+                                                                        .setContentTitle("XML Translator Free")
+                                                                        .setContentText(getString(R.string.translations_complete));
 
 // Gets an instance of the NotificationManager service
-                                                    NotificationManager mNotifyMgr =
-                                                            (NotificationManager) MainActivity.this.getSystemService(NOTIFICATION_SERVICE);
+                                                        NotificationManager mNotifyMgr =
+                                                                (NotificationManager) MainActivity.this.getSystemService(NOTIFICATION_SERVICE);
 // Builds the notification and issues it.
-                                                    mNotifyMgr.notify(0, mBuilder.setPriority(PRIORITY_MAX).build());
+                                                        mNotifyMgr.notify(0, mBuilder.setPriority(PRIORITY_MAX).build());
 
-                                                }
-                                            });
+                                                    }
+                                                });
 
-                                        }
-                                    });
+                                            }
+                                        });
 
-                                    Thread t = new Thread(r);
-                                    t.start();                       // starts thread in background..
+                                        Thread t = new Thread(r);
+                                        t.start();                       // starts thread in background..
+                                    }
+
+                                } else {
+                                    mGoogleApiClient.clearDefaultAccountAndReconnect();
                                 }
 
                             } else {
-                                mGoogleApiClient.clearDefaultAccountAndReconnect();
+                                new AlertDialog.Builder(MainActivity.this)
+                                        .setTitle(getString(R.string.no_connection))
+                                        .setMessage(getString(R.string.no_connection_direction))
+                                        .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                            }
+                                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
                             }
 
                         } else {
                             new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle(getString(R.string.no_connection))
-                                    .setMessage(getString(R.string.no_connection_direction))
+                                    .setTitle("Invalid Text")
+                                    .setMessage("Please enter text in XML format.")
                                     .setPositiveButton(ok, new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                         }
