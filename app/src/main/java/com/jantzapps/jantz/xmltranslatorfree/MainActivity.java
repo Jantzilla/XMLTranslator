@@ -942,6 +942,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (!rawEditText.getText().toString().equals("")) {
             xmlStringsList = storeValues(rawEditText.getText().toString());
             xmlNamesList = storeNames(rawEditText.getText().toString());
+            rawEditText.setText("");
         } else {
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
