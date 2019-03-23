@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public DriveFile file;
 
     Button submit;
-    EditText xmlStrings;
     Context context;
 
     private GoogleApiClient mGoogleApiClient;
@@ -546,7 +545,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         submit = (Button) findViewById(R.id.btnSubmit);
-        xmlStrings = (EditText) findViewById(R.id.etEmailMessage);
         spinner = (MultiSelectionSpinner)findViewById(R.id.input1);
         spinner2 = (MultiSelectionSpinner)findViewById(R.id.input2);
         final Handler handler = new Handler();
@@ -803,9 +801,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 String toLang = toLangBuilder.toString();
 
 
-                    if (!xmlStrings.getText().toString().equals("")) {
+                    if (!rawEditText.getText().toString().equals("")) {
 
-                        if(validateFileText(xmlStrings.getText().toString())) {
+                        if(validateFileText(rawEditText.getText().toString())) {
 
                             if (isNetworkConnected()) {
 
@@ -941,9 +939,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         for (int i = 0; i < toLangs.length; i++) {
             toLangCount += 1;
         }
-        if (!xmlStrings.getText().toString().equals("")) {
-            xmlStringsList = storeValues(xmlStrings.getText().toString());
-            xmlNamesList = storeNames(xmlStrings.getText().toString());
+        if (!rawEditText.getText().toString().equals("")) {
+            xmlStringsList = storeValues(rawEditText.getText().toString());
+            xmlNamesList = storeNames(rawEditText.getText().toString());
         } else {
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
@@ -1023,7 +1021,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             final ArrayList<String> translatedStrings = new ArrayList<String>();
 
-            xmlStrings.setText("");
+            rawEditText.setText("");
 
             Runnable r = (new Runnable() {
                 @Override
