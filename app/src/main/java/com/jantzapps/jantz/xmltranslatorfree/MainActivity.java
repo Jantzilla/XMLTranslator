@@ -946,6 +946,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         } else {
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
+            inputStream = null;
+            animateTranslateButton();
         }
 
         int checkChar = 0;
