@@ -811,7 +811,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                     startTranslation(fromLang, toLang, Xml_limit_path, Xml_limit, dailyLimit, handler);
 
                                 } else {
-                                    mGoogleApiClient.clearDefaultAccountAndReconnect();
+                                    mGoogleApiClient.connect();
                                 }
 
                             } else {
