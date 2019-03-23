@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private String locale;
     private InputStream inputStream;
     private String fileString;
+    private FrameLayout pasteEntryLayout;
 
     private void upload_to_drive(String toLang, String xmlFile) {
 
@@ -546,6 +547,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         orTextView = findViewById(R.id.tv_or_label);
         fileTextView = findViewById(R.id.tv_chosen_file);
         chosenFileView = findViewById(R.id.fl_chosen_file);
+        pasteEntryLayout = findViewById(R.id.fl_paste_entry);
 
         constraintSet = new ConstraintSet();
         constraintSet.clone(parentLayout);
@@ -1036,7 +1038,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private void showChosenFile(Uri uri) {
         String chosenFile = getFileName(uri);
         animateTranslateButton();
-        rawEditText.setVisibility(View.GONE);
+        pasteEntryLayout.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
         chosenFileView.setVisibility(View.VISIBLE);
         orTextView.setVisibility(View.GONE);
