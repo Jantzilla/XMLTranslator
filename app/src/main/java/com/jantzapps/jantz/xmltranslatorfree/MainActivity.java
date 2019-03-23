@@ -778,7 +778,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 String toLang = toLangBuilder.toString();
 
 
-                    if (!xmlStrings.getText().equals("") || inputStream != null) {if (isNetworkConnected()) {
+                    if (!xmlStrings.getText().equals("") || inputStream != null) {
+                        if (isNetworkConnected()) {
+
+                            if(mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+
                                 new Handler().postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
@@ -998,14 +1002,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                 }
 
                             } else {
-                                new AlertDialog.Builder(MainActivity.this)
-                                        .setTitle(getString(R.string.no_connection))
-                                        .setMessage(getString(R.string.no_connection_direction))
-                                        .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                            }
-                                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
+                                mGoogleApiClient.clearDefaultAccountAndReconnect();
                             }
+
+                        } else {
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle(getString(R.string.no_connection))
+                                    .setMessage(getString(R.string.no_connection_direction))
+                                    .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                        }
+                                    }).setIcon(android.R.drawable.ic_dialog_alert).show();
+                        }
                     }
             }
         });
