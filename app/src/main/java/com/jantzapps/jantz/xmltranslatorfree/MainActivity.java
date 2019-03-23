@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private EditText rawEditText;
     private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
-    private ImageView deleteButton, googleButton;
+    private ImageView deleteButton, googleButton, clearButton;
     private boolean translateReady;
     private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
@@ -543,6 +543,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         openFileButton = findViewById(R.id.btn_open_file);
         deleteButton = findViewById(R.id.iv_delete);
         googleButton = findViewById(R.id.iv_google_drive);
+        clearButton = findViewById(R.id.iv_clear);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
         fileTextView = findViewById(R.id.tv_chosen_file);
@@ -1021,6 +1022,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.BOTTOM);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.TOP, R.id.root, ConstraintSet.BOTTOM, 0);
             constraintSet.constrainHeight(R.id.fl_paste_entry, (int) dPToPx(100));
+            clearButton.setVisibility(View.GONE);
         } else {
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.BOTTOM, R.id.root, ConstraintSet.BOTTOM, 0);
@@ -1051,6 +1053,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         animateTranslateButton();
         openFileButton.setVisibility(View.GONE);
         orTextView.setVisibility(View.GONE);
+        clearButton.setVisibility(View.VISIBLE);
     }
 
     public String getLangId(String lang) {
