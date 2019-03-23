@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private EditText rawEditText;
     private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
-    private ImageView deleteButton;
+    private ImageView deleteButton, googleButton;
     private boolean translateReady;
     private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
@@ -540,6 +540,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
         deleteButton = findViewById(R.id.iv_delete);
+        googleButton = findViewById(R.id.iv_google_drive);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
         fileTextView = findViewById(R.id.tv_chosen_file);
@@ -553,6 +554,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         setSupportActionBar(toolbar);
+
+        googleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mGoogleApiClient.clearDefaultAccountAndReconnect();
+            }
+        });
 
         openFileButton.setOnClickListener(new View.OnClickListener() {
             @Override
