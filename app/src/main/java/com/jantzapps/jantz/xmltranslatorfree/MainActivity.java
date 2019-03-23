@@ -577,6 +577,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
+        chosenFileView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performFileSearch();
+            }
+        });
+
         rawEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
