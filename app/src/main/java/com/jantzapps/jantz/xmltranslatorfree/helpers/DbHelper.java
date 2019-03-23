@@ -1,4 +1,4 @@
-package com.jantzapps.jantz.xmltranslatorfree;
+package com.jantzapps.jantz.xmltranslatorfree.helpers;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -1,20 +1,17 @@
-package com.jantzapps.jantz.xmltranslatorfree;
+package com.jantzapps.jantz.xmltranslatorfree.services;
 
 import android.app.AlarmManager;
 import android.app.IntentService;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Environment;
-import android.preference.PreferenceManager;
-import android.support.v4.content.ContextCompat;
+
+import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
+import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
 
 import java.io.File;
-
-import static java.security.AccessController.getContext;
 
 /**
  * Created by jantz on 7/11/2017.

@@ -1,4 +1,4 @@
-package com.jantzapps.jantz.xmltranslatorfree;
+package com.jantzapps.jantz.xmltranslatorfree.activities;
 
 import android.Manifest;
 import android.app.Activity;
@@ -68,6 +68,12 @@ import com.google.android.gms.drive.MetadataChangeSet;
 import com.google.android.gms.drive.query.Filters;
 import com.google.android.gms.drive.query.Query;
 import com.google.android.gms.drive.query.SearchableField;
+import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
+import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
+import com.jantzapps.jantz.xmltranslatorfree.views.MultiSelectionSpinner;
+import com.jantzapps.jantz.xmltranslatorfree.R;
+import com.jantzapps.jantz.xmltranslatorfree.utils.TranslatorBackgroundTask;
+import com.jantzapps.jantz.xmltranslatorfree.utils.XMLFileMakerClass;
 
 import org.xml.sax.InputSource;
 

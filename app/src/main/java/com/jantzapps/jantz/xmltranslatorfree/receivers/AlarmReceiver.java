@@ -1,40 +1,18 @@
-package com.jantzapps.jantz.xmltranslatorfree;
+package com.jantzapps.jantz.xmltranslatorfree.receivers;
 
-import android.*;
-import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
-import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
+import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
+import com.jantzapps.jantz.xmltranslatorfree.services.RestartAlarmService;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import static android.content.Context.NOTIFICATION_SERVICE;
-import static android.os.Environment.getExternalStoragePublicDirectory;
-import static android.support.v4.app.NotificationCompat.PRIORITY_MAX;
-import static java.security.AccessController.getContext;
 
 /**
  * Created by jantz on 7/11/2017.

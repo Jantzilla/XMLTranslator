@@ -1,4 +1,4 @@
-package com.jantzapps.jantz.xmltranslatorfree;
+package com.jantzapps.jantz.xmltranslatorfree.views;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
+
+import com.jantzapps.jantz.xmltranslatorfree.R;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -25,11 +27,12 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
 {
     SharedPreferences sharedPreferences;
     String[] _items = null;
-    boolean[] mSelection = null;
+    public boolean[] mSelection = null;
 
     ArrayAdapter<String> simple_adapter;
-    boolean singleChoice;
-    int selectedIndex, otherIndex;
+    public boolean singleChoice;
+    public int selectedIndex;
+    int otherIndex;
     OnItemSelected onItemSelected;
 
     public interface OnItemSelected {
