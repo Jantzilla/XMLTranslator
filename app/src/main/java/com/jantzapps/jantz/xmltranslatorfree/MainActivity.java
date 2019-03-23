@@ -38,6 +38,7 @@ import android.text.TextWatcher;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -596,10 +597,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!translateReady && count > 0)
+                if(!translateReady && count > 0) {
                     showRawXml();
-                else if(translateReady && count == 0)
+                    rawEditText.setGravity(Gravity.START);
+                } else if(translateReady && count == 0) {
                     animateTranslateButton();
+                    rawEditText.setGravity(Gravity.CENTER);
+                }
             }
 
             @Override
