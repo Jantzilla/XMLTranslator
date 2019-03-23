@@ -1165,8 +1165,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.action_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
+            case R.id.action_privacy_policy:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://jantz.000webhostapp.com/Privacy-Policy/")));
                 return true;
             default:
 
