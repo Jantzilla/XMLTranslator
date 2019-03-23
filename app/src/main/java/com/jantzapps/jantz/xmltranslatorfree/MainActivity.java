@@ -1178,25 +1178,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void setDefaultTranslation() {
-        if(!locale.equals("ar")) {
-            spinner.setSelection(3);
+        if(!locale.equals("ar"))
             sharedPreferences.edit().putBoolean("3", true).apply();
-        } if(!locale.equals("zh")) {
-            spinner.setSelection(13);
+        if(!locale.equals("zh"))
             sharedPreferences.edit().putBoolean("13", true).apply();
-        } if(!locale.equals("en")) {
-            spinner.setSelection(18);
+        if(!locale.equals("en"))
             sharedPreferences.edit().putBoolean("18", true).apply();
-        } if(!locale.equals("fr")) {
-            spinner.setSelection(22);
+        if(!locale.equals("fr"))
             sharedPreferences.edit().putBoolean("22", true).apply();
-        } if(!locale.equals("de")) {
-            spinner.setSelection(25);
+        if(!locale.equals("de"))
             sharedPreferences.edit().putBoolean("25", true).apply();
-        } if(!locale.equals("es")) {
-            spinner.setSelection(73);
+        if(!locale.equals("es"))
             sharedPreferences.edit().putBoolean("73", true).apply();
-        }
     }
 
     @Override
