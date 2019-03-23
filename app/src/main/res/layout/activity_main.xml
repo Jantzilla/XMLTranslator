@@ -138,22 +138,34 @@
         </LinearLayout>
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/etEmailMessage"
+    <FrameLayout
+        android:id="@+id/fl_paste_entry"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
+        android:layout_margin="8dp"
         android:background="@drawable/edittext_background"
-        android:cursorVisible="false"
-        android:hint="@string/message"
-        android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/tv_or_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_to_block"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintVertical_chainStyle="spread">
+        <EditText
+            android:id="@+id/etEmailMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:hint="@string/message"
+            android:inputType="textMultiLine"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/delete_button_background"
+            android:padding="4dp"
+            android:layout_gravity="top|end"
+            android:src="@drawable/delete"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_or_label"
@@ -165,7 +177,7 @@
         app:layout_constraintBottom_toTopOf="@id/btn_open_file"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/fl_paste_entry" />
 
     <Button
         android:id="@+id/btn_open_file"
@@ -195,7 +207,7 @@
         android:id="@+id/fl_chosen_file"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#47bfc7"
+        android:background="@drawable/chosen_file_background"
         android:layout_margin="8dp"
         android:paddingStart="24dp"
         android:paddingLeft="24dp"
