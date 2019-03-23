@@ -37,6 +37,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.transition.TransitionManager;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -1017,14 +1018,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if(translateReady) {
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.BOTTOM);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.TOP, R.id.root, ConstraintSet.BOTTOM, 0);
+            constraintSet.constrainHeight(R.id.fl_paste_entry, (int) dPToPx(100));
         } else {
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.BOTTOM, R.id.root, ConstraintSet.BOTTOM, 0);
-            constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.WRAP_CONTENT);
+            constraintSet.constrainHeight(R.id.fl_paste_entry,ConstraintSet.MATCH_CONSTRAINT);
         }
 
         translateReady = !translateReady;
         constraintSet.applyTo(parentLayout);
+    }
+
+    private float dPToPx(int dp) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
     private void showChosenFile(Uri uri) {
