@@ -48,7 +48,7 @@ public class TranslateXML {
                     for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
 
                         translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
-                        showProgressNotification("Translating...", i2 * i, xmlStringsList.size() * toLangIds.size());
+                        showProgressNotification("Translating...", (i2 + 1) * (i + 1), (xmlStringsList.size() * toLangIds.size()));
 
                     }
 
