@@ -695,16 +695,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit, final Handler handler) {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
-                }
-            }
-        }, 4000);
+
+        showInterstitial();
+
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkPermission()) {
                 if (!xml_limit_path.exists()) {
@@ -915,6 +908,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             Thread t = new Thread(r);
             t.start();                       // starts thread in background..
         }
+    }
+
+    public void showInterstitial() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+            }
+        }, 4000);
     }
 
     public boolean validateFileText(String text) {
