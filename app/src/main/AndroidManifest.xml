@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".utils.TranslationService"
+            android:name=".services.TranslationService"
             android:enabled="true"
             android:exported="false"></service>
 

@@ -1,4 +1,4 @@
-package com.jantzapps.jantz.xmltranslatorfree.utils;
+package com.jantzapps.jantz.xmltranslatorfree.services;
 
 import android.app.Service;
 import android.content.Intent;
