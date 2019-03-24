@@ -142,12 +142,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private String fileString;
     private FrameLayout pasteEntryLayout;
 
-    private void upload_to_drive(String toLang, String xmlFile) {
-
-        //async check if folder exists... if not, create it. continue after with create_file_in_folder(driveId);
-        create_file_in_folder(toLang,xmlFile);
-    }
-
     private void check_folder_exists() {
 
         Query query =
@@ -1019,7 +1013,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                         String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
                         if (mGoogleApiClient != null) {
-                            upload_to_drive(toLangIds.get(i), xmlFile);
+                            create_file_in_folder(toLangIds.get(i), xmlFile);
                         } else {
                             Log.e(TAG, "Could not connect to google drive manager");
                         }
