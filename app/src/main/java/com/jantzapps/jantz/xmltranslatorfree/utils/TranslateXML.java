@@ -1,8 +1,11 @@
 package com.jantzapps.jantz.xmltranslatorfree.utils;
 
+import android.app.NotificationManager;
+import android.content.Context;
 import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.jantzapps.jantz.xmltranslatorfree.services.TranslationService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,12 +18,16 @@ import java.util.ArrayList;
 
 public class TranslateXML {
 
+    private static final int REQUEST_CODE = 132;
+    private static TranslationService service;
+
     public static void translateXML(String fromLang, final String[] toLangs, final ArrayList<String> xmlStringsList,
-                             final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList) {
+                                    final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService) {
 
         final ArrayList<String> toLangIds = new ArrayList<String>();
         final String fromLangId = getLangId(fromLang);
         final String langDirectDivide = "-";
+        service = translationService;
 
         final ArrayList<String> translatedStrings = new ArrayList<String>();
 
@@ -41,6 +48,7 @@ public class TranslateXML {
                     for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
 
                         translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
+                        showProgressNotification("Translating...", i2 * i, xmlStringsList.size() * toLangIds.size());
 
                     }
 
@@ -118,5 +126,14 @@ public class TranslateXML {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private static void showProgressNotification(String caption, int completedUnits, int totalUnits) {
+
+        NotificationManager mNotificationManager = (NotificationManager) service.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (mNotificationManager != null) {
+            //Update the notification bar progress
+            mNotificationManager.notify(REQUEST_CODE,  service.createNotification(completedUnits,totalUnits, caption));
+        }
     }
 }
