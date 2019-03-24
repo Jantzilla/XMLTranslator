@@ -705,54 +705,31 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 }
                 if (!xml_limit.getParentFile().exists()) {
                     try {
-
                         xml_limit.getParentFile().createNewFile();
-                        Log.e("Success", "DailyTrac File Created");
-                    } catch (Exception e) {
-
-                    }
-                } else {
-                    Log.e("DailyCharCount", "File Exists");
+                    } catch (Exception e) {}
                 }
-
             } else {
                 requestPermission(); // Code for permission
                 if (checkPermission()) {
-                    if (!xml_limit_path.exists()) {
+                    if (!xml_limit_path.exists())
                         xml_limit_path.mkdir();
-                    }
+
                     if (!xml_limit.getParentFile().exists()) {
                         try {
-
                             xml_limit.getParentFile().createNewFile();
-                            Log.e("Success", "DailyTrac File Created");
-                        } catch (Exception e) {
-
-                        }
-                    } else {
-                        Log.e("DailyCharCount", "File Exists");
+                        } catch (Exception e) {}
                     }
-
                 }
             }
         } else {
-            // Code for Below 23 API Oriented Device
-            // Do next code
 
-            if (!xml_limit_path.exists()) {
+            if (!xml_limit_path.exists())
                 xml_limit_path.mkdir();
-            }
+
             if (!xml_limit.getParentFile().exists()) {
                 try {
-
                     xml_limit.getParentFile().createNewFile();
-
-
-                } catch (Exception e) {
-
-                }
-            } else {
-                Log.e("DailyCharCount", "File Exists");
+                } catch (Exception e) {}
             }
         }
 
