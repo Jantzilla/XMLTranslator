@@ -80,16 +80,31 @@ public class TranslationService extends Service {
             percentComplete = (int) (100 * completedUnits / totalUnits);
         }
 
-        //Return the latest progress of task
-        return new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle(getString(R.string.app_name))
-                .setContentText(caption)
-                .setProgress(100, percentComplete, false)
-                .setContentInfo(String.valueOf(percentComplete +"%"))
-                .setOngoing(true)
-                .setAutoCancel(false)
-                .build();
+        if(percentComplete == 100) {
 
+            //Return the latest progress of task
+            return new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentTitle(getString(R.string.app_name))
+                    .setContentText("Translation Complete!")
+                    .setContentInfo(String.valueOf(percentComplete +"%"))
+                    .setOngoing(false)
+                    .setAutoCancel(false)
+                    .build();
+
+        } else {
+
+            //Return the latest progress of task
+            return new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentTitle(getString(R.string.app_name))
+                    .setContentText(caption)
+                    .setProgress(100, percentComplete, false)
+                    .setContentInfo(String.valueOf(percentComplete +"%"))
+                    .setOngoing(true)
+                    .setAutoCancel(false)
+                    .build();
+
+        }
     }
 }
