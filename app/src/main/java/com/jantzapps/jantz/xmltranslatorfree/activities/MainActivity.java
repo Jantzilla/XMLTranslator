@@ -70,6 +70,7 @@ import com.google.android.gms.drive.query.Query;
 import com.google.android.gms.drive.query.SearchableField;
 import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
+import com.jantzapps.jantz.xmltranslatorfree.utils.TranslateXML;
 import com.jantzapps.jantz.xmltranslatorfree.views.MultiSelectionSpinner;
 import com.jantzapps.jantz.xmltranslatorfree.R;
 import com.jantzapps.jantz.xmltranslatorfree.utils.TranslatorBackgroundTask;
@@ -783,73 +784,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 }
             }, 1000);
 
-            //progressDialog.setTitle("Creating Files");
-            //progressDialog.setMessage("Processing...");
-            //progressDialog.show();
-            final ArrayList<String> toLangIds = new ArrayList<String>();
-            final String fromLangId = getLangId(fromLang);
-            final String langDirectDivide = "-";
-
-            final ArrayList<String> translatedStrings = new ArrayList<String>();
-
             rawEditText.setText("");
-
-            Runnable r = (new Runnable() {
-                @Override
-                public void run() {
-
-                    String langDirection;
-
-
-                    for (int i = 0; i < toLangs.length; i++) {
-                        toLangIds.add(getLangId(toLangs[i]));
-                    }
-
-                    for (int i = 0; i < toLangIds.size(); i++) {
-                        langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
-
-                        for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
-
-                            translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
-
-                        }
-
-                        String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
-                        if (mGoogleApiClient != null) {
-                            XMLFileMaker.createFileInFolder(toLangIds.get(i), xmlFile, mGoogleApiClient);
-                        } else {
-                            Log.e(TAG, "Could not connect to google drive manager");
-                        }
-                        translatedStrings.clear();
-
-                    }
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            NotificationCompat.Builder mBuilder =
-                                    new NotificationCompat.Builder(MainActivity.this)
-                                            .setAutoCancel(true)
-                                            .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
-                                            .setLights(Color.BLUE, 12500, 12500)
-                                            .setColor(Color.argb(1, 66, 208, 217))
-                                            .setSmallIcon(R.drawable.finished)
-                                            .setContentTitle("XML Translator Free")
-                                            .setContentText(getString(R.string.translations_complete));
-
-// Gets an instance of the NotificationManager service
-                            NotificationManager mNotifyMgr =
-                                    (NotificationManager) MainActivity.this.getSystemService(NOTIFICATION_SERVICE);
-// Builds the notification and issues it.
-                            mNotifyMgr.notify(0, mBuilder.setPriority(PRIORITY_MAX).build());
-
-                        }
-                    });
-
-                }
-            });
-
-            Thread t = new Thread(r);
-            t.start();                       // starts thread in background..
+            TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList);
         }
     }
 
@@ -953,34 +889,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         openFileButton.setVisibility(View.GONE);
         orTextView.setVisibility(View.GONE);
         clearButton.setVisibility(View.VISIBLE);
-    }
-
-    public String getLangId(String lang) {
-        String langId = "";
-        switch(lang) {
-            case "Afrikaans af": langId = "af"; return langId; case "Albanian sq": langId = "sq"; return langId; case "Amharic am": langId = "am"; return langId; case "Arabic ar": langId = "ar"; return langId; case "Armenian hy": langId = "hy"; return langId; case "Azerbaijan az": langId = "az"; return langId; case "Basque eu": langId = "eu"; return langId; case "Belarusian be": langId = "be"; return langId; case "Bengali bn": langId = "bn"; return langId; case "Bosnian bs": langId = "bs"; return langId; case "Bulgarian bg": langId = "bg"; return langId;
-            case "Catalan ca": langId = "ca"; return langId; case "Cebuano ceb": langId = "ceb"; return langId; case "Chinese zh": langId = "zh"; return langId; case "Croatian hr": langId = "hr"; return langId;case "Czech cs": langId = "cs"; return langId; case "Danish da": langId = "da"; return langId; case "Dutch nl": langId = "nl"; return langId; case "English en": langId = "en"; return langId; case "Esperanto eo": langId = "eo"; return langId; case "Estonian et": langId = "et"; return langId; case "Finnish fi": langId = "fi"; return langId;
-            case "French fr": langId = "fr"; return langId; case "Galician gl": langId = "gl"; return langId; case "Georgian ka": langId = "ka"; return langId; case "German de": langId = "de"; return langId; case "Greek el": langId = "el"; return langId; case "Gujarati gu": langId = "gu"; return langId; case "Haitian Creole ht": langId = "ht"; return langId; case "Hebrew he": langId = "he"; return langId;case "Hill Mari mrj": langId = "mrj";return langId;case "Hindi hi": langId = "hi";return langId;case "Hungarian hu": langId = "hu";return langId;
-            case "Icelandic is": langId = "is";return langId;case "Indonesian id": langId = "id";return langId;case "Irish ga": langId = "ga";return langId;case "Italian it": langId = "it";return langId;case "Japanese ja": langId = "ja";return langId;case "Javanese jv": langId = "jv";return langId;case "Kannada kn": langId = "kn";return langId;case "Kazakh kk": langId = "kk";return langId;case "Khmer km": langId = "km";return langId;case "Korean ko": langId = "ko";return langId;case "Kyrgyz ky": langId = "ky";return langId;case "Laotian lo": langId = "lo";return langId;
-            case "Latin la": langId = "la";return langId;case "Latvian lv": langId = "lv";return langId;case "Lithuanian lt": langId = "lt";return langId;case "Luxembourgish lb": langId = "lb";return langId;case "Macedonian mk": langId = "mk";return langId;case "Malagasy mg": langId = "mg";return langId;case "Malay ms": langId = "ms";return langId;case "Malayalam ml": langId = "ml";return langId;case "Maltese mt": langId = "mt";return langId;case "Maori mi": langId = "mi";return langId;case "Marathi mr": langId = "mr";return langId;
-            case "Mari mhr": langId = "mhr";return langId;case "Mongolian mn": langId = "mn";return langId;case "Myanmar (Burmese) my": langId = "my";return langId;case "Nepali ne": langId = "ne";return langId;case "Norwegian no": langId = "no";return langId;case "Papiamento pap": langId = "pap";return langId;case "Persian fa": langId = "fa";return langId;case "Polish pl": langId = "pl";return langId;case "Portuguese pt": langId = "pt";return langId;case "Punjabi pa": langId = "pa";return langId;case "Romanian ro": langId = "ro";return langId;case "Russian ru": langId = "ru";return langId;
-            case "Scottish gd": langId = "gd";return langId;case "Serbian sr": langId = "sr";return langId;case "Sinhala si": langId = "si";return langId;case "Slovak sk": langId = "sk";return langId;case "Slovenian sl": langId = "sl";return langId;case "Spanish es": langId = "es"; return langId; case "Sundanese su": langId = "su";return langId;case "Swahili sw": langId = "sw";return langId;case "Swedish sv": langId = "sv";return langId;case "Tagalog tl": langId = "tl";return langId;case "Tajik tg": langId = "tg";return langId;
-            case "Tamil ta": langId = "ta";return langId;case "Tatar tt": langId = "tt";return langId;case "Telugu te": langId = "te";return langId;case "Thai th": langId = "th";return langId;case "Turkish tr": langId = "tr";return langId;case "Udmurt udm": langId = "udm";return langId;case "Ukrainian uk": langId = "uk";return langId;case "Urdu ur": langId = "ur";return langId;case "Uzbek uz": langId = "uz";return langId;case "Vietnamese vi": langId = "vi";return langId;case "Welsh cy": langId = "cy";return langId;case "Xhosa xh": langId = "xh";return langId;case "Yiddish yi": langId = "yi";return langId;
-        }
-        return langId;
-    }
-
-    public String translate(String textToBeTranslated,String languagePair){
-        TranslatorBackgroundTask translatorBackgroundTask= new TranslatorBackgroundTask(context);
-        String translationResult = null; // Returns the translated text as a String
-        try {
-            translationResult = String.valueOf(translatorBackgroundTask.execute(textToBeTranslated,languagePair).get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-        return translationResult;
     }
 
     public ArrayList storeNames(String string) {
