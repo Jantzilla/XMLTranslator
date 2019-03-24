@@ -3,7 +3,6 @@ package com.jantzapps.jantz.xmltranslatorfree.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,7 +12,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -27,7 +25,6 @@ import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -57,23 +54,15 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.drive.Drive;
-import com.google.android.gms.drive.DriveApi;
 import com.google.android.gms.drive.DriveFile;
-import com.google.android.gms.drive.DriveFolder;
 import com.google.android.gms.drive.DriveId;
-import com.google.android.gms.drive.Metadata;
-import com.google.android.gms.drive.MetadataChangeSet;
-import com.google.android.gms.drive.query.Filters;
-import com.google.android.gms.drive.query.Query;
-import com.google.android.gms.drive.query.SearchableField;
+import com.jantzapps.jantz.xmltranslatorfree.helpers.GoogleApiHelper;
 import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
-import com.jantzapps.jantz.xmltranslatorfree.utils.TranslateXML;
+import com.jantzapps.jantz.xmltranslatorfree.services.TranslationService;
 import com.jantzapps.jantz.xmltranslatorfree.views.MultiSelectionSpinner;
 import com.jantzapps.jantz.xmltranslatorfree.R;
-import com.jantzapps.jantz.xmltranslatorfree.utils.TranslatorBackgroundTask;
 import com.jantzapps.jantz.xmltranslatorfree.utils.XMLFileMaker;
 
 import org.xml.sax.InputSource;
@@ -88,21 +77,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.StringReader;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.ExecutionException;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static android.R.string.ok;
-import static android.support.v4.app.NotificationCompat.PRIORITY_MAX;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
@@ -142,6 +126,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private InputStream inputStream;
     private String fileString;
     private FrameLayout pasteEntryLayout;
+    private TranslationService translateService;
+    private GoogleApiHelper googleApiHelper;
 
     @Override protected void onResume() {
         super.onResume();
@@ -161,12 +147,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             } else {
 
-                mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Drive.API)
-                        .addScope(Drive.SCOPE_FILE)
-                        .addScope(Drive.SCOPE_APPFOLDER)                                                     // required for App Folder sample
-                        .addConnectionCallbacks(this)
-                        .addOnConnectionFailedListener(this)
-                        .build();
+                googleApiHelper = new GoogleApiHelper(this);
+                mGoogleApiClient = googleApiHelper.getGoogleApiClient();
 
                 mGoogleApiClient.connect();
             }
@@ -785,7 +767,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }, 1000);
 
             rawEditText.setText("");
-            TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList);
+
+            Intent intent = new Intent(this, TranslationService.class);
+            intent.putExtra("fromLang", fromLang);
+            intent.putExtra("toLangs", toLangs);
+            intent.putStringArrayListExtra("xmlStringsList", xmlStringsList);
+            intent.putStringArrayListExtra("xmlNamesList", xmlNamesList);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(intent);
+            } else
+                startService(intent);
         }
     }
 
