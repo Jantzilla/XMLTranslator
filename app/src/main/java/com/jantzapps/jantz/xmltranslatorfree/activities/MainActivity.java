@@ -142,51 +142,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private String fileString;
     private FrameLayout pasteEntryLayout;
 
-    private void check_folder_exists() {
-
-        Query query =
-                new Query.Builder().addFilter(Filters.and(Filters.eq(SearchableField.TITLE, FOLDER_NAME), Filters.eq(SearchableField.TRASHED, false)))
-                        .build();
-
-        Drive.DriveApi.query(mGoogleApiClient, query).setResultCallback(new ResultCallback<DriveApi.MetadataBufferResult>() {
-            @Override public void onResult(DriveApi.MetadataBufferResult result) {
-                if (!result.getStatus().isSuccess()) {
-                    Log.e(TAG, "Cannot create folder in the root.");
-                } else {
-                    boolean isFound = false;
-
-
-                    for (Metadata m : result.getMetadataBuffer()) {
-                        if (m.getTitle().equals(FOLDER_NAME)) {
-                            Log.e(TAG, "Main Folder exists");
-                            isFound = true;
-                            driveId = m.getDriveId();
-                            //create_file_in_folder(driveId,toLang,xmlFile);
-                            break;
-                        }
-                    }
-                    if (isFound == false) {
-                        Log.i(TAG, "Folder not found; creating it.");
-                        MetadataChangeSet changeSet = new MetadataChangeSet.Builder().setTitle(FOLDER_NAME).build();
-                        Drive.DriveApi.getRootFolder(mGoogleApiClient)
-                                .createFolder(mGoogleApiClient, changeSet)
-                                .setResultCallback(new ResultCallback<DriveFolder.DriveFolderResult>() {
-                                    @Override public void onResult(DriveFolder.DriveFolderResult result) {
-                                        if (!result.getStatus().isSuccess()) {
-                                            Log.e(TAG, "Error while trying to create the folder");
-                                        } else {
-                                            Log.i(TAG, "Created Main Folder");
-                                            driveId = result.getDriveFolder().getDriveId();
-                                            //create_file_in_folder(driveId,toLang,xmlFile);
-                                        }
-                                    }
-                                });
-                    }
-                }
-            }
-        });
-    }
-
     private void create_file_in_folder(final String toLang, final String xmlFile) {
 
         Drive.DriveApi.newDriveContents(mGoogleApiClient).setResultCallback(new ResultCallback<DriveApi.DriveContentsResult>() {
@@ -969,7 +924,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    check_folder_exists();
+                    XMLFileMaker.checkFolderExists(mGoogleApiClient);
                 }
             }, 1000);
 
