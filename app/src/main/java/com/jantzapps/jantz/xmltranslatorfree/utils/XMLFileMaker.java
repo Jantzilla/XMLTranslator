@@ -1,5 +1,7 @@
 package com.jantzapps.jantz.xmltranslatorfree.utils;
 
+import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -14,6 +16,12 @@ import com.google.android.gms.drive.query.Filters;
 import com.google.android.gms.drive.query.Query;
 import com.google.android.gms.drive.query.SearchableField;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 
 import static android.support.constraint.Constraints.TAG;
@@ -89,6 +97,83 @@ public class XMLFileMaker {
                                 }
                             });
                 }
+            }
+        });
+    }
+
+    public static void createFileInFolder(final String toLang, final String xmlFile, final GoogleApiClient mGoogleApiClient) {
+
+        Drive.DriveApi.newDriveContents(mGoogleApiClient).setResultCallback(new ResultCallback<DriveApi.DriveContentsResult>() {
+            @Override public void onResult(@NonNull final DriveApi.DriveContentsResult driveContentsResult) {
+
+                try {
+                    DriveFolder folder2 = driveId.asDriveFolder();
+                    MetadataChangeSet changeSet2 = new MetadataChangeSet.Builder()
+                            .setTitle("values-"+toLang).build();
+                    folder2.createFolder(mGoogleApiClient, changeSet2);
+                } catch (Exception e) {
+                    MetadataChangeSet changeSet2 = new MetadataChangeSet.Builder()
+                            .setTitle("values-"+toLang).build();
+                    Drive.DriveApi.getRootFolder(mGoogleApiClient)
+                            .createFolder(mGoogleApiClient, changeSet2);
+                }
+                Query query =
+                        new Query.Builder().addFilter(Filters.and(Filters.eq(SearchableField.TITLE, "values-"+toLang), Filters.eq(SearchableField.TRASHED, false)))
+                                .build();
+                Drive.DriveApi.query(mGoogleApiClient, query).setResultCallback(new ResultCallback<DriveApi.MetadataBufferResult>() {
+                    @Override public void onResult(DriveApi.MetadataBufferResult result) {
+                        DriveId driveId2 = null;
+                            for (Metadata m : result.getMetadataBuffer()) {
+                                if (m.getTitle().equals("values-"+toLang)) {
+                                    Log.e(TAG, "Folder exists");
+                                    //isFound = true;
+                                    driveId2 = m.getDriveId();
+                                    //create_file_in_folder(driveId);
+                                    break;
+                                }
+                            }
+                            final OutputStream outputStream = driveContentsResult.getDriveContents().getOutputStream();
+                            Writer writer = new OutputStreamWriter(outputStream);
+
+
+                            //------ THIS IS AN EXAMPLE FOR FILE --------
+                            final File theFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/xmlfiles/strings.xml"); //>>>>>> WHAT FILE ?
+
+                            try {
+                                FileInputStream fileInputStream = new FileInputStream(theFile);
+                                byte[] buffer = new byte[1024];
+                                int bytesRead;
+                                while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+                                    outputStream.write(buffer, 0, bytesRead);
+                                }
+                            } catch (IOException e1) {
+                                Log.i(TAG, "Unable to write file contents.");
+                            }
+                            try {
+                                writer.write(xmlFile);
+                                writer.close();
+                            } catch (IOException e) {
+                                Log.e(TAG, e.getMessage());
+                            }
+
+                            MetadataChangeSet changeSet = new MetadataChangeSet.Builder().setTitle(theFile.getName()).setMimeType("text/plain").setStarred(false).build();
+                            DriveFolder folder = driveId2.asDriveFolder();
+                            folder.createFile(mGoogleApiClient, changeSet, driveContentsResult.getDriveContents())
+                                    .setResultCallback(new ResultCallback<DriveFolder.DriveFileResult>() {
+                                        @Override
+                                        public void onResult(@NonNull DriveFolder.DriveFileResult driveFileResult) {
+                                            if (!driveFileResult.getStatus().isSuccess()) {
+                                                Log.e(TAG, "Error while trying to create the file");
+                                                return;
+                                            }
+                                            Log.v(TAG, "Created a file: " + driveFileResult.getDriveFile().getDriveId());
+                                        }
+                                    });
+                    }
+                });
+
+
+
             }
         });
     }

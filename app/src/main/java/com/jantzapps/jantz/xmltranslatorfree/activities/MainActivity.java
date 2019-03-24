@@ -142,94 +142,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private String fileString;
     private FrameLayout pasteEntryLayout;
 
-    private void create_file_in_folder(final String toLang, final String xmlFile) {
-
-        Drive.DriveApi.newDriveContents(mGoogleApiClient).setResultCallback(new ResultCallback<DriveApi.DriveContentsResult>() {
-            @Override public void onResult(@NonNull final DriveApi.DriveContentsResult driveContentsResult) {
-                if (!driveContentsResult.getStatus().isSuccess()) {
-                    Log.e(TAG, "Error while trying to create new file contents");
-                    return;
-                }
-
-
-                try {
-                    DriveFolder folder2 = driveId.asDriveFolder();
-                    MetadataChangeSet changeSet2 = new MetadataChangeSet.Builder()
-                            .setTitle("values-"+toLang).build();
-                    folder2.createFolder(mGoogleApiClient, changeSet2);
-                } catch (Exception e) {
-                    MetadataChangeSet changeSet2 = new MetadataChangeSet.Builder()
-                            .setTitle("values-"+toLang).build();
-                    Drive.DriveApi.getRootFolder(mGoogleApiClient)
-                            .createFolder(mGoogleApiClient, changeSet2);
-                }
-                Query query =
-                        new Query.Builder().addFilter(Filters.and(Filters.eq(SearchableField.TITLE, "values-"+toLang), Filters.eq(SearchableField.TRASHED, false)))
-                                .build();
-                Drive.DriveApi.query(mGoogleApiClient, query).setResultCallback(new ResultCallback<DriveApi.MetadataBufferResult>() {
-                    @Override public void onResult(DriveApi.MetadataBufferResult result) {
-                        if (!result.getStatus().isSuccess()) {
-                            Log.e(TAG, "Error while trying to create the folder");
-                        } else {
-                            Log.i(TAG, "Created a folder");
-                            //boolean isFound = false;
-                            DriveId driveId2 = null;
-                            for (Metadata m : result.getMetadataBuffer()) {
-                                if (m.getTitle().equals("values-"+toLang)) {
-                                    Log.e(TAG, "Folder exists");
-                                    //isFound = true;
-                                    driveId2 = m.getDriveId();
-                                    //create_file_in_folder(driveId);
-                                    break;
-                                }
-                            }
-                            final OutputStream outputStream = driveContentsResult.getDriveContents().getOutputStream();
-                            Writer writer = new OutputStreamWriter(outputStream);
-
-
-                            //------ THIS IS AN EXAMPLE FOR FILE --------
-                            final File theFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/xmlfiles/strings.xml"); //>>>>>> WHAT FILE ?
-
-                            try {
-                                FileInputStream fileInputStream = new FileInputStream(theFile);
-                                byte[] buffer = new byte[1024];
-                                int bytesRead;
-                                while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-                                    outputStream.write(buffer, 0, bytesRead);
-                                }
-                            } catch (IOException e1) {
-                                Log.i(TAG, "Unable to write file contents.");
-                            }
-                            try {
-                                writer.write(xmlFile);
-                                writer.close();
-                            } catch (IOException e) {
-                                Log.e(TAG, e.getMessage());
-                            }
-
-                            MetadataChangeSet changeSet = new MetadataChangeSet.Builder().setTitle(theFile.getName()).setMimeType("text/plain").setStarred(false).build();
-                            DriveFolder folder = driveId2.asDriveFolder();
-                            folder.createFile(mGoogleApiClient, changeSet, driveContentsResult.getDriveContents())
-                                    .setResultCallback(new ResultCallback<DriveFolder.DriveFileResult>() {
-                                        @Override
-                                        public void onResult(@NonNull DriveFolder.DriveFileResult driveFileResult) {
-                                            if (!driveFileResult.getStatus().isSuccess()) {
-                                                Log.e(TAG, "Error while trying to create the file");
-                                                return;
-                                            }
-                                            Log.v(TAG, "Created a file: " + driveFileResult.getDriveFile().getDriveId());
-                                        }
-                                    });
-                        }
-                    }
-                });
-
-
-
-            }
-        });
-    }
-
     @Override protected void onResume() {
         super.onResume();
         if (mGoogleApiClient == null) {
@@ -968,7 +880,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                         String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
                         if (mGoogleApiClient != null) {
-                            create_file_in_folder(toLangIds.get(i), xmlFile);
+                            XMLFileMaker.createFileInFolder(toLangIds.get(i), xmlFile, mGoogleApiClient);
                         } else {
                             Log.e(TAG, "Could not connect to google drive manager");
                         }
