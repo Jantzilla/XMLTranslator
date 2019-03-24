@@ -507,22 +507,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     String permChar;
                     final File Xml_limit_path = new File(Environment.getExternalStorageDirectory() + "/App_data/");
                     final File Xml_limit = new File(Xml_limit_path, "Char.txt");
-                        try {
-                            FileInputStream fis = new FileInputStream(Xml_limit);
-                            DataInputStream in = new DataInputStream(fis);
-                            BufferedReader br =
-                                    new BufferedReader(new InputStreamReader(in));
-                            String strLine;
-                            while ((strLine = br.readLine()) != null) {
-                                permChar = strLine;
-                                Log.e("DailyCharCount","File Is Read");
-                                dbHelper.addCharCount(Integer.valueOf(permChar));
-                                Log.e("DailyCharCount", String.valueOf(dbHelper.getCharCount()));
-                            }
-                            in.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                    updateDailyLimit(Xml_limit);
 
                 } else {
                     Log.e("value", "Permission Denied, You cannot read local drive .");
@@ -723,52 +708,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             String permChar;
 
             if (Build.VERSION.SDK_INT >= 23)
-            {
                 if (checkPermission2())
-                {
-                    try {
-                        FileInputStream fis = new FileInputStream(Xml_limit);
-                        DataInputStream in = new DataInputStream(fis);
-                        BufferedReader br =
-                                new BufferedReader(new InputStreamReader(in));
-                        String strLine;
-                        while ((strLine = br.readLine()) != null) {
-                            permChar = strLine;
-                            Log.e("DailyCharCount","File Is Read");
-                            dbHelper.addCharCount(Integer.valueOf(permChar));
-                            Log.e("DailyCharCount", String.valueOf(dbHelper.getCharCount()));
-                        }
-                        in.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                } else {
-                    requestPermission2(); // Code for permission
-                }
-            }
+                    updateDailyLimit(Xml_limit);
+                else
+                    requestPermission2();
             else
-            {
-                // Code for Below 23 API Oriented Device
-                // Do next code
-
-                try {
-                    FileInputStream fis = new FileInputStream(Xml_limit);
-                    DataInputStream in = new DataInputStream(fis);
-                    BufferedReader br =
-                            new BufferedReader(new InputStreamReader(in));
-                    String strLine;
-                    while ((strLine = br.readLine()) != null) {
-                        permChar = strLine;
-                        Log.e("DailyCharCount","File Is Read");
-                        dbHelper.addCharCount(Integer.valueOf(permChar));
-                        Log.e("DailyCharCount", String.valueOf(dbHelper.getCharCount()));
-                    }
-                    in.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+                updateDailyLimit(Xml_limit);
 
         }
 
@@ -866,6 +811,26 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     }
             }
         });
+    }
+
+    private void updateDailyLimit(File xml_limit) {
+        String permChar;
+        try {
+            FileInputStream fis = new FileInputStream(xml_limit);
+            DataInputStream in = new DataInputStream(fis);
+            BufferedReader br =
+                    new BufferedReader(new InputStreamReader(in));
+            String strLine;
+            while ((strLine = br.readLine()) != null) {
+                permChar = strLine;
+                Log.e("DailyCharCount", "File Is Read");
+                dbHelper.addCharCount(Integer.valueOf(permChar));
+                Log.e("DailyCharCount", String.valueOf(dbHelper.getCharCount()));
+            }
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit, final Handler handler) {
