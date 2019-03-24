@@ -73,7 +73,7 @@ import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
 import com.jantzapps.jantz.xmltranslatorfree.views.MultiSelectionSpinner;
 import com.jantzapps.jantz.xmltranslatorfree.R;
 import com.jantzapps.jantz.xmltranslatorfree.utils.TranslatorBackgroundTask;
-import com.jantzapps.jantz.xmltranslatorfree.utils.XMLFileMakerClass;
+import com.jantzapps.jantz.xmltranslatorfree.utils.XMLFileMaker;
 
 import org.xml.sax.InputSource;
 
@@ -1052,7 +1052,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                         }
 
-                        String xmlFile = XMLFileMakerClass.xmlFileCreate(xmlNamesList, translatedStrings);
+                        String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
                         if (mGoogleApiClient != null) {
                             upload_to_drive(toLangIds.get(i), xmlFile);
                         } else {

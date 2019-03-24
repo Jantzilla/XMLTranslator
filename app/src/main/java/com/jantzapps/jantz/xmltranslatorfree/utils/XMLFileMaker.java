@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by jantz on 7/10/2017.
  */
 
-public class XMLFileMakerClass {
+public class XMLFileMaker {
     static String resourceBegin = "<resources>\n";              //first in file
     static String resourceEnd = "\n</resources>";               //last in file
     static String stringBegin = "<string name=\"";              //opening string tag, beginning of xml string definition line
