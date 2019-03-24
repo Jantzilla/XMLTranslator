@@ -698,41 +698,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         showInterstitial();
 
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkPermission()) {
-                if (!xml_limit_path.exists()) {
-                    xml_limit_path.mkdir();
-                }
-                if (!xml_limit.getParentFile().exists()) {
-                    try {
-                        xml_limit.getParentFile().createNewFile();
-                    } catch (Exception e) {}
-                }
-            } else {
-                requestPermission(); // Code for permission
-                if (checkPermission()) {
-                    if (!xml_limit_path.exists())
-                        xml_limit_path.mkdir();
-
-                    if (!xml_limit.getParentFile().exists()) {
-                        try {
-                            xml_limit.getParentFile().createNewFile();
-                        } catch (Exception e) {}
-                    }
-                }
-            }
-        } else {
-
-            if (!xml_limit_path.exists())
-                xml_limit_path.mkdir();
-
-            if (!xml_limit.getParentFile().exists()) {
-                try {
-                    xml_limit.getParentFile().createNewFile();
-                } catch (Exception e) {}
-            }
-        }
-
+        checkDailyLimitExists(xml_limit_path, xml_limit);
 
         String delims = "[,]";                                                                       //Important!!!  //XML string parsing
         final String[] toLangs = toLang.split(delims);
@@ -884,6 +850,43 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             Thread t = new Thread(r);
             t.start();                       // starts thread in background..
+        }
+    }
+
+    public void checkDailyLimitExists(File xml_limit_path, File xml_limit) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkPermission()) {
+                if (!xml_limit_path.exists()) {
+                    xml_limit_path.mkdir();
+                }
+                if (!xml_limit.getParentFile().exists()) {
+                    try {
+                        xml_limit.getParentFile().createNewFile();
+                    } catch (Exception e) {}
+                }
+            } else {
+                requestPermission(); // Code for permission
+                if (checkPermission()) {
+                    if (!xml_limit_path.exists())
+                        xml_limit_path.mkdir();
+
+                    if (!xml_limit.getParentFile().exists()) {
+                        try {
+                            xml_limit.getParentFile().createNewFile();
+                        } catch (Exception e) {}
+                    }
+                }
+            }
+        } else {
+
+            if (!xml_limit_path.exists())
+                xml_limit_path.mkdir();
+
+            if (!xml_limit.getParentFile().exists()) {
+                try {
+                    xml_limit.getParentFile().createNewFile();
+                } catch (Exception e) {}
+            }
         }
     }
 
