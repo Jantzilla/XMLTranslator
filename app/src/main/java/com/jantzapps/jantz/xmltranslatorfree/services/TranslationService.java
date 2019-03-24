@@ -52,7 +52,7 @@ public class TranslationService extends Service {
         this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
         this.xmlNamesList = intent.getStringArrayListExtra("xmlNamesList");
 
-        TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList);
+        TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this);
 
         startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
 
