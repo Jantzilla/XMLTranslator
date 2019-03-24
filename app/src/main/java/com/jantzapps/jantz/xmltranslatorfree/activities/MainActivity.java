@@ -874,7 +874,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                         for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
 
-                            translatedStrings.add(Translate(xmlStringsList.get(i2), langDirection));
+                            translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
 
                         }
 
@@ -984,7 +984,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         return langId;
     }
 
-    public String Translate(String textToBeTranslated,String languagePair){
+    public String translate(String textToBeTranslated,String languagePair){
         TranslatorBackgroundTask translatorBackgroundTask= new TranslatorBackgroundTask(context);
         String translationResult = null; // Returns the translated text as a String
         try {
