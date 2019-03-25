@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.LocalBroadcastManager;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jantzapps.jantz.xmltranslatorfree.R;
@@ -25,12 +26,14 @@ public class TranslationService extends Service {
     private ArrayList<String> xmlNamesList;
     private GoogleApiClient mGoogleApiClient;
     private GoogleApiHelper googleApiHelper;
+    private LocalBroadcastManager broadcaster;
 
     public TranslationService() {}
 
     @Override
     public void onCreate() {
         super.onCreate();
+        broadcaster = LocalBroadcastManager.getInstance(this);
 
         if(mGoogleApiClient == null) {
             googleApiHelper = new GoogleApiHelper(this);
@@ -52,7 +55,7 @@ public class TranslationService extends Service {
         this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
         this.xmlNamesList = intent.getStringArrayListExtra("xmlNamesList");
 
-        TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this);
+        TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this, broadcaster);
 
         startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
 
