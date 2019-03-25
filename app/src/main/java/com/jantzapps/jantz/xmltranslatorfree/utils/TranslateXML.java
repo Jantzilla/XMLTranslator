@@ -2,6 +2,8 @@ package com.jantzapps.jantz.xmltranslatorfree.utils;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -19,15 +21,19 @@ import java.util.ArrayList;
 public class TranslateXML {
 
     private static final int REQUEST_CODE = 132;
+    private static final String COMPLETED_UNITS = "completedUnits";
+    private static final String TOTAL_UNITS = "totalUnits";
     private static TranslationService service;
+    private static LocalBroadcastManager localBroadCastManager;
 
     public static void translateXML(String fromLang, final String[] toLangs, final ArrayList<String> xmlStringsList,
-                                    final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService) {
+                                    final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService, LocalBroadcastManager broadcaster) {
 
         final ArrayList<String> toLangIds = new ArrayList<String>();
         final String fromLangId = getLangId(fromLang);
         final String langDirectDivide = "-";
         service = translationService;
+        localBroadCastManager = broadcaster;
 
         final ArrayList<String> translatedStrings = new ArrayList<String>();
 
@@ -128,6 +134,13 @@ public class TranslateXML {
         return null;
     }
 
+    public static void sendProgress(int completedUnits, int totalUnits) {
+        Intent intent = new Intent();
+        intent.putExtra(COMPLETED_UNITS, completedUnits);
+        intent.putExtra(TOTAL_UNITS, totalUnits);
+        localBroadCastManager.sendBroadcast(intent);
+    }
+
     private static void showProgressNotification(String caption, int completedUnits, int totalUnits) {
 
         NotificationManager mNotificationManager = (NotificationManager) service.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -135,5 +148,7 @@ public class TranslateXML {
             //Update the notification bar progress
             mNotificationManager.notify(REQUEST_CODE,  service.createNotification(completedUnits,totalUnits, caption));
         }
+
+        sendProgress(completedUnits, totalUnits);
     }
 }
