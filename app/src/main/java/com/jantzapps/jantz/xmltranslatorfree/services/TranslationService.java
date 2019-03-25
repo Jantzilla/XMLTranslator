@@ -2,6 +2,7 @@ package com.jantzapps.jantz.xmltranslatorfree.services;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import android.support.v4.content.LocalBroadcastManager;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jantzapps.jantz.xmltranslatorfree.R;
+import com.jantzapps.jantz.xmltranslatorfree.activities.MainActivity;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.GoogleApiHelper;
 import com.jantzapps.jantz.xmltranslatorfree.utils.TranslateXML;
 
@@ -27,6 +29,8 @@ public class TranslationService extends Service {
     private GoogleApiClient mGoogleApiClient;
     private GoogleApiHelper googleApiHelper;
     private LocalBroadcastManager broadcaster;
+    private Intent intent;
+    private PendingIntent pendingIntent;
 
     public TranslationService() {}
 
@@ -34,6 +38,8 @@ public class TranslationService extends Service {
     public void onCreate() {
         super.onCreate();
         broadcaster = LocalBroadcastManager.getInstance(this);
+        intent = new Intent(this, MainActivity.class);
+        pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         if(mGoogleApiClient == null) {
             googleApiHelper = new GoogleApiHelper(this);
@@ -99,6 +105,7 @@ public class TranslationService extends Service {
                     .setContentTitle(getString(R.string.app_name))
                     .setContentText("Translation Complete!")
                     .setContentInfo(String.valueOf(percentComplete +"%"))
+                    .setContentIntent(pendingIntent)
                     .setOngoing(false)
                     .setAutoCancel(false)
                     .build();
@@ -112,6 +119,7 @@ public class TranslationService extends Service {
                     .setContentText(caption)
                     .setProgress(100, percentComplete, false)
                     .setContentInfo(String.valueOf(percentComplete +"%"))
+                    .setContentIntent(pendingIntent)
                     .setOngoing(true)
                     .setAutoCancel(false)
                     .build();
