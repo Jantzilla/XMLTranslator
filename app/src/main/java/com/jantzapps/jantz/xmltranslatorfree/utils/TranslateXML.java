@@ -25,9 +25,12 @@ public class TranslateXML {
     private static final String TOTAL_UNITS = "totalUnits";
     private static TranslationService service;
     private static LocalBroadcastManager localBroadCastManager;
+    private static boolean translating;
 
     public static void translateXML(String fromLang, final String[] toLangs, final ArrayList<String> xmlStringsList,
                                     final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService, LocalBroadcastManager broadcaster) {
+
+        translating = true;
 
         final ArrayList<String> toLangIds = new ArrayList<String>();
         final String fromLangId = getLangId(fromLang);
@@ -51,10 +54,14 @@ public class TranslateXML {
                 for (int i = 0; i < toLangIds.size(); i++) {
                     langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
 
-                    for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
+                    while(translating) {
 
-                        translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
-                        showProgressNotification("Translating...", (i2 + 1) * (i + 1), (xmlStringsList.size() * toLangIds.size()));
+                        for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
+
+                            translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
+                            showProgressNotification("Translating...", (i2 + 1) * (i + 1), (xmlStringsList.size() * toLangIds.size()));
+
+                        }
 
                     }
 
@@ -150,5 +157,9 @@ public class TranslateXML {
         }
 
         sendProgress(completedUnits, totalUnits);
+    }
+
+    public static void stopTranslation() {
+        translating = false;
     }
 }
