@@ -67,7 +67,7 @@ public class TranslationService extends Service {
 
         }
 
-        return START_STICKY;
+        return START_REDELIVER_INTENT;
     }
 
     public android.app.Notification createNotification(int totalUnits, int completedUnits, String caption) {
@@ -118,4 +118,14 @@ public class TranslationService extends Service {
 
         }
     }
+
+    @Override
+    public void onDestroy() {
+        TranslateXML.stopTranslation();
+        stopSelf();
+
+        super.onDestroy();
+    }
+
+
 }
