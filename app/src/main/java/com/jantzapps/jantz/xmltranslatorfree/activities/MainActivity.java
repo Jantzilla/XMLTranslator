@@ -825,6 +825,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }, 1000);
 
             Intent intent = new Intent(this, TranslationService.class);
+            intent.putExtra("command", "start");
             intent.putExtra("fromLang", fromLang);
             intent.putExtra("toLangs", toLangs);
             intent.putStringArrayListExtra("xmlStringsList", xmlStringsList);
