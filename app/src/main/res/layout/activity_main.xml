@@ -270,7 +270,7 @@
             fontPath="fonts/avenir.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background"
+            android:background="@drawable/stop_button_background"
             android:paddingStart="24dp"
             android:paddingLeft="24dp"
             android:paddingTop="18dp"
