@@ -494,10 +494,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(!translating) {
-                    if (!translateReady && count > 0) {
+                    if (!translateReady && s.length() > 0) {
                         showRawXml();
                         rawEditText.setGravity(Gravity.START);
-                    } else if (translateReady && count == 0) {
+                    } else if (translateReady && s.length() == 0) {
                         animateTranslateButton();
                     }
                 }
