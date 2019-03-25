@@ -3,6 +3,7 @@ package com.jantzapps.jantz.xmltranslatorfree.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -46,6 +47,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -113,11 +115,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private static final int PERMISSION_REQUEST_CODE2 = 2;
     private static final String ADMOB_APP_ID = "ca-app-pub-5985384760144093~6592515362";
     InterstitialAd mInterstitialAd;
-    private Button openFileButton;
+    private Button openFileButton, stopButton;
     private ConstraintLayout buttonBlock, parentLayout;
     private ConstraintSet constraintSet;
     private EditText rawEditText;
-    private TextView orTextView, fileTextView;
+    private TextView orTextView, fileTextView, translatingLabel;
     private FrameLayout chosenFileView;
     private ImageView deleteButton, googleButton, clearButton;
     private boolean translateReady, translating;
@@ -132,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private TranslationService translateService;
     private GoogleApiHelper googleApiHelper;
     private BroadcastReceiver receiver;
+    private ProgressBar progressBar;
 
     @Override protected void onResume() {
         super.onResume();
@@ -411,12 +414,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         buttonBlock = findViewById(R.id.ll_button_block);
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
+        stopButton = findViewById(R.id.btn_stop);
+        progressBar = findViewById(R.id.pb);
         deleteButton = findViewById(R.id.iv_delete);
         googleButton = findViewById(R.id.iv_google_drive);
         clearButton = findViewById(R.id.iv_clear);
         rawEditText = findViewById(R.id.etEmailMessage);
         orTextView = findViewById(R.id.tv_or_label);
         fileTextView = findViewById(R.id.tv_chosen_file);
+        translatingLabel = findViewById(R.id.tv_translating);
         chosenFileView = findViewById(R.id.fl_chosen_file);
         pasteEntryLayout = findViewById(R.id.fl_paste_entry);
 
