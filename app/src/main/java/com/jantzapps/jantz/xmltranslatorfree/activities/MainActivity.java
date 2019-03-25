@@ -414,9 +414,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mGoogleApiClient != null && mGoogleApiClient.isConnected())
-                    mGoogleApiClient.clearDefaultAccountAndReconnect();
-                else
+                if(mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+                    googleApiHelper.clearDefaultAccountAndReconnect();
+                    mGoogleApiClient = googleApiHelper.getGoogleApiClient();
+                } else
                     mGoogleApiClient.connect();
             }
         });
