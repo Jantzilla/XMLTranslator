@@ -516,6 +516,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
         });
 
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TranslationService.class);
+                intent.putExtra("command", "stop");
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(intent);
+                } else
+                    startService(intent);
+            }
+        });
+
         list = new ArrayList<String>();
         list.add("Afrikaans af"); list.add("Albanian sq"); list.add("Amharic am"); list.add("Arabic ar"); list.add("Armenian hy"); list.add("Azerbaijan az"); list.add("Basque eu"); list.add("Belarusian be"); list.add("Bengali bn"); list.add("Bosnian bs"); list.add("Bulgarian bg");
         list.add("Catalan ca"); list.add("Cebuano ceb"); list.add("Chinese zh"); list.add("Croatian hr"); list.add("Czech cs"); list.add("Danish da"); list.add("Dutch nl"); list.add("English en"); list.add("Esperanto eo"); list.add("Estonian et"); list.add("Finnish fi");
