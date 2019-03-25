@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private TextView orTextView, fileTextView;
     private FrameLayout chosenFileView;
     private ImageView deleteButton, googleButton, clearButton;
-    private boolean translateReady;
+    private boolean translateReady, translating;
     private MultiSelectionSpinner spinner, spinner2;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
@@ -705,6 +705,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit, final Handler handler) {
 
+        translating = true;
+
         showInterstitial();
 
         checkDailyLimitExists(xml_limit_path, xml_limit);
@@ -719,12 +721,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (!rawEditText.getText().toString().equals("")) {
             xmlStringsList = storeValues(rawEditText.getText().toString());
             xmlNamesList = storeNames(rawEditText.getText().toString());
-            rawEditText.setText("");
+            animateProgressBar();
         } else {
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
             inputStream = null;
-            animateTranslateButton();
+            animateProgressBar();
         }
 
         int checkChar = 0;
@@ -883,6 +885,31 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
 
         translateReady = !translateReady;
+        constraintSet.applyTo(parentLayout);
+    }
+
+    private void animateProgressBar() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+            TransitionManager.beginDelayedTransition(parentLayout);
+
+        if(translating) {
+            submit.setVisibility(View.GONE);
+            translatingLabel.setVisibility(View.VISIBLE);
+            stopButton.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
+            constraintSet.clear(R.id.iv_google_drive, ConstraintSet.END);
+            constraintSet.connect(R.id.iv_google_drive, ConstraintSet.START, R.id.root, ConstraintSet.END, 0);
+        } else {
+            constraintSet.clear(R.id.ll_button_block, ConstraintSet.START);
+            constraintSet.connect(R.id.ll_button_block, ConstraintSet.END, R.id.root, ConstraintSet.END, 0);
+            submit.setVisibility(View.VISIBLE);
+            translatingLabel.setVisibility(View.GONE);
+            stopButton.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
+        }
+
+        translating = !translating;
         constraintSet.applyTo(parentLayout);
     }
 
