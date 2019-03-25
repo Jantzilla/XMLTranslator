@@ -50,14 +50,22 @@ public class TranslationService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        this.fromLang = intent.getStringExtra("fromLang");
-        this.toLangs = intent.getStringArrayExtra("toLangs");
-        this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
-        this.xmlNamesList = intent.getStringArrayListExtra("xmlNamesList");
+        if(intent.getStringExtra("command").equals("stop")) {
+            TranslateXML.stopTranslation();
+            stopSelf();
 
-        TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this, broadcaster);
+        } else {
 
-        startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
+            this.fromLang = intent.getStringExtra("fromLang");
+            this.toLangs = intent.getStringArrayExtra("toLangs");
+            this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
+            this.xmlNamesList = intent.getStringArrayListExtra("xmlNamesList");
+
+            TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this, broadcaster);
+
+            startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
+
+        }
 
         return START_STICKY;
     }
