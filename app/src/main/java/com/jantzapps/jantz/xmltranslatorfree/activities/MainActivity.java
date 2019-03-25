@@ -463,8 +463,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputStream = null;
-                animateTranslateButton();
+                if(!translating) {
+                    inputStream = null;
+                    animateTranslateButton();
+                }
             }
         });
 
@@ -483,12 +485,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!translateReady && count > 0) {
-                    showRawXml();
-                    rawEditText.setGravity(Gravity.START);
-                } else if(translateReady && count == 0) {
-                    animateTranslateButton();
-                    rawEditText.setGravity(Gravity.CENTER);
+                if(!translating) {
+                    if (!translateReady && count > 0) {
+                        showRawXml();
+                        rawEditText.setGravity(Gravity.START);
+                    } else if (translateReady && count == 0) {
+                        animateTranslateButton();
+                        rawEditText.setGravity(Gravity.CENTER);
+                    }
                 }
             }
 
