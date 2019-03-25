@@ -911,16 +911,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             constraintSet.clear(R.id.iv_google_drive, ConstraintSet.END);
             constraintSet.connect(R.id.iv_google_drive, ConstraintSet.START, R.id.root, ConstraintSet.END, 0);
         } else {
-            constraintSet.clear(R.id.ll_button_block, ConstraintSet.START);
-            constraintSet.connect(R.id.ll_button_block, ConstraintSet.END, R.id.root, ConstraintSet.END, 0);
+            constraintSet.clear(R.id.iv_google_drive, ConstraintSet.START);
+            constraintSet.connect(R.id.iv_google_drive, ConstraintSet.END, R.id.root, ConstraintSet.END, 0);
             submit.setVisibility(View.VISIBLE);
             translatingLabel.setVisibility(View.GONE);
             stopButton.setVisibility(View.GONE);
             progressBar.setVisibility(View.GONE);
         }
 
-        translating = !translating;
-        constraintSet.applyTo(parentLayout);
     }
 
     private float dPToPx(int dp) {
