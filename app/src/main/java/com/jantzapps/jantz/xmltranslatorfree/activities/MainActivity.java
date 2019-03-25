@@ -382,7 +382,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     protected void onStart() {
         super.onStart();
         LocalBroadcastManager.getInstance(this).registerReceiver((receiver),
-                new IntentFilter()
+                new IntentFilter("translation update")
         );
     }
 
@@ -438,7 +438,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                // do something here.
+                int completedUnits = intent.getIntExtra("completedUnits", 0);
+                int totalUnits = intent.getIntExtra("totalUnits", 100);
+                progressBar.setMax(totalUnits);
+                progressBar.setProgress(completedUnits);
+
+                if(completedUnits == totalUnits) {
+                    translating = false;
+                    animateProgressBar();
+                }
             }
         };
 
@@ -491,7 +499,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         rawEditText.setGravity(Gravity.START);
                     } else if (translateReady && count == 0) {
                         animateTranslateButton();
-                        rawEditText.setGravity(Gravity.CENTER);
                     }
                 }
             }
@@ -887,6 +894,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.BOTTOM);
             constraintSet.connect(R.id.ll_button_block, ConstraintSet.TOP, R.id.root, ConstraintSet.BOTTOM, 0);
             constraintSet.constrainHeight(R.id.fl_paste_entry, (int) dPToPx(100));
+            rawEditText.setGravity(Gravity.CENTER);
             clearButton.setVisibility(View.GONE);
         } else {
             constraintSet.clear(R.id.ll_button_block, ConstraintSet.TOP);
@@ -903,13 +911,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             TransitionManager.beginDelayedTransition(parentLayout);
 
+        ConstraintSet constraintSet2 = new ConstraintSet();
+        constraintSet2.clone(parentLayout);
+
         if(translating) {
             submit.setVisibility(View.GONE);
             translatingLabel.setVisibility(View.VISIBLE);
             stopButton.setVisibility(View.VISIBLE);
             progressBar.setVisibility(View.VISIBLE);
-            constraintSet.clear(R.id.iv_google_drive, ConstraintSet.END);
-            constraintSet.connect(R.id.iv_google_drive, ConstraintSet.START, R.id.root, ConstraintSet.END, 0);
+            constraintSet2.clear(R.id.iv_google_drive, ConstraintSet.END);
+            constraintSet2.connect(R.id.iv_google_drive, ConstraintSet.START, R.id.root, ConstraintSet.END, 0);
+            constraintSet2.applyTo(parentLayout);
         } else {
             constraintSet.clear(R.id.iv_google_drive, ConstraintSet.START);
             constraintSet.connect(R.id.iv_google_drive, ConstraintSet.END, R.id.root, ConstraintSet.END, 0);
@@ -917,8 +929,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             translatingLabel.setVisibility(View.GONE);
             stopButton.setVisibility(View.GONE);
             progressBar.setVisibility(View.GONE);
+            animateTranslateButton();
         }
-
     }
 
     private float dPToPx(int dp) {
