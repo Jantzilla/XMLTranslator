@@ -135,7 +135,7 @@ public class TranslateXML {
     }
 
     public static void sendProgress(int completedUnits, int totalUnits) {
-        Intent intent = new Intent();
+        Intent intent = new Intent("translation update");
         intent.putExtra(COMPLETED_UNITS, completedUnits);
         intent.putExtra(TOTAL_UNITS, totalUnits);
         localBroadCastManager.sendBroadcast(intent);
