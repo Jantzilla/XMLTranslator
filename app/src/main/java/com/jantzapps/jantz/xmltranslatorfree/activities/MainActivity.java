@@ -722,10 +722,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit, final Handler handler) {
 
-        translating = true;
-
-        showInterstitial();
-
         checkDailyLimitExists(xml_limit_path, xml_limit);
 
         String delims = "[,]";                                                                       //Important!!!  //XML string parsing
@@ -738,12 +734,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (!rawEditText.getText().toString().equals("")) {
             xmlStringsList = storeValues(rawEditText.getText().toString());
             xmlNamesList = storeNames(rawEditText.getText().toString());
-            animateProgressBar();
         } else {
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
             inputStream = null;
-            animateProgressBar();
         }
 
         int checkChar = 0;
@@ -776,6 +770,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             AlertDialog alert = builder.create();
             alert.show();
         } else {
+
+            translating = true;
+
+            showInterstitial();
+
+            animateProgressBar();
 
             dbHelper.addCharCount((checkChar * toLangCount));
 
@@ -810,8 +810,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
                 }
             }, 1000);
-
-            rawEditText.setText("");
 
             Intent intent = new Intent(this, TranslationService.class);
             intent.putExtra("fromLang", fromLang);
@@ -929,7 +927,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             translatingLabel.setVisibility(View.GONE);
             stopButton.setVisibility(View.GONE);
             progressBar.setVisibility(View.GONE);
-            animateTranslateButton();
+            rawEditText.setText("");
         }
     }
 
