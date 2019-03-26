@@ -1,5 +1,6 @@
 package com.jantzapps.jantz.xmltranslatorfree.services;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jantzapps.jantz.xmltranslatorfree.R;
@@ -56,12 +58,6 @@ public class TranslationService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        if(intent.getStringExtra("command").equals("stop")) {
-            TranslateXML.stopTranslation();
-            stopSelf();
-
-        } else {
-
             this.fromLang = intent.getStringExtra("fromLang");
             this.toLangs = intent.getStringArrayExtra("toLangs");
             this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
@@ -71,12 +67,22 @@ public class TranslationService extends Service {
 
             startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
 
-        }
-
-        return START_REDELIVER_INTENT;
+        return START_NOT_STICKY;
     }
 
-    public android.app.Notification createNotification(int totalUnits, int completedUnits, String caption) {
+    @Override
+    public boolean stopService(Intent name) {
+
+        TranslateXML.stopTranslation();
+        stopForeground(false);
+        stopSelf();
+        Log.d("Translation Has Been", " Stopped");
+
+        return true;
+
+    }
+
+    public Notification createNotification(int totalUnits, int completedUnits, String caption) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Progress", NotificationManager.IMPORTANCE_HIGH);
@@ -99,8 +105,12 @@ public class TranslationService extends Service {
 
         if(percentComplete == 100) {
 
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                stopForeground(STOP_FOREGROUND_DETACH);
+            }
+
             //Return the latest progress of task
-            return new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
+            return new NotificationCompat.Builder(getBaseContext(), NOTIFICATION_CHANNEL_ID)
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentTitle(getString(R.string.app_name))
                     .setContentText("Translation Complete!")
