@@ -58,6 +58,16 @@ public class TranslationService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        if(intent.getBooleanExtra("stopped", false)) {
+            TranslateXML.stopTranslation(true);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                stopForeground(STOP_FOREGROUND_DETACH);
+            } else
+                stopForeground(false);
+            stopSelf();
+
+        } else {
+
             this.fromLang = intent.getStringExtra("fromLang");
             this.toLangs = intent.getStringArrayExtra("toLangs");
             this.xmlStringsList = intent.getStringArrayListExtra("xmlStringsList");
@@ -66,6 +76,7 @@ public class TranslationService extends Service {
             TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this, broadcaster);
 
             startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
+        }
 
         return START_NOT_STICKY;
     }
@@ -73,7 +84,7 @@ public class TranslationService extends Service {
     @Override
     public boolean stopService(Intent name) {
 
-        TranslateXML.stopTranslation();
+        TranslateXML.stopTranslation(false);
         stopForeground(false);
         stopSelf();
         Log.d("Translation Has Been", " Stopped");
@@ -113,7 +124,7 @@ public class TranslationService extends Service {
             return new NotificationCompat.Builder(getBaseContext(), NOTIFICATION_CHANNEL_ID)
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentTitle(getString(R.string.app_name))
-                    .setContentText("Translation Complete!")
+                    .setContentText(caption)
                     .setContentInfo(String.valueOf(percentComplete +"%"))
                     .setContentIntent(pendingIntent)
                     .setOngoing(false)
@@ -139,7 +150,7 @@ public class TranslationService extends Service {
 
     @Override
     public void onDestroy() {
-        TranslateXML.stopTranslation();
+        TranslateXML.stopTranslation(false);
         stopSelf();
 
         super.onDestroy();
