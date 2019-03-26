@@ -172,16 +172,19 @@ public class TranslateXML {
         NotificationManager mNotificationManager = (NotificationManager) service.getSystemService(Context.NOTIFICATION_SERVICE);
         if (mNotificationManager != null) {
             //Update the notification bar progress
-            mNotificationManager.notify(REQUEST_CODE,  service.createNotification(totalUnits,completedUnits, caption));
-        }
 
-        sendProgress(completedUnits, totalUnits);
+            if(!translating) {
+                mNotificationManager.cancelAll();
+                mNotificationManager.notify(REQUEST_CODE,  service.createNotification(100,100, "Translation Stopped!"));
+                sendProgress(100, 100);
+            } else {
+                mNotificationManager.notify(REQUEST_CODE, service.createNotification(totalUnits, completedUnits, caption));
+                sendProgress(completedUnits, totalUnits);
+            }
+        }
     }
 
     public static void stopTranslation(boolean stopped) {
         translating = false;
-
-        if(stopped)
-            showProgressNotification("Translation Stopped!", 100, 100);
     }
 }
