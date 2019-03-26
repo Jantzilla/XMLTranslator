@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private ArrayList<String> list, xmlNamesList;
     private String locale;
     private InputStream inputStream;
-    private String fileString;
+    private String fileString, chosenFile;
     private FrameLayout pasteEntryLayout;
     private TranslationService translateService;
     private GoogleApiHelper googleApiHelper;
@@ -440,8 +440,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             @Override
             public void onReceive(Context context, Intent intent) {
                 if(translatingLabel.getVisibility() == View.GONE) {
+                    showActivelyTranslating();
                     translating = true;
-                    animateTranslateButton();
                     animateProgressBar();
                 }
 
@@ -719,6 +719,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         });
     }
 
+    public void showActivelyTranslating() {
+        if(sharedPreferences.contains("TranslationString") && !sharedPreferences.getString("TranslationString", "").equals(""))
+            rawEditText.setText(sharedPreferences.getString("TranslationString", ""));
+
+        else if(sharedPreferences.contains("TranslationFile") && !sharedPreferences.getString("TranslationFile", "").equals(""))
+            showChosenFile(sharedPreferences.getString("TranslationFile", ""));
+        else
+            animateTranslateButton();
+    }
+
     private void updateDailyLimit(File xml_limit) {
         String permChar;
         try {
@@ -751,9 +761,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             toLangCount += 1;
         }
         if (!rawEditText.getText().toString().equals("")) {
+            sharedPreferences.edit().putString("TranslationString", rawEditText.getText().toString()).apply();
+            sharedPreferences.edit().putString("TranslationFile", "").apply();
             xmlStringsList = storeValues(rawEditText.getText().toString());
             xmlNamesList = storeNames(rawEditText.getText().toString());
         } else {
+            sharedPreferences.edit().putString("TranslationFile", chosenFile).apply();
+            sharedPreferences.edit().putString("TranslationString", "").apply();
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
             inputStream = null;
@@ -956,6 +970,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showChosenFile(String chosenFile) {
+        this.chosenFile = chosenFile;
         animateTranslateButton();
         pasteEntryLayout.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
