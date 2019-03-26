@@ -798,7 +798,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         if ((checkChar * toLangCount) + dbHelper.getCharCount() > dailyLimit) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle(R.string.app_name);
+            builder.setTitle(R.string.limit_reached);
             builder.setIcon(R.mipmap.ic_launcher);
             builder.setMessage(R.string.daily_limit_reached)
                     .setCancelable(false)
