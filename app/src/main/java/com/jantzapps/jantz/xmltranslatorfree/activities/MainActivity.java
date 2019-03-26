@@ -786,7 +786,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             sharedPreferences.edit().putString("TranslationString", "").apply();
             xmlStringsList = storeValues(fileString);
             xmlNamesList = storeNames(fileString);
-            inputStream = null;
         }
 
         int checkChar = 0;
@@ -803,15 +802,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             builder.setIcon(R.mipmap.ic_launcher);
             builder.setMessage(R.string.daily_limit_reached)
                     .setCancelable(false)
-                    .setPositiveButton(R.string.try_it, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setData(Uri.parse("market://details?id=com.jantzapps.jantz.xmlanguagetranslator"));
-                            startActivity(intent);
-                            finish();
-                        }
-                    })
-                    .setNegativeButton(R.string.mayber_later, new DialogInterface.OnClickListener() {
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
                         }
