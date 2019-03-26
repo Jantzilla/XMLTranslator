@@ -520,12 +520,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TranslationService.class);
-                intent.putExtra("command", "stop");
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    startForegroundService(intent);
-                } else
-                    startService(intent);
+                stopService(intent);
             }
         });
 
