@@ -61,6 +61,9 @@ public class TranslateXML {
                             translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
                             showProgressNotification("Translating...", (i2 + 1) * (i + 1), (xmlStringsList.size() * toLangIds.size()));
 
+                            if(i == toLangIds.size() - 1 && i2 == xmlStringsList.size() - 1)
+                                finishTranslation();
+
                         }
 
                     }
@@ -77,6 +80,11 @@ public class TranslateXML {
 
         Thread t = new Thread(r);
         t.start();                       // starts thread in background..
+    }
+
+    private static void finishTranslation() {
+        Intent intent = new Intent(service, TranslationService.class);
+        service.stopService(intent);
     }
 
     private static String getLangId(String lang) {
