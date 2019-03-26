@@ -69,6 +69,7 @@ public class TranslateXML {
                             showProgressNotification("Translating...", totalStrings, (xmlStringsList.size() * toLangIds.size()));
 
                             if (totalStrings == (xmlStringsList.size() * toLangIds.size())) {
+                                showProgressNotification("Translation Complete!", totalStrings, (xmlStringsList.size() * toLangIds.size()));
                                 finishTranslation();
                                 Log.d("Finished", " Reaches");
                             }
@@ -177,7 +178,10 @@ public class TranslateXML {
         sendProgress(completedUnits, totalUnits);
     }
 
-    public static void stopTranslation() {
+    public static void stopTranslation(boolean stopped) {
         translating = false;
+
+        if(stopped)
+            showProgressNotification("Translation Stopped!", 100, 100);
     }
 }
