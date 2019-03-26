@@ -813,6 +813,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             translating = true;
 
+            inputStream = null;
+
             showInterstitial();
 
             animateProgressBar();
