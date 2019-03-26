@@ -26,11 +26,13 @@ public class TranslateXML {
     private static TranslationService service;
     private static LocalBroadcastManager localBroadCastManager;
     private static boolean translating;
+    private static int totalStrings;
 
     public static void translateXML(String fromLang, final String[] toLangs, final ArrayList<String> xmlStringsList,
                                     final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService, LocalBroadcastManager broadcaster) {
 
         translating = true;
+        totalStrings = 0;
 
         final ArrayList<String> toLangIds = new ArrayList<String>();
         final String fromLangId = getLangId(fromLang);
@@ -51,28 +53,36 @@ public class TranslateXML {
                     toLangIds.add(getLangId(toLangs[i]));
                 }
 
-                for (int i = 0; i < toLangIds.size(); i++) {
-                    langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
+                label:
+                while(translating) {
 
-                    while(translating) {
+                    for (int i = 0; i < toLangIds.size(); i++) {
+                        langDirection = fromLangId + langDirectDivide + toLangIds.get(i);
 
                         for (int i2 = 0; i2 < xmlStringsList.size(); i2++) {
 
-                            translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
-                            showProgressNotification("Translating...", (i2 + 1) * (i + 1), (xmlStringsList.size() * toLangIds.size()));
+                            if(!translating)
+                                break label;
 
-                            if(i == toLangIds.size() - 1 && i2 == xmlStringsList.size() - 1)
+                            translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
+                            totalStrings++;
+                            showProgressNotification("Translating...", totalStrings, (xmlStringsList.size() * toLangIds.size()));
+
+                            if (totalStrings == (xmlStringsList.size() * toLangIds.size())) {
                                 finishTranslation();
+                                Log.d("Finished", " Reaches");
+                            }
 
                         }
 
-                    }
 
-                    String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
-                    if (mGoogleApiClient != null) {
-                        XMLFileMaker.createFileInFolder(toLangIds.get(i), xmlFile, mGoogleApiClient);
+                        String xmlFile = XMLFileMaker.xmlFileCreate(xmlNamesList, translatedStrings);
+                        if (mGoogleApiClient != null) {
+                            XMLFileMaker.createFileInFolder(toLangIds.get(i), xmlFile, mGoogleApiClient);
+                        }
+                        translatedStrings.clear();
+
                     }
-                    translatedStrings.clear();
 
                 }
             }
