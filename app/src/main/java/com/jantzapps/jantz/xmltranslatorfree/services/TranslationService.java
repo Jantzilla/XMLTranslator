@@ -139,6 +139,7 @@ public class TranslationService extends Service {
                     .setContentTitle(getString(R.string.app_name))
                     .setContentText(caption)
                     .setProgress(100, percentComplete, false)
+                    .setOnlyAlertOnce(true)
                     .setContentInfo(String.valueOf(percentComplete +"%"))
                     .setContentIntent(pendingIntent)
                     .setOngoing(true)
