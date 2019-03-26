@@ -171,7 +171,7 @@ public class TranslateXML {
         NotificationManager mNotificationManager = (NotificationManager) service.getSystemService(Context.NOTIFICATION_SERVICE);
         if (mNotificationManager != null) {
             //Update the notification bar progress
-            mNotificationManager.notify(REQUEST_CODE,  service.createNotification(completedUnits,totalUnits, caption));
+            mNotificationManager.notify(REQUEST_CODE,  service.createNotification(totalUnits,completedUnits, caption));
         }
 
         sendProgress(completedUnits, totalUnits);
