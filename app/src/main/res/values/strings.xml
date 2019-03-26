@@ -23,7 +23,7 @@
     <string name="how_to_use_xmlanguage_translator">How to use XML Translator Free</string>
     <string name="finished">Finished!</string>
     <string name="translating_updating_wait">Translating and uploading .xml files. This may take a while. Thank you for your patience.</string>
-    <string name="daily_limit_reached">You have reached or are about to reach your 3000 character daily limit for free translations. To continue translating .xml, download XML Translator at 20 dollars a month with no cancellation fees!</string>
+    <string name="daily_limit_reached">You have reached or are about to reach your 3000 character daily limit for free translations.</string>
     <string name="choose_lang_translate_to">Please choose the languages to translate to.</string>
     <string name="choose_one_translate_from">Please choose ONE language to translate from</string>
     <string name="choose_lang_translate_from">Please choose the language to translate from.</string>
