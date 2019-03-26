@@ -213,7 +213,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         inputStream = null;
 
                     } else {
-                        showChosenFile(uri);
+                        String chosenFile = getFileName(uri);
+                        showChosenFile(chosenFile);
                     }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -954,8 +955,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
-    private void showChosenFile(Uri uri) {
-        String chosenFile = getFileName(uri);
+    private void showChosenFile(String chosenFile) {
         animateTranslateButton();
         pasteEntryLayout.setVisibility(View.GONE);
         openFileButton.setVisibility(View.GONE);
