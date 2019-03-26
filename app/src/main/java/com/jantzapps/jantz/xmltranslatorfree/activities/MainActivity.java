@@ -438,6 +438,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+                if(translatingLabel.getVisibility() == View.GONE) {
+                    translating = true;
+                    animateTranslateButton();
+                    animateProgressBar();
+                }
+
                 int completedUnits = intent.getIntExtra("completedUnits", 0);
                 int totalUnits = intent.getIntExtra("totalUnits", 100);
                 progressBar.setMax(totalUnits);
