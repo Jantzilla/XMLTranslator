@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     if(!validateFileText(fileString)) {
                         new AlertDialog.Builder(MainActivity.this)
                                 .setTitle("Invalid File")
-                                .setMessage("Please try another xml file.")
+                                .setMessage(R.string.select_different_file)
                                 .setPositiveButton(ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                     }
