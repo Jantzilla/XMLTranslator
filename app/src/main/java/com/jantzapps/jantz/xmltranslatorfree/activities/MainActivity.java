@@ -3,7 +3,6 @@ package com.jantzapps.jantz.xmltranslatorfree.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -44,6 +43,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -62,6 +62,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.drive.DriveFile;
 import com.google.android.gms.drive.DriveId;
+import com.jantzapps.jantz.xmltranslatorfree.fragments.ConfirmationDialog;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.GoogleApiHelper;
 import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.DbHelper;
@@ -660,79 +661,82 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                final List<Integer> toIndices = spinner2.getSelectedIndicies();
-
-                final String fromLang = list.get(spinner.selectedIndex);
-
-                StringBuilder toLangBuilder = new StringBuilder();
-                for(int index : toIndices) {
-                    toLangBuilder.append(list.get(index));
-                    toLangBuilder.append(',');
-                }
-
-                String toLang = toLangBuilder.toString();
-
-
-                    if (!rawEditText.getText().toString().equals("")) {
-
-                        if(validateFileText(rawEditText.getText().toString())) {
-
-                            if (isNetworkConnected()) {
-
-                                if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
-
-                                    startTranslation(fromLang, toLang, Xml_limit_path, Xml_limit, dailyLimit, handler);
-
-                                } else {
-                                    mGoogleApiClient.connect();
-                                }
-
-                            } else {
-                                new AlertDialog.Builder(MainActivity.this)
-                                        .setTitle(getString(R.string.no_connection))
-                                        .setMessage(getString(R.string.no_connection_direction))
-                                        .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                            }
-                                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
-                            }
-
-                        } else {
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Invalid Text")
-                                    .setMessage("Please enter text in XML format.")
-                                    .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                        }
-                                    }).setIcon(android.R.drawable.ic_dialog_alert).show();
-                        }
-
-                    } else if(inputStream != null) {
-
-                        if (isNetworkConnected()) {
-
-                            if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
-
-                                startTranslation(fromLang, toLang, Xml_limit_path, Xml_limit, dailyLimit, handler);
-
-                            } else {
-                                mGoogleApiClient.connect();
-                            }
-
-                        } else {
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle(getString(R.string.no_connection))
-                                    .setMessage(getString(R.string.no_connection_direction))
-                                    .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                        }
-                                    }).setIcon(android.R.drawable.ic_dialog_alert).show();
-                        }
-
-                    }
+                initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler);
             }
         });
+    }
+
+    public void initializeTranslation(File xml_limit_path, File xml_limit, int dailyLimit, Handler handler) {
+        final List<Integer> toIndices = spinner2.getSelectedIndicies();
+
+        final String fromLang = list.get(spinner.selectedIndex);
+
+        StringBuilder toLangBuilder = new StringBuilder();
+        for(int index : toIndices) {
+            toLangBuilder.append(list.get(index));
+            toLangBuilder.append(',');
+        }
+
+        String toLang = toLangBuilder.toString();
+
+
+        if (!rawEditText.getText().toString().equals("")) {
+
+            if(validateFileText(rawEditText.getText().toString())) {
+
+                if (isNetworkConnected()) {
+
+                    if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+
+                        startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit, handler);
+
+                    } else {
+                        mGoogleApiClient.connect();
+                    }
+
+                } else {
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle(getString(R.string.no_connection))
+                            .setMessage(getString(R.string.no_connection_direction))
+                            .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            }).setIcon(android.R.drawable.ic_dialog_alert).show();
+                }
+
+            } else {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Invalid Text")
+                        .setMessage("Please enter text in XML format.")
+                        .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
+            }
+
+        } else if(inputStream != null) {
+
+            if (isNetworkConnected()) {
+
+                if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+
+                    startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit, handler);
+
+                } else {
+                    mGoogleApiClient.connect();
+                }
+
+            } else {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle(getString(R.string.no_connection))
+                        .setMessage(getString(R.string.no_connection_direction))
+                        .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
+            }
+
+        }
     }
 
     public void showActivelyTranslating() {
