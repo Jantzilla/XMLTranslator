@@ -157,6 +157,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 mGoogleApiClient.connect();
             }
         }
+
+        if(translatingLabel.getVisibility() == View.VISIBLE && !translating) {
+            animateTranslateButton();
+            animateProgressBar();
+        }
     }
 
     @Override public void onConnected(@Nullable Bundle bundle) {
