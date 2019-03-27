@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private GoogleApiHelper googleApiHelper;
     private BroadcastReceiver receiver;
     private ProgressBar progressBar;
+    private AlertDialog alert;
 
     @Override protected void onResume() {
         super.onResume();
@@ -452,6 +453,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 progressBar.setProgress(completedUnits);
 
                 if(completedUnits == totalUnits) {
+                    if(alert.isShowing())
+                        alert.dismiss();
                     translating = false;
                     animateProgressBar();
                 }
@@ -547,7 +550,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                 dialog.cancel();
                             }
                         });
-                AlertDialog alert = builder.create();
+                alert = builder.create();
                 alert.show();
             }
         });
