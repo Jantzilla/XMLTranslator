@@ -373,6 +373,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     protected void onStop() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver);
+        if(alert != null && alert.isShowing())
+            alert.dismiss();
+        translating = false;
+        animateProgressBar();
         super.onStop();
     }
 
