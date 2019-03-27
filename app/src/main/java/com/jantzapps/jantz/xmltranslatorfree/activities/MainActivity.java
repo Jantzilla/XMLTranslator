@@ -437,7 +437,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 progressBar.setProgress(completedUnits);
 
                 if(completedUnits == totalUnits) {
-                    if(alert.isShowing())
+                    if(alert != null && alert.isShowing())
                         alert.dismiss();
                     translating = false;
                     animateProgressBar();
