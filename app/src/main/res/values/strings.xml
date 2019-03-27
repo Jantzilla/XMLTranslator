@@ -7,7 +7,6 @@
     <string name="no_connection">No Internet Connection</string>
     <string name="no_connection_direction">XML Translator Free could not establish a internet connection. Make sure you are connected to a network and try again.</string>
     <string name="powered_by_yandex_translate">Powered by Yandex.Translate</string>
-    <string name="translating_updating_wait">Translating and uploading .xml files. This may take a while. Thank you for your patience.</string>
     <string name="daily_limit_reached">This translation will exceed your 3000 character daily limit.</string>
     <string name="ok">Ok</string>
     <string name="external_storage_must">External storage must be available.</string>

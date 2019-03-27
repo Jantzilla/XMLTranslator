@@ -842,7 +842,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             }
 
 
-            Toast.makeText(MainActivity.this, R.string.translating_updating_wait, Toast.LENGTH_LONG).show();
             Drive.DriveApi.requestSync(mGoogleApiClient);                                                             //Drive Sync request
 
             new Handler().postDelayed(new Runnable() {
