@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notice"
+        android:layout_gravity="center"
+        android:padding="18dp"
+        android:textSize="30dp"
+        android:id="@+id/tv_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:id="@+id/tv_divider_top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="Depending on the amount of translations, this process could consume a large amount of mobile data."
+        android:textSize="18dp"
+        android:id="@+id/tv_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Therefore, it is advised that you acquire an unlimited or unmetered network connection before beginning your translation."
+        android:textSize="18dp"
+        android:id="@+id/tv_message2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:id="@+id/tv_divider_bottom"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue?"
+        android:layout_gravity="center"
+        android:padding="18dp"
+        android:textSize="24dp"
+        android:id="@+id/tv_title2"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="18dp"
+            android:text="Yes"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="18dp"
+            android:text="No"
+            android:id="@+id/button2"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Do not ask again."
+        android:id="@+id/checkBox"/>
+</LinearLayout>
