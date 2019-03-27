@@ -8,10 +8,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notice"
+        android:text="@string/notice"
         android:layout_gravity="center"
         android:padding="18dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:id="@+id/tv_title"/>
 
     <TextView
@@ -28,16 +28,16 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
-        android:text="Depending on the amount of translations, this process could consume a large amount of mobile data."
-        android:textSize="18dp"
+        android:text="@string/notice_message_1"
+        android:textSize="18sp"
         android:id="@+id/tv_message"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:text="Therefore, it is advised that you acquire an unlimited or unmetered network connection before beginning your translation."
-        android:textSize="18dp"
+        android:text="@string/notice_message_2"
+        android:textSize="18sp"
         android:id="@+id/tv_message2"/>
 
     <TextView
@@ -50,10 +50,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continue?"
+        android:text="@string/notice_continue"
         android:layout_gravity="center"
         android:padding="18dp"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:id="@+id/tv_title2"/>
 
     <LinearLayout
@@ -69,8 +69,8 @@
             android:paddingStart="40dp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:textSize="18dp"
-            android:text="Yes"
+            android:textSize="18sp"
+            android:text="@string/yes"
             android:id="@+id/button1"/>
         <Button
             android:layout_width="wrap_content"
@@ -81,8 +81,8 @@
             android:paddingStart="40dp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:textSize="18dp"
-            android:text="No"
+            android:textSize="18sp"
+            android:text="@string/no"
             android:id="@+id/button2"/>
     </LinearLayout>
 
@@ -92,6 +92,6 @@
         android:padding="18dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:text="Do not ask again."
+        android:text="@string/do_not_ask_again"
         android:id="@+id/checkBox"/>
 </LinearLayout>

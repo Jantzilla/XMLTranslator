@@ -61,7 +61,6 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.drive.DriveFile;
-import com.google.android.gms.drive.DriveId;
 import com.jantzapps.jantz.xmltranslatorfree.fragments.ConfirmationDialog;
 import com.jantzapps.jantz.xmltranslatorfree.helpers.GoogleApiHelper;
 import com.jantzapps.jantz.xmltranslatorfree.receivers.AlarmReceiver;
@@ -107,8 +106,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private GoogleApiClient mGoogleApiClient;
     private static final String TAG = "<< DRIVE >>";
     protected static final int REQUEST_CODE_RESOLUTION = 1338;
-    private String FOLDER_NAME = "XMLTranslatorFILES";
-    DriveId driveId = null;
     DbHelper dbHelper;
     PendingIntent mAlarmIntent;
     AlarmManager alarm_manager;
@@ -117,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private static final String ADMOB_APP_ID = "ca-app-pub-5985384760144093~6592515362";
     InterstitialAd mInterstitialAd;
     private Button openFileButton, stopButton;
-    private ConstraintLayout buttonBlock, parentLayout;
+    private ConstraintLayout parentLayout;
     private ConstraintSet constraintSet;
     private EditText rawEditText;
     private TextView orTextView, fileTextView, translatingLabel;
@@ -132,7 +129,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private InputStream inputStream;
     private String fileString, chosenFile;
     private FrameLayout pasteEntryLayout;
-    private TranslationService translateService;
     private GoogleApiHelper googleApiHelper;
     private BroadcastReceiver receiver;
     private ProgressBar progressBar;
@@ -150,7 +146,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     GooglePlayServicesUtil.getErrorDialog(resultCode, this,
                             PLAY_SERVICES_RESOLUTION_REQUEST).show();
                 } else {
-                    Log.i(TAG, "This device is not supported.");
                     finish();
                 }
 
@@ -191,11 +186,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (requestCode == REQUEST_CODE_RESOLUTION && resultCode == RESULT_OK) {
             mGoogleApiClient.connect();
         } else if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            // The document selected by the user won't be returned in the intent.
-            // Instead, a URI to that document will be contained in the return intent
-            // provided to this method as a parameter.
-            // Pull that URI using resultData.getData().
-            Uri uri = null;
+            Uri uri;
             if (data != null) {
                 try {
                     uri = data.getData();
@@ -205,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                     if(!validateFileText(fileString)) {
                         new AlertDialog.Builder(MainActivity.this)
-                                .setTitle("Invalid File")
+                                .setTitle(R.string.invalid_file)
                                 .setMessage(R.string.select_different_file)
                                 .setPositiveButton(ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
@@ -284,36 +275,22 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     /* Checks if external storage is available for read and write */
     public boolean isExternalStorageWritable() {
         String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
+        return Environment.MEDIA_MOUNTED.equals(state);
     }
 
     private static boolean isExternalStorageAvailable() {
         String extStorageState = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(extStorageState)) {
-            return true;
-        }
-        return false;
+        return Environment.MEDIA_MOUNTED.equals(extStorageState);
     }
 
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     private boolean checkPermission2() {
         int result = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
@@ -358,7 +335,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             case PERMISSION_REQUEST_CODE2:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Log.e("value", "Permission Granted, Now you can read local drive .");
-                    String permChar;
                     final File Xml_limit_path = new File(Environment.getExternalStorageDirectory() + "/App_data/");
                     final File Xml_limit = new File(Xml_limit_path, "Char.txt");
                     updateDailyLimit(Xml_limit);
@@ -414,7 +390,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         final File Xml_limit = new File(Xml_limit_path, "Char.txt");
 
         toolbar = findViewById(R.id.toolbar);
-        buttonBlock = findViewById(R.id.ll_button_block);
         parentLayout = findViewById(R.id.root);
         openFileButton = findViewById(R.id.btn_open_file);
         stopButton = findViewById(R.id.btn_stop);
@@ -422,7 +397,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         deleteButton = findViewById(R.id.iv_delete);
         googleButton = findViewById(R.id.iv_google_drive);
         clearButton = findViewById(R.id.iv_clear);
-        rawEditText = findViewById(R.id.etEmailMessage);
+        rawEditText = findViewById(R.id.et_paste_entry);
         orTextView = findViewById(R.id.tv_or_label);
         fileTextView = findViewById(R.id.tv_chosen_file);
         translatingLabel = findViewById(R.id.tv_translating);
@@ -532,7 +507,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Stop Translation?");
+                builder.setTitle(R.string.stop_translation);
                 builder.setIcon(R.mipmap.ic_launcher);
                 builder.setCancelable(true)
                         .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
@@ -612,11 +587,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
 
         try {
-            if(dbHelper.getTime() == 0L) {
-            }
-            else {
-
-            }
+            dbHelper.getTime();
 
         } catch (Exception e) {
             dbHelper.initialize();
@@ -631,7 +602,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             dbHelper.newTime();
 
             alarm_manager.set(AlarmManager.RTC_WAKEUP, time + day, mAlarmIntent);
-            String permChar;
 
             if (Build.VERSION.SDK_INT >= 23)
                 if (checkPermission2())
@@ -688,7 +658,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                             // Store the isChecked to Preference here
                             sharedPreferences.edit().putBoolean("hide_dialog", isChecked).apply();
-                            Log.d("CheckBox", "Changed");
 
                         }
                     });
@@ -721,7 +690,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                     if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
 
-                        startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit, handler);
+                        startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit);
 
                     } else {
                         mGoogleApiClient.connect();
@@ -739,8 +708,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             } else {
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Invalid Text")
-                        .setMessage("Please enter text in XML format.")
+                        .setTitle(R.string.invalid_text)
+                        .setMessage(R.string.enter_valid_text)
                         .setPositiveButton(ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                             }
@@ -753,7 +722,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                 if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
 
-                    startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit, handler);
+                    startTranslation(fromLang, toLang, xml_limit_path, xml_limit, dailyLimit);
 
                 } else {
                     mGoogleApiClient.connect();
@@ -802,7 +771,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
     }
 
-    public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit, final Handler handler) {
+    public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit) {
 
         checkDailyLimitExists(xml_limit_path, xml_limit);
 
@@ -947,8 +916,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             public void run() {
                 if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
-                } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
             }
         }, 4000);
@@ -1027,7 +994,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void showRawXml() {
-        constraintSet.constrainHeight(R.id.etEmailMessage,ConstraintSet.MATCH_CONSTRAINT);
+        constraintSet.constrainHeight(R.id.et_paste_entry,ConstraintSet.MATCH_CONSTRAINT);
         animateTranslateButton();
         openFileButton.setVisibility(View.GONE);
         orTextView.setVisibility(View.GONE);

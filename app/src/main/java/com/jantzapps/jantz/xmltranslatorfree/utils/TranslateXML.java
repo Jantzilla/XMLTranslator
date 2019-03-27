@@ -7,6 +7,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.jantzapps.jantz.xmltranslatorfree.R;
 import com.jantzapps.jantz.xmltranslatorfree.services.TranslationService;
 
 import java.io.BufferedReader;
@@ -29,7 +30,7 @@ public class TranslateXML {
     private static int totalStrings;
 
     public static void translateXML(String fromLang, final String[] toLangs, final ArrayList<String> xmlStringsList,
-                                    final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, TranslationService translationService, LocalBroadcastManager broadcaster) {
+                                    final GoogleApiClient mGoogleApiClient, final ArrayList<String> xmlNamesList, final TranslationService translationService, LocalBroadcastManager broadcaster) {
 
         translating = true;
         totalStrings = 0;
@@ -66,12 +67,11 @@ public class TranslateXML {
 
                             translatedStrings.add(translate(xmlStringsList.get(i2), langDirection));
                             totalStrings++;
-                            showProgressNotification("Translating...", totalStrings, (xmlStringsList.size() * toLangIds.size()));
+                            showProgressNotification(translationService.getString(R.string.translating), totalStrings, (xmlStringsList.size() * toLangIds.size()));
 
                             if (totalStrings == (xmlStringsList.size() * toLangIds.size())) {
-                                showProgressNotification("Translation Complete!", totalStrings, (xmlStringsList.size() * toLangIds.size()));
+                                showProgressNotification(translationService.getString(R.string.translation_complete), totalStrings, (xmlStringsList.size() * toLangIds.size()));
                                 finishTranslation();
-                                Log.d("Finished", " Reaches");
                             }
 
                         }
@@ -175,7 +175,7 @@ public class TranslateXML {
 
             if(!translating) {
                 mNotificationManager.cancelAll();
-                mNotificationManager.notify(REQUEST_CODE,  service.createNotification(100,100, "Translation Stopped!"));
+                mNotificationManager.notify(REQUEST_CODE,  service.createNotification(100,100, service.getString(R.string.translation_stopped)));
                 sendProgress(100, 100);
             } else {
                 mNotificationManager.notify(REQUEST_CODE, service.createNotification(totalUnits, completedUnits, caption));
@@ -184,7 +184,7 @@ public class TranslateXML {
         }
     }
 
-    public static void stopTranslation(boolean stopped) {
+    public static void stopTranslation() {
         translating = false;
     }
 }

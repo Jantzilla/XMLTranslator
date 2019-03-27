@@ -1,12 +1,9 @@
 package com.jantzapps.jantz.xmltranslatorfree.helpers;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.util.ArrayList;
 
 /**
  * Created by jantz on 7/10/2017.
@@ -50,13 +47,6 @@ public class DbHelper extends SQLiteOpenHelper {
         String charName = "Char";
         String query2 = "INSERT INTO "+DB_TABLE+" VALUES ("+initialInt+", '"+charName+"', "+time+");";
         db.execSQL(query2);
-        db.close();
-    }
-
-    public void addColumn () {
-        SQLiteDatabase  db = this.getWritableDatabase();
-        String query = "ALTER TABLE "+DB_TABLE+" ADD COLUMN Char TEXT;";                                                      //COLUMN ADD METHOD
-        db.execSQL(query);
         db.close();
     }
 

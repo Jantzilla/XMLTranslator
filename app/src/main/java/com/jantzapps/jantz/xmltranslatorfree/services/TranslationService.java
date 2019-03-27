@@ -11,7 +11,6 @@ import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jantzapps.jantz.xmltranslatorfree.R;
@@ -59,7 +58,7 @@ public class TranslationService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         if(intent.getBooleanExtra("stopped", false)) {
-            TranslateXML.stopTranslation(true);
+            TranslateXML.stopTranslation();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 stopForeground(STOP_FOREGROUND_DETACH);
             } else
@@ -75,7 +74,7 @@ public class TranslationService extends Service {
 
             TranslateXML.translateXML(fromLang, toLangs, xmlStringsList, mGoogleApiClient, xmlNamesList, this, broadcaster);
 
-            startForeground(REQUEST_CODE, createNotification(100, 0, "Translating..."));
+            startForeground(REQUEST_CODE, createNotification(100, 0, getString(R.string.translating)));
         }
 
         return START_NOT_STICKY;
@@ -84,11 +83,9 @@ public class TranslationService extends Service {
     @Override
     public boolean stopService(Intent name) {
 
-        TranslateXML.stopTranslation(false);
+        TranslateXML.stopTranslation();
         stopForeground(false);
         stopSelf();
-        Log.d("Translation Has Been", " Stopped");
-
         return true;
 
     }
@@ -151,7 +148,7 @@ public class TranslationService extends Service {
 
     @Override
     public void onDestroy() {
-        TranslateXML.stopTranslation(false);
+        TranslateXML.stopTranslation();
         stopSelf();
 
         super.onDestroy();

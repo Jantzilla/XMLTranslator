@@ -22,10 +22,8 @@ public class RestartAlarmService extends IntentService {
     AlarmManager alarm_manager;
     PendingIntent mAlarmIntent;
     int day = 86400000;
-    Context context;
     final File Xml_limit_path = new File(Environment.getExternalStorageDirectory() + "/App_data/");
     final File Xml_limit = new File(Xml_limit_path, "Char.txt");
-    //private static final String TAG = AlarmReceiver.class.getName();
 
 
     public RestartAlarmService() {
