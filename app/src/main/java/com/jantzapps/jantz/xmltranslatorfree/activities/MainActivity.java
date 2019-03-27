@@ -661,7 +661,37 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler);
+                if(!sharedPreferences.getBoolean("hide_dialog", false)) {
+                    final ConfirmationDialog confirmationDialog = new ConfirmationDialog();
+                    confirmationDialog.show(getSupportFragmentManager(), "Dialog");
+                    getSupportFragmentManager().executePendingTransactions();
+//                    Dialog d = confirmationDialog.getDialog();
+//                    confirmationDialog.show(getSupportFragmentManager(), "Confirmation");
+                    confirmationDialog.setPositiveButton(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler);
+                            confirmationDialog.dismiss();
+                        }
+                    });
+                    confirmationDialog.setNegativeButton(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            confirmationDialog.dismiss();
+                        }
+                    });
+                    confirmationDialog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                            // Store the isChecked to Preference here
+                            sharedPreferences.edit().putBoolean("hide_dialog", isChecked).apply();
+                            Log.d("CheckBox", "Changed");
+
+                        }
+                    });
+
+                } else
+                    initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler);
             }
         });
     }
