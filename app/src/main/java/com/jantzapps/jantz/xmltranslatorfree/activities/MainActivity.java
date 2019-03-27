@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public DriveFile file;
 
     Button submit;
-    Context context;
 
     private GoogleApiClient mGoogleApiClient;
     private static final String TAG = "<< DRIVE >>";
@@ -324,7 +323,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     Log.e("value", "Permission Granted, Now you can write local drive .");
                 } else {
                     Log.e("value", "Permission Denied, You cannot write local drive .");
-                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                     alertBuilder.setCancelable(true);
                     alertBuilder.setTitle(getString(R.string.permission_necessary));
                     alertBuilder.setMessage(R.string.write_external_permission_necessary);
@@ -346,7 +345,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                 } else {
                     Log.e("value", "Permission Denied, You cannot read local drive .");
-                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                     alertBuilder.setCancelable(true);
                     alertBuilder.setTitle(R.string.permission_necessary);
                     alertBuilder.setMessage(R.string.read_external_permission_necessary);
@@ -782,7 +781,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void startTranslation(String fromLang, String toLang, File xml_limit_path, File xml_limit, int dailyLimit) {
 
-        checkDailyLimitExists(xml_limit_path, xml_limit);
+        if(!checkDailyLimitExists(xml_limit_path, xml_limit))
+            return;
 
         String delims = "[,]";                                                                       //Important!!!  //XML string parsing
         final String[] toLangs = toLang.split(delims);
@@ -881,7 +881,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
     }
 
-    public void checkDailyLimitExists(File xml_limit_path, File xml_limit) {
+    public boolean checkDailyLimitExists(File xml_limit_path, File xml_limit) {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkPermission()) {
                 if (!xml_limit_path.exists()) {
@@ -892,18 +892,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         xml_limit.getParentFile().createNewFile();
                     } catch (Exception e) {}
                 }
+                return true;
             } else {
                 requestPermission(); // Code for permission
-                if (checkPermission()) {
-                    if (!xml_limit_path.exists())
-                        xml_limit_path.mkdir();
-
-                    if (!xml_limit.getParentFile().exists()) {
-                        try {
-                            xml_limit.getParentFile().createNewFile();
-                        } catch (Exception e) {}
-                    }
-                }
+                return false;
             }
         } else {
 
@@ -915,6 +907,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     xml_limit.getParentFile().createNewFile();
                 } catch (Exception e) {}
             }
+
+            return true;
         }
     }
 
