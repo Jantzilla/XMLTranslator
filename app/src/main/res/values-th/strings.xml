@@ -1,42 +1,14 @@
 <resources>
-<string name="app_name">XML ล่ามอิสระ</string>
+<string name="app_name">XML ล่าม</string>
 <string name="translate">แปลภาษา</string>
 <string name="message">วางคุณ XML ที่นี่... </string>
-<string name="email_to">ส่งอีเมลไปยัง</string>
-<string name="translate_from">แปลมาจาก</string>
-<string name="translate_to">แปลออกไป</string>
+<string name="translate_from">แปลภาษา</string>
+<string name="translate_to">เข้า</string>
 <string name="no_connection">ไม่มีการเชื่อมต่ออินเทอร์เน็ต</string>
 <string name="no_connection_direction">XML ล่ามฟรีไม่สามารถกำหนดการเชื่อมต่ออินเทอร์เน็ต. ทำให้แน่ใจว่าคุณเชื่อมต่อกับเครือข่ายแล้วลองใหม่อีกครั้ง</string>
-<string name="welcome_to_xmlanguage_translator">ยินดีต้อนรับ XML ล่ามอิสระ</string>
-<string name="translate_from_choose_one">แปลออกมาจาก(เลือกหนึ่ง)</string>
-<string name="translate_to_choose_one_or_more">แปลไป(เลือกหนึ่งหรือมากกว่า)</string>
 <string name="powered_by_yandex_translate">พลังงานโดย Yandex นแปลภาษา</string>
-<string name="paste_example_below">วางตัวอย่างด้านล่างนี้</string>
-<string name="please_do_not_alter_the_main_xml_folder">*ได้โปรดอย่าทำไม่ได้เปลี่ยนแปลงหลักของ XML โฟลเดอร์*</string>
-<string name="check_your_google_drive_for_your_translated_xml_strings">เช็คของคุณฐานขับรถของคุณสำหรับแปล XML ใช้เส้นสาย!</string>
-<string name="step_3">ขั้นที่ 3</string>
-<string name="choose_the_language_of_your_xml_strings_and_select_the_desired_languages">เลือกภาษาของ XML ใช้เส้นสายแล้วเลือกที่ต้องการภาษา</string>
-<string name="allow_xml_translator_permission_to_access_the_google_drive_account_of_your_choice">อนุญาตให้ XML ล่ามอิสระขออนุญาตการเข้าถึงคนขับรถของกูเกิ้ลบัญชีของทางเลือกของคุณ</string>
-<string name="step_2">ขั้นที่ 2</string>
-<string name="step_1">ขั้นที่ 1</string>
-<string name="how_to_use_xmlanguage_translator">วิธีใช้ name=แอพพลิเคชันล่ามอิสระ</string>
-<string name="help">ช่วย</string>
-<string name="home">กลับบ้าน</string>
-<string name="disclaimer">Disclaimer</string>
-<string name="finished">เสร็จแล้ว!</string>
-<string name="translating_updating_wait">แปลงและการอัพโหลดอนแฟ้ม xml ได้ นี่อาจจะใช้เวลานานซักหน่อย ขอบคุณสำหรับความอดทน</string>
-<string name="daily_limit_reached">คุณได้ขึ้นหรือเรื่องติดต่อของคุณ 3000 วอักษรประจำวันข้อจำกัดสำหรับการแปลภาษาอิสระ. จะทำต่อไปหรือไม่ไปต่อแล้วxml,ดาวน์โหลดแฟ้ม XML ล่ามตอน 20 ดอลล่าร์เป็นเดือนกับไม่มีคำขอยกเลิกค่าธรรมเนียม!</string>
-<string name="choose_lang_translate_to">โปรดเลือกภาษาแปลอก</string>
-<string name="choose_one_translate_from">โปรดเลือกหนึ่งภาษาที่จะแปลออกมาจาก</string>
-<string name="choose_lang_translate_from">โปรดเลือกภาษาแปลกมากมาย</string>
-<string name="paste_xml_to_translate">ได้โปรดวาง XML คุณต้องแปล</string>
-<string name="by_using_this_application_you_hereby_consent_to_the_disclaimer_and_agree_to_its_terms">โดยการใช้โปรแกรมนี้คุณขอยอมให้ disclaimer และเห็นด้วยกันมันยอมตามเงื่อนไข</string>
-<string name="disclaimer_2">ที่เครื่องมือสร้างของโปรแกรมนี้ไม่ได้มี warranties เรื่อง completeness,reliability และความถูกต้องของข้อมูลถูกสร้างขึ้น การกระทำที่เป็นการบุกรุกคุณเอาไว้ข้อมูลที่คุณค้นหาในโปรแกรมนี้ต้องถูกเก็ตของตัวเองต้องมาเสี่ยงไปด้วย ที่เครื่องมือสร้างของโปรแกรมนี้จะไม่ถูกผิดชอบแน่นอนสำหรับพรสูญเสียและ/หรือถ้าโดนเต้าทิ่มตาในการเชื่อมต่อกับผู้ใช้ของโปรแกรมนี้นะ</string>
-<string name="disclaimer_1">ที่เครื่องมือสร้างของโปรแกรมนี้มัน\'t ในข้อบังคับให้ใช้ข้อมูลที่ถูกสร้างโดยใช้โปรแกรมนี้\'s การบริการ. มันขึ้นอยู่กับผู้ใช้ของโปรแกรมนี้เพื่อกำหนดงานอดิเรกที่ขอบเขตของ allowable การใช้พื้นทีี่ของข้อมูลให้มาเพื่อโปรแกรมนี้\'s การบริการ. อย่างไรก็ตามที่ใช้โปรแกรมนี้\'s การบริการจะไม่เปลี่ยนแปลงอะไร copyrights หรือการใช้สิทธิ์ที่อนุญาตของใส่ข้อมูล</string>
-<string name="disclaimer_for_xmlanguage_translator">Disclaimer สำหรับ XML ล่ามอิสระ</string>
+<string name="daily_limit_reached">นี่แปลงจะเกิของคุณ 3000 อักขระวัรีสวัสดิ์สเปนเซอร์</string>
 <string name="ok">โอเค</string>
-<string name="mayber_later">อาจจะทีหลัง</string>
-<string name="try_it">ลองมัน</string>
 <string name="external_storage_must">เว็บเบราว์เซอร์ภายนอกห้องเก็บขต้องมีอยู่</string>
 <string name="mount_external_please">ได้โปรดทำการเมานท์สามารถเขียนไปยังเว็บเบราว์เซอร์ภายนอกห้องเก็บของสื่อเพื่อต้องใช้โปรแกรม</string>
 <string name="read_external_permission_necessary">อ่านเว็บเบราว์เซอร์ภายนอกขออนุญาตที่จำเป็นต้องอ่านโปรแกรมแฟ้ม</string>
@@ -44,7 +16,28 @@
 <string name="write_external_permission_necessary">เขียนเว็บเบราว์เซอร์ภายนอกขออนุญาตที่จำเป็นต้องเขียนโปรแกรมแฟ้ม</string>
 <string name="read_permission_explain">อ่านเว็บเบราว์เซอร์ภายนอกห้องเก็บขออนุญาตนี้จะอนุญาตให้โปรแกรมเกี่ยวต้องอ่านสำคัญมาโปรแกรมเกี่ยวข้อมูล ได้โปรดอนุญาตสิทธิ์ในการตั้งค่าโปรแกรม</string>
 <string name="write_permission_explain">เขียนเว็บเบราว์เซอร์ภายนอกห้องเก็บขออนุญาตนี้จะอนุญาตให้โปรแกรงไปที่ร้านสำคัญมาโปรแกรมเกี่ยวข้อมูล ได้โปรดอนุญาตสิทธิ์ในการตั้งค่าโปรแกรม</string>
-<string name="translations_complete">การแปลภาษาสมบูรณ์</string>
+<string name="open_file">เปิดแฟ้ม</string>
+<string name="or">หรือ</string>
+<string name="settings">การตั้งค่า</string>
+<string name="reconnect_drive">ขับรถสานสัมพันธ์ใหม่</string>
+<string name="privacy_policy">ข้อกำหนดความเป็นส่วนตัว</string>
+<string name="limit_reached">จำกัดการติดต่อ</string>
+<string name="select_different_file">โปรดเลือกต่างออกแฟ้ม xml ได้</string>
+<string name="invalid_file">แฟ้มไม่ถูกต้อง</string>
+<string name="stop_translation">หยุดการแปลภาษา?</string>
+<string name="invalid_text">ข้อความไม่ถูกต้อง</string>
+<string name="enter_valid_text">โปรดป้อนข้อความในรูปแบบ XML ได้</string>
+<string name="translating">แปล...</string>
+<string name="translation_complete">การแปลภาษาสมบูรณ์!</string>
+<string name="translation_stopped">การแปลภาษาหยุด!</string>
+<string name="stop">หยุด</string>
+<string name="notice">สังเกตเห็น</string>
+<string name="notice_message_1">ขึ้นอยู่กับจำนวนเงินโดบประมาณของการแปลภาษา,โพรเซสนี้จะกินเวลาขนาดใหญ่จำนวนมากของเคลื่อนข้อมูล</string>
+<string name="notice_message_2">ดังนั้นมันก็ฉลาดพอที่คุณร้องมีไม่จำกัดหรือ unmetered การเชื่อมต่อระบบเครือข่ายก่อนเริ่มแปลภาษาของนาย</string>
+<string name="notice_continue">ทำต่อไปหรือไม่?</string>
+<string name="yes">ใช่แล้ว</string>
+<string name="no">ไม่</string>
+<string name="do_not_ask_again">ไม่ต้องถามอีกครั้ง</string>
 
 </resources>
 
