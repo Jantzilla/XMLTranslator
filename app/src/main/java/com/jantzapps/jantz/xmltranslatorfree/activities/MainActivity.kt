@@ -37,13 +37,6 @@ import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
 
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -85,6 +78,7 @@ import javax.xml.parsers.DocumentBuilderFactory
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 import android.R.string.ok
+import android.widget.*
 
 class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
     private lateinit var mAlarmIntent: PendingIntent
@@ -660,15 +654,16 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
                 supportFragmentManager.executePendingTransactions()
                 //                    Dialog d = confirmationDialog.getDialog();
                 //                    confirmationDialog.show(getSupportFragmentManager(), "Confirmation");
-                confirmationDialog.setPositiveButton {
+                confirmationDialog.setPositiveButton(View.OnClickListener {
                     initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler)
                     confirmationDialog.dismiss()
-                }
-                confirmationDialog.setNegativeButton { confirmationDialog.dismiss() }
-                confirmationDialog.setOnCheckedChangeListener { compoundButton, isChecked ->
-                    // Store the isChecked to Preference here
+                })
+                confirmationDialog.setNegativeButton(View.OnClickListener {
+                    confirmationDialog.dismiss()
+                })
+                confirmationDialog.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { _: CompoundButton, isChecked: Boolean ->
                     sharedPreferences!!.edit().putBoolean("hide_dialog", isChecked).apply()
-                }
+                })
 
             } else
                 initializeTranslation(Xml_limit_path, Xml_limit, dailyLimit, handler)
