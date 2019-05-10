@@ -593,7 +593,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
 
         for (i in list!!.indices) {
             if (sharedPreferences!!.getBoolean(i.toString(), false)) {
-                spinner2!!.mSelection[i] = true
+                spinner2!!.mSelection!![i] = true
             }
         }
 
