@@ -129,9 +129,9 @@ object XMLFileMaker {
                 try {
                     val fileInputStream = FileInputStream(theFile)
                     val buffer = ByteArray(1024)
-                    var bytesRead: Int
-                    while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-                        outputStream.write(buffer, 0, bytesRead)
+                    var bytesRead: Int? = null
+                    while ({ bytesRead = fileInputStream.read(buffer); bytesRead }() != -1) {
+                        outputStream.write(buffer, 0, bytesRead!!)
                     }
                 } catch (e1: IOException) {
                     Log.i(TAG, "Unable to write file contents.")
