@@ -97,7 +97,7 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     override fun onClick(dialog: DialogInterface, which: Int, isChecked: Boolean) {
         if (mSelection != null && which < mSelection!!.size) {
-            mSelection[which] = isChecked
+            mSelection!![which] = isChecked
             sharedPreferences.edit().putBoolean(which.toString(), isChecked).apply()
 
             simple_adapter.clear()
@@ -143,7 +143,7 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
     private fun clearChoices() {
         for (i in mSelection!!.indices) {
             if (mSelection!![i]) {
-                mSelection[i] = false
+                mSelection!![i] = false
                 sharedPreferences.edit().putBoolean(i.toString(), false).apply()
             }
         }
@@ -152,7 +152,7 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     private fun selectAll() {
         for (i in mSelection!!.indices) {
-            mSelection[i] = true
+            mSelection!![i] = true
             sharedPreferences.edit().putBoolean(i.toString(), true).apply()
         }
         validateInputs()
@@ -160,7 +160,7 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     fun validateInputs() {
         if (noChoiceSelected()) {
-            mSelection[0] = true
+            mSelection?.set(0, true)
             sharedPreferences.edit().putBoolean(0.toString(), true).apply()
         }
         resolveLoopedTranslation()
@@ -171,17 +171,17 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
     private fun resolveLoopedTranslation() {
         for (i in mSelection!!.indices) {
             if (mSelection!![i] && i == sharedPreferences.getInt("index", 0)) {
-                mSelection[i] = false
+                mSelection!![i] = false
                 sharedPreferences.edit().putBoolean(i.toString(), false).apply()
             }
         }
 
         if (noChoiceSelected()) {
             if (sharedPreferences.getInt("index", 0) < mSelection!!.size - 1) {
-                mSelection[sharedPreferences.getInt("index", 0) + 1] = true
+                mSelection!![sharedPreferences.getInt("index", 0) + 1] = true
                 sharedPreferences.edit().putBoolean((sharedPreferences.getInt("index", 0) + 1).toString(), true).apply()
             } else {
-                mSelection[sharedPreferences.getInt("index", 0) - 1] = true
+                mSelection!![sharedPreferences.getInt("index", 0) - 1] = true
                 sharedPreferences.edit().putBoolean((sharedPreferences.getInt("index", 0) - 1).toString(), true).apply()
             }
         }
@@ -220,7 +220,7 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
         for (cell in selection) {
             for (j in _items!!.indices) {
                 if (_items!![j] == cell) {
-                    mSelection[j] = true
+                    mSelection?.set(j, true)
                 }
             }
         }
@@ -228,12 +228,12 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     fun setSelection(selection: List<String>) {
         for (i in mSelection!!.indices) {
-            mSelection[i] = false
+            mSelection!![i] = false
         }
         for (sel in selection) {
             for (j in _items!!.indices) {
                 if (_items!![j] == sel) {
-                    mSelection[j] = true
+                    mSelection!![j] = true
                 }
             }
         }
@@ -243,10 +243,10 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     override fun setSelection(index: Int) {
         for (i in mSelection!!.indices) {
-            mSelection[i] = false
+            mSelection!![i] = false
         }
         if (index >= 0 && index < mSelection!!.size) {
-            mSelection[index] = true
+            mSelection!![index] = true
         } else {
             throw IllegalArgumentException("Index " + index
                     + " is out of bounds.")
@@ -261,11 +261,11 @@ class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, Dialog
 
     fun setSelection(selectedIndicies: IntArray) {
         for (i in mSelection!!.indices) {
-            mSelection[i] = false
+            mSelection!![i] = false
         }
         for (index in selectedIndicies) {
             if (index >= 0 && index < mSelection!!.size) {
-                mSelection[index] = true
+                mSelection!![index] = true
             } else {
                 throw IllegalArgumentException("Index " + index
                         + " is out of bounds.")
