@@ -29,8 +29,8 @@ object TranslateXML {
     private var translating: Boolean = false
     private var totalStrings: Int = 0
 
-    fun translateXML(fromLang: String, toLangs: Array<String>, xmlStringsList: ArrayList<String>,
-                     mGoogleApiClient: GoogleApiClient?, xmlNamesList: ArrayList<String>, translationService: TranslationService, broadcaster: LocalBroadcastManager) {
+    fun translateXML(fromLang: String, toLangs: Array<String>?, xmlStringsList: ArrayList<String>?,
+                     mGoogleApiClient: GoogleApiClient?, xmlNamesList: ArrayList<String>?, translationService: TranslationService, broadcaster: LocalBroadcastManager?) {
 
         translating = true
         totalStrings = 0
