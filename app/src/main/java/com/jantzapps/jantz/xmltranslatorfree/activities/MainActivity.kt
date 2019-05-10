@@ -986,7 +986,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         clearButton!!.visibility = View.VISIBLE
     }
 
-    fun storeNames(string: String?): ArrayList<*> {
+    fun storeNames(string: String?): ArrayList<String>? {
         var i = 0
         val xmlNames = ArrayList<String>()
         while (true) {
@@ -1007,7 +1007,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         return xmlNames
     }
 
-    fun storeValues(string: String?): ArrayList<*> {
+    fun storeValues(string: String?): ArrayList<String> {
         var i = 0
         val xmlStrings = ArrayList<String>()
         while (true) {
