@@ -41,7 +41,7 @@ object XMLFileMaker {
         xmlFile += resourceBegin
         var newValue: String
         var newValue2: String
-        for (i in NamesArray.indices) {
+        for (i in NamesArray!!.indices) {
             xmlFile += stringBegin
             xmlFile += NamesArray[i]
             xmlFile += stringDivider
