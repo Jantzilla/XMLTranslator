@@ -12,7 +12,6 @@ import com.jantzapps.jantz.xmltranslatorfree.services.TranslationService
 
 import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStream
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
@@ -47,7 +46,7 @@ object TranslateXML {
             var langDirection: String
 
 
-            for (i in toLangs.indices) {
+            for (i in toLangs!!.indices) {
                 toLangIds.add(getLangId(toLangs[i]))
             }
 
@@ -56,12 +55,12 @@ object TranslateXML {
                 for (i in toLangIds.indices) {
                     langDirection = fromLangId + langDirectDivide + toLangIds[i]
 
-                    for (i2 in xmlStringsList.indices) {
+                    for (i2 in xmlStringsList!!.indices) {
 
                         if (!translating)
                             break@label
 
-                        translatedStrings.add(translate(xmlStringsList[i2], langDirection))
+                        translatedStrings.add(this.translate(xmlStringsList[i2], langDirection)!!)
                         totalStrings++
                         showProgressNotification(translationService.getString(R.string.translating), totalStrings, xmlStringsList.size * toLangIds.size)
 
