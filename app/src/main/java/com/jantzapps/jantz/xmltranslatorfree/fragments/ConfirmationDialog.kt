@@ -13,7 +13,7 @@ import com.jantzapps.jantz.xmltranslatorfree.R
 
 class ConfirmationDialog : DialogFragment() {
 
-    var checkBox: CheckBox
+    private var checkBox: CheckBox? = null
     private var button1: Button? = null
     private var button2: Button? = null
 
@@ -38,6 +38,6 @@ class ConfirmationDialog : DialogFragment() {
     }
 
     fun setOnCheckedChangeListener(checkedChangeListener: CompoundButton.OnCheckedChangeListener) {
-        checkBox.setOnCheckedChangeListener(checkedChangeListener)
+        checkBox!!.setOnCheckedChangeListener(checkedChangeListener)
     }
 }
