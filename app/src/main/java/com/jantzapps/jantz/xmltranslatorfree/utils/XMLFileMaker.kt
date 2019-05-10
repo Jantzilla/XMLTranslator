@@ -56,7 +56,7 @@ object XMLFileMaker {
         return xmlFile
     }
 
-    fun checkFolderExists(mGoogleApiClient: GoogleApiClient) {
+    fun checkFolderExists(mGoogleApiClient: GoogleApiClient?) {
 
         val query = Query.Builder().addFilter(Filters.and(Filters.eq(SearchableField.TITLE, FOLDER_NAME), Filters.eq(SearchableField.TRASHED, false)))
                 .build()
