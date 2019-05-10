@@ -263,9 +263,9 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     fun parseFileToString(inputStream: InputStream?): String {
         val r = BufferedReader(InputStreamReader(inputStream))
         val text = StringBuilder()
-        var line: String
+        var line: String? = null
         try {
-            while ((line = r.readLine()) != null) {
+            while ({ line = r.readLine(); line }() != null) {
                 text.append(line).append('\n')
             }
         } catch (e: Exception) {
