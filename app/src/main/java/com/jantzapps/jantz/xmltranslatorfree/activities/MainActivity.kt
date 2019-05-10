@@ -753,13 +753,13 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     }
 
     private fun updateDailyLimit(xml_limit: File) {
-        var permChar: String
+        var permChar: String?
         try {
             val fis = FileInputStream(xml_limit)
             val `in` = DataInputStream(fis)
             val br = BufferedReader(InputStreamReader(`in`))
-            var strLine: String
-            while ((strLine = br.readLine()) != null) {
+            var strLine: String? = null
+            while ({ strLine = br.readLine(); strLine }() != null) {
                 permChar = strLine
                 Log.e("DailyCharCount", "File Is Read")
                 dbHelper.addCharCount(Integer.valueOf(permChar))
