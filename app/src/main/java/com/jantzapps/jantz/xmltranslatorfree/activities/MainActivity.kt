@@ -91,6 +91,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import android.R.string.ok
 
 class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
+    private lateinit var mAlarmIntent: PendingIntent
+    private lateinit var alarm_manager: AlarmManager
     private lateinit var dbHelper: DbHelper
     private lateinit var submit: Button
     private lateinit var mInterstitialAd: InterstitialAd
