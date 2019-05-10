@@ -6,10 +6,7 @@ import android.util.Log
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.ResultCallback
 import com.google.android.gms.drive.Drive
-import com.google.android.gms.drive.DriveApi
-import com.google.android.gms.drive.DriveFolder
 import com.google.android.gms.drive.DriveId
-import com.google.android.gms.drive.Metadata
 import com.google.android.gms.drive.MetadataChangeSet
 import com.google.android.gms.drive.query.Filters
 import com.google.android.gms.drive.query.Query
@@ -18,9 +15,7 @@ import com.google.android.gms.drive.query.SearchableField
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
-import java.io.OutputStream
 import java.io.OutputStreamWriter
-import java.io.Writer
 import java.util.ArrayList
 
 import android.support.constraint.Constraints.TAG
@@ -38,7 +33,7 @@ object XMLFileMaker {
     internal var stringEnd = "</string>\n"                    //closing string tag, ending of xml string definition line
     internal var driveId: DriveId? = null
 
-    fun xmlFileCreate(NamesArray: ArrayList<String>, ValuesArray: ArrayList<String>): String {
+    fun xmlFileCreate(NamesArray: ArrayList<String>?, ValuesArray: ArrayList<String>): String {
         var xmlFile = ""
         val poweredBy = "Powered By "
         val yandexTranslate = "Yandex.Translate"
