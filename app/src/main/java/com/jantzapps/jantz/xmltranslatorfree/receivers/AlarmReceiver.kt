@@ -19,9 +19,6 @@ import java.io.File
  */
 
 class AlarmReceiver : BroadcastReceiver() {
-    internal var dbHelper: DbHelper
-    internal var alarm_manager: AlarmManager
-    internal var mAlarmIntent: PendingIntent
     internal var day = 86400000
     internal val Xml_limit_path = File(Environment.getExternalStorageDirectory().toString() + "/App_data/")
     internal val Xml_limit = File(Xml_limit_path, "Char.txt")
@@ -51,15 +48,15 @@ class AlarmReceiver : BroadcastReceiver() {
 
 
 
-        dbHelper = DbHelper(context)
+        val dbHelper = DbHelper(context)
 
         dbHelper.newCharCount()
         dbHelper.newTime()
 
-        alarm_manager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val alarm_manager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent2 = Intent(context, AlarmReceiver::class.java)
         intent2.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
-        mAlarmIntent = PendingIntent.getBroadcast(context, 0, intent2, 0)
+        val mAlarmIntent = PendingIntent.getBroadcast(context, 0, intent2, 0)
 
         alarm_manager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + day, mAlarmIntent)
 
