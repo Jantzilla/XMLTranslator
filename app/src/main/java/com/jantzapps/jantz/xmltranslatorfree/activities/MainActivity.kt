@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     private var chosenFile: String? = null
     private var pasteEntryLayout: FrameLayout? = null
     private var googleApiHelper: GoogleApiHelper? = null
-    private var receiver: BroadcastReceiver? = null
+    private lateinit var receiver: BroadcastReceiver
     private var progressBar: ProgressBar? = null
     private var alert: AlertDialog? = null
 
