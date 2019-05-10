@@ -469,7 +469,7 @@ object TranslateXML {
 
     private fun translate(textToBeTranslated: String, languagePair: String): String? {
 
-        var jsonString: String
+        var jsonString: String? = null
 
         try {
             //Set up the translation call URL
@@ -485,7 +485,7 @@ object TranslateXML {
 
             //Set string builder and insert retrieved JSON result into it
             val jsonStringBuilder = StringBuilder()
-            while ((jsonString = bufferedReader.readLine()) != null) {
+            while ({ jsonString = bufferedReader.readLine(); jsonString }() != null) {
                 jsonStringBuilder.append(jsonString + "\n")
             }
 
