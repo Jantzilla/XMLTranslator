@@ -19,15 +19,15 @@ import android.os.Environment
 import android.os.Handler
 import android.preference.PreferenceManager
 import android.provider.OpenableColumns
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v4.content.LocalBroadcastManager
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import android.text.Editable
 import android.text.TextWatcher
 import android.transition.TransitionManager
@@ -333,13 +333,13 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
 
     override fun onStart() {
         super.onStart()
-        LocalBroadcastManager.getInstance(this).registerReceiver(receiver,
+        androidx.localbroadcastmanager.content.LocalBroadcastManager.getInstance(this).registerReceiver(receiver,
                 IntentFilter("translation update")
         )
     }
 
     override fun onStop() {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver!!)
+        androidx.localbroadcastmanager.content.LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver!!)
         if (alert != null && alert!!.isShowing)
             alert!!.dismiss()
         translating = false
@@ -364,7 +364,6 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         val Xml_limit_path = File(Environment.getExternalStorageDirectory().toString() + "/App_data/")
         val Xml_limit = File(Xml_limit_path, "Char.txt")
 
-        toolbar = findViewById(R.id.toolbar)
         parentLayout = findViewById(R.id.root)
         openFileButton = findViewById(R.id.btn_open_file)
         stopButton = findViewById(R.id.btn_stop)

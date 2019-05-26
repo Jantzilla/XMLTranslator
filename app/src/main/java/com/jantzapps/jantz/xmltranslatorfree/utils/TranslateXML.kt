@@ -3,7 +3,7 @@ package com.jantzapps.jantz.xmltranslatorfree.utils
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
-import android.support.v4.content.LocalBroadcastManager
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import android.util.Log
 
 import com.google.android.gms.common.api.GoogleApiClient
@@ -24,12 +24,12 @@ object TranslateXML {
     private val COMPLETED_UNITS = "completedUnits"
     private val TOTAL_UNITS = "totalUnits"
     private var service: TranslationService? = null
-    private var localBroadCastManager: LocalBroadcastManager? = null
+    private var localBroadCastManager: androidx.localbroadcastmanager.content.LocalBroadcastManager? = null
     private var translating: Boolean = false
     private var totalStrings: Int = 0
 
     fun translateXML(fromLang: String, toLangs: Array<String>?, xmlStringsList: ArrayList<String>?,
-                     mGoogleApiClient: GoogleApiClient?, xmlNamesList: ArrayList<String>?, translationService: TranslationService, broadcaster: LocalBroadcastManager?) {
+                     mGoogleApiClient: GoogleApiClient?, xmlNamesList: ArrayList<String>?, translationService: TranslationService, broadcaster: androidx.localbroadcastmanager.content.LocalBroadcastManager?) {
 
         translating = true
         totalStrings = 0

@@ -21,7 +21,7 @@ import android.R.string.ok
  * Created by jantz on 7/10/2017.
  */
 
-class MultiSelectionSpinner : android.support.v7.widget.AppCompatSpinner, DialogInterface.OnMultiChoiceClickListener {
+class MultiSelectionSpinner : androidx.appcompat.widget.AppCompatSpinner, DialogInterface.OnMultiChoiceClickListener {
     internal var sharedPreferences: SharedPreferences
     internal var _items: Array<String>? = null
     var mSelection: BooleanArray? = null

@@ -9,8 +9,8 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.IBinder
-import android.support.v4.app.NotificationCompat
-import android.support.v4.content.LocalBroadcastManager
+import androidx.core.app.NotificationCompat
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 import com.google.android.gms.common.api.GoogleApiClient
 import com.jantzapps.jantz.xmltranslatorfree.R
@@ -27,13 +27,13 @@ class TranslationService : Service() {
     private var xmlNamesList: ArrayList<String>? = null
     private var mGoogleApiClient: GoogleApiClient? = null
     private var googleApiHelper: GoogleApiHelper? = null
-    private var broadcaster: LocalBroadcastManager? = null
+    private var broadcaster: androidx.localbroadcastmanager.content.LocalBroadcastManager? = null
     private var intent: Intent? = null
     private var pendingIntent: PendingIntent? = null
 
     override fun onCreate() {
         super.onCreate()
-        broadcaster = LocalBroadcastManager.getInstance(this)
+        broadcaster = androidx.localbroadcastmanager.content.LocalBroadcastManager.getInstance(this)
         intent = Intent(this, MainActivity::class.java)
         pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
 
