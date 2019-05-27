@@ -79,6 +79,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 import android.R.string.ok
 import android.widget.*
+import butterknife.BindView
 
 class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
     private lateinit var mAlarmIntent: PendingIntent
@@ -89,18 +90,18 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     var file: DriveFile? = null
 
     private var mGoogleApiClient: GoogleApiClient? = null
-    private var openFileButton: Button? = null
-    private var stopButton: Button? = null
-    private var parentLayout: ConstraintLayout? = null
+    @BindView(R.id.btn_open_file) lateinit var openFileButton: Button
+    @BindView(R.id.btn_stop) lateinit var stopButton: Button
+    @BindView(R.id.root) lateinit var parentLayout: ConstraintLayout
     private var constraintSet: ConstraintSet? = null
-    private var rawEditText: EditText? = null
-    private var orTextView: TextView? = null
-    private var fileTextView: TextView? = null
-    private var translatingLabel: TextView? = null
-    private var chosenFileView: FrameLayout? = null
-    private var deleteButton: ImageView? = null
-    private var googleButton: ImageView? = null
-    private var clearButton: ImageView? = null
+    @BindView(R.id.et_paste_entry) lateinit var rawEditText: EditText
+    @BindView(R.id.tv_or_label) lateinit var orTextView: TextView
+    @BindView(R.id.tv_chosen_file) lateinit var fileTextView: TextView
+    @BindView(R.id.tv_translating) lateinit var translatingLabel: TextView
+    @BindView(R.id.fl_chosen_file) lateinit var chosenFileView: FrameLayout
+    @BindView(R.id.iv_delete) lateinit var deleteButton: ImageView
+    @BindView(R.id.iv_google_drive) lateinit var googleButton: ImageView
+    @BindView(R.id.iv_clear) lateinit var clearButton: ImageView
     private var translateReady: Boolean = false
     private var translating: Boolean = false
     private var spinner: MultiSelectionSpinner? = null
@@ -113,10 +114,10 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     private var inputStream: InputStream? = null
     private var fileString: String? = null
     private var chosenFile: String? = null
-    private var pasteEntryLayout: FrameLayout? = null
+    @BindView(R.id.fl_paste_entry) lateinit var pasteEntryLayout: FrameLayout
     private var googleApiHelper: GoogleApiHelper? = null
     private lateinit var receiver: BroadcastReceiver
-    private var progressBar: ProgressBar? = null
+    @BindView(R.id.pb) lateinit var progressBar: ProgressBar
     private var alert: AlertDialog? = null
 
     private// 1
@@ -363,20 +364,6 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         val dailyLimit = 3000
         val Xml_limit_path = File(Environment.getExternalStorageDirectory().toString() + "/App_data/")
         val Xml_limit = File(Xml_limit_path, "Char.txt")
-
-        parentLayout = findViewById(R.id.root)
-        openFileButton = findViewById(R.id.btn_open_file)
-        stopButton = findViewById(R.id.btn_stop)
-        progressBar = findViewById(R.id.pb)
-        deleteButton = findViewById(R.id.iv_delete)
-        googleButton = findViewById(R.id.iv_google_drive)
-        clearButton = findViewById(R.id.iv_clear)
-        rawEditText = findViewById(R.id.et_paste_entry)
-        orTextView = findViewById(R.id.tv_or_label)
-        fileTextView = findViewById(R.id.tv_chosen_file)
-        translatingLabel = findViewById(R.id.tv_translating)
-        chosenFileView = findViewById(R.id.fl_chosen_file)
-        pasteEntryLayout = findViewById(R.id.fl_paste_entry)
 
         constraintSet = ConstraintSet()
         constraintSet!!.clone(parentLayout!!)
