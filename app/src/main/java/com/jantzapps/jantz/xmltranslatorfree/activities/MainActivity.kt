@@ -80,6 +80,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import android.R.string.ok
 import android.widget.*
 import butterknife.BindView
+import butterknife.ButterKnife
 
 class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, MultiSelectionSpinner.OnItemSelected {
     private lateinit var mAlarmIntent: PendingIntent
@@ -351,6 +352,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        ButterKnife.bind(this)
         MobileAds.initialize(this, ADMOB_APP_ID)
         mInterstitialAd = InterstitialAd(this)
         mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
