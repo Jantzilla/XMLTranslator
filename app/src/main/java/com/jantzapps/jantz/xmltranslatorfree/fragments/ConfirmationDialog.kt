@@ -8,14 +8,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.CompoundButton
+import butterknife.BindView
+import butterknife.ButterKnife
 
 import com.jantzapps.jantz.xmltranslatorfree.R
 
 class ConfirmationDialog : androidx.fragment.app.DialogFragment() {
 
-    private var checkBox: CheckBox? = null
-    private var button1: Button? = null
-    private var button2: Button? = null
+    @BindView(R.id.checkBox) private lateinit var checkBox: CheckBox
+    @BindView(R.id.button1) private lateinit var button1: Button
+    @BindView(R.id.button2) private lateinit var button2: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +25,7 @@ class ConfirmationDialog : androidx.fragment.app.DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val mainView = inflater.inflate(R.layout.confirmation_dialog, container)
-        checkBox = mainView.findViewById<View>(R.id.checkBox) as CheckBox
-        button1 = mainView.findViewById<View>(R.id.button1) as Button
-        button2 = mainView.findViewById<View>(R.id.button2) as Button
+        ButterKnife.bind(this, mainView)
         return mainView
     }
 
